@@ -1,8 +1,8980 @@
-!function(e){function t(s){if(o[s])return o[s].exports;var r=o[s]={i:s,l:!1,exports:{}};return e[s].call(r.exports,r,r.exports,t),r.l=!0,r.exports}var o={};return t.m=e,t.c=o,t.i=function(e){return e},t.d=function(e,t,o){Object.defineProperty(e,t,{configurable:!1,enumerable:!0,get:o})},t.n=function(e){var o=e&&e.__esModule?function(){return e["default"]}:function(){return e};return t.d(o,"a",o),o},t.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},t.p="/dist/",t(t.s=28)}([function(e,t){e.exports=function(){var e=[];return e.toString=function(){for(var e=[],t=0;t<this.length;t++){var o=this[t];o[2]?e.push("@media "+o[2]+"{"+o[1]+"}"):e.push(o[1])}return e.join("")},e.i=function(t,o){"string"==typeof t&&(t=[[null,t,""]]);for(var s={},r=0;r<this.length;r++){var i=this[r][0];"number"==typeof i&&(s[i]=!0)}for(r=0;r<t.length;r++){var a=t[r];"number"==typeof a[0]&&s[a[0]]||(o&&!a[2]?a[2]=o:o&&(a[2]="("+a[2]+") and ("+o+")"),e.push(a))}},e}},function(e,t,o){var s=o(7);"string"==typeof s&&(s=[[e.i,s,""]]);o(23)(s,{});s.locals&&(e.exports=s.locals)},function(e,t,o){var s,r;o(26),s=o(4);var i=o(24);r=s=s||{},"object"!=typeof s["default"]&&"function"!=typeof s["default"]||(r=s=s["default"]),"function"==typeof r&&(r=r.options),r.render=i.render,r.staticRenderFns=i.staticRenderFns,e.exports=s},function(e,t,o){"use strict";(function(t){function o(e){return null==e?"":"object"==typeof e?JSON.stringify(e,null,2):String(e)}function s(e){var t=parseFloat(e,10);return t||0===t?t:e}function r(e,t){for(var o=Object.create(null),s=e.split(","),r=0;r<s.length;r++)o[s[r]]=!0;return t?function(e){return o[e.toLowerCase()]}:function(e){return o[e]}}function i(e,t){if(e.length){var o=e.indexOf(t);if(o>-1)return e.splice(o,1)}}function a(e,t){return no.call(e,t)}function p(e){return"string"==typeof e||"number"==typeof e}function u(e){var t=Object.create(null);return function(o){var s=t[o];return s||(t[o]=e(o))}}function n(e,t){function o(o){var s=arguments.length;return s?s>1?e.apply(t,arguments):e.call(t,o):e.call(t)}return o._length=e.length,o}function l(e,t){t=t||0;for(var o=e.length-t,s=new Array(o);o--;)s[o]=e[o+t];return s}function c(e,t){for(var o in t)e[o]=t[o];return e}function h(e){return null!==e&&"object"==typeof e}function m(e){return go.call(e)===bo}function d(e){for(var t={},o=0;o<e.length;o++)e[o]&&c(t,e[o]);return t}function v(){}function g(e){return e.reduce(function(e,t){return e.concat(t.staticKeys||[])},[]).join(",")}function b(e,t){return e==t||!(!h(e)||!h(t))&&JSON.stringify(e)===JSON.stringify(t)}function f(e,t){for(var o=0;o<e.length;o++)if(b(e[o],t))return o;return-1}function _(e){var t=(e+"").charCodeAt(0);return 36===t||95===t}function k(e,t,o,s){Object.defineProperty(e,t,{value:o,enumerable:!!s,writable:!0,configurable:!0})}function A(e){if(!ko.test(e)){var t=e.split(".");return function(e){for(var o=0;o<t.length;o++){if(!e)return;e=e[t[o]]}return e}}}function w(e){return/native code/.test(e.toString())}function D(e){Bo.target&&Lo.push(Bo.target),Bo.target=e}function y(){Bo.target=Lo.pop()}function F(e,t){e.__proto__=t}function j(e,t,o){for(var s=0,r=o.length;s<r;s++){var i=o[s];k(e,i,t[i])}}function x(e){if(h(e)){var t;return a(e,"__ob__")&&e.__ob__ instanceof Io?t=e.__ob__:Po.shouldConvert&&!zo()&&(Array.isArray(e)||m(e))&&Object.isExtensible(e)&&!e._isVue&&(t=new Io(e)),t}}function C(e,t,o,s){var r=new Bo,i=Object.getOwnPropertyDescriptor(e,t);if(!i||i.configurable!==!1){var a=i&&i.get,p=i&&i.set,u=x(o);Object.defineProperty(e,t,{enumerable:!0,configurable:!0,get:function(){var t=a?a.call(e):o;return Bo.target&&(r.depend(),u&&u.dep.depend(),Array.isArray(t)&&S(t)),t},set:function(t){var s=a?a.call(e):o;t===s||t!==t&&s!==s||(p?p.call(e,t):o=t,u=x(t),r.notify())}})}}function z(e,t,o){if(Array.isArray(e))return e.length=Math.max(e.length,t),e.splice(t,1,o),o;if(a(e,t))return void(e[t]=o);var s=e.__ob__;if(!(e._isVue||s&&s.vmCount))return s?(C(s.value,t,o),s.dep.notify(),o):void(e[t]=o)}function T(e,t){var o=e.__ob__;e._isVue||o&&o.vmCount||a(e,t)&&(delete e[t],o&&o.dep.notify())}function S(e){for(var t=void 0,o=0,s=e.length;o<s;o++)t=e[o],t&&t.__ob__&&t.__ob__.dep.depend(),Array.isArray(t)&&S(t)}function E(e,t){if(!t)return e;for(var o,s,r,i=Object.keys(t),p=0;p<i.length;p++)o=i[p],s=e[o],r=t[o],a(e,o)?m(s)&&m(r)&&E(s,r):z(e,o,r);return e}function O(e,t){return t?e?e.concat(t):Array.isArray(t)?t:[t]:e}function $(e,t){var o=Object.create(e||null);return t?c(o,t):o}function B(e){var t=e.props;if(t){var o,s,r,i={};if(Array.isArray(t))for(o=t.length;o--;)s=t[o],"string"==typeof s&&(r=co(s),i[r]={type:null});else if(m(t))for(var a in t)s=t[a],r=co(a),i[r]=m(s)?s:{type:s};e.props=i}}function L(e){var t=e.directives;if(t)for(var o in t){var s=t[o];"function"==typeof s&&(t[o]={bind:s,update:s})}}function q(e,t,o){function s(s){var r=No[s]||Uo;l[s]=r(e[s],t[s],o,s)}B(t),L(t);var r=t["extends"];if(r&&(e="function"==typeof r?q(e,r.options,o):q(e,r,o)),t.mixins)for(var i=0,p=t.mixins.length;i<p;i++){var u=t.mixins[i];u.prototype instanceof Me&&(u=u.options),e=q(e,u,o)}var n,l={};for(n in e)s(n);for(n in t)a(e,n)||s(n);return l}function Z(e,t,o,s){if("string"==typeof o){var r=e[t],i=r[o]||r[co(o)]||r[ho(co(o))];return i}}function M(e,t,o,s){var r=t[e],i=!a(o,e),p=o[e];if(N(r.type)&&(i&&!a(r,"default")?p=!1:""!==p&&p!==vo(e)||(p=!0)),void 0===p){p=P(s,r,e);var u=Po.shouldConvert;Po.shouldConvert=!0,x(p),Po.shouldConvert=u}return p}function P(e,t,o){if(a(t,"default")){var s=t["default"];return h(s),e&&e.$options.propsData&&void 0===e.$options.propsData[o]&&void 0!==e[o]?e[o]:"function"==typeof s&&t.type!==Function?s.call(e):s}}function I(e){var t=e&&e.toString().match(/^\s*function (\w+)/);return t&&t[1]}function N(e){if(!Array.isArray(e))return"Boolean"===I(e);for(var t=0,o=e.length;t<o;t++)if("Boolean"===I(e[t]))return!0;return!1}function U(){Ro.length=0,Vo={},Jo=Ho=!1}function Q(){for(Ho=!0,Ro.sort(function(e,t){return e.id-t.id}),Wo=0;Wo<Ro.length;Wo++){var e=Ro[Wo],t=e.id;Vo[t]=null,e.run()}To&&_o.devtools&&To.emit("flush"),U()}function R(e){var t=e.id;if(null==Vo[t]){if(Vo[t]=!0,Ho){for(var o=Ro.length-1;o>=0&&Ro[o].id>e.id;)o--;Ro.splice(Math.max(o,Wo)+1,0,e)}else Ro.push(e);Jo||(Jo=!0,So(Q))}}function V(e){Xo.clear(),J(e,Xo)}function J(e,t){var o,s,r=Array.isArray(e);if((r||h(e))&&Object.isExtensible(e)){if(e.__ob__){var i=e.__ob__.dep.id;if(t.has(i))return;t.add(i)}if(r)for(o=e.length;o--;)J(e[o],t);else for(s=Object.keys(e),o=s.length;o--;)J(e[s[o]],t)}}function H(e){e._watchers=[],W(e),Y(e),G(e),K(e),ee(e)}function W(e){var t=e.$options.props;if(t){var o=e.$options.propsData||{},s=e.$options._propKeys=Object.keys(t),r=!e.$parent;Po.shouldConvert=r;for(var i=function(r){var i=s[r];C(e,i,M(i,t,o,e))},a=0;a<s.length;a++)i(a);Po.shouldConvert=!0}}function G(e){var t=e.$options.data;t=e._data="function"==typeof t?t.call(e):t||{},m(t)||(t={});for(var o=Object.keys(t),s=e.$options.props,r=o.length;r--;)s&&a(s,o[r])||se(e,o[r]);x(t),t.__ob__&&t.__ob__.vmCount++}function K(e){var t=e.$options.computed;if(t)for(var o in t){var s=t[o];"function"==typeof s?(Yo.get=X(s,e),Yo.set=v):(Yo.get=s.get?s.cache!==!1?X(s.get,e):n(s.get,e):v,Yo.set=s.set?n(s.set,e):v),Object.defineProperty(e,o,Yo)}}function X(e,t){var o=new Ko(t,e,v,{lazy:!0});return function(){return o.dirty&&o.evaluate(),Bo.target&&o.depend(),o.value}}function Y(e){var t=e.$options.methods;if(t)for(var o in t)e[o]=null==t[o]?v:n(t[o],e)}function ee(e){var t=e.$options.watch;if(t)for(var o in t){var s=t[o];if(Array.isArray(s))for(var r=0;r<s.length;r++)te(e,o,s[r]);else te(e,o,s)}}function te(e,t,o){var s;m(o)&&(s=o,o=o.handler),"string"==typeof o&&(o=e[o]),e.$watch(t,o,s)}function oe(e){var t={};t.get=function(){return this._data},Object.defineProperty(e.prototype,"$data",t),e.prototype.$set=z,e.prototype.$delete=T,e.prototype.$watch=function(e,t,o){var s=this;o=o||{},o.user=!0;var r=new Ko(s,e,t,o);return o.immediate&&t.call(s,r.value),function(){r.teardown()}}}function se(e,t){_(t)||Object.defineProperty(e,t,{configurable:!0,enumerable:!0,get:function(){return e._data[t]},set:function(o){e._data[t]=o}})}function re(e){var t=new es(e.tag,e.data,e.children,e.text,e.elm,e.ns,e.context,e.componentOptions);return t.isStatic=e.isStatic,t.key=e.key,t.isCloned=!0,t}function ie(e){for(var t=new Array(e.length),o=0;o<e.length;o++)t[o]=re(e[o]);return t}function ae(e,t,o,s){s+=t;var r=e.__injected||(e.__injected={});if(!r[s]){r[s]=!0;var i=e[t];i?e[t]=function(){i.apply(this,arguments),o.apply(this,arguments)}:e[t]=o}}function pe(e,t,o,s,r){var i,a,p,u,n,l,c;for(i in e)if(a=e[i],p=t[i],a)if(p){if(a!==p)if(Array.isArray(p)){p.length=a.length;for(var h=0;h<p.length;h++)p[h]=a[h];e[i]=p}else p.fn=a,e[i]=p}else c="~"===i.charAt(0),n=c?i.slice(1):i,l="!"===n.charAt(0),n=l?n.slice(1):n,Array.isArray(a)?o(n,a.invoker=ue(a),c,l):(a.invoker||(u=a,a=e[i]={},a.fn=u,a.invoker=ne(a)),o(n,a.invoker,c,l));else;for(i in t)e[i]||(c="~"===i.charAt(0),n=c?i.slice(1):i,l="!"===n.charAt(0),n=l?n.slice(1):n,s(n,t[i].invoker,l))}function ue(e){return function(t){for(var o=arguments,s=1===arguments.length,r=0;r<e.length;r++)s?e[r](t):e[r].apply(null,o)}}function ne(e){return function(t){var o=1===arguments.length;o?e.fn(t):e.fn.apply(null,arguments)}}function le(e,t,o){if(p(e))return[ce(e)];if(Array.isArray(e)){for(var s=[],r=0,i=e.length;r<i;r++){var a=e[r],u=s[s.length-1];Array.isArray(a)?s.push.apply(s,le(a,t,(o||"")+"_"+r)):p(a)?u&&u.text?u.text+=String(a):""!==a&&s.push(ce(a)):a instanceof es&&(a.text&&u&&u.text?u.isCloned||(u.text+=a.text):(t&&he(a,t),a.tag&&null==a.key&&null!=o&&(a.key="__vlist"+o+"_"+r+"__"),s.push(a)))}return s}}function ce(e){return new es((void 0),(void 0),(void 0),String(e))}function he(e,t){if(e.tag&&!e.ns&&(e.ns=t,e.children))for(var o=0,s=e.children.length;o<s;o++)he(e.children[o],t)}function me(e){return e&&e.filter(function(e){return e&&e.componentOptions})[0]}function de(e){var t=e.$options,o=t.parent;if(o&&!t["abstract"]){for(;o.$options["abstract"]&&o.$parent;)o=o.$parent;o.$children.push(e)}e.$parent=o,e.$root=o?o.$root:e,e.$children=[],e.$refs={},e._watcher=null,e._inactive=!1,e._isMounted=!1,e._isDestroyed=!1,e._isBeingDestroyed=!1}function ve(e){e.prototype._mount=function(e,t){var o=this;return o.$el=e,o.$options.render||(o.$options.render=ts),ge(o,"beforeMount"),o._watcher=new Ko(o,function(){o._update(o._render(),t)},v),t=!1,null==o.$vnode&&(o._isMounted=!0,ge(o,"mounted")),o},e.prototype._update=function(e,t){var o=this;o._isMounted&&ge(o,"beforeUpdate");var s=o.$el,r=o._vnode,i=os;os=o,o._vnode=e,r?o.$el=o.__patch__(r,e):o.$el=o.__patch__(o.$el,e,t,!1,o.$options._parentElm,o.$options._refElm),os=i,s&&(s.__vue__=null),o.$el&&(o.$el.__vue__=o),o.$vnode&&o.$parent&&o.$vnode===o.$parent._vnode&&(o.$parent.$el=o.$el),o._isMounted&&ge(o,"updated")},e.prototype._updateFromParent=function(e,t,o,s){var r=this,i=!(!r.$options._renderChildren&&!s);if(r.$options._parentVnode=o,r.$vnode=o,r._vnode&&(r._vnode.parent=o),r.$options._renderChildren=s,e&&r.$options.props){Po.shouldConvert=!1;for(var a=r.$options._propKeys||[],p=0;p<a.length;p++){var u=a[p];r[u]=M(u,r.$options.props,e,r)}Po.shouldConvert=!0,r.$options.propsData=e}if(t){var n=r.$options._parentListeners;r.$options._parentListeners=t,r._updateListeners(t,n)}i&&(r.$slots=Oe(s,o.context),r.$forceUpdate())},e.prototype.$forceUpdate=function(){var e=this;e._watcher&&e._watcher.update()},e.prototype.$destroy=function(){var e=this;if(!e._isBeingDestroyed){ge(e,"beforeDestroy"),e._isBeingDestroyed=!0;var t=e.$parent;!t||t._isBeingDestroyed||e.$options["abstract"]||i(t.$children,e),e._watcher&&e._watcher.teardown();for(var o=e._watchers.length;o--;)e._watchers[o].teardown();e._data.__ob__&&e._data.__ob__.vmCount--,e._isDestroyed=!0,ge(e,"destroyed"),e.$off(),e.$el&&(e.$el.__vue__=null),e.__patch__(e._vnode,null)}}}function ge(e,t){var o=e.$options[t];if(o)for(var s=0,r=o.length;s<r;s++)o[s].call(e);e.$emit("hook:"+t)}function be(e,t,o,s,r){if(e){var i=o.$options._base;if(h(e)&&(e=i.extend(e)),"function"==typeof e){if(!e.cid)if(e.resolved)e=e.resolved;else if(e=ye(e,i,function(){o.$forceUpdate()}),!e)return;Ze(e),t=t||{};var a=Fe(t,e);if(e.options.functional)return fe(e,a,t,o,s);var p=t.on;t.on=t.nativeOn,e.options["abstract"]&&(t={}),xe(t);var u=e.options.name||r,n=new es("vue-component-"+e.cid+(u?"-"+u:""),t,(void 0),(void 0),(void 0),(void 0),o,{Ctor:e,propsData:a,listeners:p,tag:r,children:s});return n}}}function fe(e,t,o,s,r){var i={},a=e.options.props;if(a)for(var p in a)i[p]=M(p,a,t);var u=e.options.render.call(null,n(ze,{_self:Object.create(s)}),{props:i,data:o,parent:s,children:le(r),slots:function(){return Oe(r,s)}});return u instanceof es&&(u.functionalContext=s,o.slot&&((u.data||(u.data={})).slot=o.slot)),u}function _e(e,t,o,s){var r=e.componentOptions,i={_isComponent:!0,parent:t,propsData:r.propsData,_componentTag:r.tag,_parentVnode:e,_parentListeners:r.listeners,_renderChildren:r.children,_parentElm:o||null,_refElm:s||null},a=e.data.inlineTemplate;return a&&(i.render=a.render,i.staticRenderFns=a.staticRenderFns),new r.Ctor(i)}function ke(e,t,o,s){if(!e.child||e.child._isDestroyed){var r=e.child=_e(e,os,o,s);r.$mount(t?e.elm:void 0,t)}else if(e.data.keepAlive){var i=e;Ae(i,i)}}function Ae(e,t){var o=t.componentOptions,s=t.child=e.child;s._updateFromParent(o.propsData,o.listeners,t,o.children)}function we(e){e.child._isMounted||(e.child._isMounted=!0,ge(e.child,"mounted")),e.data.keepAlive&&(e.child._inactive=!1,ge(e.child,"activated"))}function De(e){e.child._isDestroyed||(e.data.keepAlive?(e.child._inactive=!0,ge(e.child,"deactivated")):e.child.$destroy())}function ye(e,t,o){if(!e.requested){e.requested=!0;var s=e.pendingCallbacks=[o],r=!0,i=function(o){if(h(o)&&(o=t.extend(o)),e.resolved=o,!r)for(var i=0,a=s.length;i<a;i++)s[i](o)},a=function(e){},p=e(i,a);return p&&"function"==typeof p.then&&!e.resolved&&p.then(i,a),r=!1,e.resolved}e.pendingCallbacks.push(o)}function Fe(e,t){var o=t.options.props;if(o){var s={},r=e.attrs,i=e.props,a=e.domProps;if(r||i||a)for(var p in o){var u=vo(p);je(s,i,p,u,!0)||je(s,r,p,u)||je(s,a,p,u)}return s}}function je(e,t,o,s,r){if(t){if(a(t,o))return e[o]=t[o],r||delete t[o],!0;if(a(t,s))return e[o]=t[s],r||delete t[s],!0}return!1}function xe(e){e.hook||(e.hook={});for(var t=0;t<rs.length;t++){var o=rs[t],s=e.hook[o],r=ss[o];e.hook[o]=s?Ce(r,s):r}}function Ce(e,t){return function(o,s,r,i){e(o,s,r,i),t(o,s,r,i)}}function ze(e,t,o){return t&&(Array.isArray(t)||"object"!=typeof t)&&(o=t,t=void 0),Te(this._self,e,t,o)}function Te(e,t,o,s){if(!o||!o.__ob__){if(!t)return ts();if(Array.isArray(s)&&"function"==typeof s[0]&&(o=o||{},o.scopedSlots={"default":s[0]},s.length=0),"string"==typeof t){var r,i=_o.getTagNamespace(t);if(_o.isReservedTag(t))return new es(t,o,le(s,i),(void 0),(void 0),i,e);if(r=Z(e.$options,"components",t))return be(r,o,e,s,t);var a="foreignObject"===t?"xhtml":i;return new es(t,o,le(s,a),(void 0),(void 0),i,e)}return be(t,o,e,s)}}function Se(e){e.$vnode=null,e._vnode=null,e._staticTrees=null;var t=e.$options._parentVnode,o=t&&t.context;e.$slots=Oe(e.$options._renderChildren,o),e.$scopedSlots={},e.$createElement=n(ze,e),e.$options.el&&e.$mount(e.$options.el)}function Ee(e){function t(e,t,o){if(Array.isArray(e))for(var s=0;s<e.length;s++)e[s]&&"string"!=typeof e[s]&&r(e[s],t+"_"+s,o);else r(e,t,o)}function r(e,t,o){e.isStatic=!0,e.key=t,e.isOnce=o}e.prototype.$nextTick=function(e){return So(e,this)},e.prototype._render=function(){var e=this,t=e.$options,o=t.render,s=t.staticRenderFns,r=t._parentVnode;if(e._isMounted)for(var i in e.$slots)e.$slots[i]=ie(e.$slots[i]);r&&r.data.scopedSlots&&(e.$scopedSlots=r.data.scopedSlots),s&&!e._staticTrees&&(e._staticTrees=[]),e.$vnode=r;var a;try{a=o.call(e._renderProxy,e.$createElement)}catch(p){if(!_o.errorHandler)throw p;_o.errorHandler.call(null,p,e),a=e._vnode}return a instanceof es||(a=ts()),a.parent=r,a},e.prototype._h=ze,e.prototype._s=o,e.prototype._n=s,e.prototype._e=ts,e.prototype._q=b,e.prototype._i=f,e.prototype._m=function(e,o){var s=this._staticTrees[e];return s&&!o?Array.isArray(s)?ie(s):re(s):(s=this._staticTrees[e]=this.$options.staticRenderFns[e].call(this._renderProxy),t(s,"__static__"+e,!1),s)},e.prototype._o=function(e,o,s){return t(e,"__once__"+o+(s?"_"+s:""),!0),e};var i=function(e){return e};e.prototype._f=function(e){return Z(this.$options,"filters",e,!0)||i},e.prototype._l=function(e,t){var o,s,r,i,a;if(Array.isArray(e))for(o=new Array(e.length),s=0,r=e.length;s<r;s++)o[s]=t(e[s],s);else if("number"==typeof e)for(o=new Array(e),s=0;s<e;s++)o[s]=t(s+1,s);else if(h(e))for(i=Object.keys(e),o=new Array(i.length),s=0,r=i.length;s<r;s++)a=i[s],o[s]=t(e[a],a,s);return o},e.prototype._t=function(e,t,o){var s=this.$scopedSlots[e];if(s)return s(o||{})||t;var r=this.$slots[e];return r||t},e.prototype._b=function(e,t,o,s){if(o)if(h(o)){Array.isArray(o)&&(o=d(o));for(var r in o)if("class"===r||"style"===r)e[r]=o[r];else{var i=s||_o.mustUseProp(t,r)?e.domProps||(e.domProps={}):e.attrs||(e.attrs={});i[r]=o[r]}}else;return e},e.prototype._k=function(e,t,o){var s=_o.keyCodes[t]||o;return Array.isArray(s)?s.indexOf(e)===-1:s!==e}}function Oe(e,t){var o={};if(!e)return o;for(var s,r,i=le(e)||[],a=[],p=0,u=i.length;p<u;p++)if(r=i[p],(r.context===t||r.functionalContext===t)&&r.data&&(s=r.data.slot)){var n=o[s]||(o[s]=[]);"template"===r.tag?n.push.apply(n,r.children):n.push(r)}else a.push(r);return a.length&&(1!==a.length||" "!==a[0].text&&!a[0].isComment)&&(o["default"]=a),o}function $e(e){e._events=Object.create(null);var t=e.$options._parentListeners,o=function(t,o,s){s?e.$once(t,o):e.$on(t,o)},s=n(e.$off,e);e._updateListeners=function(t,r){pe(t,r||{},o,s,e)},t&&e._updateListeners(t)}function Be(e){e.prototype.$on=function(e,t){var o=this;return(o._events[e]||(o._events[e]=[])).push(t),o},e.prototype.$once=function(e,t){function o(){s.$off(e,o),t.apply(s,arguments)}var s=this;return o.fn=t,s.$on(e,o),s},e.prototype.$off=function(e,t){var o=this;if(!arguments.length)return o._events=Object.create(null),o;var s=o._events[e];if(!s)return o;if(1===arguments.length)return o._events[e]=null,o;for(var r,i=s.length;i--;)if(r=s[i],r===t||r.fn===t){s.splice(i,1);break}return o},e.prototype.$emit=function(e){var t=this,o=t._events[e];if(o){o=o.length>1?l(o):o;for(var s=l(arguments,1),r=0,i=o.length;r<i;r++)o[r].apply(t,s)}return t}}function Le(e){e.prototype._init=function(e){var t=this;t._uid=is++,t._isVue=!0,e&&e._isComponent?qe(t,e):t.$options=q(Ze(t.constructor),e||{},t),t._renderProxy=t,t._self=t,de(t),$e(t),ge(t,"beforeCreate"),H(t),ge(t,"created"),Se(t)}}function qe(e,t){var o=e.$options=Object.create(e.constructor.options);o.parent=t.parent,o.propsData=t.propsData,o._parentVnode=t._parentVnode,o._parentListeners=t._parentListeners,o._renderChildren=t._renderChildren,o._componentTag=t._componentTag,o._parentElm=t._parentElm,o._refElm=t._refElm,t.render&&(o.render=t.render,o.staticRenderFns=t.staticRenderFns)}function Ze(e){var t=e.options;if(e["super"]){var o=e["super"].options,s=e.superOptions,r=e.extendOptions;o!==s&&(e.superOptions=o,r.render=t.render,r.staticRenderFns=t.staticRenderFns,r._scopeId=t._scopeId,t=e.options=q(o,r),t.name&&(t.components[t.name]=e))}return t}function Me(e){this._init(e)}function Pe(e){e.use=function(e){if(!e.installed){var t=l(arguments,1);return t.unshift(this),"function"==typeof e.install?e.install.apply(e,t):e.apply(null,t),e.installed=!0,this}}}function Ie(e){e.mixin=function(e){this.options=q(this.options,e)}}function Ne(e){e.cid=0;var t=1;e.extend=function(e){e=e||{};var o=this,s=o.cid,r=e._Ctor||(e._Ctor={});if(r[s])return r[s];var i=e.name||o.options.name,a=function(e){this._init(e)};return a.prototype=Object.create(o.prototype),a.prototype.constructor=a,a.cid=t++,a.options=q(o.options,e),a["super"]=o,a.extend=o.extend,a.mixin=o.mixin,a.use=o.use,_o._assetTypes.forEach(function(e){a[e]=o[e]}),i&&(a.options.components[i]=a),a.superOptions=o.options,a.extendOptions=e,r[s]=a,a}}function Ue(e){_o._assetTypes.forEach(function(t){e[t]=function(e,o){return o?("component"===t&&m(o)&&(o.name=o.name||e,o=this.options._base.extend(o)),"directive"===t&&"function"==typeof o&&(o={bind:o,update:o}),this.options[t+"s"][e]=o,o):this.options[t+"s"][e]}})}function Qe(e,t){return"string"==typeof e?e.split(",").indexOf(t)>-1:e.test(t)}function Re(e){var t={};t.get=function(){return _o},Object.defineProperty(e,"config",t),e.util=Qo,e.set=z,e["delete"]=T,e.nextTick=So,e.options=Object.create(null),_o._assetTypes.forEach(function(t){e.options[t+"s"]=Object.create(null)}),e.options._base=e,c(e.options.components,us),Pe(e),Ie(e),Ne(e),Ue(e)}function Ve(e){for(var t=e.data,o=e,s=e;s.child;)s=s.child._vnode,s.data&&(t=Je(s.data,t));for(;o=o.parent;)o.data&&(t=Je(t,o.data));return He(t)}function Je(e,t){return{staticClass:We(e.staticClass,t.staticClass),"class":e["class"]?[e["class"],t["class"]]:t["class"]}}function He(e){var t=e["class"],o=e.staticClass;return o||t?We(o,Ge(t)):""}function We(e,t){return e?t?e+" "+t:e:t||""}function Ge(e){var t="";if(!e)return t;if("string"==typeof e)return e;if(Array.isArray(e)){for(var o,s=0,r=e.length;s<r;s++)e[s]&&(o=Ge(e[s]))&&(t+=o+" ");return t.slice(0,-1)}if(h(e)){for(var i in e)e[i]&&(t+=i+" ");return t.slice(0,-1)}return t}function Ke(e){return _s(e)?"svg":"math"===e?"math":void 0}function Xe(e){if(!wo)return!0;if(ks(e))return!1;if(e=e.toLowerCase(),null!=As[e])return As[e];var t=document.createElement(e);return e.indexOf("-")>-1?As[e]=t.constructor===window.HTMLUnknownElement||t.constructor===window.HTMLElement:As[e]=/HTMLUnknownElement/.test(t.toString())}function Ye(e){if("string"==typeof e){if(e=document.querySelector(e),!e)return document.createElement("div")}return e}function et(e,t){var o=document.createElement(e);return"select"!==e?o:(t.data&&t.data.attrs&&"multiple"in t.data.attrs&&o.setAttribute("multiple","multiple"),o)}function tt(e,t){return document.createElementNS(bs[e],t)}function ot(e){return document.createTextNode(e)}function st(e){return document.createComment(e)}function rt(e,t,o){e.insertBefore(t,o)}function it(e,t){e.removeChild(t)}function at(e,t){e.appendChild(t)}function pt(e){return e.parentNode}function ut(e){return e.nextSibling}function nt(e){return e.tagName}function lt(e,t){e.textContent=t}function ct(e){return e.childNodes}function ht(e,t,o){e.setAttribute(t,o)}function mt(e,t){var o=e.data.ref;if(o){var s=e.context,r=e.child||e.elm,a=s.$refs;t?Array.isArray(a[o])?i(a[o],r):a[o]===r&&(a[o]=void 0):e.data.refInFor?Array.isArray(a[o])&&a[o].indexOf(r)<0?a[o].push(r):a[o]=[r]:a[o]=r}}function dt(e){return null==e}function vt(e){return null!=e}function gt(e,t){return e.key===t.key&&e.tag===t.tag&&e.isComment===t.isComment&&!e.data==!t.data}function bt(e,t,o){var s,r,i={};for(s=t;s<=o;++s)r=e[s].key,vt(r)&&(i[r]=s);return i}function ft(e){function t(e){return new es(j.tagName(e).toLowerCase(),{},[],(void 0),e)}function o(e,t){function o(){0===--o.listeners&&s(e)}return o.listeners=t,o}function s(e){var t=j.parentNode(e);t&&j.removeChild(t,e)}function r(e,t,o,s,r){if(e.isRootInsert=!r,!i(e,t,o,s)){var a=e.data,p=e.children,l=e.tag;vt(l)?(e.elm=e.ns?j.createElementNS(e.ns,l):j.createElement(l,e),m(e),n(e,p,t),vt(a)&&c(e,t),u(o,e.elm,s)):e.isComment?(e.elm=j.createComment(e.text),u(o,e.elm,s)):(e.elm=j.createTextNode(e.text),u(o,e.elm,s))}}function i(e,t,o,s){var r=e.data;if(vt(r)){var i=vt(e.child)&&r.keepAlive;if(vt(r=r.hook)&&vt(r=r.init)&&r(e,!1,o,s),vt(e.child))return h(e,t),i&&a(e,t,o,s),!0}}function a(e,t,o,s){for(var r,i=e;i.child;)if(i=i.child._vnode,vt(r=i.data)&&vt(r=r.transition)){for(r=0;r<y.activate.length;++r)y.activate[r](ys,i);t.push(i);break}u(o,e.elm,s)}function u(e,t,o){e&&j.insertBefore(e,t,o)}function n(e,t,o){if(Array.isArray(t))for(var s=0;s<t.length;++s)r(t[s],o,e.elm,null,!0);else p(e.text)&&j.appendChild(e.elm,j.createTextNode(e.text))}function l(e){for(;e.child;)e=e.child._vnode;return vt(e.tag)}function c(e,t){for(var o=0;o<y.create.length;++o)y.create[o](ys,e);w=e.data.hook,vt(w)&&(w.create&&w.create(ys,e),w.insert&&t.push(e))}function h(e,t){e.data.pendingInsert&&t.push.apply(t,e.data.pendingInsert),e.elm=e.child.$el,l(e)?(c(e,t),m(e)):(mt(e),t.push(e))}function m(e){var t;vt(t=e.context)&&vt(t=t.$options._scopeId)&&j.setAttribute(e.elm,t,""),vt(t=os)&&t!==e.context&&vt(t=t.$options._scopeId)&&j.setAttribute(e.elm,t,"")}function d(e,t,o,s,i,a){for(;s<=i;++s)r(o[s],a,e,t)}function v(e){var t,o,s=e.data;if(vt(s))for(vt(t=s.hook)&&vt(t=t.destroy)&&t(e),t=0;t<y.destroy.length;++t)y.destroy[t](e);if(vt(t=e.children))for(o=0;o<e.children.length;++o)v(e.children[o])}function g(e,t,o,s){for(;o<=s;++o){var r=t[o];vt(r)&&(vt(r.tag)?(b(r),v(r)):j.removeChild(e,r.elm))}}function b(e,t){if(t||vt(e.data)){var r=y.remove.length+1;for(t?t.listeners+=r:t=o(e.elm,r),vt(w=e.child)&&vt(w=w._vnode)&&vt(w.data)&&b(w,t),w=0;w<y.remove.length;++w)y.remove[w](e,t);vt(w=e.data.hook)&&vt(w=w.remove)?w(e,t):t()}else s(e.elm)}function f(e,t,o,s,i){for(var a,p,u,n,l=0,c=0,h=t.length-1,m=t[0],v=t[h],b=o.length-1,f=o[0],k=o[b],A=!i;l<=h&&c<=b;)dt(m)?m=t[++l]:dt(v)?v=t[--h]:gt(m,f)?(_(m,f,s),m=t[++l],f=o[++c]):gt(v,k)?(_(v,k,s),v=t[--h],k=o[--b]):gt(m,k)?(_(m,k,s),A&&j.insertBefore(e,m.elm,j.nextSibling(v.elm)),m=t[++l],k=o[--b]):gt(v,f)?(_(v,f,s),A&&j.insertBefore(e,v.elm,m.elm),v=t[--h],f=o[++c]):(dt(a)&&(a=bt(t,l,h)),p=vt(f.key)?a[f.key]:null,dt(p)?(r(f,s,e,m.elm),f=o[++c]):(u=t[p],u.tag!==f.tag?(r(f,s,e,m.elm),f=o[++c]):(_(u,f,s),t[p]=void 0,A&&j.insertBefore(e,f.elm,m.elm),f=o[++c])));l>h?(n=dt(o[b+1])?null:o[b+1].elm,d(e,n,o,c,b,s)):c>b&&g(e,t,l,h)}function _(e,t,o,s){if(e!==t){if(t.isStatic&&e.isStatic&&t.key===e.key&&(t.isCloned||t.isOnce))return t.elm=e.elm,void(t.child=e.child);var r,i=t.data,a=vt(i);a&&vt(r=i.hook)&&vt(r=r.prepatch)&&r(e,t);var p=t.elm=e.elm,u=e.children,n=t.children;if(a&&l(t)){for(r=0;r<y.update.length;++r)y.update[r](e,t);vt(r=i.hook)&&vt(r=r.update)&&r(e,t)}dt(t.text)?vt(u)&&vt(n)?u!==n&&f(p,u,n,o,s):vt(n)?(vt(e.text)&&j.setTextContent(p,""),d(p,null,n,0,n.length-1,o)):vt(u)?g(p,u,0,u.length-1):vt(e.text)&&j.setTextContent(p,""):e.text!==t.text&&j.setTextContent(p,t.text),a&&vt(r=i.hook)&&vt(r=r.postpatch)&&r(e,t)}}function k(e,t,o){if(o&&e.parent)e.parent.data.pendingInsert=t;else for(var s=0;s<t.length;++s)t[s].data.hook.insert(t[s])}function A(e,t,o){t.elm=e;var s=t.tag,r=t.data,i=t.children;if(vt(r)&&(vt(w=r.hook)&&vt(w=w.init)&&w(t,!0),vt(w=t.child)))return h(t,o),!0;if(vt(s)){if(vt(i)){var a=j.childNodes(e);if(a.length){var p=!0;if(a.length!==i.length)p=!1;else for(var u=0;u<i.length;u++)if(!A(a[u],i[u],o)){p=!1;break}if(!p)return!1}else n(t,i,o)}vt(r)&&c(t,o)}return!0}var w,D,y={},F=e.modules,j=e.nodeOps;for(w=0;w<Fs.length;++w)for(y[Fs[w]]=[],D=0;D<F.length;++D)void 0!==F[D][Fs[w]]&&y[Fs[w]].push(F[D][Fs[w]]);return function(e,o,s,i,a,p){if(!o)return void(e&&v(e));var u,n,c=!1,h=[];if(e){var m=vt(e.nodeType);if(!m&&gt(e,o))_(e,o,h,i);else{if(m){if(1===e.nodeType&&e.hasAttribute("server-rendered")&&(e.removeAttribute("server-rendered"),s=!0),s&&A(e,o,h))return k(o,h,!0),e;e=t(e)}if(u=e.elm,n=j.parentNode(u),r(o,h,n,j.nextSibling(u)),o.parent){for(var d=o.parent;d;)d.elm=o.elm,d=d.parent;if(l(o))for(var b=0;b<y.create.length;++b)y.create[b](ys,o.parent)}null!==n?g(n,[e],0,0):vt(e.tag)&&v(e)}}else c=!0,r(o,h,a,p);return k(o,h,c),o.elm}}function _t(e,t){if(e.data.directives||t.data.directives){var o,s,r,i=e===ys,a=kt(e.data.directives,e.context),p=kt(t.data.directives,t.context),u=[],n=[];for(o in p)s=a[o],r=p[o],s?(r.oldValue=s.value,wt(r,"update",t,e),r.def&&r.def.componentUpdated&&n.push(r)):(wt(r,"bind",t,e),r.def&&r.def.inserted&&u.push(r));if(u.length){var l=function(){u.forEach(function(o){wt(o,"inserted",t,e)})};i?ae(t.data.hook||(t.data.hook={}),"insert",l,"dir-insert"):l()}if(n.length&&ae(t.data.hook||(t.data.hook={}),"postpatch",function(){n.forEach(function(o){wt(o,"componentUpdated",t,e)})},"dir-postpatch"),!i)for(o in a)p[o]||wt(a[o],"unbind",e)}}function kt(e,t){var o=Object.create(null);if(!e)return o;var s,r;for(s=0;s<e.length;s++)r=e[s],r.modifiers||(r.modifiers=xs),o[At(r)]=r,r.def=Z(t.$options,"directives",r.name,!0);return o}function At(e){return e.rawName||e.name+"."+Object.keys(e.modifiers||{}).join(".")}function wt(e,t,o,s){var r=e.def&&e.def[t];r&&r(o.elm,e,o,s)}function Dt(e,t){if(e.data.attrs||t.data.attrs){var o,s,r,i=t.elm,a=e.data.attrs||{},p=t.data.attrs||{};p.__ob__&&(p=t.data.attrs=c({},p));for(o in p)s=p[o],r=a[o],r!==s&&yt(i,o,s);for(o in a)null==p[o]&&(ds(o)?i.removeAttributeNS(ms,vs(o)):cs(o)||i.removeAttribute(o))}}function yt(e,t,o){hs(t)?gs(o)?e.removeAttribute(t):e.setAttribute(t,t):cs(t)?e.setAttribute(t,gs(o)||"false"===o?"false":"true"):ds(t)?gs(o)?e.removeAttributeNS(ms,vs(t)):e.setAttributeNS(ms,t,o):gs(o)?e.removeAttribute(t):e.setAttribute(t,o)}function Ft(e,t){var o=t.elm,s=t.data,r=e.data;if(s.staticClass||s["class"]||r&&(r.staticClass||r["class"])){var i=Ve(t),a=o._transitionClasses;a&&(i=We(i,Ge(a))),i!==o._prevClass&&(o.setAttribute("class",i),o._prevClass=i)}}function jt(e,t){if(e.data.on||t.data.on){var o=t.data.on||{},s=e.data.on||{},r=t.elm._v_add||(t.elm._v_add=function(e,o,s,r){if(s){var a=o;o=function(t){i(e,o,r),1===arguments.length?a(t):a.apply(null,arguments)}}t.elm.addEventListener(e,o,r)}),i=t.elm._v_remove||(t.elm._v_remove=function(e,o,s){t.elm.removeEventListener(e,o,s)});pe(o,s,r,i,t.context)}}function xt(e,t){if(e.data.domProps||t.data.domProps){var o,s,r=t.elm,i=e.data.domProps||{},a=t.data.domProps||{};a.__ob__&&(a=t.data.domProps=c({},a));for(o in i)null==a[o]&&(r[o]="");for(o in a)if(s=a[o],"textContent"!==o&&"innerHTML"!==o||(t.children&&(t.children.length=0),s!==i[o]))if("value"===o){r._value=s;var p=null==s?"":String(s);r.value===p||r.composing||(r.value=p)}else r[o]=s}}function Ct(e){var t=zt(e.style);return e.staticStyle?c(e.staticStyle,t):t}function zt(e){return Array.isArray(e)?d(e):"string"==typeof e?Os(e):e}function Tt(e,t){var o,s={};if(t)for(var r=e;r.child;)r=r.child._vnode,r.data&&(o=Ct(r.data))&&c(s,o);(o=Ct(e.data))&&c(s,o);for(var i=e;i=i.parent;)i.data&&(o=Ct(i.data))&&c(s,o);return s}function St(e,t){var o=t.data,s=e.data;if(o.staticStyle||o.style||s.staticStyle||s.style){var r,i,a=t.elm,p=e.data.staticStyle,u=e.data.style||{},n=p||u,l=zt(t.data.style)||{};t.data.style=l.__ob__?c({},l):l;var h=Tt(t,!0);for(i in n)null==h[i]&&Ls(a,i,"");for(i in h)r=h[i],r!==n[i]&&Ls(a,i,null==r?"":r)}}function Et(e,t){if(t&&t.trim())if(e.classList)t.indexOf(" ")>-1?t.split(/\s+/).forEach(function(t){return e.classList.add(t)}):e.classList.add(t);else{var o=" "+e.getAttribute("class")+" ";o.indexOf(" "+t+" ")<0&&e.setAttribute("class",(o+t).trim())}}function Ot(e,t){if(t&&t.trim())if(e.classList)t.indexOf(" ")>-1?t.split(/\s+/).forEach(function(t){return e.classList.remove(t)}):e.classList.remove(t);else{for(var o=" "+e.getAttribute("class")+" ",s=" "+t+" ";o.indexOf(s)>=0;)o=o.replace(s," ");e.setAttribute("class",o.trim())}}function $t(e){Js(function(){Js(e)})}function Bt(e,t){(e._transitionClasses||(e._transitionClasses=[])).push(t),Et(e,t)}function Lt(e,t){e._transitionClasses&&i(e._transitionClasses,t),Ot(e,t)}function qt(e,t,o){var s=Zt(e,t),r=s.type,i=s.timeout,a=s.propCount;if(!r)return o();var p=r===Is?Qs:Vs,u=0,n=function(){e.removeEventListener(p,l),o()},l=function(t){t.target===e&&++u>=a&&n()};setTimeout(function(){u<a&&n()},i+1),e.addEventListener(p,l)}function Zt(e,t){var o,s=window.getComputedStyle(e),r=s[Us+"Delay"].split(", "),i=s[Us+"Duration"].split(", "),a=Mt(r,i),p=s[Rs+"Delay"].split(", "),u=s[Rs+"Duration"].split(", "),n=Mt(p,u),l=0,c=0;t===Is?a>0&&(o=Is,l=a,c=i.length):t===Ns?n>0&&(o=Ns,l=n,c=u.length):(l=Math.max(a,n),o=l>0?a>n?Is:Ns:null,c=o?o===Is?i.length:u.length:0);var h=o===Is&&Hs.test(s[Us+"Property"]);return{type:o,timeout:l,propCount:c,hasTransform:h}}function Mt(e,t){for(;e.length<t.length;)e=e.concat(e);return Math.max.apply(null,t.map(function(t,o){return Pt(t)+Pt(e[o]);
-}))}function Pt(e){return 1e3*Number(e.slice(0,-1))}function It(e){var t=e.elm;t._leaveCb&&(t._leaveCb.cancelled=!0,t._leaveCb());var o=Ut(e.data.transition);if(o&&!t._enterCb&&1===t.nodeType){for(var s=o.css,r=o.type,i=o.enterClass,a=o.enterActiveClass,p=o.appearClass,u=o.appearActiveClass,n=o.beforeEnter,l=o.enter,c=o.afterEnter,h=o.enterCancelled,m=o.beforeAppear,d=o.appear,v=o.afterAppear,g=o.appearCancelled,b=os,f=os.$vnode;f&&f.parent;)f=f.parent,b=f.context;var _=!b._isMounted||!e.isRootInsert;if(!_||d||""===d){var k=_?p:i,A=_?u:a,w=_?m||n:n,D=_&&"function"==typeof d?d:l,y=_?v||c:c,F=_?g||h:h,j=s!==!1&&!Fo,x=D&&(D._length||D.length)>1,C=t._enterCb=Qt(function(){j&&Lt(t,A),C.cancelled?(j&&Lt(t,k),F&&F(t)):y&&y(t),t._enterCb=null});e.data.show||ae(e.data.hook||(e.data.hook={}),"insert",function(){var o=t.parentNode,s=o&&o._pending&&o._pending[e.key];s&&s.context===e.context&&s.tag===e.tag&&s.elm._leaveCb&&s.elm._leaveCb(),D&&D(t,C)},"transition-insert"),w&&w(t),j&&(Bt(t,k),Bt(t,A),$t(function(){Lt(t,k),C.cancelled||x||qt(t,r,C)})),e.data.show&&D&&D(t,C),j||x||C()}}}function Nt(e,t){function o(){g.cancelled||(e.data.show||((s.parentNode._pending||(s.parentNode._pending={}))[e.key]=e),n&&n(s),d&&(Bt(s,p),Bt(s,u),$t(function(){Lt(s,p),g.cancelled||v||qt(s,a,g)})),l&&l(s,g),d||v||g())}var s=e.elm;s._enterCb&&(s._enterCb.cancelled=!0,s._enterCb());var r=Ut(e.data.transition);if(!r)return t();if(!s._leaveCb&&1===s.nodeType){var i=r.css,a=r.type,p=r.leaveClass,u=r.leaveActiveClass,n=r.beforeLeave,l=r.leave,c=r.afterLeave,h=r.leaveCancelled,m=r.delayLeave,d=i!==!1&&!Fo,v=l&&(l._length||l.length)>1,g=s._leaveCb=Qt(function(){s.parentNode&&s.parentNode._pending&&(s.parentNode._pending[e.key]=null),d&&Lt(s,u),g.cancelled?(d&&Lt(s,p),h&&h(s)):(t(),c&&c(s)),s._leaveCb=null});m?m(o):o()}}function Ut(e){if(e){if("object"==typeof e){var t={};return e.css!==!1&&c(t,Ws(e.name||"v")),c(t,e),t}return"string"==typeof e?Ws(e):void 0}}function Qt(e){var t=!1;return function(){t||(t=!0,e())}}function Rt(e,t){t.data.show||It(t)}function Vt(e,t,o){var s=t.value,r=e.multiple;if(!r||Array.isArray(s)){for(var i,a,p=0,u=e.options.length;p<u;p++)if(a=e.options[p],r)i=f(s,Ht(a))>-1,a.selected!==i&&(a.selected=i);else if(b(Ht(a),s))return void(e.selectedIndex!==p&&(e.selectedIndex=p));r||(e.selectedIndex=-1)}}function Jt(e,t){for(var o=0,s=t.length;o<s;o++)if(b(Ht(t[o]),e))return!1;return!0}function Ht(e){return"_value"in e?e._value:e.value}function Wt(e){e.target.composing=!0}function Gt(e){e.target.composing=!1,Kt(e.target,"input")}function Kt(e,t){var o=document.createEvent("HTMLEvents");o.initEvent(t,!0,!0),e.dispatchEvent(o)}function Xt(e){return!e.child||e.data&&e.data.transition?e:Xt(e.child._vnode)}function Yt(e){var t=e&&e.componentOptions;return t&&t.Ctor.options["abstract"]?Yt(me(t.children)):e}function eo(e){var t={},o=e.$options;for(var s in o.propsData)t[s]=e[s];var r=o._parentListeners;for(var i in r)t[co(i)]=r[i].fn;return t}function to(e,t){return/\d-keep-alive$/.test(t.tag)?e("keep-alive"):null}function oo(e){for(;e=e.parent;)if(e.data.transition)return!0}function so(e){e.elm._moveCb&&e.elm._moveCb(),e.elm._enterCb&&e.elm._enterCb()}function ro(e){e.data.newPos=e.elm.getBoundingClientRect()}function io(e){var t=e.data.pos,o=e.data.newPos,s=t.left-o.left,r=t.top-o.top;if(s||r){e.data.moved=!0;var i=e.elm.style;i.transform=i.WebkitTransform="translate("+s+"px,"+r+"px)",i.transitionDuration="0s"}}var ao,po,uo=r("slot,component",!0),no=Object.prototype.hasOwnProperty,lo=/-(\w)/g,co=u(function(e){return e.replace(lo,function(e,t){return t?t.toUpperCase():""})}),ho=u(function(e){return e.charAt(0).toUpperCase()+e.slice(1)}),mo=/([^-])([A-Z])/g,vo=u(function(e){return e.replace(mo,"$1-$2").replace(mo,"$1-$2").toLowerCase()}),go=Object.prototype.toString,bo="[object Object]",fo=function(){return!1},_o={optionMergeStrategies:Object.create(null),silent:!1,devtools:!1,errorHandler:null,ignoredElements:null,keyCodes:Object.create(null),isReservedTag:fo,isUnknownElement:fo,getTagNamespace:v,mustUseProp:fo,_assetTypes:["component","directive","filter"],_lifecycleHooks:["beforeCreate","created","beforeMount","mounted","beforeUpdate","updated","beforeDestroy","destroyed","activated","deactivated"],_maxUpdateCount:100},ko=/[^\w.$]/,Ao="__proto__"in{},wo="undefined"!=typeof window,Do=wo&&window.navigator.userAgent.toLowerCase(),yo=Do&&/msie|trident/.test(Do),Fo=Do&&Do.indexOf("msie 9.0")>0,jo=Do&&Do.indexOf("edge/")>0,xo=Do&&Do.indexOf("android")>0,Co=Do&&/iphone|ipad|ipod|ios/.test(Do),zo=function(){return void 0===ao&&(ao=!wo&&"undefined"!=typeof t&&"server"===t.process.env.VUE_ENV),ao},To=wo&&window.__VUE_DEVTOOLS_GLOBAL_HOOK__,So=function(){function e(){s=!1;var e=o.slice(0);o.length=0;for(var t=0;t<e.length;t++)e[t]()}var t,o=[],s=!1;if("undefined"!=typeof Promise&&w(Promise)){var r=Promise.resolve(),i=function(e){console.error(e)};t=function(){r.then(e)["catch"](i),Co&&setTimeout(v)}}else if("undefined"==typeof MutationObserver||!w(MutationObserver)&&"[object MutationObserverConstructor]"!==MutationObserver.toString())t=function(){setTimeout(e,0)};else{var a=1,p=new MutationObserver(e),u=document.createTextNode(String(a));p.observe(u,{characterData:!0}),t=function(){a=(a+1)%2,u.data=String(a)}}return function(e,r){var i;if(o.push(function(){e&&e.call(r),i&&i(r)}),s||(s=!0,t()),!e&&"undefined"!=typeof Promise)return new Promise(function(e){i=e})}}();po="undefined"!=typeof Set&&w(Set)?Set:function(){function e(){this.set=Object.create(null)}return e.prototype.has=function(e){return void 0!==this.set[e]},e.prototype.add=function(e){this.set[e]=1},e.prototype.clear=function(){this.set=Object.create(null)},e}();var Eo,Oo=v,$o=0,Bo=function(){this.id=$o++,this.subs=[]};Bo.prototype.addSub=function(e){this.subs.push(e)},Bo.prototype.removeSub=function(e){i(this.subs,e)},Bo.prototype.depend=function(){Bo.target&&Bo.target.addDep(this)},Bo.prototype.notify=function(){for(var e=this.subs.slice(),t=0,o=e.length;t<o;t++)e[t].update()},Bo.target=null;var Lo=[],qo=Array.prototype,Zo=Object.create(qo);["push","pop","shift","unshift","splice","sort","reverse"].forEach(function(e){var t=qo[e];k(Zo,e,function(){for(var o=arguments,s=arguments.length,r=new Array(s);s--;)r[s]=o[s];var i,a=t.apply(this,r),p=this.__ob__;switch(e){case"push":i=r;break;case"unshift":i=r;break;case"splice":i=r.slice(2)}return i&&p.observeArray(i),p.dep.notify(),a})});var Mo=Object.getOwnPropertyNames(Zo),Po={shouldConvert:!0,isSettingProps:!1},Io=function(e){if(this.value=e,this.dep=new Bo,this.vmCount=0,k(e,"__ob__",this),Array.isArray(e)){var t=Ao?F:j;t(e,Zo,Mo),this.observeArray(e)}else this.walk(e)};Io.prototype.walk=function(e){for(var t=Object.keys(e),o=0;o<t.length;o++)C(e,t[o],e[t[o]])},Io.prototype.observeArray=function(e){for(var t=0,o=e.length;t<o;t++)x(e[t])};var No=_o.optionMergeStrategies;No.data=function(e,t,o){return o?e||t?function(){var s="function"==typeof t?t.call(o):t,r="function"==typeof e?e.call(o):void 0;return s?E(s,r):r}:void 0:t?"function"!=typeof t?e:e?function(){return E(t.call(this),e.call(this))}:t:e},_o._lifecycleHooks.forEach(function(e){No[e]=O}),_o._assetTypes.forEach(function(e){No[e+"s"]=$}),No.watch=function(e,t){if(!t)return e;if(!e)return t;var o={};c(o,e);for(var s in t){var r=o[s],i=t[s];r&&!Array.isArray(r)&&(r=[r]),o[s]=r?r.concat(i):[i]}return o},No.props=No.methods=No.computed=function(e,t){if(!t)return e;if(!e)return t;var o=Object.create(null);return c(o,e),c(o,t),o};var Uo=function(e,t){return void 0===t?e:t},Qo=Object.freeze({defineReactive:C,_toString:o,toNumber:s,makeMap:r,isBuiltInTag:uo,remove:i,hasOwn:a,isPrimitive:p,cached:u,camelize:co,capitalize:ho,hyphenate:vo,bind:n,toArray:l,extend:c,isObject:h,isPlainObject:m,toObject:d,noop:v,no:fo,genStaticKeys:g,looseEqual:b,looseIndexOf:f,isReserved:_,def:k,parsePath:A,hasProto:Ao,inBrowser:wo,UA:Do,isIE:yo,isIE9:Fo,isEdge:jo,isAndroid:xo,isIOS:Co,isServerRendering:zo,devtools:To,nextTick:So,get _Set(){return po},mergeOptions:q,resolveAsset:Z,get warn(){return Oo},get formatComponentName(){return Eo},validateProp:M}),Ro=[],Vo={},Jo=!1,Ho=!1,Wo=0,Go=0,Ko=function(e,t,o,s){void 0===s&&(s={}),this.vm=e,e._watchers.push(this),this.deep=!!s.deep,this.user=!!s.user,this.lazy=!!s.lazy,this.sync=!!s.sync,this.expression=t.toString(),this.cb=o,this.id=++Go,this.active=!0,this.dirty=this.lazy,this.deps=[],this.newDeps=[],this.depIds=new po,this.newDepIds=new po,"function"==typeof t?this.getter=t:(this.getter=A(t),this.getter||(this.getter=function(){})),this.value=this.lazy?void 0:this.get()};Ko.prototype.get=function(){D(this);var e=this.getter.call(this.vm,this.vm);return this.deep&&V(e),y(),this.cleanupDeps(),e},Ko.prototype.addDep=function(e){var t=e.id;this.newDepIds.has(t)||(this.newDepIds.add(t),this.newDeps.push(e),this.depIds.has(t)||e.addSub(this))},Ko.prototype.cleanupDeps=function(){for(var e=this,t=this.deps.length;t--;){var o=e.deps[t];e.newDepIds.has(o.id)||o.removeSub(e)}var s=this.depIds;this.depIds=this.newDepIds,this.newDepIds=s,this.newDepIds.clear(),s=this.deps,this.deps=this.newDeps,this.newDeps=s,this.newDeps.length=0},Ko.prototype.update=function(){this.lazy?this.dirty=!0:this.sync?this.run():R(this)},Ko.prototype.run=function(){if(this.active){var e=this.get();if(e!==this.value||h(e)||this.deep){var t=this.value;if(this.value=e,this.user)try{this.cb.call(this.vm,e,t)}catch(o){if(!_o.errorHandler)throw o;_o.errorHandler.call(null,o,this.vm)}else this.cb.call(this.vm,e,t)}}},Ko.prototype.evaluate=function(){this.value=this.get(),this.dirty=!1},Ko.prototype.depend=function(){for(var e=this,t=this.deps.length;t--;)e.deps[t].depend()},Ko.prototype.teardown=function(){var e=this;if(this.active){this.vm._isBeingDestroyed||this.vm._vForRemoving||i(this.vm._watchers,this);for(var t=this.deps.length;t--;)e.deps[t].removeSub(e);this.active=!1}};var Xo=new po,Yo={enumerable:!0,configurable:!0,get:v,set:v},es=function(e,t,o,s,r,i,a,p){this.tag=e,this.data=t,this.children=o,this.text=s,this.elm=r,this.ns=i,this.context=a,this.functionalContext=void 0,this.key=t&&t.key,this.componentOptions=p,this.child=void 0,this.parent=void 0,this.raw=!1,this.isStatic=!1,this.isRootInsert=!0,this.isComment=!1,this.isCloned=!1,this.isOnce=!1},ts=function(){var e=new es;return e.text="",e.isComment=!0,e},os=null,ss={init:ke,prepatch:Ae,insert:we,destroy:De},rs=Object.keys(ss),is=0;Le(Me),oe(Me),Be(Me),ve(Me),Ee(Me);var as=[String,RegExp],ps={name:"keep-alive","abstract":!0,props:{include:as,exclude:as},created:function(){this.cache=Object.create(null)},render:function(){var e=me(this.$slots["default"]);if(e&&e.componentOptions){var t=e.componentOptions,o=t.Ctor.options.name||t.tag;if(o&&(this.include&&!Qe(this.include,o)||this.exclude&&Qe(this.exclude,o)))return e;var s=null==e.key?t.Ctor.cid+(t.tag?"::"+t.tag:""):e.key;this.cache[s]?e.child=this.cache[s].child:this.cache[s]=e,e.data.keepAlive=!0}return e},destroyed:function(){var e=this;for(var t in this.cache){var o=e.cache[t];ge(o.child,"deactivated"),o.child.$destroy()}}},us={KeepAlive:ps};Re(Me),Object.defineProperty(Me.prototype,"$isServer",{get:zo}),Me.version="2.1.4";var ns,ls=function(e,t){return"value"===t&&("input"===e||"textarea"===e||"option"===e)||"selected"===t&&"option"===e||"checked"===t&&"input"===e||"muted"===t&&"video"===e},cs=r("contenteditable,draggable,spellcheck"),hs=r("allowfullscreen,async,autofocus,autoplay,checked,compact,controls,declare,default,defaultchecked,defaultmuted,defaultselected,defer,disabled,enabled,formnovalidate,hidden,indeterminate,inert,ismap,itemscope,loop,multiple,muted,nohref,noresize,noshade,novalidate,nowrap,open,pauseonexit,readonly,required,reversed,scoped,seamless,selected,sortable,translate,truespeed,typemustmatch,visible"),ms="http://www.w3.org/1999/xlink",ds=function(e){return":"===e.charAt(5)&&"xlink"===e.slice(0,5)},vs=function(e){return ds(e)?e.slice(6,e.length):""},gs=function(e){return null==e||e===!1},bs={svg:"http://www.w3.org/2000/svg",math:"http://www.w3.org/1998/Math/MathML",xhtml:"http://www.w3.org/1999/xhtml"},fs=r("html,body,base,head,link,meta,style,title,address,article,aside,footer,header,h1,h2,h3,h4,h5,h6,hgroup,nav,section,div,dd,dl,dt,figcaption,figure,hr,img,li,main,ol,p,pre,ul,a,b,abbr,bdi,bdo,br,cite,code,data,dfn,em,i,kbd,mark,q,rp,rt,rtc,ruby,s,samp,small,span,strong,sub,sup,time,u,var,wbr,area,audio,map,track,video,embed,object,param,source,canvas,script,noscript,del,ins,caption,col,colgroup,table,thead,tbody,td,th,tr,button,datalist,fieldset,form,input,label,legend,meter,optgroup,option,output,progress,select,textarea,details,dialog,menu,menuitem,summary,content,element,shadow,template"),_s=r("svg,animate,circle,clippath,cursor,defs,desc,ellipse,filter,font,font-face,g,glyph,image,line,marker,mask,missing-glyph,path,pattern,polygon,polyline,rect,switch,symbol,text,textpath,tspan,use,view",!0),ks=function(e){return fs(e)||_s(e)},As=Object.create(null),ws=Object.freeze({createElement:et,createElementNS:tt,createTextNode:ot,createComment:st,insertBefore:rt,removeChild:it,appendChild:at,parentNode:pt,nextSibling:ut,tagName:nt,setTextContent:lt,childNodes:ct,setAttribute:ht}),Ds={create:function(e,t){mt(t)},update:function(e,t){e.data.ref!==t.data.ref&&(mt(e,!0),mt(t))},destroy:function(e){mt(e,!0)}},ys=new es("",{},[]),Fs=["create","activate","update","remove","destroy"],js={create:_t,update:_t,destroy:function(e){_t(e,ys)}},xs=Object.create(null),Cs=[Ds,js],zs={create:Dt,update:Dt},Ts={create:Ft,update:Ft},Ss={create:jt,update:jt},Es={create:xt,update:xt},Os=u(function(e){var t={},o=/;(?![^(]*\))/g,s=/:(.+)/;return e.split(o).forEach(function(e){if(e){var o=e.split(s);o.length>1&&(t[o[0].trim()]=o[1].trim())}}),t}),$s=/^--/,Bs=/\s*!important$/,Ls=function(e,t,o){$s.test(t)?e.style.setProperty(t,o):Bs.test(o)?e.style.setProperty(t,o.replace(Bs,""),"important"):e.style[Zs(t)]=o},qs=["Webkit","Moz","ms"],Zs=u(function(e){if(ns=ns||document.createElement("div"),e=co(e),"filter"!==e&&e in ns.style)return e;for(var t=e.charAt(0).toUpperCase()+e.slice(1),o=0;o<qs.length;o++){var s=qs[o]+t;if(s in ns.style)return s}}),Ms={create:St,update:St},Ps=wo&&!Fo,Is="transition",Ns="animation",Us="transition",Qs="transitionend",Rs="animation",Vs="animationend";Ps&&(void 0===window.ontransitionend&&void 0!==window.onwebkittransitionend&&(Us="WebkitTransition",Qs="webkitTransitionEnd"),void 0===window.onanimationend&&void 0!==window.onwebkitanimationend&&(Rs="WebkitAnimation",Vs="webkitAnimationEnd"));var Js=wo&&window.requestAnimationFrame||setTimeout,Hs=/\b(transform|all)(,|$)/,Ws=u(function(e){return{enterClass:e+"-enter",leaveClass:e+"-leave",appearClass:e+"-enter",enterActiveClass:e+"-enter-active",leaveActiveClass:e+"-leave-active",appearActiveClass:e+"-enter-active"}}),Gs=wo?{create:Rt,activate:Rt,remove:function(e,t){e.data.show?t():Nt(e,t)}}:{},Ks=[zs,Ts,Ss,Es,Ms,Gs],Xs=Ks.concat(Cs),Ys=ft({nodeOps:ws,modules:Xs});Fo&&document.addEventListener("selectionchange",function(){var e=document.activeElement;e&&e.vmodel&&Kt(e,"input")});var er={inserted:function(e,t,o){if("select"===o.tag){var s=function(){Vt(e,t,o.context)};s(),(yo||jo)&&setTimeout(s,0)}else"textarea"!==o.tag&&"text"!==e.type||t.modifiers.lazy||(xo||(e.addEventListener("compositionstart",Wt),e.addEventListener("compositionend",Gt)),Fo&&(e.vmodel=!0))},componentUpdated:function(e,t,o){if("select"===o.tag){Vt(e,t,o.context);var s=e.multiple?t.value.some(function(t){return Jt(t,e.options)}):t.value!==t.oldValue&&Jt(t.value,e.options);s&&Kt(e,"change")}}},tr={bind:function(e,t,o){var s=t.value;o=Xt(o);var r=o.data&&o.data.transition;s&&r&&!Fo&&It(o);var i="none"===e.style.display?"":e.style.display;e.style.display=s?i:"none",e.__vOriginalDisplay=i},update:function(e,t,o){var s=t.value,r=t.oldValue;if(s!==r){o=Xt(o);var i=o.data&&o.data.transition;i&&!Fo?s?(It(o),e.style.display=e.__vOriginalDisplay):Nt(o,function(){e.style.display="none"}):e.style.display=s?e.__vOriginalDisplay:"none"}}},or={model:er,show:tr},sr={name:String,appear:Boolean,css:Boolean,mode:String,type:String,enterClass:String,leaveClass:String,enterActiveClass:String,leaveActiveClass:String,appearClass:String,appearActiveClass:String},rr={name:"transition",props:sr,"abstract":!0,render:function(e){var t=this,o=this.$slots["default"];if(o&&(o=o.filter(function(e){return e.tag}),o.length)){var s=this.mode,r=o[0];if(oo(this.$vnode))return r;var i=Yt(r);if(!i)return r;if(this._leaving)return to(e,r);var a=i.key=null==i.key||i.isStatic?"__v"+(i.tag+this._uid)+"__":i.key,p=(i.data||(i.data={})).transition=eo(this),u=this._vnode,n=Yt(u);if(i.data.directives&&i.data.directives.some(function(e){return"show"===e.name})&&(i.data.show=!0),n&&n.data&&n.key!==a){var l=n.data.transition=c({},p);if("out-in"===s)return this._leaving=!0,ae(l,"afterLeave",function(){t._leaving=!1,t.$forceUpdate()},a),to(e,r);if("in-out"===s){var h,m=function(){h()};ae(p,"afterEnter",m,a),ae(p,"enterCancelled",m,a),ae(l,"delayLeave",function(e){h=e},a)}}return r}}},ir=c({tag:String,moveClass:String},sr);delete ir.mode;var ar={props:ir,render:function(e){for(var t=this.tag||this.$vnode.data.tag||"span",o=Object.create(null),s=this.prevChildren=this.children,r=this.$slots["default"]||[],i=this.children=[],a=eo(this),p=0;p<r.length;p++){var u=r[p];if(u.tag)if(null!=u.key&&0!==String(u.key).indexOf("__vlist"))i.push(u),o[u.key]=u,(u.data||(u.data={})).transition=a;else;}if(s){for(var n=[],l=[],c=0;c<s.length;c++){var h=s[c];h.data.transition=a,h.data.pos=h.elm.getBoundingClientRect(),o[h.key]?n.push(h):l.push(h)}this.kept=e(t,null,n),this.removed=l}return e(t,null,i)},beforeUpdate:function(){this.__patch__(this._vnode,this.kept,!1,!0),this._vnode=this.kept},updated:function(){var e=this.prevChildren,t=this.moveClass||(this.name||"v")+"-move";if(e.length&&this.hasMove(e[0].elm,t)){e.forEach(so),e.forEach(ro),e.forEach(io);document.body.offsetHeight;e.forEach(function(e){if(e.data.moved){var o=e.elm,s=o.style;Bt(o,t),s.transform=s.WebkitTransform=s.transitionDuration="",o.addEventListener(Qs,o._moveCb=function r(e){e&&!/transform$/.test(e.propertyName)||(o.removeEventListener(Qs,r),o._moveCb=null,Lt(o,t))})}})}},methods:{hasMove:function(e,t){if(!Ps)return!1;if(null!=this._hasMove)return this._hasMove;Bt(e,t);var o=Zt(e);return Lt(e,t),this._hasMove=o.hasTransform}}},pr={Transition:rr,TransitionGroup:ar};Me.config.isUnknownElement=Xe,Me.config.isReservedTag=ks,Me.config.getTagNamespace=Ke,Me.config.mustUseProp=ls,c(Me.options.directives,or),c(Me.options.components,pr),Me.prototype.__patch__=wo?Ys:v,Me.prototype.$mount=function(e,t){return e=e&&wo?Ye(e):void 0,this._mount(e,t)},setTimeout(function(){_o.devtools&&To&&To.emit("init",Me)},0),e.exports=Me}).call(t,o(27))},function(e,t,o){"use strict";function s(e){if(Array.isArray(e)){for(var t=0,o=Array(e.length);t<e.length;t++)o[t]=e[t];return o}return Array.from(e)}var r,i,a=o(22),p=o.n(a),u=[],n={all:[]},l={all:[],Viewer:[],"Design Automation":[],"Model Derivative":[],"Data Management":[]},c=!0,h=!1,m=void 0;try{for(var d,v=p.a[Symbol.iterator]();!(c=(d=v.next()).done);c=!0){var g=d.value;u.push(g);var b=g.language;null!==b&&(n[b]||(n[b]=[]),n[b].push(g));var f=/[vV]iewer/g,_=/[dD]esign.[aA]utomation/g,k=/[mM]odel.[dD]erivative/g,A=/[dD]ata.[mM]anagement/g;g.name.match(f)&&l.Viewer.push(g),g.name.match(_)&&l["Design Automation"].push(g),g.name.match(k)&&l["Model Derivative"].push(g),g.name.match(A)&&l["Data Management"].push(g)}}catch(w){h=!0,m=w}finally{try{!c&&v["return"]&&v["return"]()}finally{if(h)throw m}}(r=n.all).push.apply(r,u),(i=l.all).push.apply(i,u),t["default"]={data:function(){return{repos:u,languages:n,apis:l}},methods:{sortByPopularity:function(){u.sort(function(e,t){return t.stargazers_count-e.stargazers_count})},sortByAlphabetical:function(){u.sort(function(e,t){return e.name.localeCompare(t.name)})},sortByLastUpdated:function(){u.sort(function(e,t){return t.updated_at.localeCompare(e.updated_at)})},filterByLanguage:function(e){u.splice(0,u.length),u.push.apply(u,s(n[e]))},filterByAPIUsed:function(e){u.splice(0,u.length),u.push.apply(u,s(l[e]))}}}},function(e,t,o){t=e.exports=o(0)(),t.push([e.i,"\n* {\n  margin: 0;\n  padding: 0;\n}\nbody {\n  background: #e2e1e0;\n  text-align: center;\n  height: 100%;\n}\n.repo-card {\n  color: #404040;\n  background: #fff;\n  border-radius: 2px;\n  display: inline-block;\n  height: 12rem;\n  margin: 1rem;\n  padding: 1rem;\n  position: relative;\n  width: 300px;\n  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);\n  transition: all 0.3s cubic-bezier(.25,.8,.25,1);\n  vertical-align: top;\n}\n.repo-card:hover {\n  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);\n}\nh3 {\n  margin-bottom: 0.5rem;\n}\n",""])},function(e,t,o){t=e.exports=o(0)(),t.push([e.i,"/*!\n *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome\n *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)\n */@font-face{font-family:'FontAwesome';src:url("+o(10)+");src:url("+o(9)+"?#iefix&v=4.7.0) format('embedded-opentype'),url("+o(12)+") format('woff2'),url("+o(13)+") format('woff'),url("+o(11)+") format('truetype'),url("+o(8)+'#fontawesomeregular) format(\'svg\');font-weight:normal;font-style:normal}.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-fw{width:1.28571429em;text-align:center}.fa-ul{padding-left:0;margin-left:2.14285714em;list-style-type:none}.fa-ul>li{position:relative}.fa-li{position:absolute;left:-2.14285714em;width:2.14285714em;top:.14285714em;text-align:center}.fa-li.fa-lg{left:-1.85714286em}.fa-border{padding:.2em .25em .15em;border:solid .08em #eee;border-radius:.1em}.fa-pull-left{float:left}.fa-pull-right{float:right}.fa.fa-pull-left{margin-right:.3em}.fa.fa-pull-right{margin-left:.3em}.pull-right{float:right}.pull-left{float:left}.fa.pull-left{margin-right:.3em}.fa.pull-right{margin-left:.3em}.fa-spin{-webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear}.fa-pulse{-webkit-animation:fa-spin 1s infinite steps(8);animation:fa-spin 1s infinite steps(8)}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}.fa-rotate-90{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";-webkit-transform:rotate(270deg);-ms-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";-webkit-transform:scale(-1, 1);-ms-transform:scale(-1, 1);transform:scale(-1, 1)}.fa-flip-vertical{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";-webkit-transform:scale(1, -1);-ms-transform:scale(1, -1);transform:scale(1, -1)}:root .fa-rotate-90,:root .fa-rotate-180,:root .fa-rotate-270,:root .fa-flip-horizontal,:root .fa-flip-vertical{filter:none}.fa-stack{position:relative;display:inline-block;width:2em;height:2em;line-height:2em;vertical-align:middle}.fa-stack-1x,.fa-stack-2x{position:absolute;left:0;width:100%;text-align:center}.fa-stack-1x{line-height:inherit}.fa-stack-2x{font-size:2em}.fa-inverse{color:#fff}.fa-glass:before{content:"\\F000"}.fa-music:before{content:"\\F001"}.fa-search:before{content:"\\F002"}.fa-envelope-o:before{content:"\\F003"}.fa-heart:before{content:"\\F004"}.fa-star:before{content:"\\F005"}.fa-star-o:before{content:"\\F006"}.fa-user:before{content:"\\F007"}.fa-film:before{content:"\\F008"}.fa-th-large:before{content:"\\F009"}.fa-th:before{content:"\\F00A"}.fa-th-list:before{content:"\\F00B"}.fa-check:before{content:"\\F00C"}.fa-remove:before,.fa-close:before,.fa-times:before{content:"\\F00D"}.fa-search-plus:before{content:"\\F00E"}.fa-search-minus:before{content:"\\F010"}.fa-power-off:before{content:"\\F011"}.fa-signal:before{content:"\\F012"}.fa-gear:before,.fa-cog:before{content:"\\F013"}.fa-trash-o:before{content:"\\F014"}.fa-home:before{content:"\\F015"}.fa-file-o:before{content:"\\F016"}.fa-clock-o:before{content:"\\F017"}.fa-road:before{content:"\\F018"}.fa-download:before{content:"\\F019"}.fa-arrow-circle-o-down:before{content:"\\F01A"}.fa-arrow-circle-o-up:before{content:"\\F01B"}.fa-inbox:before{content:"\\F01C"}.fa-play-circle-o:before{content:"\\F01D"}.fa-rotate-right:before,.fa-repeat:before{content:"\\F01E"}.fa-refresh:before{content:"\\F021"}.fa-list-alt:before{content:"\\F022"}.fa-lock:before{content:"\\F023"}.fa-flag:before{content:"\\F024"}.fa-headphones:before{content:"\\F025"}.fa-volume-off:before{content:"\\F026"}.fa-volume-down:before{content:"\\F027"}.fa-volume-up:before{content:"\\F028"}.fa-qrcode:before{content:"\\F029"}.fa-barcode:before{content:"\\F02A"}.fa-tag:before{content:"\\F02B"}.fa-tags:before{content:"\\F02C"}.fa-book:before{content:"\\F02D"}.fa-bookmark:before{content:"\\F02E"}.fa-print:before{content:"\\F02F"}.fa-camera:before{content:"\\F030"}.fa-font:before{content:"\\F031"}.fa-bold:before{content:"\\F032"}.fa-italic:before{content:"\\F033"}.fa-text-height:before{content:"\\F034"}.fa-text-width:before{content:"\\F035"}.fa-align-left:before{content:"\\F036"}.fa-align-center:before{content:"\\F037"}.fa-align-right:before{content:"\\F038"}.fa-align-justify:before{content:"\\F039"}.fa-list:before{content:"\\F03A"}.fa-dedent:before,.fa-outdent:before{content:"\\F03B"}.fa-indent:before{content:"\\F03C"}.fa-video-camera:before{content:"\\F03D"}.fa-photo:before,.fa-image:before,.fa-picture-o:before{content:"\\F03E"}.fa-pencil:before{content:"\\F040"}.fa-map-marker:before{content:"\\F041"}.fa-adjust:before{content:"\\F042"}.fa-tint:before{content:"\\F043"}.fa-edit:before,.fa-pencil-square-o:before{content:"\\F044"}.fa-share-square-o:before{content:"\\F045"}.fa-check-square-o:before{content:"\\F046"}.fa-arrows:before{content:"\\F047"}.fa-step-backward:before{content:"\\F048"}.fa-fast-backward:before{content:"\\F049"}.fa-backward:before{content:"\\F04A"}.fa-play:before{content:"\\F04B"}.fa-pause:before{content:"\\F04C"}.fa-stop:before{content:"\\F04D"}.fa-forward:before{content:"\\F04E"}.fa-fast-forward:before{content:"\\F050"}.fa-step-forward:before{content:"\\F051"}.fa-eject:before{content:"\\F052"}.fa-chevron-left:before{content:"\\F053"}.fa-chevron-right:before{content:"\\F054"}.fa-plus-circle:before{content:"\\F055"}.fa-minus-circle:before{content:"\\F056"}.fa-times-circle:before{content:"\\F057"}.fa-check-circle:before{content:"\\F058"}.fa-question-circle:before{content:"\\F059"}.fa-info-circle:before{content:"\\F05A"}.fa-crosshairs:before{content:"\\F05B"}.fa-times-circle-o:before{content:"\\F05C"}.fa-check-circle-o:before{content:"\\F05D"}.fa-ban:before{content:"\\F05E"}.fa-arrow-left:before{content:"\\F060"}.fa-arrow-right:before{content:"\\F061"}.fa-arrow-up:before{content:"\\F062"}.fa-arrow-down:before{content:"\\F063"}.fa-mail-forward:before,.fa-share:before{content:"\\F064"}.fa-expand:before{content:"\\F065"}.fa-compress:before{content:"\\F066"}.fa-plus:before{content:"\\F067"}.fa-minus:before{content:"\\F068"}.fa-asterisk:before{content:"\\F069"}.fa-exclamation-circle:before{content:"\\F06A"}.fa-gift:before{content:"\\F06B"}.fa-leaf:before{content:"\\F06C"}.fa-fire:before{content:"\\F06D"}.fa-eye:before{content:"\\F06E"}.fa-eye-slash:before{content:"\\F070"}.fa-warning:before,.fa-exclamation-triangle:before{content:"\\F071"}.fa-plane:before{content:"\\F072"}.fa-calendar:before{content:"\\F073"}.fa-random:before{content:"\\F074"}.fa-comment:before{content:"\\F075"}.fa-magnet:before{content:"\\F076"}.fa-chevron-up:before{content:"\\F077"}.fa-chevron-down:before{content:"\\F078"}.fa-retweet:before{content:"\\F079"}.fa-shopping-cart:before{content:"\\F07A"}.fa-folder:before{content:"\\F07B"}.fa-folder-open:before{content:"\\F07C"}.fa-arrows-v:before{content:"\\F07D"}.fa-arrows-h:before{content:"\\F07E"}.fa-bar-chart-o:before,.fa-bar-chart:before{content:"\\F080"}.fa-twitter-square:before{content:"\\F081"}.fa-facebook-square:before{content:"\\F082"}.fa-camera-retro:before{content:"\\F083"}.fa-key:before{content:"\\F084"}.fa-gears:before,.fa-cogs:before{content:"\\F085"}.fa-comments:before{content:"\\F086"}.fa-thumbs-o-up:before{content:"\\F087"}.fa-thumbs-o-down:before{content:"\\F088"}.fa-star-half:before{content:"\\F089"}.fa-heart-o:before{content:"\\F08A"}.fa-sign-out:before{content:"\\F08B"}.fa-linkedin-square:before{content:"\\F08C"}.fa-thumb-tack:before{content:"\\F08D"}.fa-external-link:before{content:"\\F08E"}.fa-sign-in:before{content:"\\F090"}.fa-trophy:before{content:"\\F091"}.fa-github-square:before{content:"\\F092"}.fa-upload:before{content:"\\F093"}.fa-lemon-o:before{content:"\\F094"}.fa-phone:before{content:"\\F095"}.fa-square-o:before{content:"\\F096"}.fa-bookmark-o:before{content:"\\F097"}.fa-phone-square:before{content:"\\F098"}.fa-twitter:before{content:"\\F099"}.fa-facebook-f:before,.fa-facebook:before{content:"\\F09A"}.fa-github:before{content:"\\F09B"}.fa-unlock:before{content:"\\F09C"}.fa-credit-card:before{content:"\\F09D"}.fa-feed:before,.fa-rss:before{content:"\\F09E"}.fa-hdd-o:before{content:"\\F0A0"}.fa-bullhorn:before{content:"\\F0A1"}.fa-bell:before{content:"\\F0F3"}.fa-certificate:before{content:"\\F0A3"}.fa-hand-o-right:before{content:"\\F0A4"}.fa-hand-o-left:before{content:"\\F0A5"}.fa-hand-o-up:before{content:"\\F0A6"}.fa-hand-o-down:before{content:"\\F0A7"}.fa-arrow-circle-left:before{content:"\\F0A8"}.fa-arrow-circle-right:before{content:"\\F0A9"}.fa-arrow-circle-up:before{content:"\\F0AA"}.fa-arrow-circle-down:before{content:"\\F0AB"}.fa-globe:before{content:"\\F0AC"}.fa-wrench:before{content:"\\F0AD"}.fa-tasks:before{content:"\\F0AE"}.fa-filter:before{content:"\\F0B0"}.fa-briefcase:before{content:"\\F0B1"}.fa-arrows-alt:before{content:"\\F0B2"}.fa-group:before,.fa-users:before{content:"\\F0C0"}.fa-chain:before,.fa-link:before{content:"\\F0C1"}.fa-cloud:before{content:"\\F0C2"}.fa-flask:before{content:"\\F0C3"}.fa-cut:before,.fa-scissors:before{content:"\\F0C4"}.fa-copy:before,.fa-files-o:before{content:"\\F0C5"}.fa-paperclip:before{content:"\\F0C6"}.fa-save:before,.fa-floppy-o:before{content:"\\F0C7"}.fa-square:before{content:"\\F0C8"}.fa-navicon:before,.fa-reorder:before,.fa-bars:before{content:"\\F0C9"}.fa-list-ul:before{content:"\\F0CA"}.fa-list-ol:before{content:"\\F0CB"}.fa-strikethrough:before{content:"\\F0CC"}.fa-underline:before{content:"\\F0CD"}.fa-table:before{content:"\\F0CE"}.fa-magic:before{content:"\\F0D0"}.fa-truck:before{content:"\\F0D1"}.fa-pinterest:before{content:"\\F0D2"}.fa-pinterest-square:before{content:"\\F0D3"}.fa-google-plus-square:before{content:"\\F0D4"}.fa-google-plus:before{content:"\\F0D5"}.fa-money:before{content:"\\F0D6"}.fa-caret-down:before{content:"\\F0D7"}.fa-caret-up:before{content:"\\F0D8"}.fa-caret-left:before{content:"\\F0D9"}.fa-caret-right:before{content:"\\F0DA"}.fa-columns:before{content:"\\F0DB"}.fa-unsorted:before,.fa-sort:before{content:"\\F0DC"}.fa-sort-down:before,.fa-sort-desc:before{content:"\\F0DD"}.fa-sort-up:before,.fa-sort-asc:before{content:"\\F0DE"}.fa-envelope:before{content:"\\F0E0"}.fa-linkedin:before{content:"\\F0E1"}.fa-rotate-left:before,.fa-undo:before{content:"\\F0E2"}.fa-legal:before,.fa-gavel:before{content:"\\F0E3"}.fa-dashboard:before,.fa-tachometer:before{content:"\\F0E4"}.fa-comment-o:before{content:"\\F0E5"}.fa-comments-o:before{content:"\\F0E6"}.fa-flash:before,.fa-bolt:before{content:"\\F0E7"}.fa-sitemap:before{content:"\\F0E8"}.fa-umbrella:before{content:"\\F0E9"}.fa-paste:before,.fa-clipboard:before{content:"\\F0EA"}.fa-lightbulb-o:before{content:"\\F0EB"}.fa-exchange:before{content:"\\F0EC"}.fa-cloud-download:before{content:"\\F0ED"}.fa-cloud-upload:before{content:"\\F0EE"}.fa-user-md:before{content:"\\F0F0"}.fa-stethoscope:before{content:"\\F0F1"}.fa-suitcase:before{content:"\\F0F2"}.fa-bell-o:before{content:"\\F0A2"}.fa-coffee:before{content:"\\F0F4"}.fa-cutlery:before{content:"\\F0F5"}.fa-file-text-o:before{content:"\\F0F6"}.fa-building-o:before{content:"\\F0F7"}.fa-hospital-o:before{content:"\\F0F8"}.fa-ambulance:before{content:"\\F0F9"}.fa-medkit:before{content:"\\F0FA"}.fa-fighter-jet:before{content:"\\F0FB"}.fa-beer:before{content:"\\F0FC"}.fa-h-square:before{content:"\\F0FD"}.fa-plus-square:before{content:"\\F0FE"}.fa-angle-double-left:before{content:"\\F100"}.fa-angle-double-right:before{content:"\\F101"}.fa-angle-double-up:before{content:"\\F102"}.fa-angle-double-down:before{content:"\\F103"}.fa-angle-left:before{content:"\\F104"}.fa-angle-right:before{content:"\\F105"}.fa-angle-up:before{content:"\\F106"}.fa-angle-down:before{content:"\\F107"}.fa-desktop:before{content:"\\F108"}.fa-laptop:before{content:"\\F109"}.fa-tablet:before{content:"\\F10A"}.fa-mobile-phone:before,.fa-mobile:before{content:"\\F10B"}.fa-circle-o:before{content:"\\F10C"}.fa-quote-left:before{content:"\\F10D"}.fa-quote-right:before{content:"\\F10E"}.fa-spinner:before{content:"\\F110"}.fa-circle:before{content:"\\F111"}.fa-mail-reply:before,.fa-reply:before{content:"\\F112"}.fa-github-alt:before{content:"\\F113"}.fa-folder-o:before{content:"\\F114"}.fa-folder-open-o:before{content:"\\F115"}.fa-smile-o:before{content:"\\F118"}.fa-frown-o:before{content:"\\F119"}.fa-meh-o:before{content:"\\F11A"}.fa-gamepad:before{content:"\\F11B"}.fa-keyboard-o:before{content:"\\F11C"}.fa-flag-o:before{content:"\\F11D"}.fa-flag-checkered:before{content:"\\F11E"}.fa-terminal:before{content:"\\F120"}.fa-code:before{content:"\\F121"}.fa-mail-reply-all:before,.fa-reply-all:before{content:"\\F122"}.fa-star-half-empty:before,.fa-star-half-full:before,.fa-star-half-o:before{content:"\\F123"}.fa-location-arrow:before{content:"\\F124"}.fa-crop:before{content:"\\F125"}.fa-code-fork:before{content:"\\F126"}.fa-unlink:before,.fa-chain-broken:before{content:"\\F127"}.fa-question:before{content:"\\F128"}.fa-info:before{content:"\\F129"}.fa-exclamation:before{content:"\\F12A"}.fa-superscript:before{content:"\\F12B"}.fa-subscript:before{content:"\\F12C"}.fa-eraser:before{content:"\\F12D"}.fa-puzzle-piece:before{content:"\\F12E"}.fa-microphone:before{content:"\\F130"}.fa-microphone-slash:before{content:"\\F131"}.fa-shield:before{content:"\\F132"}.fa-calendar-o:before{content:"\\F133"}.fa-fire-extinguisher:before{content:"\\F134"}.fa-rocket:before{content:"\\F135"}.fa-maxcdn:before{content:"\\F136"}.fa-chevron-circle-left:before{content:"\\F137"}.fa-chevron-circle-right:before{content:"\\F138"}.fa-chevron-circle-up:before{content:"\\F139"}.fa-chevron-circle-down:before{content:"\\F13A"}.fa-html5:before{content:"\\F13B"}.fa-css3:before{content:"\\F13C"}.fa-anchor:before{content:"\\F13D"}.fa-unlock-alt:before{content:"\\F13E"}.fa-bullseye:before{content:"\\F140"}.fa-ellipsis-h:before{content:"\\F141"}.fa-ellipsis-v:before{content:"\\F142"}.fa-rss-square:before{content:"\\F143"}.fa-play-circle:before{content:"\\F144"}.fa-ticket:before{content:"\\F145"}.fa-minus-square:before{content:"\\F146"}.fa-minus-square-o:before{content:"\\F147"}.fa-level-up:before{content:"\\F148"}.fa-level-down:before{content:"\\F149"}.fa-check-square:before{content:"\\F14A"}.fa-pencil-square:before{content:"\\F14B"}.fa-external-link-square:before{content:"\\F14C"}.fa-share-square:before{content:"\\F14D"}.fa-compass:before{content:"\\F14E"}.fa-toggle-down:before,.fa-caret-square-o-down:before{content:"\\F150"}.fa-toggle-up:before,.fa-caret-square-o-up:before{content:"\\F151"}.fa-toggle-right:before,.fa-caret-square-o-right:before{content:"\\F152"}.fa-euro:before,.fa-eur:before{content:"\\F153"}.fa-gbp:before{content:"\\F154"}.fa-dollar:before,.fa-usd:before{content:"\\F155"}.fa-rupee:before,.fa-inr:before{content:"\\F156"}.fa-cny:before,.fa-rmb:before,.fa-yen:before,.fa-jpy:before{content:"\\F157"}.fa-ruble:before,.fa-rouble:before,.fa-rub:before{content:"\\F158"}.fa-won:before,.fa-krw:before{content:"\\F159"}.fa-bitcoin:before,.fa-btc:before{content:"\\F15A"}.fa-file:before{content:"\\F15B"}.fa-file-text:before{content:"\\F15C"}.fa-sort-alpha-asc:before{content:"\\F15D"}.fa-sort-alpha-desc:before{content:"\\F15E"}.fa-sort-amount-asc:before{content:"\\F160"}.fa-sort-amount-desc:before{content:"\\F161"}.fa-sort-numeric-asc:before{content:"\\F162"}.fa-sort-numeric-desc:before{content:"\\F163"}.fa-thumbs-up:before{content:"\\F164"}.fa-thumbs-down:before{content:"\\F165"}.fa-youtube-square:before{content:"\\F166"}.fa-youtube:before{content:"\\F167"}.fa-xing:before{content:"\\F168"}.fa-xing-square:before{content:"\\F169"}.fa-youtube-play:before{content:"\\F16A"}.fa-dropbox:before{content:"\\F16B"}.fa-stack-overflow:before{content:"\\F16C"}.fa-instagram:before{content:"\\F16D"}.fa-flickr:before{content:"\\F16E"}.fa-adn:before{content:"\\F170"}.fa-bitbucket:before{content:"\\F171"}.fa-bitbucket-square:before{content:"\\F172"}.fa-tumblr:before{content:"\\F173"}.fa-tumblr-square:before{content:"\\F174"}.fa-long-arrow-down:before{content:"\\F175"}.fa-long-arrow-up:before{content:"\\F176"}.fa-long-arrow-left:before{content:"\\F177"}.fa-long-arrow-right:before{content:"\\F178"}.fa-apple:before{content:"\\F179"}.fa-windows:before{content:"\\F17A"}.fa-android:before{content:"\\F17B"}.fa-linux:before{content:"\\F17C"}.fa-dribbble:before{content:"\\F17D"}.fa-skype:before{content:"\\F17E"}.fa-foursquare:before{content:"\\F180"}.fa-trello:before{content:"\\F181"}.fa-female:before{content:"\\F182"}.fa-male:before{content:"\\F183"}.fa-gittip:before,.fa-gratipay:before{content:"\\F184"}.fa-sun-o:before{content:"\\F185"}.fa-moon-o:before{content:"\\F186"}.fa-archive:before{content:"\\F187"}.fa-bug:before{content:"\\F188"}.fa-vk:before{content:"\\F189"}.fa-weibo:before{content:"\\F18A"}.fa-renren:before{content:"\\F18B"}.fa-pagelines:before{content:"\\F18C"}.fa-stack-exchange:before{content:"\\F18D"}.fa-arrow-circle-o-right:before{content:"\\F18E"}.fa-arrow-circle-o-left:before{content:"\\F190"}.fa-toggle-left:before,.fa-caret-square-o-left:before{content:"\\F191"}.fa-dot-circle-o:before{content:"\\F192"}.fa-wheelchair:before{content:"\\F193"}.fa-vimeo-square:before{content:"\\F194"}.fa-turkish-lira:before,.fa-try:before{content:"\\F195"}.fa-plus-square-o:before{content:"\\F196"}.fa-space-shuttle:before{content:"\\F197"}.fa-slack:before{content:"\\F198"}.fa-envelope-square:before{content:"\\F199"}.fa-wordpress:before{content:"\\F19A"}.fa-openid:before{content:"\\F19B"}.fa-institution:before,.fa-bank:before,.fa-university:before{content:"\\F19C"}.fa-mortar-board:before,.fa-graduation-cap:before{content:"\\F19D"}.fa-yahoo:before{content:"\\F19E"}.fa-google:before{content:"\\F1A0"}.fa-reddit:before{content:"\\F1A1"}.fa-reddit-square:before{content:"\\F1A2"}.fa-stumbleupon-circle:before{content:"\\F1A3"}.fa-stumbleupon:before{content:"\\F1A4"}.fa-delicious:before{content:"\\F1A5"}.fa-digg:before{content:"\\F1A6"}.fa-pied-piper-pp:before{content:"\\F1A7"}.fa-pied-piper-alt:before{content:"\\F1A8"}.fa-drupal:before{content:"\\F1A9"}.fa-joomla:before{content:"\\F1AA"}.fa-language:before{content:"\\F1AB"}.fa-fax:before{content:"\\F1AC"}.fa-building:before{content:"\\F1AD"}.fa-child:before{content:"\\F1AE"}.fa-paw:before{content:"\\F1B0"}.fa-spoon:before{content:"\\F1B1"}.fa-cube:before{content:"\\F1B2"}.fa-cubes:before{content:"\\F1B3"}.fa-behance:before{content:"\\F1B4"}.fa-behance-square:before{content:"\\F1B5"}.fa-steam:before{content:"\\F1B6"}.fa-steam-square:before{content:"\\F1B7"}.fa-recycle:before{content:"\\F1B8"}.fa-automobile:before,.fa-car:before{content:"\\F1B9"}.fa-cab:before,.fa-taxi:before{content:"\\F1BA"}.fa-tree:before{content:"\\F1BB"}.fa-spotify:before{content:"\\F1BC"}.fa-deviantart:before{content:"\\F1BD"}.fa-soundcloud:before{content:"\\F1BE"}.fa-database:before{content:"\\F1C0"}.fa-file-pdf-o:before{content:"\\F1C1"}.fa-file-word-o:before{content:"\\F1C2"}.fa-file-excel-o:before{content:"\\F1C3"}.fa-file-powerpoint-o:before{content:"\\F1C4"}.fa-file-photo-o:before,.fa-file-picture-o:before,.fa-file-image-o:before{content:"\\F1C5"}.fa-file-zip-o:before,.fa-file-archive-o:before{content:"\\F1C6"}.fa-file-sound-o:before,.fa-file-audio-o:before{content:"\\F1C7"}.fa-file-movie-o:before,.fa-file-video-o:before{content:"\\F1C8"}.fa-file-code-o:before{content:"\\F1C9"}.fa-vine:before{content:"\\F1CA"}.fa-codepen:before{content:"\\F1CB"}.fa-jsfiddle:before{content:"\\F1CC"}.fa-life-bouy:before,.fa-life-buoy:before,.fa-life-saver:before,.fa-support:before,.fa-life-ring:before{content:"\\F1CD"}.fa-circle-o-notch:before{content:"\\F1CE"}.fa-ra:before,.fa-resistance:before,.fa-rebel:before{content:"\\F1D0"}.fa-ge:before,.fa-empire:before{content:"\\F1D1"}.fa-git-square:before{content:"\\F1D2"}.fa-git:before{content:"\\F1D3"}.fa-y-combinator-square:before,.fa-yc-square:before,.fa-hacker-news:before{content:"\\F1D4"}.fa-tencent-weibo:before{content:"\\F1D5"}.fa-qq:before{content:"\\F1D6"}.fa-wechat:before,.fa-weixin:before{content:"\\F1D7"}.fa-send:before,.fa-paper-plane:before{content:"\\F1D8"}.fa-send-o:before,.fa-paper-plane-o:before{content:"\\F1D9"}.fa-history:before{content:"\\F1DA"}.fa-circle-thin:before{content:"\\F1DB"}.fa-header:before{content:"\\F1DC"}.fa-paragraph:before{content:"\\F1DD"}.fa-sliders:before{content:"\\F1DE"}.fa-share-alt:before{content:"\\F1E0"}.fa-share-alt-square:before{content:"\\F1E1"}.fa-bomb:before{content:"\\F1E2"}.fa-soccer-ball-o:before,.fa-futbol-o:before{content:"\\F1E3"}.fa-tty:before{content:"\\F1E4"}.fa-binoculars:before{content:"\\F1E5"}.fa-plug:before{content:"\\F1E6"}.fa-slideshare:before{content:"\\F1E7"}.fa-twitch:before{content:"\\F1E8"}.fa-yelp:before{content:"\\F1E9"}.fa-newspaper-o:before{content:"\\F1EA"}.fa-wifi:before{content:"\\F1EB"}.fa-calculator:before{content:"\\F1EC"}.fa-paypal:before{content:"\\F1ED"}.fa-google-wallet:before{content:"\\F1EE"}.fa-cc-visa:before{content:"\\F1F0"}.fa-cc-mastercard:before{content:"\\F1F1"}.fa-cc-discover:before{content:"\\F1F2"}.fa-cc-amex:before{content:"\\F1F3"}.fa-cc-paypal:before{content:"\\F1F4"}.fa-cc-stripe:before{content:"\\F1F5"}.fa-bell-slash:before{content:"\\F1F6"}.fa-bell-slash-o:before{content:"\\F1F7"}.fa-trash:before{content:"\\F1F8"}.fa-copyright:before{content:"\\F1F9"}.fa-at:before{content:"\\F1FA"}.fa-eyedropper:before{content:"\\F1FB"}.fa-paint-brush:before{content:"\\F1FC"}.fa-birthday-cake:before{content:"\\F1FD"}.fa-area-chart:before{content:"\\F1FE"}.fa-pie-chart:before{content:"\\F200"}.fa-line-chart:before{content:"\\F201"}.fa-lastfm:before{content:"\\F202"}.fa-lastfm-square:before{content:"\\F203"}.fa-toggle-off:before{content:"\\F204"}.fa-toggle-on:before{content:"\\F205"}.fa-bicycle:before{content:"\\F206"}.fa-bus:before{content:"\\F207"}.fa-ioxhost:before{content:"\\F208"}.fa-angellist:before{content:"\\F209"}.fa-cc:before{content:"\\F20A"}.fa-shekel:before,.fa-sheqel:before,.fa-ils:before{content:"\\F20B"}.fa-meanpath:before{content:"\\F20C"}.fa-buysellads:before{content:"\\F20D"}.fa-connectdevelop:before{content:"\\F20E"}.fa-dashcube:before{content:"\\F210"}.fa-forumbee:before{content:"\\F211"}.fa-leanpub:before{content:"\\F212"}.fa-sellsy:before{content:"\\F213"}.fa-shirtsinbulk:before{content:"\\F214"}.fa-simplybuilt:before{content:"\\F215"}.fa-skyatlas:before{content:"\\F216"}.fa-cart-plus:before{content:"\\F217"}.fa-cart-arrow-down:before{content:"\\F218"}.fa-diamond:before{content:"\\F219"}.fa-ship:before{content:"\\F21A"}.fa-user-secret:before{content:"\\F21B"}.fa-motorcycle:before{content:"\\F21C"}.fa-street-view:before{content:"\\F21D"}.fa-heartbeat:before{content:"\\F21E"}.fa-venus:before{content:"\\F221"}.fa-mars:before{content:"\\F222"}.fa-mercury:before{content:"\\F223"}.fa-intersex:before,.fa-transgender:before{content:"\\F224"}.fa-transgender-alt:before{content:"\\F225"}.fa-venus-double:before{content:"\\F226"}.fa-mars-double:before{content:"\\F227"}.fa-venus-mars:before{content:"\\F228"}.fa-mars-stroke:before{content:"\\F229"}.fa-mars-stroke-v:before{content:"\\F22A"}.fa-mars-stroke-h:before{content:"\\F22B"}.fa-neuter:before{content:"\\F22C"}.fa-genderless:before{content:"\\F22D"}.fa-facebook-official:before{content:"\\F230"}.fa-pinterest-p:before{content:"\\F231"}.fa-whatsapp:before{content:"\\F232"}.fa-server:before{content:"\\F233"}.fa-user-plus:before{content:"\\F234"}.fa-user-times:before{content:"\\F235"}.fa-hotel:before,.fa-bed:before{content:"\\F236"}.fa-viacoin:before{content:"\\F237"}.fa-train:before{content:"\\F238"}.fa-subway:before{content:"\\F239"}.fa-medium:before{content:"\\F23A"}.fa-yc:before,.fa-y-combinator:before{content:"\\F23B"}.fa-optin-monster:before{content:"\\F23C"}.fa-opencart:before{content:"\\F23D"}.fa-expeditedssl:before{content:"\\F23E"}.fa-battery-4:before,.fa-battery:before,.fa-battery-full:before{content:"\\F240"}.fa-battery-3:before,.fa-battery-three-quarters:before{content:"\\F241"}.fa-battery-2:before,.fa-battery-half:before{content:"\\F242"}.fa-battery-1:before,.fa-battery-quarter:before{content:"\\F243"}.fa-battery-0:before,.fa-battery-empty:before{content:"\\F244"}.fa-mouse-pointer:before{content:"\\F245"}.fa-i-cursor:before{content:"\\F246"}.fa-object-group:before{content:"\\F247"}.fa-object-ungroup:before{content:"\\F248"}.fa-sticky-note:before{content:"\\F249"}.fa-sticky-note-o:before{content:"\\F24A"}.fa-cc-jcb:before{content:"\\F24B"}.fa-cc-diners-club:before{content:"\\F24C"}.fa-clone:before{content:"\\F24D"}.fa-balance-scale:before{content:"\\F24E"}.fa-hourglass-o:before{content:"\\F250"}.fa-hourglass-1:before,.fa-hourglass-start:before{content:"\\F251"}.fa-hourglass-2:before,.fa-hourglass-half:before{content:"\\F252"}.fa-hourglass-3:before,.fa-hourglass-end:before{content:"\\F253"}.fa-hourglass:before{content:"\\F254"}.fa-hand-grab-o:before,.fa-hand-rock-o:before{content:"\\F255"}.fa-hand-stop-o:before,.fa-hand-paper-o:before{content:"\\F256"}.fa-hand-scissors-o:before{content:"\\F257"}.fa-hand-lizard-o:before{content:"\\F258"}.fa-hand-spock-o:before{content:"\\F259"}.fa-hand-pointer-o:before{content:"\\F25A"}.fa-hand-peace-o:before{content:"\\F25B"}.fa-trademark:before{content:"\\F25C"}.fa-registered:before{content:"\\F25D"}.fa-creative-commons:before{content:"\\F25E"}.fa-gg:before{content:"\\F260"}.fa-gg-circle:before{content:"\\F261"}.fa-tripadvisor:before{content:"\\F262"}.fa-odnoklassniki:before{content:"\\F263"}.fa-odnoklassniki-square:before{content:"\\F264"}.fa-get-pocket:before{content:"\\F265"}.fa-wikipedia-w:before{content:"\\F266"}.fa-safari:before{content:"\\F267"}.fa-chrome:before{content:"\\F268"}.fa-firefox:before{content:"\\F269"}.fa-opera:before{content:"\\F26A"}.fa-internet-explorer:before{content:"\\F26B"}.fa-tv:before,.fa-television:before{content:"\\F26C"}.fa-contao:before{content:"\\F26D"}.fa-500px:before{content:"\\F26E"}.fa-amazon:before{content:"\\F270"}.fa-calendar-plus-o:before{content:"\\F271"}.fa-calendar-minus-o:before{content:"\\F272"}.fa-calendar-times-o:before{content:"\\F273"}.fa-calendar-check-o:before{content:"\\F274"}.fa-industry:before{content:"\\F275"}.fa-map-pin:before{content:"\\F276"}.fa-map-signs:before{content:"\\F277"}.fa-map-o:before{content:"\\F278"}.fa-map:before{content:"\\F279"}.fa-commenting:before{content:"\\F27A"}.fa-commenting-o:before{content:"\\F27B"}.fa-houzz:before{content:"\\F27C"}.fa-vimeo:before{content:"\\F27D"}.fa-black-tie:before{content:"\\F27E"}.fa-fonticons:before{content:"\\F280"}.fa-reddit-alien:before{content:"\\F281"}.fa-edge:before{content:"\\F282"}.fa-credit-card-alt:before{content:"\\F283"}.fa-codiepie:before{content:"\\F284"}.fa-modx:before{content:"\\F285"}.fa-fort-awesome:before{content:"\\F286"}.fa-usb:before{content:"\\F287"}.fa-product-hunt:before{content:"\\F288"}.fa-mixcloud:before{content:"\\F289"}.fa-scribd:before{content:"\\F28A"}.fa-pause-circle:before{content:"\\F28B"}.fa-pause-circle-o:before{content:"\\F28C"}.fa-stop-circle:before{content:"\\F28D"}.fa-stop-circle-o:before{content:"\\F28E"}.fa-shopping-bag:before{content:"\\F290"}.fa-shopping-basket:before{content:"\\F291"}.fa-hashtag:before{content:"\\F292"}.fa-bluetooth:before{content:"\\F293"}.fa-bluetooth-b:before{content:"\\F294"}.fa-percent:before{content:"\\F295"}.fa-gitlab:before{content:"\\F296"}.fa-wpbeginner:before{content:"\\F297"}.fa-wpforms:before{content:"\\F298"}.fa-envira:before{content:"\\F299"}.fa-universal-access:before{content:"\\F29A"}.fa-wheelchair-alt:before{content:"\\F29B"}.fa-question-circle-o:before{content:"\\F29C"}.fa-blind:before{content:"\\F29D"}.fa-audio-description:before{content:"\\F29E"}.fa-volume-control-phone:before{content:"\\F2A0"}.fa-braille:before{content:"\\F2A1"}.fa-assistive-listening-systems:before{content:"\\F2A2"}.fa-asl-interpreting:before,.fa-american-sign-language-interpreting:before{content:"\\F2A3"}.fa-deafness:before,.fa-hard-of-hearing:before,.fa-deaf:before{content:"\\F2A4"}.fa-glide:before{content:"\\F2A5"}.fa-glide-g:before{content:"\\F2A6"}.fa-signing:before,.fa-sign-language:before{content:"\\F2A7"}.fa-low-vision:before{content:"\\F2A8"}.fa-viadeo:before{content:"\\F2A9"}.fa-viadeo-square:before{content:"\\F2AA"}.fa-snapchat:before{content:"\\F2AB"}.fa-snapchat-ghost:before{content:"\\F2AC"}.fa-snapchat-square:before{content:"\\F2AD"}.fa-pied-piper:before{content:"\\F2AE"}.fa-first-order:before{content:"\\F2B0"}.fa-yoast:before{content:"\\F2B1"}.fa-themeisle:before{content:"\\F2B2"}.fa-google-plus-circle:before,.fa-google-plus-official:before{content:"\\F2B3"}.fa-fa:before,.fa-font-awesome:before{content:"\\F2B4"}.fa-handshake-o:before{content:"\\F2B5"}.fa-envelope-open:before{content:"\\F2B6"}.fa-envelope-open-o:before{content:"\\F2B7"}.fa-linode:before{content:"\\F2B8"}.fa-address-book:before{content:"\\F2B9"}.fa-address-book-o:before{content:"\\F2BA"}.fa-vcard:before,.fa-address-card:before{content:"\\F2BB"}.fa-vcard-o:before,.fa-address-card-o:before{content:"\\F2BC"}.fa-user-circle:before{content:"\\F2BD"}.fa-user-circle-o:before{content:"\\F2BE"}.fa-user-o:before{content:"\\F2C0"}.fa-id-badge:before{content:"\\F2C1"}.fa-drivers-license:before,.fa-id-card:before{content:"\\F2C2"}.fa-drivers-license-o:before,.fa-id-card-o:before{content:"\\F2C3"}.fa-quora:before{content:"\\F2C4"}.fa-free-code-camp:before{content:"\\F2C5"}.fa-telegram:before{content:"\\F2C6"}.fa-thermometer-4:before,.fa-thermometer:before,.fa-thermometer-full:before{content:"\\F2C7"}.fa-thermometer-3:before,.fa-thermometer-three-quarters:before{content:"\\F2C8"}.fa-thermometer-2:before,.fa-thermometer-half:before{content:"\\F2C9"}.fa-thermometer-1:before,.fa-thermometer-quarter:before{content:"\\F2CA"}.fa-thermometer-0:before,.fa-thermometer-empty:before{content:"\\F2CB"}.fa-shower:before{content:"\\F2CC"}.fa-bathtub:before,.fa-s15:before,.fa-bath:before{content:"\\F2CD"}.fa-podcast:before{content:"\\F2CE"}.fa-window-maximize:before{content:"\\F2D0"}.fa-window-minimize:before{content:"\\F2D1"}.fa-window-restore:before{content:"\\F2D2"}.fa-times-rectangle:before,.fa-window-close:before{content:"\\F2D3"}.fa-times-rectangle-o:before,.fa-window-close-o:before{content:"\\F2D4"}.fa-bandcamp:before{content:"\\F2D5"}.fa-grav:before{content:"\\F2D6"}.fa-etsy:before{content:"\\F2D7"}.fa-imdb:before{content:"\\F2D8"}.fa-ravelry:before{content:"\\F2D9"}.fa-eercast:before{content:"\\F2DA"}.fa-microchip:before{content:"\\F2DB"}.fa-snowflake-o:before{content:"\\F2DC"}.fa-superpowers:before{content:"\\F2DD"}.fa-wpexplorer:before{content:"\\F2DE"}.fa-meetup:before{content:"\\F2E0"}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}',""]);
-},function(e,t,o){t=e.exports=o(0)(),t.i(o(6),""),t.push([e.i,"@font-face {\n  font-family: 'Artifakt Element';\n  src:  url("+o(14)+") format('eot'),\n        url("+o(15)+") format('ttf'),\n        url("+o(16)+") format('woff'),\n        url("+o(17)+") format('woff2');\n}\n@font-face {\n  font-family: 'Artifakt Legend';\n  src:  url("+o(18)+") format('eot'),\n        url("+o(19)+") format('ttf'),\n        url("+o(20)+") format('woff'),\n        url("+o(21)+") format('woff2');\n}\nbody {\n    font-family: \"Artifakt Element\", fallback, sans-serif;\n}\na {\n  text-decoration: none;\n  color: black;\n}\na:hover {\n    color: #EE8822;\n}\nul {\n    list-style-type: none;\n    margin: 0;\n    padding: 0;\n    overflow: hidden;\n    background-color: #fff;\n}\nli {\n    float: left;\n}\nli a {\n    display: block;\n    color: black;\n    text-align: center;\n    padding: 24px 16px;\n    text-decoration: none;\n}\n\nli a:hover {\n    background-color: #D17920;\n    color: white;\n}",""])},function(e,t,o){e.exports=o.p+"b67134b4df53afdfcd5565f5bb031c9f.svg"},function(e,t,o){e.exports=o.p+"674f50d287a8c48dc19ba404d20fe713.eot"},function(e,t,o){e.exports=o.p+"674f50d287a8c48dc19ba404d20fe713.eot"},function(e,t,o){e.exports=o.p+"b06871f281fee6b241d60582ae9369b9.ttf"},function(e,t,o){e.exports=o.p+"af7ae505a9eed503f8b8e6982036873e.woff2"},function(e,t,o){e.exports=o.p+"fee66e712a8a08eef5805a46892932ad.woff"},function(e,t,o){e.exports=o.p+"b55ce0300eb05115229e39fd1efbd249.eot"},function(e,t,o){e.exports=o.p+"987567cc24dd1d57a195aa5f883b9b6c.ttf"},function(e,t,o){e.exports=o.p+"5df10b32745d362e4c96bf4495aa0506.woff"},function(e,t,o){e.exports=o.p+"b0c983bbda990a72e5d84ffc5ed4cd85.woff2"},function(e,t,o){e.exports=o.p+"081c9df7e40389dd9d8ff2b4bd4f74a0.eot"},function(e,t,o){e.exports=o.p+"d41a989609413d1591f33a88383e87ff.ttf"},function(e,t,o){e.exports=o.p+"f50fe0e10a846115dea27179ae287eec.woff"},function(e,t,o){e.exports=o.p+"4adbc570eca5a2c295c8318589f42bd1.woff2"},function(e,t){e.exports=[{id:21414956,name:"workflow-aspnet-webform-view.and.data.api",full_name:"Developer-Autodesk/workflow-aspnet-webform-view.and.data.api",owner:{login:"Developer-Autodesk",id:8017462,avatar_url:"https://avatars.githubusercontent.com/u/8017462?v=3",gravatar_id:"",url:"https://api.github.com/users/Developer-Autodesk",html_url:"https://github.com/Developer-Autodesk",followers_url:"https://api.github.com/users/Developer-Autodesk/followers",following_url:"https://api.github.com/users/Developer-Autodesk/following{/other_user}",gists_url:"https://api.github.com/users/Developer-Autodesk/gists{/gist_id}",starred_url:"https://api.github.com/users/Developer-Autodesk/starred{/owner}{/repo}",subscriptions_url:"https://api.github.com/users/Developer-Autodesk/subscriptions",organizations_url:"https://api.github.com/users/Developer-Autodesk/orgs",repos_url:"https://api.github.com/users/Developer-Autodesk/repos",events_url:"https://api.github.com/users/Developer-Autodesk/events{/privacy}",received_events_url:"https://api.github.com/users/Developer-Autodesk/received_events",type:"Organization",site_admin:!1},"private":!1,html_url:"https://github.com/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api",description:"This is a sample demoing the complete workflow of using Autodesk View and Data API",fork:!1,url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api",forks_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/forks",keys_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/keys{/key_id}",collaborators_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/collaborators{/collaborator}",teams_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/teams",hooks_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/hooks",issue_events_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/issues/events{/number}",events_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/events",assignees_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/assignees{/user}",branches_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/branches{/branch}",tags_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/tags",blobs_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/git/blobs{/sha}",git_tags_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/git/tags{/sha}",git_refs_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/git/refs{/sha}",trees_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/git/trees{/sha}",statuses_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/statuses/{sha}",languages_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/languages",stargazers_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/stargazers",contributors_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/contributors",subscribers_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/subscribers",subscription_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/subscription",commits_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/commits{/sha}",git_commits_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/git/commits{/sha}",comments_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/comments{/number}",issue_comment_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/issues/comments{/number}",contents_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/contents/{+path}",compare_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/compare/{base}...{head}",merges_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/merges",archive_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/{archive_format}{/ref}",downloads_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/downloads",issues_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/issues{/number}",pulls_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/pulls{/number}",milestones_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/milestones{/number}",notifications_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/notifications{?since,all,participating}",labels_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/labels{/name}",releases_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/releases{/id}",deployments_url:"https://api.github.com/repos/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api/deployments",created_at:"2014-07-02T07:16:32Z",updated_at:"2016-08-12T07:59:36Z",pushed_at:"2015-06-12T07:58:16Z",git_url:"git://github.com/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api.git",ssh_url:"git@github.com:Developer-Autodesk/workflow-aspnet-webform-view.and.data.api.git",clone_url:"https://github.com/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api.git",svn_url:"https://github.com/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api",homepage:null,size:966,stargazers_count:4,watchers_count:4,language:"C#",has_issues:!0,has_downloads:!0,has_wiki:!0,has_pages:!1,forks_count:5,mirror_url:null,open_issues_count:0,forks:5,open_issues:0,watchers:4,default_branch:"master",permissions:{admin:!1,push:!1,pull:!0}},{id:21501781,name:"integration-sharepoint-view.and.data.api",full_name:"Developer-Autodesk/integration-sharepoint-view.and.data.api",owner:{login:"Developer-Autodesk",id:8017462,avatar_url:"https://avatars.githubusercontent.com/u/8017462?v=3",gravatar_id:"",url:"https://api.github.com/users/Developer-Autodesk",html_url:"https://github.com/Developer-Autodesk",followers_url:"https://api.github.com/users/Developer-Autodesk/followers",following_url:"https://api.github.com/users/Developer-Autodesk/following{/other_user}",gists_url:"https://api.github.com/users/Developer-Autodesk/gists{/gist_id}",starred_url:"https://api.github.com/users/Developer-Autodesk/starred{/owner}{/repo}",subscriptions_url:"https://api.github.com/users/Developer-Autodesk/subscriptions",organizations_url:"https://api.github.com/users/Developer-Autodesk/orgs",repos_url:"https://api.github.com/users/Developer-Autodesk/repos",events_url:"https://api.github.com/users/Developer-Autodesk/events{/privacy}",received_events_url:"https://api.github.com/users/Developer-Autodesk/received_events",type:"Organization",site_admin:!1},"private":!1,html_url:"https://github.com/Developer-Autodesk/integration-sharepoint-view.and.data.api",description:"Shows how you can upload files and view them inside SharePoint using the Autodesk viewer",fork:!1,url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api",forks_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/forks",keys_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/keys{/key_id}",collaborators_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/collaborators{/collaborator}",teams_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/teams",hooks_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/hooks",issue_events_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/issues/events{/number}",events_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/events",assignees_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/assignees{/user}",branches_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/branches{/branch}",tags_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/tags",blobs_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/git/blobs{/sha}",git_tags_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/git/tags{/sha}",git_refs_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/git/refs{/sha}",trees_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/git/trees{/sha}",statuses_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/statuses/{sha}",languages_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/languages",stargazers_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/stargazers",contributors_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/contributors",subscribers_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/subscribers",subscription_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/subscription",commits_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/commits{/sha}",git_commits_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/git/commits{/sha}",comments_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/comments{/number}",issue_comment_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/issues/comments{/number}",contents_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/contents/{+path}",compare_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/compare/{base}...{head}",merges_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/merges",archive_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/{archive_format}{/ref}",downloads_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/downloads",issues_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/issues{/number}",pulls_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/pulls{/number}",milestones_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/milestones{/number}",notifications_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/notifications{?since,all,participating}",labels_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/labels{/name}",releases_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/releases{/id}",deployments_url:"https://api.github.com/repos/Developer-Autodesk/integration-sharepoint-view.and.data.api/deployments",created_at:"2014-07-04T15:43:35Z",updated_at:"2016-08-04T00:07:13Z",pushed_at:"2015-02-20T21:27:34Z",git_url:"git://github.com/Developer-Autodesk/integration-sharepoint-view.and.data.api.git",ssh_url:"git@github.com:Developer-Autodesk/integration-sharepoint-view.and.data.api.git",clone_url:"https://github.com/Developer-Autodesk/integration-sharepoint-view.and.data.api.git",svn_url:"https://github.com/Developer-Autodesk/integration-sharepoint-view.and.data.api",homepage:null,size:9681,stargazers_count:3,watchers_count:3,language:"ASP",has_issues:!0,has_downloads:!0,has_wiki:!0,has_pages:!1,forks_count:2,mirror_url:null,open_issues_count:0,forks:2,open_issues:0,watchers:3,default_branch:"master",permissions:{admin:!1,push:!1,pull:!0}},{id:23714847,name:"viewer-javascript-debugger.tool",full_name:"Developer-Autodesk/viewer-javascript-debugger.tool",owner:{login:"Developer-Autodesk",id:8017462,avatar_url:"https://avatars.githubusercontent.com/u/8017462?v=3",gravatar_id:"",url:"https://api.github.com/users/Developer-Autodesk",html_url:"https://github.com/Developer-Autodesk",followers_url:"https://api.github.com/users/Developer-Autodesk/followers",following_url:"https://api.github.com/users/Developer-Autodesk/following{/other_user}",gists_url:"https://api.github.com/users/Developer-Autodesk/gists{/gist_id}",starred_url:"https://api.github.com/users/Developer-Autodesk/starred{/owner}{/repo}",subscriptions_url:"https://api.github.com/users/Developer-Autodesk/subscriptions",organizations_url:"https://api.github.com/users/Developer-Autodesk/orgs",repos_url:"https://api.github.com/users/Developer-Autodesk/repos",events_url:"https://api.github.com/users/Developer-Autodesk/events{/privacy}",received_events_url:"https://api.github.com/users/Developer-Autodesk/received_events",type:"Organization",site_admin:!1},"private":!1,html_url:"https://github.com/Developer-Autodesk/viewer-javascript-debugger.tool",description:"Viewer Debugger",fork:!1,url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool",forks_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/forks",keys_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/keys{/key_id}",collaborators_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/collaborators{/collaborator}",teams_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/teams",hooks_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/hooks",issue_events_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/issues/events{/number}",events_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/events",assignees_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/assignees{/user}",branches_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/branches{/branch}",tags_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/tags",blobs_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/git/blobs{/sha}",git_tags_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/git/tags{/sha}",git_refs_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/git/refs{/sha}",trees_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/git/trees{/sha}",statuses_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/statuses/{sha}",languages_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/languages",stargazers_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/stargazers",contributors_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/contributors",subscribers_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/subscribers",subscription_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/subscription",commits_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/commits{/sha}",git_commits_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/git/commits{/sha}",comments_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/comments{/number}",issue_comment_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/issues/comments{/number}",contents_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/contents/{+path}",compare_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/compare/{base}...{head}",merges_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/merges",archive_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/{archive_format}{/ref}",downloads_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/downloads",issues_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/issues{/number}",pulls_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/pulls{/number}",milestones_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/milestones{/number}",notifications_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/notifications{?since,all,participating}",labels_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/labels{/name}",releases_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/releases{/id}",deployments_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-debugger.tool/deployments",created_at:"2014-09-05T19:01:48Z",updated_at:"2016-11-11T18:38:03Z",pushed_at:"2016-11-11T18:38:01Z",git_url:"git://github.com/Developer-Autodesk/viewer-javascript-debugger.tool.git",ssh_url:"git@github.com:Developer-Autodesk/viewer-javascript-debugger.tool.git",clone_url:"https://github.com/Developer-Autodesk/viewer-javascript-debugger.tool.git",svn_url:"https://github.com/Developer-Autodesk/viewer-javascript-debugger.tool",homepage:"http://developer-autodesk.github.io/view.and.data-javascript-lmvdbg.tool/",size:2925,stargazers_count:18,watchers_count:18,language:"HTML",has_issues:!0,has_downloads:!0,has_wiki:!0,has_pages:!0,forks_count:14,mirror_url:null,open_issues_count:0,forks:14,open_issues:0,watchers:18,default_branch:"master",permissions:{admin:!1,push:!1,pull:!0}},{id:24208069,name:"model.derivative-swift-sample",full_name:"Developer-Autodesk/model.derivative-swift-sample",owner:{login:"Developer-Autodesk",id:8017462,avatar_url:"https://avatars.githubusercontent.com/u/8017462?v=3",gravatar_id:"",url:"https://api.github.com/users/Developer-Autodesk",html_url:"https://github.com/Developer-Autodesk",followers_url:"https://api.github.com/users/Developer-Autodesk/followers",following_url:"https://api.github.com/users/Developer-Autodesk/following{/other_user}",gists_url:"https://api.github.com/users/Developer-Autodesk/gists{/gist_id}",starred_url:"https://api.github.com/users/Developer-Autodesk/starred{/owner}{/repo}",subscriptions_url:"https://api.github.com/users/Developer-Autodesk/subscriptions",organizations_url:"https://api.github.com/users/Developer-Autodesk/orgs",repos_url:"https://api.github.com/users/Developer-Autodesk/repos",events_url:"https://api.github.com/users/Developer-Autodesk/events{/privacy}",received_events_url:"https://api.github.com/users/Developer-Autodesk/received_events",type:"Organization",site_admin:!1},"private":!1,html_url:"https://github.com/Developer-Autodesk/model.derivative-swift-sample",description:"MacOS sample written in Swift",fork:!1,url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample",forks_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/forks",keys_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/keys{/key_id}",collaborators_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/collaborators{/collaborator}",teams_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/teams",hooks_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/hooks",issue_events_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/issues/events{/number}",events_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/events",assignees_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/assignees{/user}",branches_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/branches{/branch}",tags_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/tags",blobs_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/git/blobs{/sha}",git_tags_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/git/tags{/sha}",git_refs_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/git/refs{/sha}",trees_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/git/trees{/sha}",statuses_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/statuses/{sha}",languages_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/languages",stargazers_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/stargazers",contributors_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/contributors",subscribers_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/subscribers",subscription_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/subscription",commits_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/commits{/sha}",git_commits_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/git/commits{/sha}",comments_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/comments{/number}",issue_comment_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/issues/comments{/number}",contents_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/contents/{+path}",compare_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/compare/{base}...{head}",merges_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/merges",archive_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/{archive_format}{/ref}",downloads_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/downloads",issues_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/issues{/number}",pulls_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/pulls{/number}",milestones_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/milestones{/number}",notifications_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/notifications{?since,all,participating}",labels_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/labels{/name}",releases_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/releases{/id}",deployments_url:"https://api.github.com/repos/Developer-Autodesk/model.derivative-swift-sample/deployments",created_at:"2014-09-18T23:01:12Z",updated_at:"2016-11-09T11:35:52Z",pushed_at:"2016-11-08T18:13:18Z",git_url:"git://github.com/Developer-Autodesk/model.derivative-swift-sample.git",ssh_url:"git@github.com:Developer-Autodesk/model.derivative-swift-sample.git",clone_url:"https://github.com/Developer-Autodesk/model.derivative-swift-sample.git",svn_url:"https://github.com/Developer-Autodesk/model.derivative-swift-sample",homepage:null,size:474,stargazers_count:6,watchers_count:6,language:"Swift",has_issues:!0,has_downloads:!0,has_wiki:!0,has_pages:!1,forks_count:1,mirror_url:null,open_issues_count:0,forks:1,open_issues:0,watchers:6,default_branch:"master",permissions:{admin:!1,push:!1,pull:!0}},{id:26297839,name:"design.automation-.net-basic-sample",full_name:"Developer-Autodesk/design.automation-.net-basic-sample",owner:{login:"Developer-Autodesk",id:8017462,avatar_url:"https://avatars.githubusercontent.com/u/8017462?v=3",gravatar_id:"",url:"https://api.github.com/users/Developer-Autodesk",html_url:"https://github.com/Developer-Autodesk",followers_url:"https://api.github.com/users/Developer-Autodesk/followers",following_url:"https://api.github.com/users/Developer-Autodesk/following{/other_user}",gists_url:"https://api.github.com/users/Developer-Autodesk/gists{/gist_id}",starred_url:"https://api.github.com/users/Developer-Autodesk/starred{/owner}{/repo}",subscriptions_url:"https://api.github.com/users/Developer-Autodesk/subscriptions",organizations_url:"https://api.github.com/users/Developer-Autodesk/orgs",repos_url:"https://api.github.com/users/Developer-Autodesk/repos",events_url:"https://api.github.com/users/Developer-Autodesk/events{/privacy}",received_events_url:"https://api.github.com/users/Developer-Autodesk/received_events",type:"Organization",site_admin:!1},"private":!1,html_url:"https://github.com/Developer-Autodesk/design.automation-.net-basic-sample",description:"This is the simplest C# client that uses the predefined PlotToPDF activity.",fork:!1,url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample",forks_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/forks",keys_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/keys{/key_id}",collaborators_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/collaborators{/collaborator}",teams_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/teams",hooks_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/hooks",issue_events_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/issues/events{/number}",events_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/events",assignees_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/assignees{/user}",branches_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/branches{/branch}",tags_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/tags",blobs_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/git/blobs{/sha}",git_tags_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/git/tags{/sha}",git_refs_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/git/refs{/sha}",trees_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/git/trees{/sha}",statuses_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/statuses/{sha}",languages_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/languages",stargazers_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/stargazers",contributors_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/contributors",subscribers_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/subscribers",subscription_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/subscription",commits_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/commits{/sha}",git_commits_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/git/commits{/sha}",comments_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/comments{/number}",issue_comment_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/issues/comments{/number}",contents_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/contents/{+path}",compare_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/compare/{base}...{head}",merges_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/merges",archive_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/{archive_format}{/ref}",downloads_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/downloads",issues_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/issues{/number}",pulls_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/pulls{/number}",milestones_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/milestones{/number}",notifications_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/notifications{?since,all,participating}",
-labels_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/labels{/name}",releases_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/releases{/id}",deployments_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-basic-sample/deployments",created_at:"2014-11-07T01:14:05Z",updated_at:"2016-11-18T07:17:14Z",pushed_at:"2016-09-01T18:47:55Z",git_url:"git://github.com/Developer-Autodesk/design.automation-.net-basic-sample.git",ssh_url:"git@github.com:Developer-Autodesk/design.automation-.net-basic-sample.git",clone_url:"https://github.com/Developer-Autodesk/design.automation-.net-basic-sample.git",svn_url:"https://github.com/Developer-Autodesk/design.automation-.net-basic-sample",homepage:"",size:80,stargazers_count:2,watchers_count:2,language:"C#",has_issues:!0,has_downloads:!0,has_wiki:!0,has_pages:!1,forks_count:2,mirror_url:null,open_issues_count:0,forks:2,open_issues:0,watchers:2,default_branch:"master",permissions:{admin:!1,push:!1,pull:!0}},{id:26338832,name:"LmvQuickStart",full_name:"Developer-Autodesk/LmvQuickStart",owner:{login:"Developer-Autodesk",id:8017462,avatar_url:"https://avatars.githubusercontent.com/u/8017462?v=3",gravatar_id:"",url:"https://api.github.com/users/Developer-Autodesk",html_url:"https://github.com/Developer-Autodesk",followers_url:"https://api.github.com/users/Developer-Autodesk/followers",following_url:"https://api.github.com/users/Developer-Autodesk/following{/other_user}",gists_url:"https://api.github.com/users/Developer-Autodesk/gists{/gist_id}",starred_url:"https://api.github.com/users/Developer-Autodesk/starred{/owner}{/repo}",subscriptions_url:"https://api.github.com/users/Developer-Autodesk/subscriptions",organizations_url:"https://api.github.com/users/Developer-Autodesk/orgs",repos_url:"https://api.github.com/users/Developer-Autodesk/repos",events_url:"https://api.github.com/users/Developer-Autodesk/events{/privacy}",received_events_url:"https://api.github.com/users/Developer-Autodesk/received_events",type:"Organization",site_admin:!1},"private":!1,html_url:"https://github.com/Developer-Autodesk/LmvQuickStart",description:null,fork:!1,url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart",forks_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/forks",keys_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/keys{/key_id}",collaborators_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/collaborators{/collaborator}",teams_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/teams",hooks_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/hooks",issue_events_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/issues/events{/number}",events_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/events",assignees_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/assignees{/user}",branches_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/branches{/branch}",tags_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/tags",blobs_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/git/blobs{/sha}",git_tags_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/git/tags{/sha}",git_refs_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/git/refs{/sha}",trees_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/git/trees{/sha}",statuses_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/statuses/{sha}",languages_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/languages",stargazers_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/stargazers",contributors_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/contributors",subscribers_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/subscribers",subscription_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/subscription",commits_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/commits{/sha}",git_commits_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/git/commits{/sha}",comments_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/comments{/number}",issue_comment_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/issues/comments{/number}",contents_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/contents/{+path}",compare_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/compare/{base}...{head}",merges_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/merges",archive_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/{archive_format}{/ref}",downloads_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/downloads",issues_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/issues{/number}",pulls_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/pulls{/number}",milestones_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/milestones{/number}",notifications_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/notifications{?since,all,participating}",labels_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/labels{/name}",releases_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/releases{/id}",deployments_url:"https://api.github.com/repos/Developer-Autodesk/LmvQuickStart/deployments",created_at:"2014-11-07T21:31:31Z",updated_at:"2016-12-01T06:00:30Z",pushed_at:"2016-12-06T19:17:15Z",git_url:"git://github.com/Developer-Autodesk/LmvQuickStart.git",ssh_url:"git@github.com:Developer-Autodesk/LmvQuickStart.git",clone_url:"https://github.com/Developer-Autodesk/LmvQuickStart.git",svn_url:"https://github.com/Developer-Autodesk/LmvQuickStart",homepage:"http://developer-autodesk.github.io/LmvQuickStart/",size:4763,stargazers_count:13,watchers_count:13,language:"JavaScript",has_issues:!0,has_downloads:!0,has_wiki:!0,has_pages:!0,forks_count:16,mirror_url:null,open_issues_count:3,forks:16,open_issues:3,watchers:13,default_branch:"gh-pages",permissions:{admin:!1,push:!1,pull:!0}},{id:26463117,name:"design.automation-.net-input.output.sample",full_name:"Developer-Autodesk/design.automation-.net-input.output.sample",owner:{login:"Developer-Autodesk",id:8017462,avatar_url:"https://avatars.githubusercontent.com/u/8017462?v=3",gravatar_id:"",url:"https://api.github.com/users/Developer-Autodesk",html_url:"https://github.com/Developer-Autodesk",followers_url:"https://api.github.com/users/Developer-Autodesk/followers",following_url:"https://api.github.com/users/Developer-Autodesk/following{/other_user}",gists_url:"https://api.github.com/users/Developer-Autodesk/gists{/gist_id}",starred_url:"https://api.github.com/users/Developer-Autodesk/starred{/owner}{/repo}",subscriptions_url:"https://api.github.com/users/Developer-Autodesk/subscriptions",organizations_url:"https://api.github.com/users/Developer-Autodesk/orgs",repos_url:"https://api.github.com/users/Developer-Autodesk/repos",events_url:"https://api.github.com/users/Developer-Autodesk/events{/privacy}",received_events_url:"https://api.github.com/users/Developer-Autodesk/received_events",type:"Organization",site_admin:!1},"private":!1,html_url:"https://github.com/Developer-Autodesk/design.automation-.net-input.output.sample",description:"This C# sample shows various ways to specify input for a workitem",fork:!1,url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample",forks_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/forks",keys_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/keys{/key_id}",collaborators_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/collaborators{/collaborator}",teams_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/teams",hooks_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/hooks",issue_events_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/issues/events{/number}",events_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/events",assignees_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/assignees{/user}",branches_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/branches{/branch}",tags_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/tags",blobs_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/git/blobs{/sha}",git_tags_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/git/tags{/sha}",git_refs_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/git/refs{/sha}",trees_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/git/trees{/sha}",statuses_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/statuses/{sha}",languages_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/languages",stargazers_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/stargazers",contributors_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/contributors",subscribers_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/subscribers",subscription_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/subscription",commits_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/commits{/sha}",git_commits_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/git/commits{/sha}",comments_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/comments{/number}",issue_comment_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/issues/comments{/number}",contents_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/contents/{+path}",compare_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/compare/{base}...{head}",merges_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/merges",archive_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/{archive_format}{/ref}",downloads_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/downloads",issues_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/issues{/number}",pulls_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/pulls{/number}",milestones_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/milestones{/number}",notifications_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/notifications{?since,all,participating}",labels_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/labels{/name}",releases_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/releases{/id}",deployments_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-input.output.sample/deployments",created_at:"2014-11-11T00:51:29Z",updated_at:"2016-11-14T15:36:02Z",pushed_at:"2016-11-14T15:36:00Z",git_url:"git://github.com/Developer-Autodesk/design.automation-.net-input.output.sample.git",ssh_url:"git@github.com:Developer-Autodesk/design.automation-.net-input.output.sample.git",clone_url:"https://github.com/Developer-Autodesk/design.automation-.net-input.output.sample.git",svn_url:"https://github.com/Developer-Autodesk/design.automation-.net-input.output.sample",homepage:"",size:116,stargazers_count:2,watchers_count:2,language:"C#",has_issues:!0,has_downloads:!0,has_wiki:!0,has_pages:!1,forks_count:2,mirror_url:null,open_issues_count:0,forks:2,open_issues:0,watchers:2,default_branch:"master",permissions:{admin:!1,push:!1,pull:!0}},{id:26464135,name:"library-sample-autocad.io",full_name:"Developer-Autodesk/library-sample-autocad.io",owner:{login:"Developer-Autodesk",id:8017462,avatar_url:"https://avatars.githubusercontent.com/u/8017462?v=3",gravatar_id:"",url:"https://api.github.com/users/Developer-Autodesk",html_url:"https://github.com/Developer-Autodesk",followers_url:"https://api.github.com/users/Developer-Autodesk/followers",following_url:"https://api.github.com/users/Developer-Autodesk/following{/other_user}",gists_url:"https://api.github.com/users/Developer-Autodesk/gists{/gist_id}",starred_url:"https://api.github.com/users/Developer-Autodesk/starred{/owner}{/repo}",subscriptions_url:"https://api.github.com/users/Developer-Autodesk/subscriptions",organizations_url:"https://api.github.com/users/Developer-Autodesk/orgs",repos_url:"https://api.github.com/users/Developer-Autodesk/repos",events_url:"https://api.github.com/users/Developer-Autodesk/events{/privacy}",received_events_url:"https://api.github.com/users/Developer-Autodesk/received_events",type:"Organization",site_admin:!1},"private":!1,html_url:"https://github.com/Developer-Autodesk/library-sample-autocad.io",description:"Drawings used by AutoCAD.IO samples",fork:!1,url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io",forks_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/forks",keys_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/keys{/key_id}",collaborators_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/collaborators{/collaborator}",teams_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/teams",hooks_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/hooks",issue_events_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/issues/events{/number}",events_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/events",assignees_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/assignees{/user}",branches_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/branches{/branch}",tags_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/tags",blobs_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/git/blobs{/sha}",git_tags_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/git/tags{/sha}",git_refs_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/git/refs{/sha}",trees_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/git/trees{/sha}",statuses_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/statuses/{sha}",languages_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/languages",stargazers_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/stargazers",contributors_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/contributors",subscribers_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/subscribers",subscription_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/subscription",commits_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/commits{/sha}",git_commits_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/git/commits{/sha}",comments_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/comments{/number}",issue_comment_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/issues/comments{/number}",contents_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/contents/{+path}",compare_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/compare/{base}...{head}",merges_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/merges",archive_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/{archive_format}{/ref}",downloads_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/downloads",issues_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/issues{/number}",pulls_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/pulls{/number}",milestones_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/milestones{/number}",notifications_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/notifications{?since,all,participating}",labels_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/labels{/name}",releases_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/releases{/id}",deployments_url:"https://api.github.com/repos/Developer-Autodesk/library-sample-autocad.io/deployments",created_at:"2014-11-11T01:27:49Z",updated_at:"2016-01-09T19:29:14Z",pushed_at:"2014-11-11T02:23:46Z",git_url:"git://github.com/Developer-Autodesk/library-sample-autocad.io.git",ssh_url:"git@github.com:Developer-Autodesk/library-sample-autocad.io.git",clone_url:"https://github.com/Developer-Autodesk/library-sample-autocad.io.git",svn_url:"https://github.com/Developer-Autodesk/library-sample-autocad.io",homepage:null,size:788,stargazers_count:1,watchers_count:1,language:null,has_issues:!0,has_downloads:!0,has_wiki:!0,has_pages:!1,forks_count:0,mirror_url:null,open_issues_count:0,forks:0,open_issues:0,watchers:1,default_branch:"master",permissions:{admin:!1,push:!1,pull:!0}},{id:26549064,name:"design.automation-.net-custom.activity.sample",full_name:"Developer-Autodesk/design.automation-.net-custom.activity.sample",owner:{login:"Developer-Autodesk",id:8017462,avatar_url:"https://avatars.githubusercontent.com/u/8017462?v=3",gravatar_id:"",url:"https://api.github.com/users/Developer-Autodesk",html_url:"https://github.com/Developer-Autodesk",followers_url:"https://api.github.com/users/Developer-Autodesk/followers",following_url:"https://api.github.com/users/Developer-Autodesk/following{/other_user}",gists_url:"https://api.github.com/users/Developer-Autodesk/gists{/gist_id}",starred_url:"https://api.github.com/users/Developer-Autodesk/starred{/owner}{/repo}",subscriptions_url:"https://api.github.com/users/Developer-Autodesk/subscriptions",organizations_url:"https://api.github.com/users/Developer-Autodesk/orgs",repos_url:"https://api.github.com/users/Developer-Autodesk/repos",events_url:"https://api.github.com/users/Developer-Autodesk/events{/privacy}",received_events_url:"https://api.github.com/users/Developer-Autodesk/received_events",type:"Organization",site_admin:!1},"private":!1,html_url:"https://github.com/Developer-Autodesk/design.automation-.net-custom.activity.sample",description:"C# sample to demonstrate Activities and AppPackages",fork:!1,url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample",forks_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/forks",keys_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/keys{/key_id}",collaborators_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/collaborators{/collaborator}",teams_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/teams",hooks_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/hooks",issue_events_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/issues/events{/number}",events_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/events",assignees_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/assignees{/user}",branches_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/branches{/branch}",tags_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/tags",blobs_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/git/blobs{/sha}",git_tags_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/git/tags{/sha}",git_refs_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/git/refs{/sha}",trees_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/git/trees{/sha}",statuses_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/statuses/{sha}",languages_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/languages",stargazers_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/stargazers",contributors_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/contributors",subscribers_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/subscribers",subscription_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/subscription",commits_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/commits{/sha}",git_commits_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/git/commits{/sha}",comments_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/comments{/number}",issue_comment_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/issues/comments{/number}",contents_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/contents/{+path}",compare_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/compare/{base}...{head}",merges_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/merges",archive_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/{archive_format}{/ref}",downloads_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/downloads",issues_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/issues{/number}",pulls_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/pulls{/number}",milestones_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/milestones{/number}",notifications_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/notifications{?since,all,participating}",labels_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/labels{/name}",releases_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/releases{/id}",deployments_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-custom.activity.sample/deployments",created_at:"2014-11-12T18:06:44Z",updated_at:"2016-11-15T20:35:34Z",pushed_at:"2016-11-15T20:35:33Z",git_url:"git://github.com/Developer-Autodesk/design.automation-.net-custom.activity.sample.git",ssh_url:"git@github.com:Developer-Autodesk/design.automation-.net-custom.activity.sample.git",clone_url:"https://github.com/Developer-Autodesk/design.automation-.net-custom.activity.sample.git",svn_url:"https://github.com/Developer-Autodesk/design.automation-.net-custom.activity.sample",homepage:null,size:196,stargazers_count:0,watchers_count:0,language:"C#",has_issues:!0,has_downloads:!0,has_wiki:!0,has_pages:!1,forks_count:2,mirror_url:null,open_issues_count:1,forks:2,open_issues:1,watchers:0,default_branch:"master",permissions:{admin:!1,push:!1,pull:!0}},{id:26572959,name:"design.automation-.net-library",full_name:"Developer-Autodesk/design.automation-.net-library",owner:{login:"Developer-Autodesk",id:8017462,avatar_url:"https://avatars.githubusercontent.com/u/8017462?v=3",gravatar_id:"",url:"https://api.github.com/users/Developer-Autodesk",html_url:"https://github.com/Developer-Autodesk",followers_url:"https://api.github.com/users/Developer-Autodesk/followers",following_url:"https://api.github.com/users/Developer-Autodesk/following{/other_user}",gists_url:"https://api.github.com/users/Developer-Autodesk/gists{/gist_id}",starred_url:"https://api.github.com/users/Developer-Autodesk/starred{/owner}{/repo}",subscriptions_url:"https://api.github.com/users/Developer-Autodesk/subscriptions",organizations_url:"https://api.github.com/users/Developer-Autodesk/orgs",repos_url:"https://api.github.com/users/Developer-Autodesk/repos",events_url:"https://api.github.com/users/Developer-Autodesk/events{/privacy}",received_events_url:"https://api.github.com/users/Developer-Autodesk/received_events",type:"Organization",site_admin:!1},"private":!1,html_url:"https://github.com/Developer-Autodesk/design.automation-.net-library",description:"Library with helper methods to perform tasks related to AutoCAD IO ",fork:!1,url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library",forks_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/forks",keys_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/keys{/key_id}",collaborators_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/collaborators{/collaborator}",teams_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/teams",hooks_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/hooks",issue_events_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/issues/events{/number}",events_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/events",assignees_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/assignees{/user}",branches_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/branches{/branch}",tags_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/tags",blobs_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/git/blobs{/sha}",git_tags_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/git/tags{/sha}",git_refs_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/git/refs{/sha}",trees_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/git/trees{/sha}",statuses_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/statuses/{sha}",languages_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/languages",stargazers_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/stargazers",contributors_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/contributors",subscribers_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/subscribers",subscription_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/subscription",commits_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/commits{/sha}",git_commits_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/git/commits{/sha}",comments_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/comments{/number}",issue_comment_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/issues/comments{/number}",contents_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/contents/{+path}",compare_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/compare/{base}...{head}",merges_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/merges",archive_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/{archive_format}{/ref}",downloads_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/downloads",issues_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/issues{/number}",pulls_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/pulls{/number}",milestones_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/milestones{/number}",notifications_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/notifications{?since,all,participating}",labels_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/labels{/name}",releases_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/releases{/id}",deployments_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-.net-library/deployments",created_at:"2014-11-13T05:51:42Z",updated_at:"2016-06-08T21:59:48Z",pushed_at:"2016-06-10T13:43:49Z",git_url:"git://github.com/Developer-Autodesk/design.automation-.net-library.git",ssh_url:"git@github.com:Developer-Autodesk/design.automation-.net-library.git",clone_url:"https://github.com/Developer-Autodesk/design.automation-.net-library.git",svn_url:"https://github.com/Developer-Autodesk/design.automation-.net-library",homepage:null,size:274,stargazers_count:4,watchers_count:4,language:"C#",has_issues:!0,has_downloads:!0,has_wiki:!0,has_pages:!1,forks_count:4,mirror_url:null,open_issues_count:0,forks:4,open_issues:0,watchers:4,default_branch:"master",permissions:{admin:!1,push:!1,pull:!0}},{id:26573507,name:"design.automation-workflow-winform-sample",full_name:"Developer-Autodesk/design.automation-workflow-winform-sample",owner:{login:"Developer-Autodesk",id:8017462,avatar_url:"https://avatars.githubusercontent.com/u/8017462?v=3",gravatar_id:"",url:"https://api.github.com/users/Developer-Autodesk",html_url:"https://github.com/Developer-Autodesk",followers_url:"https://api.github.com/users/Developer-Autodesk/followers",following_url:"https://api.github.com/users/Developer-Autodesk/following{/other_user}",gists_url:"https://api.github.com/users/Developer-Autodesk/gists{/gist_id}",starred_url:"https://api.github.com/users/Developer-Autodesk/starred{/owner}{/repo}",subscriptions_url:"https://api.github.com/users/Developer-Autodesk/subscriptions",organizations_url:"https://api.github.com/users/Developer-Autodesk/orgs",
-repos_url:"https://api.github.com/users/Developer-Autodesk/repos",events_url:"https://api.github.com/users/Developer-Autodesk/events{/privacy}",received_events_url:"https://api.github.com/users/Developer-Autodesk/received_events",type:"Organization",site_admin:!1},"private":!1,html_url:"https://github.com/Developer-Autodesk/design.automation-workflow-winform-sample",description:"A C# WinForm application for performing AutoCAD IO workflow tasks",fork:!1,url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample",forks_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/forks",keys_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/keys{/key_id}",collaborators_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/collaborators{/collaborator}",teams_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/teams",hooks_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/hooks",issue_events_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/issues/events{/number}",events_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/events",assignees_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/assignees{/user}",branches_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/branches{/branch}",tags_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/tags",blobs_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/git/blobs{/sha}",git_tags_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/git/tags{/sha}",git_refs_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/git/refs{/sha}",trees_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/git/trees{/sha}",statuses_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/statuses/{sha}",languages_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/languages",stargazers_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/stargazers",contributors_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/contributors",subscribers_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/subscribers",subscription_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/subscription",commits_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/commits{/sha}",git_commits_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/git/commits{/sha}",comments_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/comments{/number}",issue_comment_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/issues/comments{/number}",contents_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/contents/{+path}",compare_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/compare/{base}...{head}",merges_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/merges",archive_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/{archive_format}{/ref}",downloads_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/downloads",issues_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/issues{/number}",pulls_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/pulls{/number}",milestones_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/milestones{/number}",notifications_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/notifications{?since,all,participating}",labels_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/labels{/name}",releases_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/releases{/id}",deployments_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-workflow-winform-sample/deployments",created_at:"2014-11-13T06:09:56Z",updated_at:"2016-11-17T18:13:49Z",pushed_at:"2016-06-09T03:47:52Z",git_url:"git://github.com/Developer-Autodesk/design.automation-workflow-winform-sample.git",ssh_url:"git@github.com:Developer-Autodesk/design.automation-workflow-winform-sample.git",clone_url:"https://github.com/Developer-Autodesk/design.automation-workflow-winform-sample.git",svn_url:"https://github.com/Developer-Autodesk/design.automation-workflow-winform-sample",homepage:null,size:1135,stargazers_count:3,watchers_count:3,language:"C#",has_issues:!0,has_downloads:!0,has_wiki:!0,has_pages:!1,forks_count:3,mirror_url:null,open_issues_count:0,forks:3,open_issues:0,watchers:3,default_branch:"master",permissions:{admin:!1,push:!1,pull:!0}},{id:26573749,name:"design.automation-windows-services-sample",full_name:"Developer-Autodesk/design.automation-windows-services-sample",owner:{login:"Developer-Autodesk",id:8017462,avatar_url:"https://avatars.githubusercontent.com/u/8017462?v=3",gravatar_id:"",url:"https://api.github.com/users/Developer-Autodesk",html_url:"https://github.com/Developer-Autodesk",followers_url:"https://api.github.com/users/Developer-Autodesk/followers",following_url:"https://api.github.com/users/Developer-Autodesk/following{/other_user}",gists_url:"https://api.github.com/users/Developer-Autodesk/gists{/gist_id}",starred_url:"https://api.github.com/users/Developer-Autodesk/starred{/owner}{/repo}",subscriptions_url:"https://api.github.com/users/Developer-Autodesk/subscriptions",organizations_url:"https://api.github.com/users/Developer-Autodesk/orgs",repos_url:"https://api.github.com/users/Developer-Autodesk/repos",events_url:"https://api.github.com/users/Developer-Autodesk/events{/privacy}",received_events_url:"https://api.github.com/users/Developer-Autodesk/received_events",type:"Organization",site_admin:!1},"private":!1,html_url:"https://github.com/Developer-Autodesk/design.automation-windows-services-sample",description:"Windows service sample to plot a drawing placed in a folder using AutoCAD IO",fork:!1,url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample",forks_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/forks",keys_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/keys{/key_id}",collaborators_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/collaborators{/collaborator}",teams_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/teams",hooks_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/hooks",issue_events_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/issues/events{/number}",events_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/events",assignees_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/assignees{/user}",branches_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/branches{/branch}",tags_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/tags",blobs_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/git/blobs{/sha}",git_tags_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/git/tags{/sha}",git_refs_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/git/refs{/sha}",trees_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/git/trees{/sha}",statuses_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/statuses/{sha}",languages_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/languages",stargazers_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/stargazers",contributors_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/contributors",subscribers_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/subscribers",subscription_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/subscription",commits_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/commits{/sha}",git_commits_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/git/commits{/sha}",comments_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/comments{/number}",issue_comment_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/issues/comments{/number}",contents_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/contents/{+path}",compare_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/compare/{base}...{head}",merges_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/merges",archive_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/{archive_format}{/ref}",downloads_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/downloads",issues_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/issues{/number}",pulls_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/pulls{/number}",milestones_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/milestones{/number}",notifications_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/notifications{?since,all,participating}",labels_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/labels{/name}",releases_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/releases{/id}",deployments_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-windows-services-sample/deployments",created_at:"2014-11-13T06:17:53Z",updated_at:"2016-06-08T04:08:39Z",pushed_at:"2016-06-08T22:05:45Z",git_url:"git://github.com/Developer-Autodesk/design.automation-windows-services-sample.git",ssh_url:"git@github.com:Developer-Autodesk/design.automation-windows-services-sample.git",clone_url:"https://github.com/Developer-Autodesk/design.automation-windows-services-sample.git",svn_url:"https://github.com/Developer-Autodesk/design.automation-windows-services-sample",homepage:null,size:4145,stargazers_count:1,watchers_count:1,language:"C#",has_issues:!0,has_downloads:!0,has_wiki:!0,has_pages:!1,forks_count:1,mirror_url:null,open_issues_count:0,forks:1,open_issues:0,watchers:1,default_branch:"master",permissions:{admin:!1,push:!1,pull:!0}},{id:26574835,name:"design.automation-asp.net-cabinet-sample",full_name:"Developer-Autodesk/design.automation-asp.net-cabinet-sample",owner:{login:"Developer-Autodesk",id:8017462,avatar_url:"https://avatars.githubusercontent.com/u/8017462?v=3",gravatar_id:"",url:"https://api.github.com/users/Developer-Autodesk",html_url:"https://github.com/Developer-Autodesk",followers_url:"https://api.github.com/users/Developer-Autodesk/followers",following_url:"https://api.github.com/users/Developer-Autodesk/following{/other_user}",gists_url:"https://api.github.com/users/Developer-Autodesk/gists{/gist_id}",starred_url:"https://api.github.com/users/Developer-Autodesk/starred{/owner}{/repo}",subscriptions_url:"https://api.github.com/users/Developer-Autodesk/subscriptions",organizations_url:"https://api.github.com/users/Developer-Autodesk/orgs",repos_url:"https://api.github.com/users/Developer-Autodesk/repos",events_url:"https://api.github.com/users/Developer-Autodesk/events{/privacy}",received_events_url:"https://api.github.com/users/Developer-Autodesk/received_events",type:"Organization",site_admin:!1},"private":!1,html_url:"https://github.com/Developer-Autodesk/design.automation-asp.net-cabinet-sample",description:"An ASP.Net Web application that uses AutoCAD IO and View&Data API to preview and create a closet drawing",fork:!1,url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample",forks_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/forks",keys_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/keys{/key_id}",collaborators_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/collaborators{/collaborator}",teams_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/teams",hooks_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/hooks",issue_events_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/issues/events{/number}",events_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/events",assignees_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/assignees{/user}",branches_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/branches{/branch}",tags_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/tags",blobs_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/git/blobs{/sha}",git_tags_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/git/tags{/sha}",git_refs_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/git/refs{/sha}",trees_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/git/trees{/sha}",statuses_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/statuses/{sha}",languages_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/languages",stargazers_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/stargazers",contributors_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/contributors",subscribers_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/subscribers",subscription_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/subscription",commits_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/commits{/sha}",git_commits_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/git/commits{/sha}",comments_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/comments{/number}",issue_comment_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/issues/comments{/number}",contents_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/contents/{+path}",compare_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/compare/{base}...{head}",merges_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/merges",archive_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/{archive_format}{/ref}",downloads_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/downloads",issues_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/issues{/number}",pulls_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/pulls{/number}",milestones_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/milestones{/number}",notifications_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/notifications{?since,all,participating}",labels_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/labels{/name}",releases_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/releases{/id}",deployments_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-asp.net-cabinet-sample/deployments",created_at:"2014-11-13T06:49:35Z",updated_at:"2016-08-30T01:45:53Z",pushed_at:"2016-06-10T04:20:58Z",git_url:"git://github.com/Developer-Autodesk/design.automation-asp.net-cabinet-sample.git",ssh_url:"git@github.com:Developer-Autodesk/design.automation-asp.net-cabinet-sample.git",clone_url:"https://github.com/Developer-Autodesk/design.automation-asp.net-cabinet-sample.git",svn_url:"https://github.com/Developer-Autodesk/design.automation-asp.net-cabinet-sample",homepage:null,size:22627,stargazers_count:4,watchers_count:4,language:"C#",has_issues:!0,has_downloads:!0,has_wiki:!0,has_pages:!1,forks_count:3,mirror_url:null,open_issues_count:1,forks:3,open_issues:1,watchers:4,default_branch:"master",permissions:{admin:!1,push:!1,pull:!0}},{id:26663078,name:"workflow-java-forge",full_name:"Developer-Autodesk/workflow-java-forge",owner:{login:"Developer-Autodesk",id:8017462,avatar_url:"https://avatars.githubusercontent.com/u/8017462?v=3",gravatar_id:"",url:"https://api.github.com/users/Developer-Autodesk",html_url:"https://github.com/Developer-Autodesk",followers_url:"https://api.github.com/users/Developer-Autodesk/followers",following_url:"https://api.github.com/users/Developer-Autodesk/following{/other_user}",gists_url:"https://api.github.com/users/Developer-Autodesk/gists{/gist_id}",starred_url:"https://api.github.com/users/Developer-Autodesk/starred{/owner}{/repo}",subscriptions_url:"https://api.github.com/users/Developer-Autodesk/subscriptions",organizations_url:"https://api.github.com/users/Developer-Autodesk/orgs",repos_url:"https://api.github.com/users/Developer-Autodesk/repos",events_url:"https://api.github.com/users/Developer-Autodesk/events{/privacy}",received_events_url:"https://api.github.com/users/Developer-Autodesk/received_events",type:"Organization",site_admin:!1},"private":!1,html_url:"https://github.com/Developer-Autodesk/workflow-java-forge",description:null,fork:!1,url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge",forks_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/forks",keys_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/keys{/key_id}",collaborators_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/collaborators{/collaborator}",teams_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/teams",hooks_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/hooks",issue_events_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/issues/events{/number}",events_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/events",assignees_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/assignees{/user}",branches_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/branches{/branch}",tags_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/tags",blobs_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/git/blobs{/sha}",git_tags_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/git/tags{/sha}",git_refs_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/git/refs{/sha}",trees_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/git/trees{/sha}",statuses_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/statuses/{sha}",languages_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/languages",stargazers_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/stargazers",contributors_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/contributors",subscribers_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/subscribers",subscription_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/subscription",commits_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/commits{/sha}",git_commits_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/git/commits{/sha}",comments_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/comments{/number}",issue_comment_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/issues/comments{/number}",contents_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/contents/{+path}",compare_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/compare/{base}...{head}",merges_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/merges",archive_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/{archive_format}{/ref}",downloads_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/downloads",issues_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/issues{/number}",pulls_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/pulls{/number}",milestones_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/milestones{/number}",notifications_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/notifications{?since,all,participating}",labels_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/labels{/name}",releases_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/releases{/id}",deployments_url:"https://api.github.com/repos/Developer-Autodesk/workflow-java-forge/deployments",created_at:"2014-11-15T00:03:10Z",updated_at:"2016-11-08T17:44:57Z",pushed_at:"2016-11-08T12:33:30Z",git_url:"git://github.com/Developer-Autodesk/workflow-java-forge.git",ssh_url:"git@github.com:Developer-Autodesk/workflow-java-forge.git",clone_url:"https://github.com/Developer-Autodesk/workflow-java-forge.git",svn_url:"https://github.com/Developer-Autodesk/workflow-java-forge",homepage:"",size:65,stargazers_count:2,watchers_count:2,language:"Java",has_issues:!0,has_downloads:!0,has_wiki:!0,has_pages:!1,forks_count:2,mirror_url:null,open_issues_count:0,forks:2,open_issues:0,watchers:2,default_branch:"master",permissions:{admin:!1,push:!1,pull:!0}},{id:27582531,name:"design.automation-java-simple.sample",full_name:"Developer-Autodesk/design.automation-java-simple.sample",owner:{login:"Developer-Autodesk",id:8017462,avatar_url:"https://avatars.githubusercontent.com/u/8017462?v=3",gravatar_id:"",url:"https://api.github.com/users/Developer-Autodesk",html_url:"https://github.com/Developer-Autodesk",followers_url:"https://api.github.com/users/Developer-Autodesk/followers",following_url:"https://api.github.com/users/Developer-Autodesk/following{/other_user}",gists_url:"https://api.github.com/users/Developer-Autodesk/gists{/gist_id}",starred_url:"https://api.github.com/users/Developer-Autodesk/starred{/owner}{/repo}",subscriptions_url:"https://api.github.com/users/Developer-Autodesk/subscriptions",organizations_url:"https://api.github.com/users/Developer-Autodesk/orgs",repos_url:"https://api.github.com/users/Developer-Autodesk/repos",events_url:"https://api.github.com/users/Developer-Autodesk/events{/privacy}",received_events_url:"https://api.github.com/users/Developer-Autodesk/received_events",type:"Organization",site_admin:!1},"private":!1,html_url:"https://github.com/Developer-Autodesk/design.automation-java-simple.sample",description:"This sample moved to https://github.com/Autodesk-Forge/design.automation-java-simple.sample",fork:!1,url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample",forks_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/forks",keys_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/keys{/key_id}",collaborators_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/collaborators{/collaborator}",teams_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/teams",hooks_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/hooks",issue_events_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/issues/events{/number}",events_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/events",assignees_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/assignees{/user}",branches_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/branches{/branch}",tags_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/tags",blobs_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/git/blobs{/sha}",git_tags_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/git/tags{/sha}",git_refs_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/git/refs{/sha}",trees_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/git/trees{/sha}",statuses_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/statuses/{sha}",languages_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/languages",stargazers_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/stargazers",contributors_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/contributors",subscribers_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/subscribers",subscription_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/subscription",commits_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/commits{/sha}",git_commits_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/git/commits{/sha}",comments_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/comments{/number}",issue_comment_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/issues/comments{/number}",contents_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/contents/{+path}",compare_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/compare/{base}...{head}",merges_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/merges",archive_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/{archive_format}{/ref}",downloads_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/downloads",issues_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/issues{/number}",pulls_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/pulls{/number}",milestones_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/milestones{/number}",notifications_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/notifications{?since,all,participating}",labels_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/labels{/name}",releases_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/releases{/id}",deployments_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-java-simple.sample/deployments",created_at:"2014-12-05T08:44:10Z",updated_at:"2016-11-11T18:11:08Z",pushed_at:"2016-11-11T18:11:32Z",git_url:"git://github.com/Developer-Autodesk/design.automation-java-simple.sample.git",ssh_url:"git@github.com:Developer-Autodesk/design.automation-java-simple.sample.git",clone_url:"https://github.com/Developer-Autodesk/design.automation-java-simple.sample.git",svn_url:"https://github.com/Developer-Autodesk/design.automation-java-simple.sample",homepage:"",size:59,stargazers_count:2,watchers_count:2,language:"Java",has_issues:!0,has_downloads:!0,has_wiki:!0,has_pages:!1,forks_count:4,mirror_url:null,open_issues_count:0,forks:4,open_issues:0,watchers:2,default_branch:"master",permissions:{admin:!1,push:!1,pull:!0}},{id:27924362,name:"library-javascript-viewer-extensions",full_name:"Developer-Autodesk/library-javascript-viewer-extensions",owner:{login:"Developer-Autodesk",id:8017462,avatar_url:"https://avatars.githubusercontent.com/u/8017462?v=3",gravatar_id:"",url:"https://api.github.com/users/Developer-Autodesk",html_url:"https://github.com/Developer-Autodesk",followers_url:"https://api.github.com/users/Developer-Autodesk/followers",following_url:"https://api.github.com/users/Developer-Autodesk/following{/other_user}",gists_url:"https://api.github.com/users/Developer-Autodesk/gists{/gist_id}",starred_url:"https://api.github.com/users/Developer-Autodesk/starred{/owner}{/repo}",subscriptions_url:"https://api.github.com/users/Developer-Autodesk/subscriptions",organizations_url:"https://api.github.com/users/Developer-Autodesk/orgs",repos_url:"https://api.github.com/users/Developer-Autodesk/repos",events_url:"https://api.github.com/users/Developer-Autodesk/events{/privacy}",received_events_url:"https://api.github.com/users/Developer-Autodesk/received_events",type:"Organization",site_admin:!1},"private":!1,html_url:"https://github.com/Developer-Autodesk/library-javascript-viewer-extensions",description:"A collection of various JavaScript extensions for the viewer",fork:!1,url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions",forks_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/forks",keys_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/keys{/key_id}",collaborators_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/collaborators{/collaborator}",
-teams_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/teams",hooks_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/hooks",issue_events_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/issues/events{/number}",events_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/events",assignees_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/assignees{/user}",branches_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/branches{/branch}",tags_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/tags",blobs_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/git/blobs{/sha}",git_tags_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/git/tags{/sha}",git_refs_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/git/refs{/sha}",trees_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/git/trees{/sha}",statuses_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/statuses/{sha}",languages_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/languages",stargazers_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/stargazers",contributors_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/contributors",subscribers_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/subscribers",subscription_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/subscription",commits_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/commits{/sha}",git_commits_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/git/commits{/sha}",comments_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/comments{/number}",issue_comment_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/issues/comments{/number}",contents_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/contents/{+path}",compare_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/compare/{base}...{head}",merges_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/merges",archive_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/{archive_format}{/ref}",downloads_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/downloads",issues_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/issues{/number}",pulls_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/pulls{/number}",milestones_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/milestones{/number}",notifications_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/notifications{?since,all,participating}",labels_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/labels{/name}",releases_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/releases{/id}",deployments_url:"https://api.github.com/repos/Developer-Autodesk/library-javascript-viewer-extensions/deployments",created_at:"2014-12-12T14:48:40Z",updated_at:"2016-12-07T01:06:40Z",pushed_at:"2016-11-17T23:29:02Z",git_url:"git://github.com/Developer-Autodesk/library-javascript-viewer-extensions.git",ssh_url:"git@github.com:Developer-Autodesk/library-javascript-viewer-extensions.git",clone_url:"https://github.com/Developer-Autodesk/library-javascript-viewer-extensions.git",svn_url:"https://github.com/Developer-Autodesk/library-javascript-viewer-extensions",homepage:null,size:4091,stargazers_count:30,watchers_count:30,language:"JavaScript",has_issues:!0,has_downloads:!0,has_wiki:!0,has_pages:!0,forks_count:19,mirror_url:null,open_issues_count:2,forks:19,open_issues:2,watchers:30,default_branch:"master",permissions:{admin:!1,push:!1,pull:!0}},{id:28427959,name:"Developer-Autodesk.github.io",full_name:"Developer-Autodesk/Developer-Autodesk.github.io",owner:{login:"Developer-Autodesk",id:8017462,avatar_url:"https://avatars.githubusercontent.com/u/8017462?v=3",gravatar_id:"",url:"https://api.github.com/users/Developer-Autodesk",html_url:"https://github.com/Developer-Autodesk",followers_url:"https://api.github.com/users/Developer-Autodesk/followers",following_url:"https://api.github.com/users/Developer-Autodesk/following{/other_user}",gists_url:"https://api.github.com/users/Developer-Autodesk/gists{/gist_id}",starred_url:"https://api.github.com/users/Developer-Autodesk/starred{/owner}{/repo}",subscriptions_url:"https://api.github.com/users/Developer-Autodesk/subscriptions",organizations_url:"https://api.github.com/users/Developer-Autodesk/orgs",repos_url:"https://api.github.com/users/Developer-Autodesk/repos",events_url:"https://api.github.com/users/Developer-Autodesk/events{/privacy}",received_events_url:"https://api.github.com/users/Developer-Autodesk/received_events",type:"Organization",site_admin:!1},"private":!1,html_url:"https://github.com/Developer-Autodesk/Developer-Autodesk.github.io",description:"The entry point of Autodesk web services, go to - ",fork:!1,url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io",forks_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/forks",keys_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/keys{/key_id}",collaborators_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/collaborators{/collaborator}",teams_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/teams",hooks_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/hooks",issue_events_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/issues/events{/number}",events_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/events",assignees_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/assignees{/user}",branches_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/branches{/branch}",tags_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/tags",blobs_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/git/blobs{/sha}",git_tags_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/git/tags{/sha}",git_refs_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/git/refs{/sha}",trees_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/git/trees{/sha}",statuses_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/statuses/{sha}",languages_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/languages",stargazers_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/stargazers",contributors_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/contributors",subscribers_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/subscribers",subscription_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/subscription",commits_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/commits{/sha}",git_commits_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/git/commits{/sha}",comments_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/comments{/number}",issue_comment_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/issues/comments{/number}",contents_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/contents/{+path}",compare_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/compare/{base}...{head}",merges_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/merges",archive_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/{archive_format}{/ref}",downloads_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/downloads",issues_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/issues{/number}",pulls_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/pulls{/number}",milestones_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/milestones{/number}",notifications_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/notifications{?since,all,participating}",labels_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/labels{/name}",releases_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/releases{/id}",deployments_url:"https://api.github.com/repos/Developer-Autodesk/Developer-Autodesk.github.io/deployments",created_at:"2014-12-24T01:22:06Z",updated_at:"2016-12-07T21:48:19Z",pushed_at:"2016-12-10T04:12:35Z",git_url:"git://github.com/Developer-Autodesk/Developer-Autodesk.github.io.git",ssh_url:"git@github.com:Developer-Autodesk/Developer-Autodesk.github.io.git",clone_url:"https://github.com/Developer-Autodesk/Developer-Autodesk.github.io.git",svn_url:"https://github.com/Developer-Autodesk/Developer-Autodesk.github.io",homepage:"http://developer-autodesk.github.io/",size:29525,stargazers_count:11,watchers_count:11,language:"CSS",has_issues:!0,has_downloads:!0,has_wiki:!0,has_pages:!0,forks_count:6,mirror_url:null,open_issues_count:0,forks:6,open_issues:0,watchers:11,default_branch:"master",permissions:{admin:!1,push:!1,pull:!0}},{id:29517720,name:"workflow-node.js-view.and.data.api",full_name:"Developer-Autodesk/workflow-node.js-view.and.data.api",owner:{login:"Developer-Autodesk",id:8017462,avatar_url:"https://avatars.githubusercontent.com/u/8017462?v=3",gravatar_id:"",url:"https://api.github.com/users/Developer-Autodesk",html_url:"https://github.com/Developer-Autodesk",followers_url:"https://api.github.com/users/Developer-Autodesk/followers",following_url:"https://api.github.com/users/Developer-Autodesk/following{/other_user}",gists_url:"https://api.github.com/users/Developer-Autodesk/gists{/gist_id}",starred_url:"https://api.github.com/users/Developer-Autodesk/starred{/owner}{/repo}",subscriptions_url:"https://api.github.com/users/Developer-Autodesk/subscriptions",organizations_url:"https://api.github.com/users/Developer-Autodesk/orgs",repos_url:"https://api.github.com/users/Developer-Autodesk/repos",events_url:"https://api.github.com/users/Developer-Autodesk/events{/privacy}",received_events_url:"https://api.github.com/users/Developer-Autodesk/received_events",type:"Organization",site_admin:!1},"private":!1,html_url:"https://github.com/Developer-Autodesk/workflow-node.js-view.and.data.api",description:"A demo with the usage of viewer client in Node.JS",fork:!1,url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api",forks_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/forks",keys_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/keys{/key_id}",collaborators_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/collaborators{/collaborator}",teams_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/teams",hooks_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/hooks",issue_events_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/issues/events{/number}",events_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/events",assignees_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/assignees{/user}",branches_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/branches{/branch}",tags_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/tags",blobs_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/git/blobs{/sha}",git_tags_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/git/tags{/sha}",git_refs_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/git/refs{/sha}",trees_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/git/trees{/sha}",statuses_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/statuses/{sha}",languages_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/languages",stargazers_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/stargazers",contributors_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/contributors",subscribers_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/subscribers",subscription_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/subscription",commits_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/commits{/sha}",git_commits_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/git/commits{/sha}",comments_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/comments{/number}",issue_comment_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/issues/comments{/number}",contents_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/contents/{+path}",compare_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/compare/{base}...{head}",merges_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/merges",archive_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/{archive_format}{/ref}",downloads_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/downloads",issues_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/issues{/number}",pulls_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/pulls{/number}",milestones_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/milestones{/number}",notifications_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/notifications{?since,all,participating}",labels_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/labels{/name}",releases_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/releases{/id}",deployments_url:"https://api.github.com/repos/Developer-Autodesk/workflow-node.js-view.and.data.api/deployments",created_at:"2015-01-20T07:36:20Z",updated_at:"2016-09-28T20:12:09Z",pushed_at:"2016-08-13T02:40:58Z",git_url:"git://github.com/Developer-Autodesk/workflow-node.js-view.and.data.api.git",ssh_url:"git@github.com:Developer-Autodesk/workflow-node.js-view.and.data.api.git",clone_url:"https://github.com/Developer-Autodesk/workflow-node.js-view.and.data.api.git",svn_url:"https://github.com/Developer-Autodesk/workflow-node.js-view.and.data.api",homepage:"",size:1935,stargazers_count:24,watchers_count:24,language:"JavaScript",has_issues:!0,has_downloads:!0,has_wiki:!0,has_pages:!1,forks_count:109,mirror_url:null,open_issues_count:5,forks:109,open_issues:5,watchers:24,default_branch:"master",permissions:{admin:!1,push:!1,pull:!0}},{id:29723868,name:"viewer-nodejs-model.as.a.service",full_name:"Developer-Autodesk/viewer-nodejs-model.as.a.service",owner:{login:"Developer-Autodesk",id:8017462,avatar_url:"https://avatars.githubusercontent.com/u/8017462?v=3",gravatar_id:"",url:"https://api.github.com/users/Developer-Autodesk",html_url:"https://github.com/Developer-Autodesk",followers_url:"https://api.github.com/users/Developer-Autodesk/followers",following_url:"https://api.github.com/users/Developer-Autodesk/following{/other_user}",gists_url:"https://api.github.com/users/Developer-Autodesk/gists{/gist_id}",starred_url:"https://api.github.com/users/Developer-Autodesk/starred{/owner}{/repo}",subscriptions_url:"https://api.github.com/users/Developer-Autodesk/subscriptions",organizations_url:"https://api.github.com/users/Developer-Autodesk/orgs",repos_url:"https://api.github.com/users/Developer-Autodesk/repos",events_url:"https://api.github.com/users/Developer-Autodesk/events{/privacy}",received_events_url:"https://api.github.com/users/Developer-Autodesk/received_events",type:"Organization",site_admin:!1},"private":!1,html_url:"https://github.com/Developer-Autodesk/viewer-nodejs-model.as.a.service",description:"A sample allows user to upload models and test client APIs live",fork:!1,url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service",forks_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/forks",keys_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/keys{/key_id}",collaborators_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/collaborators{/collaborator}",teams_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/teams",hooks_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/hooks",issue_events_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/issues/events{/number}",events_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/events",assignees_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/assignees{/user}",branches_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/branches{/branch}",tags_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/tags",blobs_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/git/blobs{/sha}",git_tags_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/git/tags{/sha}",git_refs_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/git/refs{/sha}",trees_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/git/trees{/sha}",statuses_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/statuses/{sha}",languages_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/languages",stargazers_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/stargazers",contributors_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/contributors",subscribers_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/subscribers",subscription_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/subscription",commits_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/commits{/sha}",git_commits_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/git/commits{/sha}",comments_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/comments{/number}",issue_comment_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/issues/comments{/number}",contents_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/contents/{+path}",compare_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/compare/{base}...{head}",merges_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/merges",archive_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/{archive_format}{/ref}",downloads_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/downloads",issues_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/issues{/number}",pulls_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/pulls{/number}",milestones_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/milestones{/number}",notifications_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/notifications{?since,all,participating}",labels_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/labels{/name}",releases_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/releases{/id}",deployments_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-model.as.a.service/deployments",created_at:"2015-01-23T08:36:04Z",updated_at:"2016-11-07T12:29:32Z",pushed_at:"2016-11-07T12:45:11Z",git_url:"git://github.com/Developer-Autodesk/viewer-nodejs-model.as.a.service.git",ssh_url:"git@github.com:Developer-Autodesk/viewer-nodejs-model.as.a.service.git",clone_url:"https://github.com/Developer-Autodesk/viewer-nodejs-model.as.a.service.git",svn_url:"https://github.com/Developer-Autodesk/viewer-nodejs-model.as.a.service",homepage:"http://still-spire-1606.herokuapp.com/",size:198,stargazers_count:5,watchers_count:5,language:"JavaScript",has_issues:!0,has_downloads:!0,has_wiki:!0,has_pages:!1,forks_count:4,mirror_url:null,open_issues_count:0,forks:4,open_issues:0,watchers:5,default_branch:"master",permissions:{admin:!1,push:!1,pull:!0}},{id:29879046,name:"viewer-quick.share-sample",full_name:"Developer-Autodesk/viewer-quick.share-sample",owner:{login:"Developer-Autodesk",id:8017462,avatar_url:"https://avatars.githubusercontent.com/u/8017462?v=3",gravatar_id:"",url:"https://api.github.com/users/Developer-Autodesk",html_url:"https://github.com/Developer-Autodesk",followers_url:"https://api.github.com/users/Developer-Autodesk/followers",following_url:"https://api.github.com/users/Developer-Autodesk/following{/other_user}",gists_url:"https://api.github.com/users/Developer-Autodesk/gists{/gist_id}",starred_url:"https://api.github.com/users/Developer-Autodesk/starred{/owner}{/repo}",subscriptions_url:"https://api.github.com/users/Developer-Autodesk/subscriptions",organizations_url:"https://api.github.com/users/Developer-Autodesk/orgs",repos_url:"https://api.github.com/users/Developer-Autodesk/repos",events_url:"https://api.github.com/users/Developer-Autodesk/events{/privacy}",received_events_url:"https://api.github.com/users/Developer-Autodesk/received_events",type:"Organization",site_admin:!1},"private":!1,html_url:"https://github.com/Developer-Autodesk/viewer-quick.share-sample",description:"Quick 3D Model Sharing App utilizing Autodesk's View and Data API",fork:!1,url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample",forks_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/forks",keys_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/keys{/key_id}",collaborators_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/collaborators{/collaborator}",teams_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/teams",hooks_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/hooks",issue_events_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/issues/events{/number}",events_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/events",assignees_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/assignees{/user}",branches_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/branches{/branch}",tags_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/tags",blobs_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/git/blobs{/sha}",git_tags_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/git/tags{/sha}",git_refs_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/git/refs{/sha}",trees_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/git/trees{/sha}",statuses_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/statuses/{sha}",languages_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/languages",stargazers_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/stargazers",contributors_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/contributors",subscribers_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/subscribers",subscription_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/subscription",commits_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/commits{/sha}",git_commits_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/git/commits{/sha}",comments_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/comments{/number}",issue_comment_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/issues/comments{/number}",contents_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/contents/{+path}",compare_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/compare/{base}...{head}",merges_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/merges",archive_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/{archive_format}{/ref}",downloads_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/downloads",issues_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/issues{/number}",pulls_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/pulls{/number}",milestones_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/milestones{/number}",notifications_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/notifications{?since,all,participating}",labels_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/labels{/name}",releases_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/releases{/id}",deployments_url:"https://api.github.com/repos/Developer-Autodesk/viewer-quick.share-sample/deployments",created_at:"2015-01-26T20:03:30Z",updated_at:"2016-06-10T14:06:30Z",pushed_at:"2016-06-08T14:39:55Z",git_url:"git://github.com/Developer-Autodesk/viewer-quick.share-sample.git",ssh_url:"git@github.com:Developer-Autodesk/viewer-quick.share-sample.git",clone_url:"https://github.com/Developer-Autodesk/viewer-quick.share-sample.git",svn_url:"https://github.com/Developer-Autodesk/viewer-quick.share-sample",homepage:"http://developer-autodesk.github.io/ViewerQuickShare",size:945,stargazers_count:2,watchers_count:2,language:"JavaScript",has_issues:!0,has_downloads:!0,has_wiki:!0,has_pages:!0,forks_count:0,mirror_url:null,open_issues_count:0,forks:0,open_issues:0,watchers:2,default_branch:"master",permissions:{admin:!1,push:!1,pull:!0}},{id:30554441,name:"viewer-boilerplate",full_name:"Developer-Autodesk/viewer-boilerplate",owner:{login:"Developer-Autodesk",id:8017462,avatar_url:"https://avatars.githubusercontent.com/u/8017462?v=3",gravatar_id:"",url:"https://api.github.com/users/Developer-Autodesk",html_url:"https://github.com/Developer-Autodesk",followers_url:"https://api.github.com/users/Developer-Autodesk/followers",following_url:"https://api.github.com/users/Developer-Autodesk/following{/other_user}",gists_url:"https://api.github.com/users/Developer-Autodesk/gists{/gist_id}",starred_url:"https://api.github.com/users/Developer-Autodesk/starred{/owner}{/repo}",subscriptions_url:"https://api.github.com/users/Developer-Autodesk/subscriptions",organizations_url:"https://api.github.com/users/Developer-Autodesk/orgs",repos_url:"https://api.github.com/users/Developer-Autodesk/repos",events_url:"https://api.github.com/users/Developer-Autodesk/events{/privacy}",received_events_url:"https://api.github.com/users/Developer-Autodesk/received_events",type:"Organization",site_admin:!1},"private":!1,html_url:"https://github.com/Developer-Autodesk/viewer-boilerplate",description:"This the the minimal JavaScript needed to get a viewer running",fork:!1,url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate",forks_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/forks",keys_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/keys{/key_id}",collaborators_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/collaborators{/collaborator}",teams_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/teams",hooks_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/hooks",issue_events_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/issues/events{/number}",events_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/events",assignees_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/assignees{/user}",branches_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/branches{/branch}",tags_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/tags",blobs_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/git/blobs{/sha}",git_tags_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/git/tags{/sha}",git_refs_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/git/refs{/sha}",trees_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/git/trees{/sha}",statuses_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/statuses/{sha}",languages_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/languages",stargazers_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/stargazers",contributors_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/contributors",subscribers_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/subscribers",subscription_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/subscription",commits_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/commits{/sha}",git_commits_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/git/commits{/sha}",
-comments_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/comments{/number}",issue_comment_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/issues/comments{/number}",contents_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/contents/{+path}",compare_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/compare/{base}...{head}",merges_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/merges",archive_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/{archive_format}{/ref}",downloads_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/downloads",issues_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/issues{/number}",pulls_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/pulls{/number}",milestones_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/milestones{/number}",notifications_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/notifications{?since,all,participating}",labels_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/labels{/name}",releases_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/releases{/id}",deployments_url:"https://api.github.com/repos/Developer-Autodesk/viewer-boilerplate/deployments",created_at:"2015-02-09T19:37:35Z",updated_at:"2016-11-18T07:18:17Z",pushed_at:"2016-11-04T02:59:31Z",git_url:"git://github.com/Developer-Autodesk/viewer-boilerplate.git",ssh_url:"git@github.com:Developer-Autodesk/viewer-boilerplate.git",clone_url:"https://github.com/Developer-Autodesk/viewer-boilerplate.git",svn_url:"https://github.com/Developer-Autodesk/viewer-boilerplate",homepage:null,size:172,stargazers_count:10,watchers_count:10,language:"HTML",has_issues:!0,has_downloads:!0,has_wiki:!0,has_pages:!1,forks_count:3,mirror_url:null,open_issues_count:0,forks:3,open_issues:0,watchers:10,default_branch:"master",permissions:{admin:!1,push:!1,pull:!0}},{id:34083223,name:"viewer-javascript-tutorial",full_name:"Developer-Autodesk/viewer-javascript-tutorial",owner:{login:"Developer-Autodesk",id:8017462,avatar_url:"https://avatars.githubusercontent.com/u/8017462?v=3",gravatar_id:"",url:"https://api.github.com/users/Developer-Autodesk",html_url:"https://github.com/Developer-Autodesk",followers_url:"https://api.github.com/users/Developer-Autodesk/followers",following_url:"https://api.github.com/users/Developer-Autodesk/following{/other_user}",gists_url:"https://api.github.com/users/Developer-Autodesk/gists{/gist_id}",starred_url:"https://api.github.com/users/Developer-Autodesk/starred{/owner}{/repo}",subscriptions_url:"https://api.github.com/users/Developer-Autodesk/subscriptions",organizations_url:"https://api.github.com/users/Developer-Autodesk/orgs",repos_url:"https://api.github.com/users/Developer-Autodesk/repos",events_url:"https://api.github.com/users/Developer-Autodesk/events{/privacy}",received_events_url:"https://api.github.com/users/Developer-Autodesk/received_events",type:"Organization",site_admin:!1},"private":!1,html_url:"https://github.com/Developer-Autodesk/viewer-javascript-tutorial",description:"A quickstart tutorial demonstrating how to set up a Node.js server and client-side JavaScript code to display and interact with a 3D model using the Autodesk Viewer & Model Derivative API",fork:!1,url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial",forks_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/forks",keys_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/keys{/key_id}",collaborators_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/collaborators{/collaborator}",teams_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/teams",hooks_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/hooks",issue_events_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/issues/events{/number}",events_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/events",assignees_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/assignees{/user}",branches_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/branches{/branch}",tags_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/tags",blobs_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/git/blobs{/sha}",git_tags_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/git/tags{/sha}",git_refs_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/git/refs{/sha}",trees_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/git/trees{/sha}",statuses_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/statuses/{sha}",languages_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/languages",stargazers_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/stargazers",contributors_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/contributors",subscribers_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/subscribers",subscription_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/subscription",commits_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/commits{/sha}",git_commits_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/git/commits{/sha}",comments_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/comments{/number}",issue_comment_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/issues/comments{/number}",contents_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/contents/{+path}",compare_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/compare/{base}...{head}",merges_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/merges",archive_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/{archive_format}{/ref}",downloads_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/downloads",issues_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/issues{/number}",pulls_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/pulls{/number}",milestones_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/milestones{/number}",notifications_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/notifications{?since,all,participating}",labels_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/labels{/name}",releases_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/releases{/id}",deployments_url:"https://api.github.com/repos/Developer-Autodesk/viewer-javascript-tutorial/deployments",created_at:"2015-04-16T22:10:02Z",updated_at:"2016-12-01T02:47:34Z",pushed_at:"2016-10-07T09:34:59Z",git_url:"git://github.com/Developer-Autodesk/viewer-javascript-tutorial.git",ssh_url:"git@github.com:Developer-Autodesk/viewer-javascript-tutorial.git",clone_url:"https://github.com/Developer-Autodesk/viewer-javascript-tutorial.git",svn_url:"https://github.com/Developer-Autodesk/viewer-javascript-tutorial",homepage:"",size:51260,stargazers_count:42,watchers_count:42,language:null,has_issues:!0,has_downloads:!0,has_wiki:!0,has_pages:!1,forks_count:54,mirror_url:null,open_issues_count:2,forks:54,open_issues:2,watchers:42,default_branch:"master",permissions:{admin:!1,push:!1,pull:!0}},{id:42235027,name:"viewer-nodejs-typeview.sample",full_name:"Developer-Autodesk/viewer-nodejs-typeview.sample",owner:{login:"Developer-Autodesk",id:8017462,avatar_url:"https://avatars.githubusercontent.com/u/8017462?v=3",gravatar_id:"",url:"https://api.github.com/users/Developer-Autodesk",html_url:"https://github.com/Developer-Autodesk",followers_url:"https://api.github.com/users/Developer-Autodesk/followers",following_url:"https://api.github.com/users/Developer-Autodesk/following{/other_user}",gists_url:"https://api.github.com/users/Developer-Autodesk/gists{/gist_id}",starred_url:"https://api.github.com/users/Developer-Autodesk/starred{/owner}{/repo}",subscriptions_url:"https://api.github.com/users/Developer-Autodesk/subscriptions",organizations_url:"https://api.github.com/users/Developer-Autodesk/orgs",repos_url:"https://api.github.com/users/Developer-Autodesk/repos",events_url:"https://api.github.com/users/Developer-Autodesk/events{/privacy}",received_events_url:"https://api.github.com/users/Developer-Autodesk/received_events",type:"Organization",site_admin:!1},"private":!1,html_url:"https://github.com/Developer-Autodesk/viewer-nodejs-typeview.sample",description:"TypeScript Sample using Node.js and Autodesk Viewer",fork:!1,url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample",forks_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/forks",keys_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/keys{/key_id}",collaborators_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/collaborators{/collaborator}",teams_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/teams",hooks_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/hooks",issue_events_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/issues/events{/number}",events_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/events",assignees_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/assignees{/user}",branches_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/branches{/branch}",tags_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/tags",blobs_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/git/blobs{/sha}",git_tags_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/git/tags{/sha}",git_refs_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/git/refs{/sha}",trees_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/git/trees{/sha}",statuses_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/statuses/{sha}",languages_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/languages",stargazers_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/stargazers",contributors_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/contributors",subscribers_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/subscribers",subscription_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/subscription",commits_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/commits{/sha}",git_commits_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/git/commits{/sha}",comments_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/comments{/number}",issue_comment_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/issues/comments{/number}",contents_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/contents/{+path}",compare_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/compare/{base}...{head}",merges_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/merges",archive_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/{archive_format}{/ref}",downloads_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/downloads",issues_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/issues{/number}",pulls_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/pulls{/number}",milestones_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/milestones{/number}",notifications_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/notifications{?since,all,participating}",labels_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/labels{/name}",releases_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/releases{/id}",deployments_url:"https://api.github.com/repos/Developer-Autodesk/viewer-nodejs-typeview.sample/deployments",created_at:"2015-09-10T09:24:09Z",updated_at:"2016-11-07T13:04:12Z",pushed_at:"2016-11-08T13:02:07Z",git_url:"git://github.com/Developer-Autodesk/viewer-nodejs-typeview.sample.git",ssh_url:"git@github.com:Developer-Autodesk/viewer-nodejs-typeview.sample.git",clone_url:"https://github.com/Developer-Autodesk/viewer-nodejs-typeview.sample.git",svn_url:"https://github.com/Developer-Autodesk/viewer-nodejs-typeview.sample",homepage:"",size:1310,stargazers_count:3,watchers_count:3,language:"TypeScript",has_issues:!0,has_downloads:!0,has_wiki:!0,has_pages:!1,forks_count:0,mirror_url:null,open_issues_count:0,forks:0,open_issues:0,watchers:3,default_branch:"master",permissions:{admin:!1,push:!1,pull:!0}},{id:43607140,name:"design.automation-python-tutorial",full_name:"Developer-Autodesk/design.automation-python-tutorial",owner:{login:"Developer-Autodesk",id:8017462,avatar_url:"https://avatars.githubusercontent.com/u/8017462?v=3",gravatar_id:"",url:"https://api.github.com/users/Developer-Autodesk",html_url:"https://github.com/Developer-Autodesk",followers_url:"https://api.github.com/users/Developer-Autodesk/followers",following_url:"https://api.github.com/users/Developer-Autodesk/following{/other_user}",gists_url:"https://api.github.com/users/Developer-Autodesk/gists{/gist_id}",starred_url:"https://api.github.com/users/Developer-Autodesk/starred{/owner}{/repo}",subscriptions_url:"https://api.github.com/users/Developer-Autodesk/subscriptions",organizations_url:"https://api.github.com/users/Developer-Autodesk/orgs",repos_url:"https://api.github.com/users/Developer-Autodesk/repos",events_url:"https://api.github.com/users/Developer-Autodesk/events{/privacy}",received_events_url:"https://api.github.com/users/Developer-Autodesk/received_events",type:"Organization",site_admin:!1},"private":!1,html_url:"https://github.com/Developer-Autodesk/design.automation-python-tutorial",description:"Python sample code for Design Automation of AutoCAD",fork:!1,url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial",forks_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/forks",keys_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/keys{/key_id}",collaborators_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/collaborators{/collaborator}",teams_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/teams",hooks_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/hooks",issue_events_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/issues/events{/number}",events_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/events",assignees_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/assignees{/user}",branches_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/branches{/branch}",tags_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/tags",blobs_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/git/blobs{/sha}",git_tags_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/git/tags{/sha}",git_refs_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/git/refs{/sha}",trees_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/git/trees{/sha}",statuses_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/statuses/{sha}",languages_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/languages",stargazers_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/stargazers",contributors_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/contributors",subscribers_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/subscribers",subscription_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/subscription",commits_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/commits{/sha}",git_commits_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/git/commits{/sha}",comments_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/comments{/number}",issue_comment_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/issues/comments{/number}",contents_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/contents/{+path}",compare_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/compare/{base}...{head}",merges_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/merges",archive_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/{archive_format}{/ref}",downloads_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/downloads",issues_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/issues{/number}",pulls_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/pulls{/number}",milestones_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/milestones{/number}",notifications_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/notifications{?since,all,participating}",labels_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/labels{/name}",releases_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/releases{/id}",deployments_url:"https://api.github.com/repos/Developer-Autodesk/design.automation-python-tutorial/deployments",created_at:"2015-10-03T17:13:20Z",updated_at:"2016-11-14T15:31:22Z",pushed_at:"2016-11-14T15:31:21Z",git_url:"git://github.com/Developer-Autodesk/design.automation-python-tutorial.git",ssh_url:"git@github.com:Developer-Autodesk/design.automation-python-tutorial.git",clone_url:"https://github.com/Developer-Autodesk/design.automation-python-tutorial.git",svn_url:"https://github.com/Developer-Autodesk/design.automation-python-tutorial",homepage:"",size:57,stargazers_count:0,watchers_count:0,language:"Python",has_issues:!0,has_downloads:!0,has_wiki:!0,has_pages:!1,forks_count:2,mirror_url:null,open_issues_count:2,forks:2,open_issues:2,watchers:0,default_branch:"master",permissions:{admin:!1,push:!1,pull:!0}},{id:43677559,name:"view-and-data-responsive",full_name:"Developer-Autodesk/view-and-data-responsive",owner:{login:"Developer-Autodesk",id:8017462,avatar_url:"https://avatars.githubusercontent.com/u/8017462?v=3",gravatar_id:"",url:"https://api.github.com/users/Developer-Autodesk",html_url:"https://github.com/Developer-Autodesk",followers_url:"https://api.github.com/users/Developer-Autodesk/followers",following_url:"https://api.github.com/users/Developer-Autodesk/following{/other_user}",gists_url:"https://api.github.com/users/Developer-Autodesk/gists{/gist_id}",starred_url:"https://api.github.com/users/Developer-Autodesk/starred{/owner}{/repo}",subscriptions_url:"https://api.github.com/users/Developer-Autodesk/subscriptions",organizations_url:"https://api.github.com/users/Developer-Autodesk/orgs",repos_url:"https://api.github.com/users/Developer-Autodesk/repos",events_url:"https://api.github.com/users/Developer-Autodesk/events{/privacy}",received_events_url:"https://api.github.com/users/Developer-Autodesk/received_events",type:"Organization",site_admin:!1},"private":!1,html_url:"https://github.com/Developer-Autodesk/view-and-data-responsive",description:"A simple responsive sample using View & Data API with a Node.js server.",fork:!1,url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive",forks_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/forks",keys_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/keys{/key_id}",collaborators_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/collaborators{/collaborator}",teams_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/teams",hooks_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/hooks",issue_events_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/issues/events{/number}",events_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/events",assignees_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/assignees{/user}",branches_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/branches{/branch}",tags_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/tags",blobs_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/git/blobs{/sha}",git_tags_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/git/tags{/sha}",git_refs_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/git/refs{/sha}",trees_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/git/trees{/sha}",statuses_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/statuses/{sha}",languages_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/languages",stargazers_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/stargazers",contributors_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/contributors",subscribers_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/subscribers",subscription_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/subscription",commits_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/commits{/sha}",git_commits_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/git/commits{/sha}",comments_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/comments{/number}",issue_comment_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/issues/comments{/number}",contents_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/contents/{+path}",compare_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/compare/{base}...{head}",merges_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/merges",archive_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/{archive_format}{/ref}",downloads_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/downloads",issues_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/issues{/number}",pulls_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/pulls{/number}",milestones_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/milestones{/number}",notifications_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/notifications{?since,all,participating}",labels_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/labels{/name}",releases_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/releases{/id}",deployments_url:"https://api.github.com/repos/Developer-Autodesk/view-and-data-responsive/deployments",created_at:"2015-10-05T10:17:30Z",updated_at:"2016-03-08T17:14:52Z",pushed_at:"2015-10-20T13:58:55Z",git_url:"git://github.com/Developer-Autodesk/view-and-data-responsive.git",ssh_url:"git@github.com:Developer-Autodesk/view-and-data-responsive.git",clone_url:"https://github.com/Developer-Autodesk/view-and-data-responsive.git",svn_url:"https://github.com/Developer-Autodesk/view-and-data-responsive",homepage:null,size:10400,stargazers_count:1,watchers_count:1,language:"CSS",has_issues:!0,has_downloads:!0,has_wiki:!0,has_pages:!1,forks_count:1,mirror_url:null,open_issues_count:0,forks:1,open_issues:0,watchers:1,default_branch:"master",permissions:{admin:!1,push:!1,pull:!0}},{id:45911026,name:"viewer-visual-report",full_name:"Developer-Autodesk/viewer-visual-report",owner:{login:"Developer-Autodesk",id:8017462,avatar_url:"https://avatars.githubusercontent.com/u/8017462?v=3",gravatar_id:"",url:"https://api.github.com/users/Developer-Autodesk",html_url:"https://github.com/Developer-Autodesk",followers_url:"https://api.github.com/users/Developer-Autodesk/followers",following_url:"https://api.github.com/users/Developer-Autodesk/following{/other_user}",gists_url:"https://api.github.com/users/Developer-Autodesk/gists{/gist_id}",starred_url:"https://api.github.com/users/Developer-Autodesk/starred{/owner}{/repo}",subscriptions_url:"https://api.github.com/users/Developer-Autodesk/subscriptions",organizations_url:"https://api.github.com/users/Developer-Autodesk/orgs",repos_url:"https://api.github.com/users/Developer-Autodesk/repos",events_url:"https://api.github.com/users/Developer-Autodesk/events{/privacy}",received_events_url:"https://api.github.com/users/Developer-Autodesk/received_events",type:"Organization",site_admin:!1},"private":!1,html_url:"https://github.com/Developer-Autodesk/viewer-visual-report",description:null,fork:!0,url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report",forks_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/forks",keys_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/keys{/key_id}",collaborators_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/collaborators{/collaborator}",teams_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/teams",hooks_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/hooks",issue_events_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/issues/events{/number}",events_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/events",assignees_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/assignees{/user}",branches_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/branches{/branch}",tags_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/tags",blobs_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/git/blobs{/sha}",git_tags_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/git/tags{/sha}",git_refs_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/git/refs{/sha}",trees_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/git/trees{/sha}",statuses_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/statuses/{sha}",languages_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/languages",stargazers_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/stargazers",contributors_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/contributors",subscribers_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/subscribers",subscription_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/subscription",commits_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/commits{/sha}",git_commits_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/git/commits{/sha}",comments_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/comments{/number}",issue_comment_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/issues/comments{/number}",contents_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/contents/{+path}",compare_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/compare/{base}...{head}",merges_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/merges",archive_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/{archive_format}{/ref}",downloads_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/downloads",issues_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/issues{/number}",pulls_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/pulls{/number}",milestones_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/milestones{/number}",notifications_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/notifications{?since,all,participating}",labels_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/labels{/name}",releases_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/releases{/id}",deployments_url:"https://api.github.com/repos/Developer-Autodesk/viewer-visual-report/deployments",created_at:"2015-11-10T12:40:05Z",updated_at:"2016-11-10T08:02:58Z",pushed_at:"2016-11-10T07:41:53Z",git_url:"git://github.com/Developer-Autodesk/viewer-visual-report.git",ssh_url:"git@github.com:Developer-Autodesk/viewer-visual-report.git",clone_url:"https://github.com/Developer-Autodesk/viewer-visual-report.git",svn_url:"https://github.com/Developer-Autodesk/viewer-visual-report",homepage:"http://developer-autodesk.github.io/LmvNavTest",size:1861,stargazers_count:2,watchers_count:2,language:"JavaScript",has_issues:!1,has_downloads:!0,has_wiki:!0,has_pages:!0,forks_count:2,mirror_url:null,open_issues_count:1,forks:2,open_issues:1,watchers:2,default_branch:"master",permissions:{admin:!1,push:!1,pull:!0}},{id:46772370,name:"community",full_name:"Developer-Autodesk/community",owner:{login:"Developer-Autodesk",id:8017462,avatar_url:"https://avatars.githubusercontent.com/u/8017462?v=3",gravatar_id:"",url:"https://api.github.com/users/Developer-Autodesk",html_url:"https://github.com/Developer-Autodesk",followers_url:"https://api.github.com/users/Developer-Autodesk/followers",following_url:"https://api.github.com/users/Developer-Autodesk/following{/other_user}",gists_url:"https://api.github.com/users/Developer-Autodesk/gists{/gist_id}",starred_url:"https://api.github.com/users/Developer-Autodesk/starred{/owner}{/repo}",subscriptions_url:"https://api.github.com/users/Developer-Autodesk/subscriptions",
-organizations_url:"https://api.github.com/users/Developer-Autodesk/orgs",repos_url:"https://api.github.com/users/Developer-Autodesk/repos",events_url:"https://api.github.com/users/Developer-Autodesk/events{/privacy}",received_events_url:"https://api.github.com/users/Developer-Autodesk/received_events",type:"Organization",site_admin:!1},"private":!1,html_url:"https://github.com/Developer-Autodesk/community",description:null,fork:!1,url:"https://api.github.com/repos/Developer-Autodesk/community",forks_url:"https://api.github.com/repos/Developer-Autodesk/community/forks",keys_url:"https://api.github.com/repos/Developer-Autodesk/community/keys{/key_id}",collaborators_url:"https://api.github.com/repos/Developer-Autodesk/community/collaborators{/collaborator}",teams_url:"https://api.github.com/repos/Developer-Autodesk/community/teams",hooks_url:"https://api.github.com/repos/Developer-Autodesk/community/hooks",issue_events_url:"https://api.github.com/repos/Developer-Autodesk/community/issues/events{/number}",events_url:"https://api.github.com/repos/Developer-Autodesk/community/events",assignees_url:"https://api.github.com/repos/Developer-Autodesk/community/assignees{/user}",branches_url:"https://api.github.com/repos/Developer-Autodesk/community/branches{/branch}",tags_url:"https://api.github.com/repos/Developer-Autodesk/community/tags",blobs_url:"https://api.github.com/repos/Developer-Autodesk/community/git/blobs{/sha}",git_tags_url:"https://api.github.com/repos/Developer-Autodesk/community/git/tags{/sha}",git_refs_url:"https://api.github.com/repos/Developer-Autodesk/community/git/refs{/sha}",trees_url:"https://api.github.com/repos/Developer-Autodesk/community/git/trees{/sha}",statuses_url:"https://api.github.com/repos/Developer-Autodesk/community/statuses/{sha}",languages_url:"https://api.github.com/repos/Developer-Autodesk/community/languages",stargazers_url:"https://api.github.com/repos/Developer-Autodesk/community/stargazers",contributors_url:"https://api.github.com/repos/Developer-Autodesk/community/contributors",subscribers_url:"https://api.github.com/repos/Developer-Autodesk/community/subscribers",subscription_url:"https://api.github.com/repos/Developer-Autodesk/community/subscription",commits_url:"https://api.github.com/repos/Developer-Autodesk/community/commits{/sha}",git_commits_url:"https://api.github.com/repos/Developer-Autodesk/community/git/commits{/sha}",comments_url:"https://api.github.com/repos/Developer-Autodesk/community/comments{/number}",issue_comment_url:"https://api.github.com/repos/Developer-Autodesk/community/issues/comments{/number}",contents_url:"https://api.github.com/repos/Developer-Autodesk/community/contents/{+path}",compare_url:"https://api.github.com/repos/Developer-Autodesk/community/compare/{base}...{head}",merges_url:"https://api.github.com/repos/Developer-Autodesk/community/merges",archive_url:"https://api.github.com/repos/Developer-Autodesk/community/{archive_format}{/ref}",downloads_url:"https://api.github.com/repos/Developer-Autodesk/community/downloads",issues_url:"https://api.github.com/repos/Developer-Autodesk/community/issues{/number}",pulls_url:"https://api.github.com/repos/Developer-Autodesk/community/pulls{/number}",milestones_url:"https://api.github.com/repos/Developer-Autodesk/community/milestones{/number}",notifications_url:"https://api.github.com/repos/Developer-Autodesk/community/notifications{?since,all,participating}",labels_url:"https://api.github.com/repos/Developer-Autodesk/community/labels{/name}",releases_url:"https://api.github.com/repos/Developer-Autodesk/community/releases{/id}",deployments_url:"https://api.github.com/repos/Developer-Autodesk/community/deployments",created_at:"2015-11-24T06:41:02Z",updated_at:"2016-03-29T20:57:08Z",pushed_at:"2016-08-26T21:30:11Z",git_url:"git://github.com/Developer-Autodesk/community.git",ssh_url:"git@github.com:Developer-Autodesk/community.git",clone_url:"https://github.com/Developer-Autodesk/community.git",svn_url:"https://github.com/Developer-Autodesk/community",homepage:"",size:3445,stargazers_count:0,watchers_count:0,language:"CSS",has_issues:!0,has_downloads:!0,has_wiki:!0,has_pages:!0,forks_count:0,mirror_url:null,open_issues_count:0,forks:0,open_issues:0,watchers:0,default_branch:"gh-pages",permissions:{admin:!1,push:!1,pull:!0}},{id:47095017,name:"lmv-extensions",full_name:"Developer-Autodesk/lmv-extensions",owner:{login:"Developer-Autodesk",id:8017462,avatar_url:"https://avatars.githubusercontent.com/u/8017462?v=3",gravatar_id:"",url:"https://api.github.com/users/Developer-Autodesk",html_url:"https://github.com/Developer-Autodesk",followers_url:"https://api.github.com/users/Developer-Autodesk/followers",following_url:"https://api.github.com/users/Developer-Autodesk/following{/other_user}",gists_url:"https://api.github.com/users/Developer-Autodesk/gists{/gist_id}",starred_url:"https://api.github.com/users/Developer-Autodesk/starred{/owner}{/repo}",subscriptions_url:"https://api.github.com/users/Developer-Autodesk/subscriptions",organizations_url:"https://api.github.com/users/Developer-Autodesk/orgs",repos_url:"https://api.github.com/users/Developer-Autodesk/repos",events_url:"https://api.github.com/users/Developer-Autodesk/events{/privacy}",received_events_url:"https://api.github.com/users/Developer-Autodesk/received_events",type:"Organization",site_admin:!1},"private":!1,html_url:"https://github.com/Developer-Autodesk/lmv-extensions",description:"How to create and use extensions for Large Model Viewer",fork:!0,url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions",forks_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/forks",keys_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/keys{/key_id}",collaborators_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/collaborators{/collaborator}",teams_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/teams",hooks_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/hooks",issue_events_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/issues/events{/number}",events_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/events",assignees_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/assignees{/user}",branches_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/branches{/branch}",tags_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/tags",blobs_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/git/blobs{/sha}",git_tags_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/git/tags{/sha}",git_refs_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/git/refs{/sha}",trees_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/git/trees{/sha}",statuses_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/statuses/{sha}",languages_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/languages",stargazers_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/stargazers",contributors_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/contributors",subscribers_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/subscribers",subscription_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/subscription",commits_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/commits{/sha}",git_commits_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/git/commits{/sha}",comments_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/comments{/number}",issue_comment_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/issues/comments{/number}",contents_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/contents/{+path}",compare_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/compare/{base}...{head}",merges_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/merges",archive_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/{archive_format}{/ref}",downloads_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/downloads",issues_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/issues{/number}",pulls_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/pulls{/number}",milestones_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/milestones{/number}",notifications_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/notifications{?since,all,participating}",labels_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/labels{/name}",releases_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/releases{/id}",deployments_url:"https://api.github.com/repos/Developer-Autodesk/lmv-extensions/deployments",created_at:"2015-11-30T04:21:10Z",updated_at:"2016-09-24T06:21:47Z",pushed_at:"2015-11-26T03:09:01Z",git_url:"git://github.com/Developer-Autodesk/lmv-extensions.git",ssh_url:"git@github.com:Developer-Autodesk/lmv-extensions.git",clone_url:"https://github.com/Developer-Autodesk/lmv-extensions.git",svn_url:"https://github.com/Developer-Autodesk/lmv-extensions",homepage:"http://examples.developer.autodesk.com/lmv-extensions/",size:7149,stargazers_count:6,watchers_count:6,language:"JavaScript",has_issues:!1,has_downloads:!0,has_wiki:!0,has_pages:!1,forks_count:4,mirror_url:null,open_issues_count:0,forks:4,open_issues:0,watchers:6,default_branch:"master",permissions:{admin:!1,push:!1,pull:!0}},{id:47102464,name:"lmv-visual-reports",full_name:"Developer-Autodesk/lmv-visual-reports",owner:{login:"Developer-Autodesk",id:8017462,avatar_url:"https://avatars.githubusercontent.com/u/8017462?v=3",gravatar_id:"",url:"https://api.github.com/users/Developer-Autodesk",html_url:"https://github.com/Developer-Autodesk",followers_url:"https://api.github.com/users/Developer-Autodesk/followers",following_url:"https://api.github.com/users/Developer-Autodesk/following{/other_user}",gists_url:"https://api.github.com/users/Developer-Autodesk/gists{/gist_id}",starred_url:"https://api.github.com/users/Developer-Autodesk/starred{/owner}{/repo}",subscriptions_url:"https://api.github.com/users/Developer-Autodesk/subscriptions",organizations_url:"https://api.github.com/users/Developer-Autodesk/orgs",repos_url:"https://api.github.com/users/Developer-Autodesk/repos",events_url:"https://api.github.com/users/Developer-Autodesk/events{/privacy}",received_events_url:"https://api.github.com/users/Developer-Autodesk/received_events",type:"Organization",site_admin:!1},"private":!1,html_url:"https://github.com/Developer-Autodesk/lmv-visual-reports",description:"Visual Reports",fork:!0,url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports",forks_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/forks",keys_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/keys{/key_id}",collaborators_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/collaborators{/collaborator}",teams_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/teams",hooks_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/hooks",issue_events_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/issues/events{/number}",events_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/events",assignees_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/assignees{/user}",branches_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/branches{/branch}",tags_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/tags",blobs_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/git/blobs{/sha}",git_tags_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/git/tags{/sha}",git_refs_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/git/refs{/sha}",trees_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/git/trees{/sha}",statuses_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/statuses/{sha}",languages_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/languages",stargazers_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/stargazers",contributors_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/contributors",subscribers_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/subscribers",subscription_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/subscription",commits_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/commits{/sha}",git_commits_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/git/commits{/sha}",comments_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/comments{/number}",issue_comment_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/issues/comments{/number}",contents_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/contents/{+path}",compare_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/compare/{base}...{head}",merges_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/merges",archive_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/{archive_format}{/ref}",downloads_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/downloads",issues_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/issues{/number}",pulls_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/pulls{/number}",milestones_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/milestones{/number}",notifications_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/notifications{?since,all,participating}",labels_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/labels{/name}",releases_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/releases{/id}",deployments_url:"https://api.github.com/repos/Developer-Autodesk/lmv-visual-reports/deployments",created_at:"2015-11-30T07:32:22Z",updated_at:"2016-11-18T07:16:56Z",pushed_at:"2016-01-29T03:03:23Z",git_url:"git://github.com/Developer-Autodesk/lmv-visual-reports.git",ssh_url:"git@github.com:Developer-Autodesk/lmv-visual-reports.git",clone_url:"https://github.com/Developer-Autodesk/lmv-visual-reports.git",svn_url:"https://github.com/Developer-Autodesk/lmv-visual-reports",homepage:"https://examples.developer.autodesk.com/lmv-visual-reports/",size:8629,stargazers_count:11,watchers_count:11,language:"JavaScript",has_issues:!1,has_downloads:!0,has_wiki:!0,has_pages:!1,forks_count:6,mirror_url:null,open_issues_count:0,forks:6,open_issues:0,watchers:11,default_branch:"master",permissions:{admin:!1,push:!1,pull:!0}},{id:50825297,name:"viewer-meteor-sample",full_name:"Developer-Autodesk/viewer-meteor-sample",owner:{login:"Developer-Autodesk",id:8017462,avatar_url:"https://avatars.githubusercontent.com/u/8017462?v=3",gravatar_id:"",url:"https://api.github.com/users/Developer-Autodesk",html_url:"https://github.com/Developer-Autodesk",followers_url:"https://api.github.com/users/Developer-Autodesk/followers",following_url:"https://api.github.com/users/Developer-Autodesk/following{/other_user}",gists_url:"https://api.github.com/users/Developer-Autodesk/gists{/gist_id}",starred_url:"https://api.github.com/users/Developer-Autodesk/starred{/owner}{/repo}",subscriptions_url:"https://api.github.com/users/Developer-Autodesk/subscriptions",organizations_url:"https://api.github.com/users/Developer-Autodesk/orgs",repos_url:"https://api.github.com/users/Developer-Autodesk/repos",events_url:"https://api.github.com/users/Developer-Autodesk/events{/privacy}",received_events_url:"https://api.github.com/users/Developer-Autodesk/received_events",type:"Organization",site_admin:!1},"private":!1,html_url:"https://github.com/Developer-Autodesk/viewer-meteor-sample",description:"This sample moved to https://github.com/Autodesk-Forge/viewer-meteor-sample",fork:!1,url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample",forks_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/forks",keys_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/keys{/key_id}",collaborators_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/collaborators{/collaborator}",teams_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/teams",hooks_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/hooks",issue_events_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/issues/events{/number}",events_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/events",assignees_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/assignees{/user}",branches_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/branches{/branch}",tags_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/tags",blobs_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/git/blobs{/sha}",git_tags_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/git/tags{/sha}",git_refs_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/git/refs{/sha}",trees_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/git/trees{/sha}",statuses_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/statuses/{sha}",languages_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/languages",stargazers_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/stargazers",contributors_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/contributors",subscribers_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/subscribers",subscription_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/subscription",commits_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/commits{/sha}",git_commits_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/git/commits{/sha}",comments_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/comments{/number}",issue_comment_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/issues/comments{/number}",contents_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/contents/{+path}",compare_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/compare/{base}...{head}",merges_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/merges",archive_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/{archive_format}{/ref}",downloads_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/downloads",issues_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/issues{/number}",pulls_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/pulls{/number}",milestones_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/milestones{/number}",notifications_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/notifications{?since,all,participating}",labels_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/labels{/name}",releases_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/releases{/id}",deployments_url:"https://api.github.com/repos/Developer-Autodesk/viewer-meteor-sample/deployments",created_at:"2016-02-01T08:25:23Z",updated_at:"2016-11-11T18:05:22Z",pushed_at:"2016-11-11T18:01:24Z",git_url:"git://github.com/Developer-Autodesk/viewer-meteor-sample.git",ssh_url:"git@github.com:Developer-Autodesk/viewer-meteor-sample.git",clone_url:"https://github.com/Developer-Autodesk/viewer-meteor-sample.git",svn_url:"https://github.com/Developer-Autodesk/viewer-meteor-sample",homepage:"",size:18,stargazers_count:6,watchers_count:6,language:"JavaScript",has_issues:!0,has_downloads:!0,has_wiki:!0,has_pages:!1,forks_count:3,mirror_url:null,open_issues_count:1,forks:3,open_issues:1,watchers:6,default_branch:"master",permissions:{admin:!1,push:!1,pull:!0}}]},function(e,t){function o(e,t){for(var o=0;o<e.length;o++){var s=e[o],r=h[s.id];if(r){r.refs++;for(var i=0;i<r.parts.length;i++)r.parts[i](s.parts[i]);for(;i<s.parts.length;i++)r.parts.push(u(s.parts[i],t))}else{for(var a=[],i=0;i<s.parts.length;i++)a.push(u(s.parts[i],t));h[s.id]={id:s.id,refs:1,parts:a}}}}function s(e){for(var t=[],o={},s=0;s<e.length;s++){var r=e[s],i=r[0],a=r[1],p=r[2],u=r[3],n={css:a,media:p,sourceMap:u};o[i]?o[i].parts.push(n):t.push(o[i]={id:i,parts:[n]})}return t}function r(e,t){var o=v(),s=f[f.length-1];if("top"===e.insertAt)s?s.nextSibling?o.insertBefore(t,s.nextSibling):o.appendChild(t):o.insertBefore(t,o.firstChild),f.push(t);else{if("bottom"!==e.insertAt)throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");o.appendChild(t)}}function i(e){e.parentNode.removeChild(e);var t=f.indexOf(e);t>=0&&f.splice(t,1)}function a(e){var t=document.createElement("style");return t.type="text/css",r(e,t),t}function p(e){var t=document.createElement("link");return t.rel="stylesheet",r(e,t),t}function u(e,t){var o,s,r;if(t.singleton){var u=b++;o=g||(g=a(t)),s=n.bind(null,o,u,!1),r=n.bind(null,o,u,!0)}else e.sourceMap&&"function"==typeof URL&&"function"==typeof URL.createObjectURL&&"function"==typeof URL.revokeObjectURL&&"function"==typeof Blob&&"function"==typeof btoa?(o=p(t),s=c.bind(null,o),r=function(){i(o),o.href&&URL.revokeObjectURL(o.href)}):(o=a(t),s=l.bind(null,o),r=function(){i(o)});return s(e),function(t){if(t){if(t.css===e.css&&t.media===e.media&&t.sourceMap===e.sourceMap)return;s(e=t)}else r()}}function n(e,t,o,s){var r=o?"":s.css;if(e.styleSheet)e.styleSheet.cssText=_(t,r);else{var i=document.createTextNode(r),a=e.childNodes;a[t]&&e.removeChild(a[t]),a.length?e.insertBefore(i,a[t]):e.appendChild(i)}}function l(e,t){var o=t.css,s=t.media;if(s&&e.setAttribute("media",s),e.styleSheet)e.styleSheet.cssText=o;else{for(;e.firstChild;)e.removeChild(e.firstChild);e.appendChild(document.createTextNode(o))}}function c(e,t){var o=t.css,s=t.sourceMap;s&&(o+="\n/*# sourceMappingURL=data:application/json;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(s))))+" */");var r=new Blob([o],{type:"text/css"}),i=e.href;e.href=URL.createObjectURL(r),i&&URL.revokeObjectURL(i)}var h={},m=function(e){var t;return function(){return"undefined"==typeof t&&(t=e.apply(this,arguments)),t}},d=m(function(){return/msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase())}),v=m(function(){return document.head||document.getElementsByTagName("head")[0]}),g=null,b=0,f=[];e.exports=function(e,t){if("undefined"!=typeof DEBUG&&DEBUG&&"object"!=typeof document)throw new Error("The style-loader cannot be used in a non-browser environment");t=t||{},"undefined"==typeof t.singleton&&(t.singleton=d()),"undefined"==typeof t.insertAt&&(t.insertAt="bottom");var r=s(e);return o(r,t),function(e){for(var i=[],a=0;a<r.length;a++){var p=r[a],u=h[p.id];u.refs--,i.push(u)}if(e){var n=s(e);o(n,t)}for(var a=0;a<i.length;a++){var u=i[a];if(0===u.refs){for(var l=0;l<u.parts.length;l++)u.parts[l]();delete h[u.id]}}}};var _=function(){var e=[];return function(t,o){return e[t]=o,e.filter(Boolean).join("\n")}}()},function(e,t){e.exports={render:function(){var e=this,t=e.$createElement;return t("div",{attrs:{id:"cards"}},[t("div",{staticClass:"repo-card"},[t("p",["There are "+e._s(e.repos.length)+" repos."])," ",e._m(0)," ",t("p",[t("a",{attrs:{href:"#"},on:{click:e.sortByPopularity}},["Most Popular"])])," ",t("p",[t("a",{attrs:{href:"#"},on:{click:e.sortByAlphabetical}},["Alphabetical"])])," ",t("p",[t("a",{attrs:{href:"#"},on:{click:e.sortByLastUpdated}},["Last Updated"])])])," ",t("div",{staticClass:"repo-card"},[t("p",["Filter by Language: "])," ",t("p",[e._l(e.languages,function(o,s){return t("a",{attrs:{href:"#"},on:{click:function(t){e.filterByLanguage(s)}}},[e._s(s)+" "])})])," ",t("br")," ",t("p",["Filter by API Used: "])," ",t("p",[e._l(e.apis,function(o,s){return t("a",{attrs:{href:"#"},on:{click:function(t){e.filterByAPIUsed(s)}}},[e._s(s)+" "])})])])," ",e._l(e.repos,function(o){return t("a",{attrs:{href:o.html_url}},[t("div",{staticClass:"repo-card"},[t("h3",[e._s(o.name)])," ",t("p",[e._s(o.description)])," ",t("p",[t("span",[t("a",{attrs:{href:o.html_url}},[t("i",{staticClass:"fa fa-github",attrs:{"aria-hidden":"true"}})," Source Code"])])," ",t("span",[t("i",{staticClass:"fa fa-star",attrs:{"aria-hidden":"true"}})," "+e._s(o.stargazers_count)])," ",t("span",[t("a",{directives:[{name:"show",rawName:"v-show",value:o.homepage,expression:"repo.homepage"}],attrs:{href:o.homepage}},[t("i",{staticClass:"fa fa-desktop",attrs:{"aria-hidden":"true"}})," Demo"])])])])])})])},staticRenderFns:[function(){var e=this,t=e.$createElement;return t("p",[t("br"),"Sort: "])}]}},function(e,t){function o(e,t){for(var o=0;o<e.length;o++){var s=e[o],r=l[s.id];if(r){r.refs++;for(var i=0;i<r.parts.length;i++)r.parts[i](s.parts[i]);for(;i<s.parts.length;i++)r.parts.push(p(s.parts[i],t))}else{for(var a=[],i=0;i<s.parts.length;i++)a.push(p(s.parts[i],t));l[s.id]={id:s.id,refs:1,parts:a}}}}function s(e){for(var t=[],o={},s=0;s<e.length;s++){var r=e[s],i=r[0],a=r[1],p=r[2],u=r[3],n={css:a,media:p,sourceMap:u};o[i]?o[i].parts.push(n):t.push(o[i]={id:i,parts:[n]})}return t}function r(e,t){var o=m(),s=g[g.length-1];if("top"===e.insertAt)s?s.nextSibling?o.insertBefore(t,s.nextSibling):o.appendChild(t):o.insertBefore(t,o.firstChild),g.push(t);else{if("bottom"!==e.insertAt)throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");o.appendChild(t)}}function i(e){e.parentNode.removeChild(e);var t=g.indexOf(e);t>=0&&g.splice(t,1)}function a(e){var t=document.createElement("style");return t.type="text/css",r(e,t),t}function p(e,t){var o,s,r;if(t.singleton){var p=v++;o=d||(d=a(t)),s=u.bind(null,o,p,!1),r=u.bind(null,o,p,!0)}else o=a(t),s=n.bind(null,o),r=function(){i(o)};return s(e),function(t){if(t){if(t.css===e.css&&t.media===e.media&&t.sourceMap===e.sourceMap)return;s(e=t)}else r()}}function u(e,t,o,s){var r=o?"":s.css;if(e.styleSheet)e.styleSheet.cssText=b(t,r);else{var i=document.createTextNode(r),a=e.childNodes;a[t]&&e.removeChild(a[t]),a.length?e.insertBefore(i,a[t]):e.appendChild(i)}}function n(e,t){var o=t.css,s=t.media,r=t.sourceMap;if(s&&e.setAttribute("media",s),r&&(o+="\n/*# sourceURL="+r.sources[0]+" */",o+="\n/*# sourceMappingURL=data:application/json;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(r))))+" */"),e.styleSheet)e.styleSheet.cssText=o;else{for(;e.firstChild;)e.removeChild(e.firstChild);e.appendChild(document.createTextNode(o))}}var l={},c=function(e){var t;return function(){return"undefined"==typeof t&&(t=e.apply(this,arguments)),t}},h=c(function(){return/msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase())}),m=c(function(){return document.head||document.getElementsByTagName("head")[0]}),d=null,v=0,g=[];e.exports=function(e,t){if("undefined"!=typeof DEBUG&&DEBUG&&"object"!=typeof document)throw new Error("The style-loader cannot be used in a non-browser environment");t=t||{},"undefined"==typeof t.singleton&&(t.singleton=h()),"undefined"==typeof t.insertAt&&(t.insertAt="bottom");var r=s(e);return o(r,t),function(e){for(var i=[],a=0;a<r.length;a++){var p=r[a],u=l[p.id];u.refs--,i.push(u)}if(e){var n=s(e);o(n,t)}for(var a=0;a<i.length;a++){var u=i[a];if(0===u.refs){for(var c=0;c<u.parts.length;c++)u.parts[c]();delete l[u.id]}}}};var b=function(){var e=[];return function(t,o){return e[t]=o,e.filter(Boolean).join("\n")}}()},function(e,t,o){var s=o(5);"string"==typeof s&&(s=[[e.i,s,""]]);o(25)(s,{});s.locals&&(e.exports=s.locals)},function(e,t){var o;o=function(){return this}();try{o=o||Function("return this")()||(0,eval)("this")}catch(s){"object"==typeof window&&(o=window)}e.exports=o},function(e,t,o){"use strict";var s=o(3),r=o.n(s),i=o(2),a=o.n(i),p=o(1);o.n(p);new r.a({el:"#cards",render:function(e){return e(a.a)}})}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+
+
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+
+/******/ 	// identity function for calling harmory imports with the correct context
+/******/ 	__webpack_require__.i = function(value) { return value; };
+
+/******/ 	// define getter function for harmory exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		Object.defineProperty(exports, name, {
+/******/ 			configurable: false,
+/******/ 			enumerable: true,
+/******/ 			get: getter
+/******/ 		});
+/******/ 	};
+
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/dist/";
+
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 28);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ function(module, exports) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function() {
+	var list = [];
+
+	// return the list of modules as css string
+	list.toString = function toString() {
+		var result = [];
+		for(var i = 0; i < this.length; i++) {
+			var item = this[i];
+			if(item[2]) {
+				result.push("@media " + item[2] + "{" + item[1] + "}");
+			} else {
+				result.push(item[1]);
+			}
+		}
+		return result.join("");
+	};
+
+	// import a list of modules into the list
+	list.i = function(modules, mediaQuery) {
+		if(typeof modules === "string")
+			modules = [[null, modules, ""]];
+		var alreadyImportedModules = {};
+		for(var i = 0; i < this.length; i++) {
+			var id = this[i][0];
+			if(typeof id === "number")
+				alreadyImportedModules[id] = true;
+		}
+		for(i = 0; i < modules.length; i++) {
+			var item = modules[i];
+			// skip already imported module
+			// this implementation is not 100% perfect for weird media query combinations
+			//  when a module is imported multiple times with different media queries.
+			//  I hope this will never occur (Hey this way we have smaller bundles)
+			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+				if(mediaQuery && !item[2]) {
+					item[2] = mediaQuery;
+				} else if(mediaQuery) {
+					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+				}
+				list.push(item);
+			}
+		}
+	};
+	return list;
+};
+
+
+/***/ },
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(7);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(23)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!./../../node_modules/css-loader/index.js!./main.css", function() {
+			var newContent = require("!!./../../node_modules/css-loader/index.js!./main.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ },
+/* 2 */
+/***/ function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = {}
+
+/* styles */
+__webpack_require__(26)
+
+/* script */
+__vue_exports__ = __webpack_require__(4)
+
+/* template */
+var __vue_template__ = __webpack_require__(24)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+module.exports = __vue_exports__
+
+
+/***/ },
+/* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {/*!
+ * Vue.js v2.1.4
+ * (c) 2014-2016 Evan You
+ * Released under the MIT License.
+ */
+'use strict';
+
+/*  */
+
+/**
+ * Convert a value to a string that is actually rendered.
+ */
+function _toString (val) {
+  return val == null
+    ? ''
+    : typeof val === 'object'
+      ? JSON.stringify(val, null, 2)
+      : String(val)
+}
+
+/**
+ * Convert a input value to a number for persistence.
+ * If the conversion fails, return original string.
+ */
+function toNumber (val) {
+  var n = parseFloat(val, 10);
+  return (n || n === 0) ? n : val
+}
+
+/**
+ * Make a map and return a function for checking if a key
+ * is in that map.
+ */
+function makeMap (
+  str,
+  expectsLowerCase
+) {
+  var map = Object.create(null);
+  var list = str.split(',');
+  for (var i = 0; i < list.length; i++) {
+    map[list[i]] = true;
+  }
+  return expectsLowerCase
+    ? function (val) { return map[val.toLowerCase()]; }
+    : function (val) { return map[val]; }
+}
+
+/**
+ * Check if a tag is a built-in tag.
+ */
+var isBuiltInTag = makeMap('slot,component', true);
+
+/**
+ * Remove an item from an array
+ */
+function remove$1 (arr, item) {
+  if (arr.length) {
+    var index = arr.indexOf(item);
+    if (index > -1) {
+      return arr.splice(index, 1)
+    }
+  }
+}
+
+/**
+ * Check whether the object has the property.
+ */
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+function hasOwn (obj, key) {
+  return hasOwnProperty.call(obj, key)
+}
+
+/**
+ * Check if value is primitive
+ */
+function isPrimitive (value) {
+  return typeof value === 'string' || typeof value === 'number'
+}
+
+/**
+ * Create a cached version of a pure function.
+ */
+function cached (fn) {
+  var cache = Object.create(null);
+  return function cachedFn (str) {
+    var hit = cache[str];
+    return hit || (cache[str] = fn(str))
+  }
+}
+
+/**
+ * Camelize a hyphen-delmited string.
+ */
+var camelizeRE = /-(\w)/g;
+var camelize = cached(function (str) {
+  return str.replace(camelizeRE, function (_, c) { return c ? c.toUpperCase() : ''; })
+});
+
+/**
+ * Capitalize a string.
+ */
+var capitalize = cached(function (str) {
+  return str.charAt(0).toUpperCase() + str.slice(1)
+});
+
+/**
+ * Hyphenate a camelCase string.
+ */
+var hyphenateRE = /([^-])([A-Z])/g;
+var hyphenate = cached(function (str) {
+  return str
+    .replace(hyphenateRE, '$1-$2')
+    .replace(hyphenateRE, '$1-$2')
+    .toLowerCase()
+});
+
+/**
+ * Simple bind, faster than native
+ */
+function bind$1 (fn, ctx) {
+  function boundFn (a) {
+    var l = arguments.length;
+    return l
+      ? l > 1
+        ? fn.apply(ctx, arguments)
+        : fn.call(ctx, a)
+      : fn.call(ctx)
+  }
+  // record original fn length
+  boundFn._length = fn.length;
+  return boundFn
+}
+
+/**
+ * Convert an Array-like object to a real Array.
+ */
+function toArray (list, start) {
+  start = start || 0;
+  var i = list.length - start;
+  var ret = new Array(i);
+  while (i--) {
+    ret[i] = list[i + start];
+  }
+  return ret
+}
+
+/**
+ * Mix properties into target object.
+ */
+function extend (to, _from) {
+  for (var key in _from) {
+    to[key] = _from[key];
+  }
+  return to
+}
+
+/**
+ * Quick object check - this is primarily used to tell
+ * Objects from primitive values when we know the value
+ * is a JSON-compliant type.
+ */
+function isObject (obj) {
+  return obj !== null && typeof obj === 'object'
+}
+
+/**
+ * Strict object type check. Only returns true
+ * for plain JavaScript objects.
+ */
+var toString = Object.prototype.toString;
+var OBJECT_STRING = '[object Object]';
+function isPlainObject (obj) {
+  return toString.call(obj) === OBJECT_STRING
+}
+
+/**
+ * Merge an Array of Objects into a single Object.
+ */
+function toObject (arr) {
+  var res = {};
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i]) {
+      extend(res, arr[i]);
+    }
+  }
+  return res
+}
+
+/**
+ * Perform no operation.
+ */
+function noop () {}
+
+/**
+ * Always return false.
+ */
+var no = function () { return false; };
+
+/**
+ * Generate a static keys string from compiler modules.
+ */
+function genStaticKeys (modules) {
+  return modules.reduce(function (keys, m) {
+    return keys.concat(m.staticKeys || [])
+  }, []).join(',')
+}
+
+/**
+ * Check if two values are loosely equal - that is,
+ * if they are plain objects, do they have the same shape?
+ */
+function looseEqual (a, b) {
+  /* eslint-disable eqeqeq */
+  return a == b || (
+    isObject(a) && isObject(b)
+      ? JSON.stringify(a) === JSON.stringify(b)
+      : false
+  )
+  /* eslint-enable eqeqeq */
+}
+
+function looseIndexOf (arr, val) {
+  for (var i = 0; i < arr.length; i++) {
+    if (looseEqual(arr[i], val)) { return i }
+  }
+  return -1
+}
+
+/*  */
+
+var config = {
+  /**
+   * Option merge strategies (used in core/util/options)
+   */
+  optionMergeStrategies: Object.create(null),
+
+  /**
+   * Whether to suppress warnings.
+   */
+  silent: false,
+
+  /**
+   * Whether to enable devtools
+   */
+  devtools: "production" !== 'production',
+
+  /**
+   * Error handler for watcher errors
+   */
+  errorHandler: null,
+
+  /**
+   * Ignore certain custom elements
+   */
+  ignoredElements: null,
+
+  /**
+   * Custom user key aliases for v-on
+   */
+  keyCodes: Object.create(null),
+
+  /**
+   * Check if a tag is reserved so that it cannot be registered as a
+   * component. This is platform-dependent and may be overwritten.
+   */
+  isReservedTag: no,
+
+  /**
+   * Check if a tag is an unknown element.
+   * Platform-dependent.
+   */
+  isUnknownElement: no,
+
+  /**
+   * Get the namespace of an element
+   */
+  getTagNamespace: noop,
+
+  /**
+   * Check if an attribute must be bound using property, e.g. value
+   * Platform-dependent.
+   */
+  mustUseProp: no,
+
+  /**
+   * List of asset types that a component can own.
+   */
+  _assetTypes: [
+    'component',
+    'directive',
+    'filter'
+  ],
+
+  /**
+   * List of lifecycle hooks.
+   */
+  _lifecycleHooks: [
+    'beforeCreate',
+    'created',
+    'beforeMount',
+    'mounted',
+    'beforeUpdate',
+    'updated',
+    'beforeDestroy',
+    'destroyed',
+    'activated',
+    'deactivated'
+  ],
+
+  /**
+   * Max circular updates allowed in a scheduler flush cycle.
+   */
+  _maxUpdateCount: 100
+};
+
+/*  */
+
+/**
+ * Check if a string starts with $ or _
+ */
+function isReserved (str) {
+  var c = (str + '').charCodeAt(0);
+  return c === 0x24 || c === 0x5F
+}
+
+/**
+ * Define a property.
+ */
+function def (obj, key, val, enumerable) {
+  Object.defineProperty(obj, key, {
+    value: val,
+    enumerable: !!enumerable,
+    writable: true,
+    configurable: true
+  });
+}
+
+/**
+ * Parse simple path.
+ */
+var bailRE = /[^\w.$]/;
+function parsePath (path) {
+  if (bailRE.test(path)) {
+    return
+  } else {
+    var segments = path.split('.');
+    return function (obj) {
+      for (var i = 0; i < segments.length; i++) {
+        if (!obj) { return }
+        obj = obj[segments[i]];
+      }
+      return obj
+    }
+  }
+}
+
+/*  */
+/* globals MutationObserver */
+
+// can we use __proto__?
+var hasProto = '__proto__' in {};
+
+// Browser environment sniffing
+var inBrowser = typeof window !== 'undefined';
+var UA = inBrowser && window.navigator.userAgent.toLowerCase();
+var isIE = UA && /msie|trident/.test(UA);
+var isIE9 = UA && UA.indexOf('msie 9.0') > 0;
+var isEdge = UA && UA.indexOf('edge/') > 0;
+var isAndroid = UA && UA.indexOf('android') > 0;
+var isIOS = UA && /iphone|ipad|ipod|ios/.test(UA);
+
+// this needs to be lazy-evaled because vue may be required before
+// vue-server-renderer can set VUE_ENV
+var _isServer;
+var isServerRendering = function () {
+  if (_isServer === undefined) {
+    /* istanbul ignore if */
+    if (!inBrowser && typeof global !== 'undefined') {
+      // detect presence of vue-server-renderer and avoid
+      // Webpack shimming the process
+      _isServer = global['process'].env.VUE_ENV === 'server';
+    } else {
+      _isServer = false;
+    }
+  }
+  return _isServer
+};
+
+// detect devtools
+var devtools = inBrowser && window.__VUE_DEVTOOLS_GLOBAL_HOOK__;
+
+/* istanbul ignore next */
+function isNative (Ctor) {
+  return /native code/.test(Ctor.toString())
+}
+
+/**
+ * Defer a task to execute it asynchronously.
+ */
+var nextTick = (function () {
+  var callbacks = [];
+  var pending = false;
+  var timerFunc;
+
+  function nextTickHandler () {
+    pending = false;
+    var copies = callbacks.slice(0);
+    callbacks.length = 0;
+    for (var i = 0; i < copies.length; i++) {
+      copies[i]();
+    }
+  }
+
+  // the nextTick behavior leverages the microtask queue, which can be accessed
+  // via either native Promise.then or MutationObserver.
+  // MutationObserver has wider support, however it is seriously bugged in
+  // UIWebView in iOS >= 9.3.3 when triggered in touch event handlers. It
+  // completely stops working after triggering a few times... so, if native
+  // Promise is available, we will use it:
+  /* istanbul ignore if */
+  if (typeof Promise !== 'undefined' && isNative(Promise)) {
+    var p = Promise.resolve();
+    var logError = function (err) { console.error(err); };
+    timerFunc = function () {
+      p.then(nextTickHandler).catch(logError);
+      // in problematic UIWebViews, Promise.then doesn't completely break, but
+      // it can get stuck in a weird state where callbacks are pushed into the
+      // microtask queue but the queue isn't being flushed, until the browser
+      // needs to do some other work, e.g. handle a timer. Therefore we can
+      // "force" the microtask queue to be flushed by adding an empty timer.
+      if (isIOS) { setTimeout(noop); }
+    };
+  } else if (typeof MutationObserver !== 'undefined' && (
+    isNative(MutationObserver) ||
+    // PhantomJS and iOS 7.x
+    MutationObserver.toString() === '[object MutationObserverConstructor]'
+  )) {
+    // use MutationObserver where native Promise is not available,
+    // e.g. PhantomJS IE11, iOS7, Android 4.4
+    var counter = 1;
+    var observer = new MutationObserver(nextTickHandler);
+    var textNode = document.createTextNode(String(counter));
+    observer.observe(textNode, {
+      characterData: true
+    });
+    timerFunc = function () {
+      counter = (counter + 1) % 2;
+      textNode.data = String(counter);
+    };
+  } else {
+    // fallback to setTimeout
+    /* istanbul ignore next */
+    timerFunc = function () {
+      setTimeout(nextTickHandler, 0);
+    };
+  }
+
+  return function queueNextTick (cb, ctx) {
+    var _resolve;
+    callbacks.push(function () {
+      if (cb) { cb.call(ctx); }
+      if (_resolve) { _resolve(ctx); }
+    });
+    if (!pending) {
+      pending = true;
+      timerFunc();
+    }
+    if (!cb && typeof Promise !== 'undefined') {
+      return new Promise(function (resolve) {
+        _resolve = resolve;
+      })
+    }
+  }
+})();
+
+var _Set;
+/* istanbul ignore if */
+if (typeof Set !== 'undefined' && isNative(Set)) {
+  // use native Set when available.
+  _Set = Set;
+} else {
+  // a non-standard Set polyfill that only works with primitive keys.
+  _Set = (function () {
+    function Set () {
+      this.set = Object.create(null);
+    }
+    Set.prototype.has = function has (key) {
+      return this.set[key] !== undefined
+    };
+    Set.prototype.add = function add (key) {
+      this.set[key] = 1;
+    };
+    Set.prototype.clear = function clear () {
+      this.set = Object.create(null);
+    };
+
+    return Set;
+  }());
+}
+
+var warn = noop;
+var formatComponentName;
+
+if (false) {
+  var hasConsole = typeof console !== 'undefined';
+
+  warn = function (msg, vm) {
+    if (hasConsole && (!config.silent)) {
+      console.error("[Vue warn]: " + msg + " " + (
+        vm ? formatLocation(formatComponentName(vm)) : ''
+      ));
+    }
+  };
+
+  formatComponentName = function (vm) {
+    if (vm.$root === vm) {
+      return 'root instance'
+    }
+    var name = vm._isVue
+      ? vm.$options.name || vm.$options._componentTag
+      : vm.name;
+    return (
+      (name ? ("component <" + name + ">") : "anonymous component") +
+      (vm._isVue && vm.$options.__file ? (" at " + (vm.$options.__file)) : '')
+    )
+  };
+
+  var formatLocation = function (str) {
+    if (str === 'anonymous component') {
+      str += " - use the \"name\" option for better debugging messages.";
+    }
+    return ("\n(found in " + str + ")")
+  };
+}
+
+/*  */
+
+
+var uid$1 = 0;
+
+/**
+ * A dep is an observable that can have multiple
+ * directives subscribing to it.
+ */
+var Dep = function Dep () {
+  this.id = uid$1++;
+  this.subs = [];
+};
+
+Dep.prototype.addSub = function addSub (sub) {
+  this.subs.push(sub);
+};
+
+Dep.prototype.removeSub = function removeSub (sub) {
+  remove$1(this.subs, sub);
+};
+
+Dep.prototype.depend = function depend () {
+  if (Dep.target) {
+    Dep.target.addDep(this);
+  }
+};
+
+Dep.prototype.notify = function notify () {
+  // stablize the subscriber list first
+  var subs = this.subs.slice();
+  for (var i = 0, l = subs.length; i < l; i++) {
+    subs[i].update();
+  }
+};
+
+// the current target watcher being evaluated.
+// this is globally unique because there could be only one
+// watcher being evaluated at any time.
+Dep.target = null;
+var targetStack = [];
+
+function pushTarget (_target) {
+  if (Dep.target) { targetStack.push(Dep.target); }
+  Dep.target = _target;
+}
+
+function popTarget () {
+  Dep.target = targetStack.pop();
+}
+
+/*
+ * not type checking this file because flow doesn't play well with
+ * dynamically accessing methods on Array prototype
+ */
+
+var arrayProto = Array.prototype;
+var arrayMethods = Object.create(arrayProto);[
+  'push',
+  'pop',
+  'shift',
+  'unshift',
+  'splice',
+  'sort',
+  'reverse'
+]
+.forEach(function (method) {
+  // cache original method
+  var original = arrayProto[method];
+  def(arrayMethods, method, function mutator () {
+    var arguments$1 = arguments;
+
+    // avoid leaking arguments:
+    // http://jsperf.com/closure-with-arguments
+    var i = arguments.length;
+    var args = new Array(i);
+    while (i--) {
+      args[i] = arguments$1[i];
+    }
+    var result = original.apply(this, args);
+    var ob = this.__ob__;
+    var inserted;
+    switch (method) {
+      case 'push':
+        inserted = args;
+        break
+      case 'unshift':
+        inserted = args;
+        break
+      case 'splice':
+        inserted = args.slice(2);
+        break
+    }
+    if (inserted) { ob.observeArray(inserted); }
+    // notify change
+    ob.dep.notify();
+    return result
+  });
+});
+
+/*  */
+
+var arrayKeys = Object.getOwnPropertyNames(arrayMethods);
+
+/**
+ * By default, when a reactive property is set, the new value is
+ * also converted to become reactive. However when passing down props,
+ * we don't want to force conversion because the value may be a nested value
+ * under a frozen data structure. Converting it would defeat the optimization.
+ */
+var observerState = {
+  shouldConvert: true,
+  isSettingProps: false
+};
+
+/**
+ * Observer class that are attached to each observed
+ * object. Once attached, the observer converts target
+ * object's property keys into getter/setters that
+ * collect dependencies and dispatches updates.
+ */
+var Observer = function Observer (value) {
+  this.value = value;
+  this.dep = new Dep();
+  this.vmCount = 0;
+  def(value, '__ob__', this);
+  if (Array.isArray(value)) {
+    var augment = hasProto
+      ? protoAugment
+      : copyAugment;
+    augment(value, arrayMethods, arrayKeys);
+    this.observeArray(value);
+  } else {
+    this.walk(value);
+  }
+};
+
+/**
+ * Walk through each property and convert them into
+ * getter/setters. This method should only be called when
+ * value type is Object.
+ */
+Observer.prototype.walk = function walk (obj) {
+  var keys = Object.keys(obj);
+  for (var i = 0; i < keys.length; i++) {
+    defineReactive$$1(obj, keys[i], obj[keys[i]]);
+  }
+};
+
+/**
+ * Observe a list of Array items.
+ */
+Observer.prototype.observeArray = function observeArray (items) {
+  for (var i = 0, l = items.length; i < l; i++) {
+    observe(items[i]);
+  }
+};
+
+// helpers
+
+/**
+ * Augment an target Object or Array by intercepting
+ * the prototype chain using __proto__
+ */
+function protoAugment (target, src) {
+  /* eslint-disable no-proto */
+  target.__proto__ = src;
+  /* eslint-enable no-proto */
+}
+
+/**
+ * Augment an target Object or Array by defining
+ * hidden properties.
+ *
+ * istanbul ignore next
+ */
+function copyAugment (target, src, keys) {
+  for (var i = 0, l = keys.length; i < l; i++) {
+    var key = keys[i];
+    def(target, key, src[key]);
+  }
+}
+
+/**
+ * Attempt to create an observer instance for a value,
+ * returns the new observer if successfully observed,
+ * or the existing observer if the value already has one.
+ */
+function observe (value) {
+  if (!isObject(value)) {
+    return
+  }
+  var ob;
+  if (hasOwn(value, '__ob__') && value.__ob__ instanceof Observer) {
+    ob = value.__ob__;
+  } else if (
+    observerState.shouldConvert &&
+    !isServerRendering() &&
+    (Array.isArray(value) || isPlainObject(value)) &&
+    Object.isExtensible(value) &&
+    !value._isVue
+  ) {
+    ob = new Observer(value);
+  }
+  return ob
+}
+
+/**
+ * Define a reactive property on an Object.
+ */
+function defineReactive$$1 (
+  obj,
+  key,
+  val,
+  customSetter
+) {
+  var dep = new Dep();
+
+  var property = Object.getOwnPropertyDescriptor(obj, key);
+  if (property && property.configurable === false) {
+    return
+  }
+
+  // cater for pre-defined getter/setters
+  var getter = property && property.get;
+  var setter = property && property.set;
+
+  var childOb = observe(val);
+  Object.defineProperty(obj, key, {
+    enumerable: true,
+    configurable: true,
+    get: function reactiveGetter () {
+      var value = getter ? getter.call(obj) : val;
+      if (Dep.target) {
+        dep.depend();
+        if (childOb) {
+          childOb.dep.depend();
+        }
+        if (Array.isArray(value)) {
+          dependArray(value);
+        }
+      }
+      return value
+    },
+    set: function reactiveSetter (newVal) {
+      var value = getter ? getter.call(obj) : val;
+      /* eslint-disable no-self-compare */
+      if (newVal === value || (newVal !== newVal && value !== value)) {
+        return
+      }
+      /* eslint-enable no-self-compare */
+      if (false) {
+        customSetter();
+      }
+      if (setter) {
+        setter.call(obj, newVal);
+      } else {
+        val = newVal;
+      }
+      childOb = observe(newVal);
+      dep.notify();
+    }
+  });
+}
+
+/**
+ * Set a property on an object. Adds the new property and
+ * triggers change notification if the property doesn't
+ * already exist.
+ */
+function set$1 (obj, key, val) {
+  if (Array.isArray(obj)) {
+    obj.length = Math.max(obj.length, key);
+    obj.splice(key, 1, val);
+    return val
+  }
+  if (hasOwn(obj, key)) {
+    obj[key] = val;
+    return
+  }
+  var ob = obj.__ob__;
+  if (obj._isVue || (ob && ob.vmCount)) {
+    "production" !== 'production' && warn(
+      'Avoid adding reactive properties to a Vue instance or its root $data ' +
+      'at runtime - declare it upfront in the data option.'
+    );
+    return
+  }
+  if (!ob) {
+    obj[key] = val;
+    return
+  }
+  defineReactive$$1(ob.value, key, val);
+  ob.dep.notify();
+  return val
+}
+
+/**
+ * Delete a property and trigger change if necessary.
+ */
+function del (obj, key) {
+  var ob = obj.__ob__;
+  if (obj._isVue || (ob && ob.vmCount)) {
+    "production" !== 'production' && warn(
+      'Avoid deleting properties on a Vue instance or its root $data ' +
+      '- just set it to null.'
+    );
+    return
+  }
+  if (!hasOwn(obj, key)) {
+    return
+  }
+  delete obj[key];
+  if (!ob) {
+    return
+  }
+  ob.dep.notify();
+}
+
+/**
+ * Collect dependencies on array elements when the array is touched, since
+ * we cannot intercept array element access like property getters.
+ */
+function dependArray (value) {
+  for (var e = (void 0), i = 0, l = value.length; i < l; i++) {
+    e = value[i];
+    e && e.__ob__ && e.__ob__.dep.depend();
+    if (Array.isArray(e)) {
+      dependArray(e);
+    }
+  }
+}
+
+/*  */
+
+/**
+ * Option overwriting strategies are functions that handle
+ * how to merge a parent option value and a child option
+ * value into the final value.
+ */
+var strats = config.optionMergeStrategies;
+
+/**
+ * Options with restrictions
+ */
+if (false) {
+  strats.el = strats.propsData = function (parent, child, vm, key) {
+    if (!vm) {
+      warn(
+        "option \"" + key + "\" can only be used during instance " +
+        'creation with the `new` keyword.'
+      );
+    }
+    return defaultStrat(parent, child)
+  };
+}
+
+/**
+ * Helper that recursively merges two data objects together.
+ */
+function mergeData (to, from) {
+  if (!from) { return to }
+  var key, toVal, fromVal;
+  var keys = Object.keys(from);
+  for (var i = 0; i < keys.length; i++) {
+    key = keys[i];
+    toVal = to[key];
+    fromVal = from[key];
+    if (!hasOwn(to, key)) {
+      set$1(to, key, fromVal);
+    } else if (isPlainObject(toVal) && isPlainObject(fromVal)) {
+      mergeData(toVal, fromVal);
+    }
+  }
+  return to
+}
+
+/**
+ * Data
+ */
+strats.data = function (
+  parentVal,
+  childVal,
+  vm
+) {
+  if (!vm) {
+    // in a Vue.extend merge, both should be functions
+    if (!childVal) {
+      return parentVal
+    }
+    if (typeof childVal !== 'function') {
+      "production" !== 'production' && warn(
+        'The "data" option should be a function ' +
+        'that returns a per-instance value in component ' +
+        'definitions.',
+        vm
+      );
+      return parentVal
+    }
+    if (!parentVal) {
+      return childVal
+    }
+    // when parentVal & childVal are both present,
+    // we need to return a function that returns the
+    // merged result of both functions... no need to
+    // check if parentVal is a function here because
+    // it has to be a function to pass previous merges.
+    return function mergedDataFn () {
+      return mergeData(
+        childVal.call(this),
+        parentVal.call(this)
+      )
+    }
+  } else if (parentVal || childVal) {
+    return function mergedInstanceDataFn () {
+      // instance merge
+      var instanceData = typeof childVal === 'function'
+        ? childVal.call(vm)
+        : childVal;
+      var defaultData = typeof parentVal === 'function'
+        ? parentVal.call(vm)
+        : undefined;
+      if (instanceData) {
+        return mergeData(instanceData, defaultData)
+      } else {
+        return defaultData
+      }
+    }
+  }
+};
+
+/**
+ * Hooks and param attributes are merged as arrays.
+ */
+function mergeHook (
+  parentVal,
+  childVal
+) {
+  return childVal
+    ? parentVal
+      ? parentVal.concat(childVal)
+      : Array.isArray(childVal)
+        ? childVal
+        : [childVal]
+    : parentVal
+}
+
+config._lifecycleHooks.forEach(function (hook) {
+  strats[hook] = mergeHook;
+});
+
+/**
+ * Assets
+ *
+ * When a vm is present (instance creation), we need to do
+ * a three-way merge between constructor options, instance
+ * options and parent options.
+ */
+function mergeAssets (parentVal, childVal) {
+  var res = Object.create(parentVal || null);
+  return childVal
+    ? extend(res, childVal)
+    : res
+}
+
+config._assetTypes.forEach(function (type) {
+  strats[type + 's'] = mergeAssets;
+});
+
+/**
+ * Watchers.
+ *
+ * Watchers hashes should not overwrite one
+ * another, so we merge them as arrays.
+ */
+strats.watch = function (parentVal, childVal) {
+  /* istanbul ignore if */
+  if (!childVal) { return parentVal }
+  if (!parentVal) { return childVal }
+  var ret = {};
+  extend(ret, parentVal);
+  for (var key in childVal) {
+    var parent = ret[key];
+    var child = childVal[key];
+    if (parent && !Array.isArray(parent)) {
+      parent = [parent];
+    }
+    ret[key] = parent
+      ? parent.concat(child)
+      : [child];
+  }
+  return ret
+};
+
+/**
+ * Other object hashes.
+ */
+strats.props =
+strats.methods =
+strats.computed = function (parentVal, childVal) {
+  if (!childVal) { return parentVal }
+  if (!parentVal) { return childVal }
+  var ret = Object.create(null);
+  extend(ret, parentVal);
+  extend(ret, childVal);
+  return ret
+};
+
+/**
+ * Default strategy.
+ */
+var defaultStrat = function (parentVal, childVal) {
+  return childVal === undefined
+    ? parentVal
+    : childVal
+};
+
+/**
+ * Validate component names
+ */
+function checkComponents (options) {
+  for (var key in options.components) {
+    var lower = key.toLowerCase();
+    if (isBuiltInTag(lower) || config.isReservedTag(lower)) {
+      warn(
+        'Do not use built-in or reserved HTML elements as component ' +
+        'id: ' + key
+      );
+    }
+  }
+}
+
+/**
+ * Ensure all props option syntax are normalized into the
+ * Object-based format.
+ */
+function normalizeProps (options) {
+  var props = options.props;
+  if (!props) { return }
+  var res = {};
+  var i, val, name;
+  if (Array.isArray(props)) {
+    i = props.length;
+    while (i--) {
+      val = props[i];
+      if (typeof val === 'string') {
+        name = camelize(val);
+        res[name] = { type: null };
+      } else if (false) {
+        warn('props must be strings when using array syntax.');
+      }
+    }
+  } else if (isPlainObject(props)) {
+    for (var key in props) {
+      val = props[key];
+      name = camelize(key);
+      res[name] = isPlainObject(val)
+        ? val
+        : { type: val };
+    }
+  }
+  options.props = res;
+}
+
+/**
+ * Normalize raw function directives into object format.
+ */
+function normalizeDirectives (options) {
+  var dirs = options.directives;
+  if (dirs) {
+    for (var key in dirs) {
+      var def = dirs[key];
+      if (typeof def === 'function') {
+        dirs[key] = { bind: def, update: def };
+      }
+    }
+  }
+}
+
+/**
+ * Merge two option objects into a new one.
+ * Core utility used in both instantiation and inheritance.
+ */
+function mergeOptions (
+  parent,
+  child,
+  vm
+) {
+  if (false) {
+    checkComponents(child);
+  }
+  normalizeProps(child);
+  normalizeDirectives(child);
+  var extendsFrom = child.extends;
+  if (extendsFrom) {
+    parent = typeof extendsFrom === 'function'
+      ? mergeOptions(parent, extendsFrom.options, vm)
+      : mergeOptions(parent, extendsFrom, vm);
+  }
+  if (child.mixins) {
+    for (var i = 0, l = child.mixins.length; i < l; i++) {
+      var mixin = child.mixins[i];
+      if (mixin.prototype instanceof Vue$2) {
+        mixin = mixin.options;
+      }
+      parent = mergeOptions(parent, mixin, vm);
+    }
+  }
+  var options = {};
+  var key;
+  for (key in parent) {
+    mergeField(key);
+  }
+  for (key in child) {
+    if (!hasOwn(parent, key)) {
+      mergeField(key);
+    }
+  }
+  function mergeField (key) {
+    var strat = strats[key] || defaultStrat;
+    options[key] = strat(parent[key], child[key], vm, key);
+  }
+  return options
+}
+
+/**
+ * Resolve an asset.
+ * This function is used because child instances need access
+ * to assets defined in its ancestor chain.
+ */
+function resolveAsset (
+  options,
+  type,
+  id,
+  warnMissing
+) {
+  /* istanbul ignore if */
+  if (typeof id !== 'string') {
+    return
+  }
+  var assets = options[type];
+  var res = assets[id] ||
+    // camelCase ID
+    assets[camelize(id)] ||
+    // Pascal Case ID
+    assets[capitalize(camelize(id))];
+  if (false) {
+    warn(
+      'Failed to resolve ' + type.slice(0, -1) + ': ' + id,
+      options
+    );
+  }
+  return res
+}
+
+/*  */
+
+function validateProp (
+  key,
+  propOptions,
+  propsData,
+  vm
+) {
+  var prop = propOptions[key];
+  var absent = !hasOwn(propsData, key);
+  var value = propsData[key];
+  // handle boolean props
+  if (isBooleanType(prop.type)) {
+    if (absent && !hasOwn(prop, 'default')) {
+      value = false;
+    } else if (value === '' || value === hyphenate(key)) {
+      value = true;
+    }
+  }
+  // check default value
+  if (value === undefined) {
+    value = getPropDefaultValue(vm, prop, key);
+    // since the default value is a fresh copy,
+    // make sure to observe it.
+    var prevShouldConvert = observerState.shouldConvert;
+    observerState.shouldConvert = true;
+    observe(value);
+    observerState.shouldConvert = prevShouldConvert;
+  }
+  if (false) {
+    assertProp(prop, key, value, vm, absent);
+  }
+  return value
+}
+
+/**
+ * Get the default value of a prop.
+ */
+function getPropDefaultValue (vm, prop, key) {
+  // no default, return undefined
+  if (!hasOwn(prop, 'default')) {
+    return undefined
+  }
+  var def = prop.default;
+  // warn against non-factory defaults for Object & Array
+  if (isObject(def)) {
+    "production" !== 'production' && warn(
+      'Invalid default value for prop "' + key + '": ' +
+      'Props with type Object/Array must use a factory function ' +
+      'to return the default value.',
+      vm
+    );
+  }
+  // the raw prop value was also undefined from previous render,
+  // return previous default value to avoid unnecessary watcher trigger
+  if (vm && vm.$options.propsData &&
+    vm.$options.propsData[key] === undefined &&
+    vm[key] !== undefined) {
+    return vm[key]
+  }
+  // call factory function for non-Function types
+  return typeof def === 'function' && prop.type !== Function
+    ? def.call(vm)
+    : def
+}
+
+/**
+ * Assert whether a prop is valid.
+ */
+function assertProp (
+  prop,
+  name,
+  value,
+  vm,
+  absent
+) {
+  if (prop.required && absent) {
+    warn(
+      'Missing required prop: "' + name + '"',
+      vm
+    );
+    return
+  }
+  if (value == null && !prop.required) {
+    return
+  }
+  var type = prop.type;
+  var valid = !type || type === true;
+  var expectedTypes = [];
+  if (type) {
+    if (!Array.isArray(type)) {
+      type = [type];
+    }
+    for (var i = 0; i < type.length && !valid; i++) {
+      var assertedType = assertType(value, type[i]);
+      expectedTypes.push(assertedType.expectedType);
+      valid = assertedType.valid;
+    }
+  }
+  if (!valid) {
+    warn(
+      'Invalid prop: type check failed for prop "' + name + '".' +
+      ' Expected ' + expectedTypes.map(capitalize).join(', ') +
+      ', got ' + Object.prototype.toString.call(value).slice(8, -1) + '.',
+      vm
+    );
+    return
+  }
+  var validator = prop.validator;
+  if (validator) {
+    if (!validator(value)) {
+      warn(
+        'Invalid prop: custom validator check failed for prop "' + name + '".',
+        vm
+      );
+    }
+  }
+}
+
+/**
+ * Assert the type of a value
+ */
+function assertType (value, type) {
+  var valid;
+  var expectedType = getType(type);
+  if (expectedType === 'String') {
+    valid = typeof value === (expectedType = 'string');
+  } else if (expectedType === 'Number') {
+    valid = typeof value === (expectedType = 'number');
+  } else if (expectedType === 'Boolean') {
+    valid = typeof value === (expectedType = 'boolean');
+  } else if (expectedType === 'Function') {
+    valid = typeof value === (expectedType = 'function');
+  } else if (expectedType === 'Object') {
+    valid = isPlainObject(value);
+  } else if (expectedType === 'Array') {
+    valid = Array.isArray(value);
+  } else {
+    valid = value instanceof type;
+  }
+  return {
+    valid: valid,
+    expectedType: expectedType
+  }
+}
+
+/**
+ * Use function string name to check built-in types,
+ * because a simple equality check will fail when running
+ * across different vms / iframes.
+ */
+function getType (fn) {
+  var match = fn && fn.toString().match(/^\s*function (\w+)/);
+  return match && match[1]
+}
+
+function isBooleanType (fn) {
+  if (!Array.isArray(fn)) {
+    return getType(fn) === 'Boolean'
+  }
+  for (var i = 0, len = fn.length; i < len; i++) {
+    if (getType(fn[i]) === 'Boolean') {
+      return true
+    }
+  }
+  /* istanbul ignore next */
+  return false
+}
+
+
+
+var util = Object.freeze({
+	defineReactive: defineReactive$$1,
+	_toString: _toString,
+	toNumber: toNumber,
+	makeMap: makeMap,
+	isBuiltInTag: isBuiltInTag,
+	remove: remove$1,
+	hasOwn: hasOwn,
+	isPrimitive: isPrimitive,
+	cached: cached,
+	camelize: camelize,
+	capitalize: capitalize,
+	hyphenate: hyphenate,
+	bind: bind$1,
+	toArray: toArray,
+	extend: extend,
+	isObject: isObject,
+	isPlainObject: isPlainObject,
+	toObject: toObject,
+	noop: noop,
+	no: no,
+	genStaticKeys: genStaticKeys,
+	looseEqual: looseEqual,
+	looseIndexOf: looseIndexOf,
+	isReserved: isReserved,
+	def: def,
+	parsePath: parsePath,
+	hasProto: hasProto,
+	inBrowser: inBrowser,
+	UA: UA,
+	isIE: isIE,
+	isIE9: isIE9,
+	isEdge: isEdge,
+	isAndroid: isAndroid,
+	isIOS: isIOS,
+	isServerRendering: isServerRendering,
+	devtools: devtools,
+	nextTick: nextTick,
+	get _Set () { return _Set; },
+	mergeOptions: mergeOptions,
+	resolveAsset: resolveAsset,
+	get warn () { return warn; },
+	get formatComponentName () { return formatComponentName; },
+	validateProp: validateProp
+});
+
+/* not type checking this file because flow doesn't play well with Proxy */
+
+var initProxy;
+
+if (false) {
+  var allowedGlobals = makeMap(
+    'Infinity,undefined,NaN,isFinite,isNaN,' +
+    'parseFloat,parseInt,decodeURI,decodeURIComponent,encodeURI,encodeURIComponent,' +
+    'Math,Number,Date,Array,Object,Boolean,String,RegExp,Map,Set,JSON,Intl,' +
+    'require' // for Webpack/Browserify
+  );
+
+  var warnNonPresent = function (target, key) {
+    warn(
+      "Property or method \"" + key + "\" is not defined on the instance but " +
+      "referenced during render. Make sure to declare reactive data " +
+      "properties in the data option.",
+      target
+    );
+  };
+
+  var hasProxy =
+    typeof Proxy !== 'undefined' &&
+    Proxy.toString().match(/native code/);
+
+  if (hasProxy) {
+    var isBuiltInModifier = makeMap('stop,prevent,self,ctrl,shift,alt,meta');
+    config.keyCodes = new Proxy(config.keyCodes, {
+      set: function set (target, key, value) {
+        if (isBuiltInModifier(key)) {
+          warn(("Avoid overwriting built-in modifier in config.keyCodes: ." + key));
+          return false
+        } else {
+          target[key] = value;
+          return true
+        }
+      }
+    });
+  }
+
+  var hasHandler = {
+    has: function has (target, key) {
+      var has = key in target;
+      var isAllowed = allowedGlobals(key) || key.charAt(0) === '_';
+      if (!has && !isAllowed) {
+        warnNonPresent(target, key);
+      }
+      return has || !isAllowed
+    }
+  };
+
+  var getHandler = {
+    get: function get (target, key) {
+      if (typeof key === 'string' && !(key in target)) {
+        warnNonPresent(target, key);
+      }
+      return target[key]
+    }
+  };
+
+  initProxy = function initProxy (vm) {
+    if (hasProxy) {
+      // determine which proxy handler to use
+      var options = vm.$options;
+      var handlers = options.render && options.render._withStripped
+        ? getHandler
+        : hasHandler;
+      vm._renderProxy = new Proxy(vm, handlers);
+    } else {
+      vm._renderProxy = vm;
+    }
+  };
+}
+
+/*  */
+
+
+var queue = [];
+var has$1 = {};
+var circular = {};
+var waiting = false;
+var flushing = false;
+var index = 0;
+
+/**
+ * Reset the scheduler's state.
+ */
+function resetSchedulerState () {
+  queue.length = 0;
+  has$1 = {};
+  if (false) {
+    circular = {};
+  }
+  waiting = flushing = false;
+}
+
+/**
+ * Flush both queues and run the watchers.
+ */
+function flushSchedulerQueue () {
+  flushing = true;
+
+  // Sort queue before flush.
+  // This ensures that:
+  // 1. Components are updated from parent to child. (because parent is always
+  //    created before the child)
+  // 2. A component's user watchers are run before its render watcher (because
+  //    user watchers are created before the render watcher)
+  // 3. If a component is destroyed during a parent component's watcher run,
+  //    its watchers can be skipped.
+  queue.sort(function (a, b) { return a.id - b.id; });
+
+  // do not cache length because more watchers might be pushed
+  // as we run existing watchers
+  for (index = 0; index < queue.length; index++) {
+    var watcher = queue[index];
+    var id = watcher.id;
+    has$1[id] = null;
+    watcher.run();
+    // in dev build, check and stop circular updates.
+    if (false) {
+      circular[id] = (circular[id] || 0) + 1;
+      if (circular[id] > config._maxUpdateCount) {
+        warn(
+          'You may have an infinite update loop ' + (
+            watcher.user
+              ? ("in watcher with expression \"" + (watcher.expression) + "\"")
+              : "in a component render function."
+          ),
+          watcher.vm
+        );
+        break
+      }
+    }
+  }
+
+  // devtool hook
+  /* istanbul ignore if */
+  if (devtools && config.devtools) {
+    devtools.emit('flush');
+  }
+
+  resetSchedulerState();
+}
+
+/**
+ * Push a watcher into the watcher queue.
+ * Jobs with duplicate IDs will be skipped unless it's
+ * pushed when the queue is being flushed.
+ */
+function queueWatcher (watcher) {
+  var id = watcher.id;
+  if (has$1[id] == null) {
+    has$1[id] = true;
+    if (!flushing) {
+      queue.push(watcher);
+    } else {
+      // if already flushing, splice the watcher based on its id
+      // if already past its id, it will be run next immediately.
+      var i = queue.length - 1;
+      while (i >= 0 && queue[i].id > watcher.id) {
+        i--;
+      }
+      queue.splice(Math.max(i, index) + 1, 0, watcher);
+    }
+    // queue the flush
+    if (!waiting) {
+      waiting = true;
+      nextTick(flushSchedulerQueue);
+    }
+  }
+}
+
+/*  */
+
+var uid$2 = 0;
+
+/**
+ * A watcher parses an expression, collects dependencies,
+ * and fires callback when the expression value changes.
+ * This is used for both the $watch() api and directives.
+ */
+var Watcher = function Watcher (
+  vm,
+  expOrFn,
+  cb,
+  options
+) {
+  if ( options === void 0 ) options = {};
+
+  this.vm = vm;
+  vm._watchers.push(this);
+  // options
+  this.deep = !!options.deep;
+  this.user = !!options.user;
+  this.lazy = !!options.lazy;
+  this.sync = !!options.sync;
+  this.expression = expOrFn.toString();
+  this.cb = cb;
+  this.id = ++uid$2; // uid for batching
+  this.active = true;
+  this.dirty = this.lazy; // for lazy watchers
+  this.deps = [];
+  this.newDeps = [];
+  this.depIds = new _Set();
+  this.newDepIds = new _Set();
+  // parse expression for getter
+  if (typeof expOrFn === 'function') {
+    this.getter = expOrFn;
+  } else {
+    this.getter = parsePath(expOrFn);
+    if (!this.getter) {
+      this.getter = function () {};
+      "production" !== 'production' && warn(
+        "Failed watching path: \"" + expOrFn + "\" " +
+        'Watcher only accepts simple dot-delimited paths. ' +
+        'For full control, use a function instead.',
+        vm
+      );
+    }
+  }
+  this.value = this.lazy
+    ? undefined
+    : this.get();
+};
+
+/**
+ * Evaluate the getter, and re-collect dependencies.
+ */
+Watcher.prototype.get = function get () {
+  pushTarget(this);
+  var value = this.getter.call(this.vm, this.vm);
+  // "touch" every property so they are all tracked as
+  // dependencies for deep watching
+  if (this.deep) {
+    traverse(value);
+  }
+  popTarget();
+  this.cleanupDeps();
+  return value
+};
+
+/**
+ * Add a dependency to this directive.
+ */
+Watcher.prototype.addDep = function addDep (dep) {
+  var id = dep.id;
+  if (!this.newDepIds.has(id)) {
+    this.newDepIds.add(id);
+    this.newDeps.push(dep);
+    if (!this.depIds.has(id)) {
+      dep.addSub(this);
+    }
+  }
+};
+
+/**
+ * Clean up for dependency collection.
+ */
+Watcher.prototype.cleanupDeps = function cleanupDeps () {
+    var this$1 = this;
+
+  var i = this.deps.length;
+  while (i--) {
+    var dep = this$1.deps[i];
+    if (!this$1.newDepIds.has(dep.id)) {
+      dep.removeSub(this$1);
+    }
+  }
+  var tmp = this.depIds;
+  this.depIds = this.newDepIds;
+  this.newDepIds = tmp;
+  this.newDepIds.clear();
+  tmp = this.deps;
+  this.deps = this.newDeps;
+  this.newDeps = tmp;
+  this.newDeps.length = 0;
+};
+
+/**
+ * Subscriber interface.
+ * Will be called when a dependency changes.
+ */
+Watcher.prototype.update = function update () {
+  /* istanbul ignore else */
+  if (this.lazy) {
+    this.dirty = true;
+  } else if (this.sync) {
+    this.run();
+  } else {
+    queueWatcher(this);
+  }
+};
+
+/**
+ * Scheduler job interface.
+ * Will be called by the scheduler.
+ */
+Watcher.prototype.run = function run () {
+  if (this.active) {
+    var value = this.get();
+      if (
+        value !== this.value ||
+      // Deep watchers and watchers on Object/Arrays should fire even
+      // when the value is the same, because the value may
+      // have mutated.
+      isObject(value) ||
+      this.deep
+    ) {
+      // set new value
+      var oldValue = this.value;
+      this.value = value;
+      if (this.user) {
+        try {
+          this.cb.call(this.vm, value, oldValue);
+        } catch (e) {
+          /* istanbul ignore else */
+          if (config.errorHandler) {
+            config.errorHandler.call(null, e, this.vm);
+          } else {
+            "production" !== 'production' && warn(
+              ("Error in watcher \"" + (this.expression) + "\""),
+              this.vm
+            );
+            throw e
+          }
+        }
+      } else {
+        this.cb.call(this.vm, value, oldValue);
+      }
+    }
+  }
+};
+
+/**
+ * Evaluate the value of the watcher.
+ * This only gets called for lazy watchers.
+ */
+Watcher.prototype.evaluate = function evaluate () {
+  this.value = this.get();
+  this.dirty = false;
+};
+
+/**
+ * Depend on all deps collected by this watcher.
+ */
+Watcher.prototype.depend = function depend () {
+    var this$1 = this;
+
+  var i = this.deps.length;
+  while (i--) {
+    this$1.deps[i].depend();
+  }
+};
+
+/**
+ * Remove self from all dependencies' subscriber list.
+ */
+Watcher.prototype.teardown = function teardown () {
+    var this$1 = this;
+
+  if (this.active) {
+    // remove self from vm's watcher list
+    // this is a somewhat expensive operation so we skip it
+    // if the vm is being destroyed or is performing a v-for
+    // re-render (the watcher list is then filtered by v-for).
+    if (!this.vm._isBeingDestroyed && !this.vm._vForRemoving) {
+      remove$1(this.vm._watchers, this);
+    }
+    var i = this.deps.length;
+    while (i--) {
+      this$1.deps[i].removeSub(this$1);
+    }
+    this.active = false;
+  }
+};
+
+/**
+ * Recursively traverse an object to evoke all converted
+ * getters, so that every nested property inside the object
+ * is collected as a "deep" dependency.
+ */
+var seenObjects = new _Set();
+function traverse (val) {
+  seenObjects.clear();
+  _traverse(val, seenObjects);
+}
+
+function _traverse (val, seen) {
+  var i, keys;
+  var isA = Array.isArray(val);
+  if ((!isA && !isObject(val)) || !Object.isExtensible(val)) {
+    return
+  }
+  if (val.__ob__) {
+    var depId = val.__ob__.dep.id;
+    if (seen.has(depId)) {
+      return
+    }
+    seen.add(depId);
+  }
+  if (isA) {
+    i = val.length;
+    while (i--) { _traverse(val[i], seen); }
+  } else {
+    keys = Object.keys(val);
+    i = keys.length;
+    while (i--) { _traverse(val[keys[i]], seen); }
+  }
+}
+
+/*  */
+
+function initState (vm) {
+  vm._watchers = [];
+  initProps(vm);
+  initMethods(vm);
+  initData(vm);
+  initComputed(vm);
+  initWatch(vm);
+}
+
+var isReservedProp = { key: 1, ref: 1, slot: 1 };
+
+function initProps (vm) {
+  var props = vm.$options.props;
+  if (props) {
+    var propsData = vm.$options.propsData || {};
+    var keys = vm.$options._propKeys = Object.keys(props);
+    var isRoot = !vm.$parent;
+    // root instance props should be converted
+    observerState.shouldConvert = isRoot;
+    var loop = function ( i ) {
+      var key = keys[i];
+      /* istanbul ignore else */
+      if (false) {
+        if (isReservedProp[key]) {
+          warn(
+            ("\"" + key + "\" is a reserved attribute and cannot be used as component prop."),
+            vm
+          );
+        }
+        defineReactive$$1(vm, key, validateProp(key, props, propsData, vm), function () {
+          if (vm.$parent && !observerState.isSettingProps) {
+            warn(
+              "Avoid mutating a prop directly since the value will be " +
+              "overwritten whenever the parent component re-renders. " +
+              "Instead, use a data or computed property based on the prop's " +
+              "value. Prop being mutated: \"" + key + "\"",
+              vm
+            );
+          }
+        });
+      } else {
+        defineReactive$$1(vm, key, validateProp(key, props, propsData, vm));
+      }
+    };
+
+    for (var i = 0; i < keys.length; i++) loop( i );
+    observerState.shouldConvert = true;
+  }
+}
+
+function initData (vm) {
+  var data = vm.$options.data;
+  data = vm._data = typeof data === 'function'
+    ? data.call(vm)
+    : data || {};
+  if (!isPlainObject(data)) {
+    data = {};
+    "production" !== 'production' && warn(
+      'data functions should return an object.',
+      vm
+    );
+  }
+  // proxy data on instance
+  var keys = Object.keys(data);
+  var props = vm.$options.props;
+  var i = keys.length;
+  while (i--) {
+    if (props && hasOwn(props, keys[i])) {
+      "production" !== 'production' && warn(
+        "The data property \"" + (keys[i]) + "\" is already declared as a prop. " +
+        "Use prop default value instead.",
+        vm
+      );
+    } else {
+      proxy(vm, keys[i]);
+    }
+  }
+  // observe data
+  observe(data);
+  data.__ob__ && data.__ob__.vmCount++;
+}
+
+var computedSharedDefinition = {
+  enumerable: true,
+  configurable: true,
+  get: noop,
+  set: noop
+};
+
+function initComputed (vm) {
+  var computed = vm.$options.computed;
+  if (computed) {
+    for (var key in computed) {
+      var userDef = computed[key];
+      if (typeof userDef === 'function') {
+        computedSharedDefinition.get = makeComputedGetter(userDef, vm);
+        computedSharedDefinition.set = noop;
+      } else {
+        computedSharedDefinition.get = userDef.get
+          ? userDef.cache !== false
+            ? makeComputedGetter(userDef.get, vm)
+            : bind$1(userDef.get, vm)
+          : noop;
+        computedSharedDefinition.set = userDef.set
+          ? bind$1(userDef.set, vm)
+          : noop;
+      }
+      Object.defineProperty(vm, key, computedSharedDefinition);
+    }
+  }
+}
+
+function makeComputedGetter (getter, owner) {
+  var watcher = new Watcher(owner, getter, noop, {
+    lazy: true
+  });
+  return function computedGetter () {
+    if (watcher.dirty) {
+      watcher.evaluate();
+    }
+    if (Dep.target) {
+      watcher.depend();
+    }
+    return watcher.value
+  }
+}
+
+function initMethods (vm) {
+  var methods = vm.$options.methods;
+  if (methods) {
+    for (var key in methods) {
+      vm[key] = methods[key] == null ? noop : bind$1(methods[key], vm);
+      if (false) {
+        warn(
+          "method \"" + key + "\" has an undefined value in the component definition. " +
+          "Did you reference the function correctly?",
+          vm
+        );
+      }
+    }
+  }
+}
+
+function initWatch (vm) {
+  var watch = vm.$options.watch;
+  if (watch) {
+    for (var key in watch) {
+      var handler = watch[key];
+      if (Array.isArray(handler)) {
+        for (var i = 0; i < handler.length; i++) {
+          createWatcher(vm, key, handler[i]);
+        }
+      } else {
+        createWatcher(vm, key, handler);
+      }
+    }
+  }
+}
+
+function createWatcher (vm, key, handler) {
+  var options;
+  if (isPlainObject(handler)) {
+    options = handler;
+    handler = handler.handler;
+  }
+  if (typeof handler === 'string') {
+    handler = vm[handler];
+  }
+  vm.$watch(key, handler, options);
+}
+
+function stateMixin (Vue) {
+  // flow somehow has problems with directly declared definition object
+  // when using Object.defineProperty, so we have to procedurally build up
+  // the object here.
+  var dataDef = {};
+  dataDef.get = function () {
+    return this._data
+  };
+  if (false) {
+    dataDef.set = function (newData) {
+      warn(
+        'Avoid replacing instance root $data. ' +
+        'Use nested data properties instead.',
+        this
+      );
+    };
+  }
+  Object.defineProperty(Vue.prototype, '$data', dataDef);
+
+  Vue.prototype.$set = set$1;
+  Vue.prototype.$delete = del;
+
+  Vue.prototype.$watch = function (
+    expOrFn,
+    cb,
+    options
+  ) {
+    var vm = this;
+    options = options || {};
+    options.user = true;
+    var watcher = new Watcher(vm, expOrFn, cb, options);
+    if (options.immediate) {
+      cb.call(vm, watcher.value);
+    }
+    return function unwatchFn () {
+      watcher.teardown();
+    }
+  };
+}
+
+function proxy (vm, key) {
+  if (!isReserved(key)) {
+    Object.defineProperty(vm, key, {
+      configurable: true,
+      enumerable: true,
+      get: function proxyGetter () {
+        return vm._data[key]
+      },
+      set: function proxySetter (val) {
+        vm._data[key] = val;
+      }
+    });
+  }
+}
+
+/*  */
+
+var VNode = function VNode (
+  tag,
+  data,
+  children,
+  text,
+  elm,
+  ns,
+  context,
+  componentOptions
+) {
+  this.tag = tag;
+  this.data = data;
+  this.children = children;
+  this.text = text;
+  this.elm = elm;
+  this.ns = ns;
+  this.context = context;
+  this.functionalContext = undefined;
+  this.key = data && data.key;
+  this.componentOptions = componentOptions;
+  this.child = undefined;
+  this.parent = undefined;
+  this.raw = false;
+  this.isStatic = false;
+  this.isRootInsert = true;
+  this.isComment = false;
+  this.isCloned = false;
+  this.isOnce = false;
+};
+
+var emptyVNode = function () {
+  var node = new VNode();
+  node.text = '';
+  node.isComment = true;
+  return node
+};
+
+// optimized shallow clone
+// used for static nodes and slot nodes because they may be reused across
+// multiple renders, cloning them avoids errors when DOM manipulations rely
+// on their elm reference.
+function cloneVNode (vnode) {
+  var cloned = new VNode(
+    vnode.tag,
+    vnode.data,
+    vnode.children,
+    vnode.text,
+    vnode.elm,
+    vnode.ns,
+    vnode.context,
+    vnode.componentOptions
+  );
+  cloned.isStatic = vnode.isStatic;
+  cloned.key = vnode.key;
+  cloned.isCloned = true;
+  return cloned
+}
+
+function cloneVNodes (vnodes) {
+  var res = new Array(vnodes.length);
+  for (var i = 0; i < vnodes.length; i++) {
+    res[i] = cloneVNode(vnodes[i]);
+  }
+  return res
+}
+
+/*  */
+
+function mergeVNodeHook (def, hookKey, hook, key) {
+  key = key + hookKey;
+  var injectedHash = def.__injected || (def.__injected = {});
+  if (!injectedHash[key]) {
+    injectedHash[key] = true;
+    var oldHook = def[hookKey];
+    if (oldHook) {
+      def[hookKey] = function () {
+        oldHook.apply(this, arguments);
+        hook.apply(this, arguments);
+      };
+    } else {
+      def[hookKey] = hook;
+    }
+  }
+}
+
+/*  */
+
+function updateListeners (
+  on,
+  oldOn,
+  add,
+  remove$$1,
+  vm
+) {
+  var name, cur, old, fn, event, capture, once;
+  for (name in on) {
+    cur = on[name];
+    old = oldOn[name];
+    if (!cur) {
+      "production" !== 'production' && warn(
+        "Invalid handler for event \"" + name + "\": got " + String(cur),
+        vm
+      );
+    } else if (!old) {
+      once = name.charAt(0) === '~'; // Prefixed last, checked first
+      event = once ? name.slice(1) : name;
+      capture = event.charAt(0) === '!';
+      event = capture ? event.slice(1) : event;
+      if (Array.isArray(cur)) {
+        add(event, (cur.invoker = arrInvoker(cur)), once, capture);
+      } else {
+        if (!cur.invoker) {
+          fn = cur;
+          cur = on[name] = {};
+          cur.fn = fn;
+          cur.invoker = fnInvoker(cur);
+        }
+        add(event, cur.invoker, once, capture);
+      }
+    } else if (cur !== old) {
+      if (Array.isArray(old)) {
+        old.length = cur.length;
+        for (var i = 0; i < old.length; i++) { old[i] = cur[i]; }
+        on[name] = old;
+      } else {
+        old.fn = cur;
+        on[name] = old;
+      }
+    }
+  }
+  for (name in oldOn) {
+    if (!on[name]) {
+      once = name.charAt(0) === '~'; // Prefixed last, checked first
+      event = once ? name.slice(1) : name;
+      capture = event.charAt(0) === '!';
+      event = capture ? event.slice(1) : event;
+      remove$$1(event, oldOn[name].invoker, capture);
+    }
+  }
+}
+
+function arrInvoker (arr) {
+  return function (ev) {
+    var arguments$1 = arguments;
+
+    var single = arguments.length === 1;
+    for (var i = 0; i < arr.length; i++) {
+      single ? arr[i](ev) : arr[i].apply(null, arguments$1);
+    }
+  }
+}
+
+function fnInvoker (o) {
+  return function (ev) {
+    var single = arguments.length === 1;
+    single ? o.fn(ev) : o.fn.apply(null, arguments);
+  }
+}
+
+/*  */
+
+function normalizeChildren (
+  children,
+  ns,
+  nestedIndex
+) {
+  if (isPrimitive(children)) {
+    return [createTextVNode(children)]
+  }
+  if (Array.isArray(children)) {
+    var res = [];
+    for (var i = 0, l = children.length; i < l; i++) {
+      var c = children[i];
+      var last = res[res.length - 1];
+      //  nested
+      if (Array.isArray(c)) {
+        res.push.apply(res, normalizeChildren(c, ns, ((nestedIndex || '') + "_" + i)));
+      } else if (isPrimitive(c)) {
+        if (last && last.text) {
+          last.text += String(c);
+        } else if (c !== '') {
+          // convert primitive to vnode
+          res.push(createTextVNode(c));
+        }
+      } else if (c instanceof VNode) {
+        if (c.text && last && last.text) {
+          if (!last.isCloned) {
+            last.text += c.text;
+          }
+        } else {
+          // inherit parent namespace
+          if (ns) {
+            applyNS(c, ns);
+          }
+          // default key for nested array children (likely generated by v-for)
+          if (c.tag && c.key == null && nestedIndex != null) {
+            c.key = "__vlist" + nestedIndex + "_" + i + "__";
+          }
+          res.push(c);
+        }
+      }
+    }
+    return res
+  }
+}
+
+function createTextVNode (val) {
+  return new VNode(undefined, undefined, undefined, String(val))
+}
+
+function applyNS (vnode, ns) {
+  if (vnode.tag && !vnode.ns) {
+    vnode.ns = ns;
+    if (vnode.children) {
+      for (var i = 0, l = vnode.children.length; i < l; i++) {
+        applyNS(vnode.children[i], ns);
+      }
+    }
+  }
+}
+
+/*  */
+
+function getFirstComponentChild (children) {
+  return children && children.filter(function (c) { return c && c.componentOptions; })[0]
+}
+
+/*  */
+
+var activeInstance = null;
+
+function initLifecycle (vm) {
+  var options = vm.$options;
+
+  // locate first non-abstract parent
+  var parent = options.parent;
+  if (parent && !options.abstract) {
+    while (parent.$options.abstract && parent.$parent) {
+      parent = parent.$parent;
+    }
+    parent.$children.push(vm);
+  }
+
+  vm.$parent = parent;
+  vm.$root = parent ? parent.$root : vm;
+
+  vm.$children = [];
+  vm.$refs = {};
+
+  vm._watcher = null;
+  vm._inactive = false;
+  vm._isMounted = false;
+  vm._isDestroyed = false;
+  vm._isBeingDestroyed = false;
+}
+
+function lifecycleMixin (Vue) {
+  Vue.prototype._mount = function (
+    el,
+    hydrating
+  ) {
+    var vm = this;
+    vm.$el = el;
+    if (!vm.$options.render) {
+      vm.$options.render = emptyVNode;
+      if (false) {
+        /* istanbul ignore if */
+        if (vm.$options.template && vm.$options.template.charAt(0) !== '#') {
+          warn(
+            'You are using the runtime-only build of Vue where the template ' +
+            'option is not available. Either pre-compile the templates into ' +
+            'render functions, or use the compiler-included build.',
+            vm
+          );
+        } else {
+          warn(
+            'Failed to mount component: template or render function not defined.',
+            vm
+          );
+        }
+      }
+    }
+    callHook(vm, 'beforeMount');
+    vm._watcher = new Watcher(vm, function () {
+      vm._update(vm._render(), hydrating);
+    }, noop);
+    hydrating = false;
+    // manually mounted instance, call mounted on self
+    // mounted is called for render-created child components in its inserted hook
+    if (vm.$vnode == null) {
+      vm._isMounted = true;
+      callHook(vm, 'mounted');
+    }
+    return vm
+  };
+
+  Vue.prototype._update = function (vnode, hydrating) {
+    var vm = this;
+    if (vm._isMounted) {
+      callHook(vm, 'beforeUpdate');
+    }
+    var prevEl = vm.$el;
+    var prevVnode = vm._vnode;
+    var prevActiveInstance = activeInstance;
+    activeInstance = vm;
+    vm._vnode = vnode;
+    // Vue.prototype.__patch__ is injected in entry points
+    // based on the rendering backend used.
+    if (!prevVnode) {
+      // initial render
+      vm.$el = vm.__patch__(
+        vm.$el, vnode, hydrating, false /* removeOnly */,
+        vm.$options._parentElm,
+        vm.$options._refElm
+      );
+    } else {
+      // updates
+      vm.$el = vm.__patch__(prevVnode, vnode);
+    }
+    activeInstance = prevActiveInstance;
+    // update __vue__ reference
+    if (prevEl) {
+      prevEl.__vue__ = null;
+    }
+    if (vm.$el) {
+      vm.$el.__vue__ = vm;
+    }
+    // if parent is an HOC, update its $el as well
+    if (vm.$vnode && vm.$parent && vm.$vnode === vm.$parent._vnode) {
+      vm.$parent.$el = vm.$el;
+    }
+    if (vm._isMounted) {
+      callHook(vm, 'updated');
+    }
+  };
+
+  Vue.prototype._updateFromParent = function (
+    propsData,
+    listeners,
+    parentVnode,
+    renderChildren
+  ) {
+    var vm = this;
+    var hasChildren = !!(vm.$options._renderChildren || renderChildren);
+    vm.$options._parentVnode = parentVnode;
+    vm.$vnode = parentVnode; // update vm's placeholder node without re-render
+    if (vm._vnode) { // update child tree's parent
+      vm._vnode.parent = parentVnode;
+    }
+    vm.$options._renderChildren = renderChildren;
+    // update props
+    if (propsData && vm.$options.props) {
+      observerState.shouldConvert = false;
+      if (false) {
+        observerState.isSettingProps = true;
+      }
+      var propKeys = vm.$options._propKeys || [];
+      for (var i = 0; i < propKeys.length; i++) {
+        var key = propKeys[i];
+        vm[key] = validateProp(key, vm.$options.props, propsData, vm);
+      }
+      observerState.shouldConvert = true;
+      if (false) {
+        observerState.isSettingProps = false;
+      }
+      vm.$options.propsData = propsData;
+    }
+    // update listeners
+    if (listeners) {
+      var oldListeners = vm.$options._parentListeners;
+      vm.$options._parentListeners = listeners;
+      vm._updateListeners(listeners, oldListeners);
+    }
+    // resolve slots + force update if has children
+    if (hasChildren) {
+      vm.$slots = resolveSlots(renderChildren, parentVnode.context);
+      vm.$forceUpdate();
+    }
+  };
+
+  Vue.prototype.$forceUpdate = function () {
+    var vm = this;
+    if (vm._watcher) {
+      vm._watcher.update();
+    }
+  };
+
+  Vue.prototype.$destroy = function () {
+    var vm = this;
+    if (vm._isBeingDestroyed) {
+      return
+    }
+    callHook(vm, 'beforeDestroy');
+    vm._isBeingDestroyed = true;
+    // remove self from parent
+    var parent = vm.$parent;
+    if (parent && !parent._isBeingDestroyed && !vm.$options.abstract) {
+      remove$1(parent.$children, vm);
+    }
+    // teardown watchers
+    if (vm._watcher) {
+      vm._watcher.teardown();
+    }
+    var i = vm._watchers.length;
+    while (i--) {
+      vm._watchers[i].teardown();
+    }
+    // remove reference from data ob
+    // frozen object may not have observer.
+    if (vm._data.__ob__) {
+      vm._data.__ob__.vmCount--;
+    }
+    // call the last hook...
+    vm._isDestroyed = true;
+    callHook(vm, 'destroyed');
+    // turn off all instance listeners.
+    vm.$off();
+    // remove __vue__ reference
+    if (vm.$el) {
+      vm.$el.__vue__ = null;
+    }
+    // invoke destroy hooks on current rendered tree
+    vm.__patch__(vm._vnode, null);
+  };
+}
+
+function callHook (vm, hook) {
+  var handlers = vm.$options[hook];
+  if (handlers) {
+    for (var i = 0, j = handlers.length; i < j; i++) {
+      handlers[i].call(vm);
+    }
+  }
+  vm.$emit('hook:' + hook);
+}
+
+/*  */
+
+var hooks = { init: init, prepatch: prepatch, insert: insert, destroy: destroy$1 };
+var hooksToMerge = Object.keys(hooks);
+
+function createComponent (
+  Ctor,
+  data,
+  context,
+  children,
+  tag
+) {
+  if (!Ctor) {
+    return
+  }
+
+  var baseCtor = context.$options._base;
+  if (isObject(Ctor)) {
+    Ctor = baseCtor.extend(Ctor);
+  }
+
+  if (typeof Ctor !== 'function') {
+    if (false) {
+      warn(("Invalid Component definition: " + (String(Ctor))), context);
+    }
+    return
+  }
+
+  // async component
+  if (!Ctor.cid) {
+    if (Ctor.resolved) {
+      Ctor = Ctor.resolved;
+    } else {
+      Ctor = resolveAsyncComponent(Ctor, baseCtor, function () {
+        // it's ok to queue this on every render because
+        // $forceUpdate is buffered by the scheduler.
+        context.$forceUpdate();
+      });
+      if (!Ctor) {
+        // return nothing if this is indeed an async component
+        // wait for the callback to trigger parent update.
+        return
+      }
+    }
+  }
+
+  // resolve constructor options in case global mixins are applied after
+  // component constructor creation
+  resolveConstructorOptions(Ctor);
+
+  data = data || {};
+
+  // extract props
+  var propsData = extractProps(data, Ctor);
+
+  // functional component
+  if (Ctor.options.functional) {
+    return createFunctionalComponent(Ctor, propsData, data, context, children)
+  }
+
+  // extract listeners, since these needs to be treated as
+  // child component listeners instead of DOM listeners
+  var listeners = data.on;
+  // replace with listeners with .native modifier
+  data.on = data.nativeOn;
+
+  if (Ctor.options.abstract) {
+    // abstract components do not keep anything
+    // other than props & listeners
+    data = {};
+  }
+
+  // merge component management hooks onto the placeholder node
+  mergeHooks(data);
+
+  // return a placeholder vnode
+  var name = Ctor.options.name || tag;
+  var vnode = new VNode(
+    ("vue-component-" + (Ctor.cid) + (name ? ("-" + name) : '')),
+    data, undefined, undefined, undefined, undefined, context,
+    { Ctor: Ctor, propsData: propsData, listeners: listeners, tag: tag, children: children }
+  );
+  return vnode
+}
+
+function createFunctionalComponent (
+  Ctor,
+  propsData,
+  data,
+  context,
+  children
+) {
+  var props = {};
+  var propOptions = Ctor.options.props;
+  if (propOptions) {
+    for (var key in propOptions) {
+      props[key] = validateProp(key, propOptions, propsData);
+    }
+  }
+  var vnode = Ctor.options.render.call(
+    null,
+    // ensure the createElement function in functional components
+    // gets a unique context - this is necessary for correct named slot check
+    bind$1(createElement, { _self: Object.create(context) }),
+    {
+      props: props,
+      data: data,
+      parent: context,
+      children: normalizeChildren(children),
+      slots: function () { return resolveSlots(children, context); }
+    }
+  );
+  if (vnode instanceof VNode) {
+    vnode.functionalContext = context;
+    if (data.slot) {
+      (vnode.data || (vnode.data = {})).slot = data.slot;
+    }
+  }
+  return vnode
+}
+
+function createComponentInstanceForVnode (
+  vnode, // we know it's MountedComponentVNode but flow doesn't
+  parent, // activeInstance in lifecycle state
+  parentElm,
+  refElm
+) {
+  var vnodeComponentOptions = vnode.componentOptions;
+  var options = {
+    _isComponent: true,
+    parent: parent,
+    propsData: vnodeComponentOptions.propsData,
+    _componentTag: vnodeComponentOptions.tag,
+    _parentVnode: vnode,
+    _parentListeners: vnodeComponentOptions.listeners,
+    _renderChildren: vnodeComponentOptions.children,
+    _parentElm: parentElm || null,
+    _refElm: refElm || null
+  };
+  // check inline-template render functions
+  var inlineTemplate = vnode.data.inlineTemplate;
+  if (inlineTemplate) {
+    options.render = inlineTemplate.render;
+    options.staticRenderFns = inlineTemplate.staticRenderFns;
+  }
+  return new vnodeComponentOptions.Ctor(options)
+}
+
+function init (
+  vnode,
+  hydrating,
+  parentElm,
+  refElm
+) {
+  if (!vnode.child || vnode.child._isDestroyed) {
+    var child = vnode.child = createComponentInstanceForVnode(
+      vnode,
+      activeInstance,
+      parentElm,
+      refElm
+    );
+    child.$mount(hydrating ? vnode.elm : undefined, hydrating);
+  } else if (vnode.data.keepAlive) {
+    // kept-alive components, treat as a patch
+    var mountedNode = vnode; // work around flow
+    prepatch(mountedNode, mountedNode);
+  }
+}
+
+function prepatch (
+  oldVnode,
+  vnode
+) {
+  var options = vnode.componentOptions;
+  var child = vnode.child = oldVnode.child;
+  child._updateFromParent(
+    options.propsData, // updated props
+    options.listeners, // updated listeners
+    vnode, // new parent vnode
+    options.children // new children
+  );
+}
+
+function insert (vnode) {
+  if (!vnode.child._isMounted) {
+    vnode.child._isMounted = true;
+    callHook(vnode.child, 'mounted');
+  }
+  if (vnode.data.keepAlive) {
+    vnode.child._inactive = false;
+    callHook(vnode.child, 'activated');
+  }
+}
+
+function destroy$1 (vnode) {
+  if (!vnode.child._isDestroyed) {
+    if (!vnode.data.keepAlive) {
+      vnode.child.$destroy();
+    } else {
+      vnode.child._inactive = true;
+      callHook(vnode.child, 'deactivated');
+    }
+  }
+}
+
+function resolveAsyncComponent (
+  factory,
+  baseCtor,
+  cb
+) {
+  if (factory.requested) {
+    // pool callbacks
+    factory.pendingCallbacks.push(cb);
+  } else {
+    factory.requested = true;
+    var cbs = factory.pendingCallbacks = [cb];
+    var sync = true;
+
+    var resolve = function (res) {
+      if (isObject(res)) {
+        res = baseCtor.extend(res);
+      }
+      // cache resolved
+      factory.resolved = res;
+      // invoke callbacks only if this is not a synchronous resolve
+      // (async resolves are shimmed as synchronous during SSR)
+      if (!sync) {
+        for (var i = 0, l = cbs.length; i < l; i++) {
+          cbs[i](res);
+        }
+      }
+    };
+
+    var reject = function (reason) {
+      "production" !== 'production' && warn(
+        "Failed to resolve async component: " + (String(factory)) +
+        (reason ? ("\nReason: " + reason) : '')
+      );
+    };
+
+    var res = factory(resolve, reject);
+
+    // handle promise
+    if (res && typeof res.then === 'function' && !factory.resolved) {
+      res.then(resolve, reject);
+    }
+
+    sync = false;
+    // return in case resolved synchronously
+    return factory.resolved
+  }
+}
+
+function extractProps (data, Ctor) {
+  // we are only extracting raw values here.
+  // validation and default values are handled in the child
+  // component itself.
+  var propOptions = Ctor.options.props;
+  if (!propOptions) {
+    return
+  }
+  var res = {};
+  var attrs = data.attrs;
+  var props = data.props;
+  var domProps = data.domProps;
+  if (attrs || props || domProps) {
+    for (var key in propOptions) {
+      var altKey = hyphenate(key);
+      checkProp(res, props, key, altKey, true) ||
+      checkProp(res, attrs, key, altKey) ||
+      checkProp(res, domProps, key, altKey);
+    }
+  }
+  return res
+}
+
+function checkProp (
+  res,
+  hash,
+  key,
+  altKey,
+  preserve
+) {
+  if (hash) {
+    if (hasOwn(hash, key)) {
+      res[key] = hash[key];
+      if (!preserve) {
+        delete hash[key];
+      }
+      return true
+    } else if (hasOwn(hash, altKey)) {
+      res[key] = hash[altKey];
+      if (!preserve) {
+        delete hash[altKey];
+      }
+      return true
+    }
+  }
+  return false
+}
+
+function mergeHooks (data) {
+  if (!data.hook) {
+    data.hook = {};
+  }
+  for (var i = 0; i < hooksToMerge.length; i++) {
+    var key = hooksToMerge[i];
+    var fromParent = data.hook[key];
+    var ours = hooks[key];
+    data.hook[key] = fromParent ? mergeHook$1(ours, fromParent) : ours;
+  }
+}
+
+function mergeHook$1 (one, two) {
+  return function (a, b, c, d) {
+    one(a, b, c, d);
+    two(a, b, c, d);
+  }
+}
+
+/*  */
+
+// wrapper function for providing a more flexible interface
+// without getting yelled at by flow
+function createElement (
+  tag,
+  data,
+  children
+) {
+  if (data && (Array.isArray(data) || typeof data !== 'object')) {
+    children = data;
+    data = undefined;
+  }
+  // make sure to use real instance instead of proxy as context
+  return _createElement(this._self, tag, data, children)
+}
+
+function _createElement (
+  context,
+  tag,
+  data,
+  children
+) {
+  if (data && data.__ob__) {
+    "production" !== 'production' && warn(
+      "Avoid using observed data object as vnode data: " + (JSON.stringify(data)) + "\n" +
+      'Always create fresh vnode data objects in each render!',
+      context
+    );
+    return
+  }
+  if (!tag) {
+    // in case of component :is set to falsy value
+    return emptyVNode()
+  }
+  // support single function children as default scoped slot
+  if (Array.isArray(children) &&
+      typeof children[0] === 'function') {
+    data = data || {};
+    data.scopedSlots = { default: children[0] };
+    children.length = 0;
+  }
+  if (typeof tag === 'string') {
+    var Ctor;
+    var ns = config.getTagNamespace(tag);
+    if (config.isReservedTag(tag)) {
+      // platform built-in elements
+      return new VNode(
+        tag, data, normalizeChildren(children, ns),
+        undefined, undefined, ns, context
+      )
+    } else if ((Ctor = resolveAsset(context.$options, 'components', tag))) {
+      // component
+      return createComponent(Ctor, data, context, children, tag)
+    } else {
+      // unknown or unlisted namespaced elements
+      // check at runtime because it may get assigned a namespace when its
+      // parent normalizes children
+      var childNs = tag === 'foreignObject' ? 'xhtml' : ns;
+      return new VNode(
+        tag, data, normalizeChildren(children, childNs),
+        undefined, undefined, ns, context
+      )
+    }
+  } else {
+    // direct component options / constructor
+    return createComponent(tag, data, context, children)
+  }
+}
+
+/*  */
+
+function initRender (vm) {
+  vm.$vnode = null; // the placeholder node in parent tree
+  vm._vnode = null; // the root of the child tree
+  vm._staticTrees = null;
+  var parentVnode = vm.$options._parentVnode;
+  var renderContext = parentVnode && parentVnode.context;
+  vm.$slots = resolveSlots(vm.$options._renderChildren, renderContext);
+  vm.$scopedSlots = {};
+  // bind the public createElement fn to this instance
+  // so that we get proper render context inside it.
+  vm.$createElement = bind$1(createElement, vm);
+  if (vm.$options.el) {
+    vm.$mount(vm.$options.el);
+  }
+}
+
+function renderMixin (Vue) {
+  Vue.prototype.$nextTick = function (fn) {
+    return nextTick(fn, this)
+  };
+
+  Vue.prototype._render = function () {
+    var vm = this;
+    var ref = vm.$options;
+    var render = ref.render;
+    var staticRenderFns = ref.staticRenderFns;
+    var _parentVnode = ref._parentVnode;
+
+    if (vm._isMounted) {
+      // clone slot nodes on re-renders
+      for (var key in vm.$slots) {
+        vm.$slots[key] = cloneVNodes(vm.$slots[key]);
+      }
+    }
+
+    if (_parentVnode && _parentVnode.data.scopedSlots) {
+      vm.$scopedSlots = _parentVnode.data.scopedSlots;
+    }
+
+    if (staticRenderFns && !vm._staticTrees) {
+      vm._staticTrees = [];
+    }
+    // set parent vnode. this allows render functions to have access
+    // to the data on the placeholder node.
+    vm.$vnode = _parentVnode;
+    // render self
+    var vnode;
+    try {
+      vnode = render.call(vm._renderProxy, vm.$createElement);
+    } catch (e) {
+      /* istanbul ignore else */
+      if (config.errorHandler) {
+        config.errorHandler.call(null, e, vm);
+      } else {
+        if (false) {
+          warn(("Error when rendering " + (formatComponentName(vm)) + ":"));
+        }
+        throw e
+      }
+      // return previous vnode to prevent render error causing blank component
+      vnode = vm._vnode;
+    }
+    // return empty vnode in case the render function errored out
+    if (!(vnode instanceof VNode)) {
+      if (false) {
+        warn(
+          'Multiple root nodes returned from render function. Render function ' +
+          'should return a single root node.',
+          vm
+        );
+      }
+      vnode = emptyVNode();
+    }
+    // set parent
+    vnode.parent = _parentVnode;
+    return vnode
+  };
+
+  // shorthands used in render functions
+  Vue.prototype._h = createElement;
+  // toString for mustaches
+  Vue.prototype._s = _toString;
+  // number conversion
+  Vue.prototype._n = toNumber;
+  // empty vnode
+  Vue.prototype._e = emptyVNode;
+  // loose equal
+  Vue.prototype._q = looseEqual;
+  // loose indexOf
+  Vue.prototype._i = looseIndexOf;
+
+  // render static tree by index
+  Vue.prototype._m = function renderStatic (
+    index,
+    isInFor
+  ) {
+    var tree = this._staticTrees[index];
+    // if has already-rendered static tree and not inside v-for,
+    // we can reuse the same tree by doing a shallow clone.
+    if (tree && !isInFor) {
+      return Array.isArray(tree)
+        ? cloneVNodes(tree)
+        : cloneVNode(tree)
+    }
+    // otherwise, render a fresh tree.
+    tree = this._staticTrees[index] = this.$options.staticRenderFns[index].call(this._renderProxy);
+    markStatic(tree, ("__static__" + index), false);
+    return tree
+  };
+
+  // mark node as static (v-once)
+  Vue.prototype._o = function markOnce (
+    tree,
+    index,
+    key
+  ) {
+    markStatic(tree, ("__once__" + index + (key ? ("_" + key) : "")), true);
+    return tree
+  };
+
+  function markStatic (tree, key, isOnce) {
+    if (Array.isArray(tree)) {
+      for (var i = 0; i < tree.length; i++) {
+        if (tree[i] && typeof tree[i] !== 'string') {
+          markStaticNode(tree[i], (key + "_" + i), isOnce);
+        }
+      }
+    } else {
+      markStaticNode(tree, key, isOnce);
+    }
+  }
+
+  function markStaticNode (node, key, isOnce) {
+    node.isStatic = true;
+    node.key = key;
+    node.isOnce = isOnce;
+  }
+
+  // filter resolution helper
+  var identity = function (_) { return _; };
+  Vue.prototype._f = function resolveFilter (id) {
+    return resolveAsset(this.$options, 'filters', id, true) || identity
+  };
+
+  // render v-for
+  Vue.prototype._l = function renderList (
+    val,
+    render
+  ) {
+    var ret, i, l, keys, key;
+    if (Array.isArray(val)) {
+      ret = new Array(val.length);
+      for (i = 0, l = val.length; i < l; i++) {
+        ret[i] = render(val[i], i);
+      }
+    } else if (typeof val === 'number') {
+      ret = new Array(val);
+      for (i = 0; i < val; i++) {
+        ret[i] = render(i + 1, i);
+      }
+    } else if (isObject(val)) {
+      keys = Object.keys(val);
+      ret = new Array(keys.length);
+      for (i = 0, l = keys.length; i < l; i++) {
+        key = keys[i];
+        ret[i] = render(val[key], key, i);
+      }
+    }
+    return ret
+  };
+
+  // renderSlot
+  Vue.prototype._t = function (
+    name,
+    fallback,
+    props
+  ) {
+    var scopedSlotFn = this.$scopedSlots[name];
+    if (scopedSlotFn) { // scoped slot
+      return scopedSlotFn(props || {}) || fallback
+    } else {
+      var slotNodes = this.$slots[name];
+      // warn duplicate slot usage
+      if (slotNodes && "production" !== 'production') {
+        slotNodes._rendered && warn(
+          "Duplicate presence of slot \"" + name + "\" found in the same render tree " +
+          "- this will likely cause render errors.",
+          this
+        );
+        slotNodes._rendered = true;
+      }
+      return slotNodes || fallback
+    }
+  };
+
+  // apply v-bind object
+  Vue.prototype._b = function bindProps (
+    data,
+    tag,
+    value,
+    asProp
+  ) {
+    if (value) {
+      if (!isObject(value)) {
+        "production" !== 'production' && warn(
+          'v-bind without argument expects an Object or Array value',
+          this
+        );
+      } else {
+        if (Array.isArray(value)) {
+          value = toObject(value);
+        }
+        for (var key in value) {
+          if (key === 'class' || key === 'style') {
+            data[key] = value[key];
+          } else {
+            var hash = asProp || config.mustUseProp(tag, key)
+              ? data.domProps || (data.domProps = {})
+              : data.attrs || (data.attrs = {});
+            hash[key] = value[key];
+          }
+        }
+      }
+    }
+    return data
+  };
+
+  // check v-on keyCodes
+  Vue.prototype._k = function checkKeyCodes (
+    eventKeyCode,
+    key,
+    builtInAlias
+  ) {
+    var keyCodes = config.keyCodes[key] || builtInAlias;
+    if (Array.isArray(keyCodes)) {
+      return keyCodes.indexOf(eventKeyCode) === -1
+    } else {
+      return keyCodes !== eventKeyCode
+    }
+  };
+}
+
+function resolveSlots (
+  renderChildren,
+  context
+) {
+  var slots = {};
+  if (!renderChildren) {
+    return slots
+  }
+  var children = normalizeChildren(renderChildren) || [];
+  var defaultSlot = [];
+  var name, child;
+  for (var i = 0, l = children.length; i < l; i++) {
+    child = children[i];
+    // named slots should only be respected if the vnode was rendered in the
+    // same context.
+    if ((child.context === context || child.functionalContext === context) &&
+        child.data && (name = child.data.slot)) {
+      var slot = (slots[name] || (slots[name] = []));
+      if (child.tag === 'template') {
+        slot.push.apply(slot, child.children);
+      } else {
+        slot.push(child);
+      }
+    } else {
+      defaultSlot.push(child);
+    }
+  }
+  // ignore single whitespace
+  if (defaultSlot.length && !(
+    defaultSlot.length === 1 &&
+    (defaultSlot[0].text === ' ' || defaultSlot[0].isComment)
+  )) {
+    slots.default = defaultSlot;
+  }
+  return slots
+}
+
+/*  */
+
+function initEvents (vm) {
+  vm._events = Object.create(null);
+  // init parent attached events
+  var listeners = vm.$options._parentListeners;
+  var add = function (event, fn, once) {
+    once ? vm.$once(event, fn) : vm.$on(event, fn);
+  };
+  var remove$$1 = bind$1(vm.$off, vm);
+  vm._updateListeners = function (listeners, oldListeners) {
+    updateListeners(listeners, oldListeners || {}, add, remove$$1, vm);
+  };
+  if (listeners) {
+    vm._updateListeners(listeners);
+  }
+}
+
+function eventsMixin (Vue) {
+  Vue.prototype.$on = function (event, fn) {
+    var vm = this;(vm._events[event] || (vm._events[event] = [])).push(fn);
+    return vm
+  };
+
+  Vue.prototype.$once = function (event, fn) {
+    var vm = this;
+    function on () {
+      vm.$off(event, on);
+      fn.apply(vm, arguments);
+    }
+    on.fn = fn;
+    vm.$on(event, on);
+    return vm
+  };
+
+  Vue.prototype.$off = function (event, fn) {
+    var vm = this;
+    // all
+    if (!arguments.length) {
+      vm._events = Object.create(null);
+      return vm
+    }
+    // specific event
+    var cbs = vm._events[event];
+    if (!cbs) {
+      return vm
+    }
+    if (arguments.length === 1) {
+      vm._events[event] = null;
+      return vm
+    }
+    // specific handler
+    var cb;
+    var i = cbs.length;
+    while (i--) {
+      cb = cbs[i];
+      if (cb === fn || cb.fn === fn) {
+        cbs.splice(i, 1);
+        break
+      }
+    }
+    return vm
+  };
+
+  Vue.prototype.$emit = function (event) {
+    var vm = this;
+    var cbs = vm._events[event];
+    if (cbs) {
+      cbs = cbs.length > 1 ? toArray(cbs) : cbs;
+      var args = toArray(arguments, 1);
+      for (var i = 0, l = cbs.length; i < l; i++) {
+        cbs[i].apply(vm, args);
+      }
+    }
+    return vm
+  };
+}
+
+/*  */
+
+var uid = 0;
+
+function initMixin (Vue) {
+  Vue.prototype._init = function (options) {
+    var vm = this;
+    // a uid
+    vm._uid = uid++;
+    // a flag to avoid this being observed
+    vm._isVue = true;
+    // merge options
+    if (options && options._isComponent) {
+      // optimize internal component instantiation
+      // since dynamic options merging is pretty slow, and none of the
+      // internal component options needs special treatment.
+      initInternalComponent(vm, options);
+    } else {
+      vm.$options = mergeOptions(
+        resolveConstructorOptions(vm.constructor),
+        options || {},
+        vm
+      );
+    }
+    /* istanbul ignore else */
+    if (false) {
+      initProxy(vm);
+    } else {
+      vm._renderProxy = vm;
+    }
+    // expose real self
+    vm._self = vm;
+    initLifecycle(vm);
+    initEvents(vm);
+    callHook(vm, 'beforeCreate');
+    initState(vm);
+    callHook(vm, 'created');
+    initRender(vm);
+  };
+}
+
+function initInternalComponent (vm, options) {
+  var opts = vm.$options = Object.create(vm.constructor.options);
+  // doing this because it's faster than dynamic enumeration.
+  opts.parent = options.parent;
+  opts.propsData = options.propsData;
+  opts._parentVnode = options._parentVnode;
+  opts._parentListeners = options._parentListeners;
+  opts._renderChildren = options._renderChildren;
+  opts._componentTag = options._componentTag;
+  opts._parentElm = options._parentElm;
+  opts._refElm = options._refElm;
+  if (options.render) {
+    opts.render = options.render;
+    opts.staticRenderFns = options.staticRenderFns;
+  }
+}
+
+function resolveConstructorOptions (Ctor) {
+  var options = Ctor.options;
+  if (Ctor.super) {
+    var superOptions = Ctor.super.options;
+    var cachedSuperOptions = Ctor.superOptions;
+    var extendOptions = Ctor.extendOptions;
+    if (superOptions !== cachedSuperOptions) {
+      // super option changed
+      Ctor.superOptions = superOptions;
+      extendOptions.render = options.render;
+      extendOptions.staticRenderFns = options.staticRenderFns;
+      extendOptions._scopeId = options._scopeId;
+      options = Ctor.options = mergeOptions(superOptions, extendOptions);
+      if (options.name) {
+        options.components[options.name] = Ctor;
+      }
+    }
+  }
+  return options
+}
+
+function Vue$2 (options) {
+  if (false) {
+    warn('Vue is a constructor and should be called with the `new` keyword');
+  }
+  this._init(options);
+}
+
+initMixin(Vue$2);
+stateMixin(Vue$2);
+eventsMixin(Vue$2);
+lifecycleMixin(Vue$2);
+renderMixin(Vue$2);
+
+/*  */
+
+function initUse (Vue) {
+  Vue.use = function (plugin) {
+    /* istanbul ignore if */
+    if (plugin.installed) {
+      return
+    }
+    // additional parameters
+    var args = toArray(arguments, 1);
+    args.unshift(this);
+    if (typeof plugin.install === 'function') {
+      plugin.install.apply(plugin, args);
+    } else {
+      plugin.apply(null, args);
+    }
+    plugin.installed = true;
+    return this
+  };
+}
+
+/*  */
+
+function initMixin$1 (Vue) {
+  Vue.mixin = function (mixin) {
+    this.options = mergeOptions(this.options, mixin);
+  };
+}
+
+/*  */
+
+function initExtend (Vue) {
+  /**
+   * Each instance constructor, including Vue, has a unique
+   * cid. This enables us to create wrapped "child
+   * constructors" for prototypal inheritance and cache them.
+   */
+  Vue.cid = 0;
+  var cid = 1;
+
+  /**
+   * Class inheritance
+   */
+  Vue.extend = function (extendOptions) {
+    extendOptions = extendOptions || {};
+    var Super = this;
+    var SuperId = Super.cid;
+    var cachedCtors = extendOptions._Ctor || (extendOptions._Ctor = {});
+    if (cachedCtors[SuperId]) {
+      return cachedCtors[SuperId]
+    }
+    var name = extendOptions.name || Super.options.name;
+    if (false) {
+      if (!/^[a-zA-Z][\w-]*$/.test(name)) {
+        warn(
+          'Invalid component name: "' + name + '". Component names ' +
+          'can only contain alphanumeric characaters and the hyphen.'
+        );
+      }
+    }
+    var Sub = function VueComponent (options) {
+      this._init(options);
+    };
+    Sub.prototype = Object.create(Super.prototype);
+    Sub.prototype.constructor = Sub;
+    Sub.cid = cid++;
+    Sub.options = mergeOptions(
+      Super.options,
+      extendOptions
+    );
+    Sub['super'] = Super;
+    // allow further extension/mixin/plugin usage
+    Sub.extend = Super.extend;
+    Sub.mixin = Super.mixin;
+    Sub.use = Super.use;
+    // create asset registers, so extended classes
+    // can have their private assets too.
+    config._assetTypes.forEach(function (type) {
+      Sub[type] = Super[type];
+    });
+    // enable recursive self-lookup
+    if (name) {
+      Sub.options.components[name] = Sub;
+    }
+    // keep a reference to the super options at extension time.
+    // later at instantiation we can check if Super's options have
+    // been updated.
+    Sub.superOptions = Super.options;
+    Sub.extendOptions = extendOptions;
+    // cache constructor
+    cachedCtors[SuperId] = Sub;
+    return Sub
+  };
+}
+
+/*  */
+
+function initAssetRegisters (Vue) {
+  /**
+   * Create asset registration methods.
+   */
+  config._assetTypes.forEach(function (type) {
+    Vue[type] = function (
+      id,
+      definition
+    ) {
+      if (!definition) {
+        return this.options[type + 's'][id]
+      } else {
+        /* istanbul ignore if */
+        if (false) {
+          if (type === 'component' && config.isReservedTag(id)) {
+            warn(
+              'Do not use built-in or reserved HTML elements as component ' +
+              'id: ' + id
+            );
+          }
+        }
+        if (type === 'component' && isPlainObject(definition)) {
+          definition.name = definition.name || id;
+          definition = this.options._base.extend(definition);
+        }
+        if (type === 'directive' && typeof definition === 'function') {
+          definition = { bind: definition, update: definition };
+        }
+        this.options[type + 's'][id] = definition;
+        return definition
+      }
+    };
+  });
+}
+
+/*  */
+
+var patternTypes = [String, RegExp];
+
+function matches (pattern, name) {
+  if (typeof pattern === 'string') {
+    return pattern.split(',').indexOf(name) > -1
+  } else {
+    return pattern.test(name)
+  }
+}
+
+var KeepAlive = {
+  name: 'keep-alive',
+  abstract: true,
+  props: {
+    include: patternTypes,
+    exclude: patternTypes
+  },
+  created: function created () {
+    this.cache = Object.create(null);
+  },
+  render: function render () {
+    var vnode = getFirstComponentChild(this.$slots.default);
+    if (vnode && vnode.componentOptions) {
+      var opts = vnode.componentOptions;
+      // check pattern
+      var name = opts.Ctor.options.name || opts.tag;
+      if (name && (
+        (this.include && !matches(this.include, name)) ||
+        (this.exclude && matches(this.exclude, name))
+      )) {
+        return vnode
+      }
+      var key = vnode.key == null
+        // same constructor may get registered as different local components
+        // so cid alone is not enough (#3269)
+        ? opts.Ctor.cid + (opts.tag ? ("::" + (opts.tag)) : '')
+        : vnode.key;
+      if (this.cache[key]) {
+        vnode.child = this.cache[key].child;
+      } else {
+        this.cache[key] = vnode;
+      }
+      vnode.data.keepAlive = true;
+    }
+    return vnode
+  },
+  destroyed: function destroyed () {
+    var this$1 = this;
+
+    for (var key in this.cache) {
+      var vnode = this$1.cache[key];
+      callHook(vnode.child, 'deactivated');
+      vnode.child.$destroy();
+    }
+  }
+};
+
+var builtInComponents = {
+  KeepAlive: KeepAlive
+};
+
+/*  */
+
+function initGlobalAPI (Vue) {
+  // config
+  var configDef = {};
+  configDef.get = function () { return config; };
+  if (false) {
+    configDef.set = function () {
+      warn(
+        'Do not replace the Vue.config object, set individual fields instead.'
+      );
+    };
+  }
+  Object.defineProperty(Vue, 'config', configDef);
+  Vue.util = util;
+  Vue.set = set$1;
+  Vue.delete = del;
+  Vue.nextTick = nextTick;
+
+  Vue.options = Object.create(null);
+  config._assetTypes.forEach(function (type) {
+    Vue.options[type + 's'] = Object.create(null);
+  });
+
+  // this is used to identify the "base" constructor to extend all plain-object
+  // components with in Weex's multi-instance scenarios.
+  Vue.options._base = Vue;
+
+  extend(Vue.options.components, builtInComponents);
+
+  initUse(Vue);
+  initMixin$1(Vue);
+  initExtend(Vue);
+  initAssetRegisters(Vue);
+}
+
+initGlobalAPI(Vue$2);
+
+Object.defineProperty(Vue$2.prototype, '$isServer', {
+  get: isServerRendering
+});
+
+Vue$2.version = '2.1.4';
+
+/*  */
+
+// attributes that should be using props for binding
+var mustUseProp = function (tag, attr) {
+  return (
+    (attr === 'value' && (tag === 'input' || tag === 'textarea' || tag === 'option')) ||
+    (attr === 'selected' && tag === 'option') ||
+    (attr === 'checked' && tag === 'input') ||
+    (attr === 'muted' && tag === 'video')
+  )
+};
+
+var isEnumeratedAttr = makeMap('contenteditable,draggable,spellcheck');
+
+var isBooleanAttr = makeMap(
+  'allowfullscreen,async,autofocus,autoplay,checked,compact,controls,declare,' +
+  'default,defaultchecked,defaultmuted,defaultselected,defer,disabled,' +
+  'enabled,formnovalidate,hidden,indeterminate,inert,ismap,itemscope,loop,multiple,' +
+  'muted,nohref,noresize,noshade,novalidate,nowrap,open,pauseonexit,readonly,' +
+  'required,reversed,scoped,seamless,selected,sortable,translate,' +
+  'truespeed,typemustmatch,visible'
+);
+
+var xlinkNS = 'http://www.w3.org/1999/xlink';
+
+var isXlink = function (name) {
+  return name.charAt(5) === ':' && name.slice(0, 5) === 'xlink'
+};
+
+var getXlinkProp = function (name) {
+  return isXlink(name) ? name.slice(6, name.length) : ''
+};
+
+var isFalsyAttrValue = function (val) {
+  return val == null || val === false
+};
+
+/*  */
+
+function genClassForVnode (vnode) {
+  var data = vnode.data;
+  var parentNode = vnode;
+  var childNode = vnode;
+  while (childNode.child) {
+    childNode = childNode.child._vnode;
+    if (childNode.data) {
+      data = mergeClassData(childNode.data, data);
+    }
+  }
+  while ((parentNode = parentNode.parent)) {
+    if (parentNode.data) {
+      data = mergeClassData(data, parentNode.data);
+    }
+  }
+  return genClassFromData(data)
+}
+
+function mergeClassData (child, parent) {
+  return {
+    staticClass: concat(child.staticClass, parent.staticClass),
+    class: child.class
+      ? [child.class, parent.class]
+      : parent.class
+  }
+}
+
+function genClassFromData (data) {
+  var dynamicClass = data.class;
+  var staticClass = data.staticClass;
+  if (staticClass || dynamicClass) {
+    return concat(staticClass, stringifyClass(dynamicClass))
+  }
+  /* istanbul ignore next */
+  return ''
+}
+
+function concat (a, b) {
+  return a ? b ? (a + ' ' + b) : a : (b || '')
+}
+
+function stringifyClass (value) {
+  var res = '';
+  if (!value) {
+    return res
+  }
+  if (typeof value === 'string') {
+    return value
+  }
+  if (Array.isArray(value)) {
+    var stringified;
+    for (var i = 0, l = value.length; i < l; i++) {
+      if (value[i]) {
+        if ((stringified = stringifyClass(value[i]))) {
+          res += stringified + ' ';
+        }
+      }
+    }
+    return res.slice(0, -1)
+  }
+  if (isObject(value)) {
+    for (var key in value) {
+      if (value[key]) { res += key + ' '; }
+    }
+    return res.slice(0, -1)
+  }
+  /* istanbul ignore next */
+  return res
+}
+
+/*  */
+
+var namespaceMap = {
+  svg: 'http://www.w3.org/2000/svg',
+  math: 'http://www.w3.org/1998/Math/MathML',
+  xhtml: 'http://www.w3.org/1999/xhtml'
+};
+
+var isHTMLTag = makeMap(
+  'html,body,base,head,link,meta,style,title,' +
+  'address,article,aside,footer,header,h1,h2,h3,h4,h5,h6,hgroup,nav,section,' +
+  'div,dd,dl,dt,figcaption,figure,hr,img,li,main,ol,p,pre,ul,' +
+  'a,b,abbr,bdi,bdo,br,cite,code,data,dfn,em,i,kbd,mark,q,rp,rt,rtc,ruby,' +
+  's,samp,small,span,strong,sub,sup,time,u,var,wbr,area,audio,map,track,video,' +
+  'embed,object,param,source,canvas,script,noscript,del,ins,' +
+  'caption,col,colgroup,table,thead,tbody,td,th,tr,' +
+  'button,datalist,fieldset,form,input,label,legend,meter,optgroup,option,' +
+  'output,progress,select,textarea,' +
+  'details,dialog,menu,menuitem,summary,' +
+  'content,element,shadow,template'
+);
+
+// this map is intentionally selective, only covering SVG elements that may
+// contain child elements.
+var isSVG = makeMap(
+  'svg,animate,circle,clippath,cursor,defs,desc,ellipse,filter,font,' +
+  'font-face,g,glyph,image,line,marker,mask,missing-glyph,path,pattern,' +
+  'polygon,polyline,rect,switch,symbol,text,textpath,tspan,use,view',
+  true
+);
+
+
+
+var isReservedTag = function (tag) {
+  return isHTMLTag(tag) || isSVG(tag)
+};
+
+function getTagNamespace (tag) {
+  if (isSVG(tag)) {
+    return 'svg'
+  }
+  // basic support for MathML
+  // note it doesn't support other MathML elements being component roots
+  if (tag === 'math') {
+    return 'math'
+  }
+}
+
+var unknownElementCache = Object.create(null);
+function isUnknownElement (tag) {
+  /* istanbul ignore if */
+  if (!inBrowser) {
+    return true
+  }
+  if (isReservedTag(tag)) {
+    return false
+  }
+  tag = tag.toLowerCase();
+  /* istanbul ignore if */
+  if (unknownElementCache[tag] != null) {
+    return unknownElementCache[tag]
+  }
+  var el = document.createElement(tag);
+  if (tag.indexOf('-') > -1) {
+    // http://stackoverflow.com/a/28210364/1070244
+    return (unknownElementCache[tag] = (
+      el.constructor === window.HTMLUnknownElement ||
+      el.constructor === window.HTMLElement
+    ))
+  } else {
+    return (unknownElementCache[tag] = /HTMLUnknownElement/.test(el.toString()))
+  }
+}
+
+/*  */
+
+/**
+ * Query an element selector if it's not an element already.
+ */
+function query (el) {
+  if (typeof el === 'string') {
+    var selector = el;
+    el = document.querySelector(el);
+    if (!el) {
+      "production" !== 'production' && warn(
+        'Cannot find element: ' + selector
+      );
+      return document.createElement('div')
+    }
+  }
+  return el
+}
+
+/*  */
+
+function createElement$1 (tagName, vnode) {
+  var elm = document.createElement(tagName);
+  if (tagName !== 'select') {
+    return elm
+  }
+  if (vnode.data && vnode.data.attrs && 'multiple' in vnode.data.attrs) {
+    elm.setAttribute('multiple', 'multiple');
+  }
+  return elm
+}
+
+function createElementNS (namespace, tagName) {
+  return document.createElementNS(namespaceMap[namespace], tagName)
+}
+
+function createTextNode (text) {
+  return document.createTextNode(text)
+}
+
+function createComment (text) {
+  return document.createComment(text)
+}
+
+function insertBefore (parentNode, newNode, referenceNode) {
+  parentNode.insertBefore(newNode, referenceNode);
+}
+
+function removeChild (node, child) {
+  node.removeChild(child);
+}
+
+function appendChild (node, child) {
+  node.appendChild(child);
+}
+
+function parentNode (node) {
+  return node.parentNode
+}
+
+function nextSibling (node) {
+  return node.nextSibling
+}
+
+function tagName (node) {
+  return node.tagName
+}
+
+function setTextContent (node, text) {
+  node.textContent = text;
+}
+
+function childNodes (node) {
+  return node.childNodes
+}
+
+function setAttribute (node, key, val) {
+  node.setAttribute(key, val);
+}
+
+
+var nodeOps = Object.freeze({
+	createElement: createElement$1,
+	createElementNS: createElementNS,
+	createTextNode: createTextNode,
+	createComment: createComment,
+	insertBefore: insertBefore,
+	removeChild: removeChild,
+	appendChild: appendChild,
+	parentNode: parentNode,
+	nextSibling: nextSibling,
+	tagName: tagName,
+	setTextContent: setTextContent,
+	childNodes: childNodes,
+	setAttribute: setAttribute
+});
+
+/*  */
+
+var ref = {
+  create: function create (_, vnode) {
+    registerRef(vnode);
+  },
+  update: function update (oldVnode, vnode) {
+    if (oldVnode.data.ref !== vnode.data.ref) {
+      registerRef(oldVnode, true);
+      registerRef(vnode);
+    }
+  },
+  destroy: function destroy (vnode) {
+    registerRef(vnode, true);
+  }
+};
+
+function registerRef (vnode, isRemoval) {
+  var key = vnode.data.ref;
+  if (!key) { return }
+
+  var vm = vnode.context;
+  var ref = vnode.child || vnode.elm;
+  var refs = vm.$refs;
+  if (isRemoval) {
+    if (Array.isArray(refs[key])) {
+      remove$1(refs[key], ref);
+    } else if (refs[key] === ref) {
+      refs[key] = undefined;
+    }
+  } else {
+    if (vnode.data.refInFor) {
+      if (Array.isArray(refs[key]) && refs[key].indexOf(ref) < 0) {
+        refs[key].push(ref);
+      } else {
+        refs[key] = [ref];
+      }
+    } else {
+      refs[key] = ref;
+    }
+  }
+}
+
+/**
+ * Virtual DOM patching algorithm based on Snabbdom by
+ * Simon Friis Vindum (@paldepind)
+ * Licensed under the MIT License
+ * https://github.com/paldepind/snabbdom/blob/master/LICENSE
+ *
+ * modified by Evan You (@yyx990803)
+ *
+
+/*
+ * Not type-checking this because this file is perf-critical and the cost
+ * of making flow understand it is not worth it.
+ */
+
+var emptyNode = new VNode('', {}, []);
+
+var hooks$1 = ['create', 'activate', 'update', 'remove', 'destroy'];
+
+function isUndef (s) {
+  return s == null
+}
+
+function isDef (s) {
+  return s != null
+}
+
+function sameVnode (vnode1, vnode2) {
+  return (
+    vnode1.key === vnode2.key &&
+    vnode1.tag === vnode2.tag &&
+    vnode1.isComment === vnode2.isComment &&
+    !vnode1.data === !vnode2.data
+  )
+}
+
+function createKeyToOldIdx (children, beginIdx, endIdx) {
+  var i, key;
+  var map = {};
+  for (i = beginIdx; i <= endIdx; ++i) {
+    key = children[i].key;
+    if (isDef(key)) { map[key] = i; }
+  }
+  return map
+}
+
+function createPatchFunction (backend) {
+  var i, j;
+  var cbs = {};
+
+  var modules = backend.modules;
+  var nodeOps = backend.nodeOps;
+
+  for (i = 0; i < hooks$1.length; ++i) {
+    cbs[hooks$1[i]] = [];
+    for (j = 0; j < modules.length; ++j) {
+      if (modules[j][hooks$1[i]] !== undefined) { cbs[hooks$1[i]].push(modules[j][hooks$1[i]]); }
+    }
+  }
+
+  function emptyNodeAt (elm) {
+    return new VNode(nodeOps.tagName(elm).toLowerCase(), {}, [], undefined, elm)
+  }
+
+  function createRmCb (childElm, listeners) {
+    function remove$$1 () {
+      if (--remove$$1.listeners === 0) {
+        removeElement(childElm);
+      }
+    }
+    remove$$1.listeners = listeners;
+    return remove$$1
+  }
+
+  function removeElement (el) {
+    var parent = nodeOps.parentNode(el);
+    // element may have already been removed due to v-html
+    if (parent) {
+      nodeOps.removeChild(parent, el);
+    }
+  }
+
+  var inPre = 0;
+  function createElm (vnode, insertedVnodeQueue, parentElm, refElm, nested) {
+    vnode.isRootInsert = !nested; // for transition enter check
+    if (createComponent(vnode, insertedVnodeQueue, parentElm, refElm)) {
+      return
+    }
+
+    var data = vnode.data;
+    var children = vnode.children;
+    var tag = vnode.tag;
+    if (isDef(tag)) {
+      if (false) {
+        if (data && data.pre) {
+          inPre++;
+        }
+        if (
+          !inPre &&
+          !vnode.ns &&
+          !(config.ignoredElements && config.ignoredElements.indexOf(tag) > -1) &&
+          config.isUnknownElement(tag)
+        ) {
+          warn(
+            'Unknown custom element: <' + tag + '> - did you ' +
+            'register the component correctly? For recursive components, ' +
+            'make sure to provide the "name" option.',
+            vnode.context
+          );
+        }
+      }
+      vnode.elm = vnode.ns
+        ? nodeOps.createElementNS(vnode.ns, tag)
+        : nodeOps.createElement(tag, vnode);
+      setScope(vnode);
+
+      /* istanbul ignore if */
+      {
+        createChildren(vnode, children, insertedVnodeQueue);
+        if (isDef(data)) {
+          invokeCreateHooks(vnode, insertedVnodeQueue);
+        }
+        insert(parentElm, vnode.elm, refElm);
+      }
+
+      if (false) {
+        inPre--;
+      }
+    } else if (vnode.isComment) {
+      vnode.elm = nodeOps.createComment(vnode.text);
+      insert(parentElm, vnode.elm, refElm);
+    } else {
+      vnode.elm = nodeOps.createTextNode(vnode.text);
+      insert(parentElm, vnode.elm, refElm);
+    }
+  }
+
+  function createComponent (vnode, insertedVnodeQueue, parentElm, refElm) {
+    var i = vnode.data;
+    if (isDef(i)) {
+      var isReactivated = isDef(vnode.child) && i.keepAlive;
+      if (isDef(i = i.hook) && isDef(i = i.init)) {
+        i(vnode, false /* hydrating */, parentElm, refElm);
+      }
+      // after calling the init hook, if the vnode is a child component
+      // it should've created a child instance and mounted it. the child
+      // component also has set the placeholder vnode's elm.
+      // in that case we can just return the element and be done.
+      if (isDef(vnode.child)) {
+        initComponent(vnode, insertedVnodeQueue);
+        if (isReactivated) {
+          reactivateComponent(vnode, insertedVnodeQueue, parentElm, refElm);
+        }
+        return true
+      }
+    }
+  }
+
+  function reactivateComponent (vnode, insertedVnodeQueue, parentElm, refElm) {
+    var i;
+    // hack for #4339: a reactivated component with inner transition
+    // does not trigger because the inner node's created hooks are not called
+    // again. It's not ideal to involve module-specific logic in here but
+    // there doesn't seem to be a better way to do it.
+    var innerNode = vnode;
+    while (innerNode.child) {
+      innerNode = innerNode.child._vnode;
+      if (isDef(i = innerNode.data) && isDef(i = i.transition)) {
+        for (i = 0; i < cbs.activate.length; ++i) {
+          cbs.activate[i](emptyNode, innerNode);
+        }
+        insertedVnodeQueue.push(innerNode);
+        break
+      }
+    }
+    // unlike a newly created component,
+    // a reactivated keep-alive component doesn't insert itself
+    insert(parentElm, vnode.elm, refElm);
+  }
+
+  function insert (parent, elm, ref) {
+    if (parent) {
+      nodeOps.insertBefore(parent, elm, ref);
+    }
+  }
+
+  function createChildren (vnode, children, insertedVnodeQueue) {
+    if (Array.isArray(children)) {
+      for (var i = 0; i < children.length; ++i) {
+        createElm(children[i], insertedVnodeQueue, vnode.elm, null, true);
+      }
+    } else if (isPrimitive(vnode.text)) {
+      nodeOps.appendChild(vnode.elm, nodeOps.createTextNode(vnode.text));
+    }
+  }
+
+  function isPatchable (vnode) {
+    while (vnode.child) {
+      vnode = vnode.child._vnode;
+    }
+    return isDef(vnode.tag)
+  }
+
+  function invokeCreateHooks (vnode, insertedVnodeQueue) {
+    for (var i$1 = 0; i$1 < cbs.create.length; ++i$1) {
+      cbs.create[i$1](emptyNode, vnode);
+    }
+    i = vnode.data.hook; // Reuse variable
+    if (isDef(i)) {
+      if (i.create) { i.create(emptyNode, vnode); }
+      if (i.insert) { insertedVnodeQueue.push(vnode); }
+    }
+  }
+
+  function initComponent (vnode, insertedVnodeQueue) {
+    if (vnode.data.pendingInsert) {
+      insertedVnodeQueue.push.apply(insertedVnodeQueue, vnode.data.pendingInsert);
+    }
+    vnode.elm = vnode.child.$el;
+    if (isPatchable(vnode)) {
+      invokeCreateHooks(vnode, insertedVnodeQueue);
+      setScope(vnode);
+    } else {
+      // empty component root.
+      // skip all element-related modules except for ref (#3455)
+      registerRef(vnode);
+      // make sure to invoke the insert hook
+      insertedVnodeQueue.push(vnode);
+    }
+  }
+
+  // set scope id attribute for scoped CSS.
+  // this is implemented as a special case to avoid the overhead
+  // of going through the normal attribute patching process.
+  function setScope (vnode) {
+    var i;
+    if (isDef(i = vnode.context) && isDef(i = i.$options._scopeId)) {
+      nodeOps.setAttribute(vnode.elm, i, '');
+    }
+    if (isDef(i = activeInstance) &&
+        i !== vnode.context &&
+        isDef(i = i.$options._scopeId)) {
+      nodeOps.setAttribute(vnode.elm, i, '');
+    }
+  }
+
+  function addVnodes (parentElm, refElm, vnodes, startIdx, endIdx, insertedVnodeQueue) {
+    for (; startIdx <= endIdx; ++startIdx) {
+      createElm(vnodes[startIdx], insertedVnodeQueue, parentElm, refElm);
+    }
+  }
+
+  function invokeDestroyHook (vnode) {
+    var i, j;
+    var data = vnode.data;
+    if (isDef(data)) {
+      if (isDef(i = data.hook) && isDef(i = i.destroy)) { i(vnode); }
+      for (i = 0; i < cbs.destroy.length; ++i) { cbs.destroy[i](vnode); }
+    }
+    if (isDef(i = vnode.children)) {
+      for (j = 0; j < vnode.children.length; ++j) {
+        invokeDestroyHook(vnode.children[j]);
+      }
+    }
+  }
+
+  function removeVnodes (parentElm, vnodes, startIdx, endIdx) {
+    for (; startIdx <= endIdx; ++startIdx) {
+      var ch = vnodes[startIdx];
+      if (isDef(ch)) {
+        if (isDef(ch.tag)) {
+          removeAndInvokeRemoveHook(ch);
+          invokeDestroyHook(ch);
+        } else { // Text node
+          nodeOps.removeChild(parentElm, ch.elm);
+        }
+      }
+    }
+  }
+
+  function removeAndInvokeRemoveHook (vnode, rm) {
+    if (rm || isDef(vnode.data)) {
+      var listeners = cbs.remove.length + 1;
+      if (!rm) {
+        // directly removing
+        rm = createRmCb(vnode.elm, listeners);
+      } else {
+        // we have a recursively passed down rm callback
+        // increase the listeners count
+        rm.listeners += listeners;
+      }
+      // recursively invoke hooks on child component root node
+      if (isDef(i = vnode.child) && isDef(i = i._vnode) && isDef(i.data)) {
+        removeAndInvokeRemoveHook(i, rm);
+      }
+      for (i = 0; i < cbs.remove.length; ++i) {
+        cbs.remove[i](vnode, rm);
+      }
+      if (isDef(i = vnode.data.hook) && isDef(i = i.remove)) {
+        i(vnode, rm);
+      } else {
+        rm();
+      }
+    } else {
+      removeElement(vnode.elm);
+    }
+  }
+
+  function updateChildren (parentElm, oldCh, newCh, insertedVnodeQueue, removeOnly) {
+    var oldStartIdx = 0;
+    var newStartIdx = 0;
+    var oldEndIdx = oldCh.length - 1;
+    var oldStartVnode = oldCh[0];
+    var oldEndVnode = oldCh[oldEndIdx];
+    var newEndIdx = newCh.length - 1;
+    var newStartVnode = newCh[0];
+    var newEndVnode = newCh[newEndIdx];
+    var oldKeyToIdx, idxInOld, elmToMove, refElm;
+
+    // removeOnly is a special flag used only by <transition-group>
+    // to ensure removed elements stay in correct relative positions
+    // during leaving transitions
+    var canMove = !removeOnly;
+
+    while (oldStartIdx <= oldEndIdx && newStartIdx <= newEndIdx) {
+      if (isUndef(oldStartVnode)) {
+        oldStartVnode = oldCh[++oldStartIdx]; // Vnode has been moved left
+      } else if (isUndef(oldEndVnode)) {
+        oldEndVnode = oldCh[--oldEndIdx];
+      } else if (sameVnode(oldStartVnode, newStartVnode)) {
+        patchVnode(oldStartVnode, newStartVnode, insertedVnodeQueue);
+        oldStartVnode = oldCh[++oldStartIdx];
+        newStartVnode = newCh[++newStartIdx];
+      } else if (sameVnode(oldEndVnode, newEndVnode)) {
+        patchVnode(oldEndVnode, newEndVnode, insertedVnodeQueue);
+        oldEndVnode = oldCh[--oldEndIdx];
+        newEndVnode = newCh[--newEndIdx];
+      } else if (sameVnode(oldStartVnode, newEndVnode)) { // Vnode moved right
+        patchVnode(oldStartVnode, newEndVnode, insertedVnodeQueue);
+        canMove && nodeOps.insertBefore(parentElm, oldStartVnode.elm, nodeOps.nextSibling(oldEndVnode.elm));
+        oldStartVnode = oldCh[++oldStartIdx];
+        newEndVnode = newCh[--newEndIdx];
+      } else if (sameVnode(oldEndVnode, newStartVnode)) { // Vnode moved left
+        patchVnode(oldEndVnode, newStartVnode, insertedVnodeQueue);
+        canMove && nodeOps.insertBefore(parentElm, oldEndVnode.elm, oldStartVnode.elm);
+        oldEndVnode = oldCh[--oldEndIdx];
+        newStartVnode = newCh[++newStartIdx];
+      } else {
+        if (isUndef(oldKeyToIdx)) { oldKeyToIdx = createKeyToOldIdx(oldCh, oldStartIdx, oldEndIdx); }
+        idxInOld = isDef(newStartVnode.key) ? oldKeyToIdx[newStartVnode.key] : null;
+        if (isUndef(idxInOld)) { // New element
+          createElm(newStartVnode, insertedVnodeQueue, parentElm, oldStartVnode.elm);
+          newStartVnode = newCh[++newStartIdx];
+        } else {
+          elmToMove = oldCh[idxInOld];
+          /* istanbul ignore if */
+          if (false) {
+            warn(
+              'It seems there are duplicate keys that is causing an update error. ' +
+              'Make sure each v-for item has a unique key.'
+            );
+          }
+          if (elmToMove.tag !== newStartVnode.tag) {
+            // same key but different element. treat as new element
+            createElm(newStartVnode, insertedVnodeQueue, parentElm, oldStartVnode.elm);
+            newStartVnode = newCh[++newStartIdx];
+          } else {
+            patchVnode(elmToMove, newStartVnode, insertedVnodeQueue);
+            oldCh[idxInOld] = undefined;
+            canMove && nodeOps.insertBefore(parentElm, newStartVnode.elm, oldStartVnode.elm);
+            newStartVnode = newCh[++newStartIdx];
+          }
+        }
+      }
+    }
+    if (oldStartIdx > oldEndIdx) {
+      refElm = isUndef(newCh[newEndIdx + 1]) ? null : newCh[newEndIdx + 1].elm;
+      addVnodes(parentElm, refElm, newCh, newStartIdx, newEndIdx, insertedVnodeQueue);
+    } else if (newStartIdx > newEndIdx) {
+      removeVnodes(parentElm, oldCh, oldStartIdx, oldEndIdx);
+    }
+  }
+
+  function patchVnode (oldVnode, vnode, insertedVnodeQueue, removeOnly) {
+    if (oldVnode === vnode) {
+      return
+    }
+    // reuse element for static trees.
+    // note we only do this if the vnode is cloned -
+    // if the new node is not cloned it means the render functions have been
+    // reset by the hot-reload-api and we need to do a proper re-render.
+    if (vnode.isStatic &&
+        oldVnode.isStatic &&
+        vnode.key === oldVnode.key &&
+        (vnode.isCloned || vnode.isOnce)) {
+      vnode.elm = oldVnode.elm;
+      vnode.child = oldVnode.child;
+      return
+    }
+    var i;
+    var data = vnode.data;
+    var hasData = isDef(data);
+    if (hasData && isDef(i = data.hook) && isDef(i = i.prepatch)) {
+      i(oldVnode, vnode);
+    }
+    var elm = vnode.elm = oldVnode.elm;
+    var oldCh = oldVnode.children;
+    var ch = vnode.children;
+    if (hasData && isPatchable(vnode)) {
+      for (i = 0; i < cbs.update.length; ++i) { cbs.update[i](oldVnode, vnode); }
+      if (isDef(i = data.hook) && isDef(i = i.update)) { i(oldVnode, vnode); }
+    }
+    if (isUndef(vnode.text)) {
+      if (isDef(oldCh) && isDef(ch)) {
+        if (oldCh !== ch) { updateChildren(elm, oldCh, ch, insertedVnodeQueue, removeOnly); }
+      } else if (isDef(ch)) {
+        if (isDef(oldVnode.text)) { nodeOps.setTextContent(elm, ''); }
+        addVnodes(elm, null, ch, 0, ch.length - 1, insertedVnodeQueue);
+      } else if (isDef(oldCh)) {
+        removeVnodes(elm, oldCh, 0, oldCh.length - 1);
+      } else if (isDef(oldVnode.text)) {
+        nodeOps.setTextContent(elm, '');
+      }
+    } else if (oldVnode.text !== vnode.text) {
+      nodeOps.setTextContent(elm, vnode.text);
+    }
+    if (hasData) {
+      if (isDef(i = data.hook) && isDef(i = i.postpatch)) { i(oldVnode, vnode); }
+    }
+  }
+
+  function invokeInsertHook (vnode, queue, initial) {
+    // delay insert hooks for component root nodes, invoke them after the
+    // element is really inserted
+    if (initial && vnode.parent) {
+      vnode.parent.data.pendingInsert = queue;
+    } else {
+      for (var i = 0; i < queue.length; ++i) {
+        queue[i].data.hook.insert(queue[i]);
+      }
+    }
+  }
+
+  var bailed = false;
+  function hydrate (elm, vnode, insertedVnodeQueue) {
+    if (false) {
+      if (!assertNodeMatch(elm, vnode)) {
+        return false
+      }
+    }
+    vnode.elm = elm;
+    var tag = vnode.tag;
+    var data = vnode.data;
+    var children = vnode.children;
+    if (isDef(data)) {
+      if (isDef(i = data.hook) && isDef(i = i.init)) { i(vnode, true /* hydrating */); }
+      if (isDef(i = vnode.child)) {
+        // child component. it should have hydrated its own tree.
+        initComponent(vnode, insertedVnodeQueue);
+        return true
+      }
+    }
+    if (isDef(tag)) {
+      if (isDef(children)) {
+        var childNodes = nodeOps.childNodes(elm);
+        // empty element, allow client to pick up and populate children
+        if (!childNodes.length) {
+          createChildren(vnode, children, insertedVnodeQueue);
+        } else {
+          var childrenMatch = true;
+          if (childNodes.length !== children.length) {
+            childrenMatch = false;
+          } else {
+            for (var i$1 = 0; i$1 < children.length; i$1++) {
+              if (!hydrate(childNodes[i$1], children[i$1], insertedVnodeQueue)) {
+                childrenMatch = false;
+                break
+              }
+            }
+          }
+          if (!childrenMatch) {
+            if (false) {
+              bailed = true;
+              console.warn('Parent: ', elm);
+              console.warn('Mismatching childNodes vs. VNodes: ', childNodes, children);
+            }
+            return false
+          }
+        }
+      }
+      if (isDef(data)) {
+        invokeCreateHooks(vnode, insertedVnodeQueue);
+      }
+    }
+    return true
+  }
+
+  function assertNodeMatch (node, vnode) {
+    if (vnode.tag) {
+      return (
+        vnode.tag.indexOf('vue-component') === 0 ||
+        vnode.tag.toLowerCase() === nodeOps.tagName(node).toLowerCase()
+      )
+    } else {
+      return _toString(vnode.text) === node.data
+    }
+  }
+
+  return function patch (oldVnode, vnode, hydrating, removeOnly, parentElm, refElm) {
+    if (!vnode) {
+      if (oldVnode) { invokeDestroyHook(oldVnode); }
+      return
+    }
+
+    var elm, parent;
+    var isInitialPatch = false;
+    var insertedVnodeQueue = [];
+
+    if (!oldVnode) {
+      // empty mount (likely as component), create new root element
+      isInitialPatch = true;
+      createElm(vnode, insertedVnodeQueue, parentElm, refElm);
+    } else {
+      var isRealElement = isDef(oldVnode.nodeType);
+      if (!isRealElement && sameVnode(oldVnode, vnode)) {
+        // patch existing root node
+        patchVnode(oldVnode, vnode, insertedVnodeQueue, removeOnly);
+      } else {
+        if (isRealElement) {
+          // mounting to a real element
+          // check if this is server-rendered content and if we can perform
+          // a successful hydration.
+          if (oldVnode.nodeType === 1 && oldVnode.hasAttribute('server-rendered')) {
+            oldVnode.removeAttribute('server-rendered');
+            hydrating = true;
+          }
+          if (hydrating) {
+            if (hydrate(oldVnode, vnode, insertedVnodeQueue)) {
+              invokeInsertHook(vnode, insertedVnodeQueue, true);
+              return oldVnode
+            } else if (false) {
+              warn(
+                'The client-side rendered virtual DOM tree is not matching ' +
+                'server-rendered content. This is likely caused by incorrect ' +
+                'HTML markup, for example nesting block-level elements inside ' +
+                '<p>, or missing <tbody>. Bailing hydration and performing ' +
+                'full client-side render.'
+              );
+            }
+          }
+          // either not server-rendered, or hydration failed.
+          // create an empty node and replace it
+          oldVnode = emptyNodeAt(oldVnode);
+        }
+
+        // replacing existing element
+        elm = oldVnode.elm;
+        parent = nodeOps.parentNode(elm);
+        createElm(vnode, insertedVnodeQueue, parent, nodeOps.nextSibling(elm));
+
+        if (vnode.parent) {
+          // component root element replaced.
+          // update parent placeholder node element, recursively
+          var ancestor = vnode.parent;
+          while (ancestor) {
+            ancestor.elm = vnode.elm;
+            ancestor = ancestor.parent;
+          }
+          if (isPatchable(vnode)) {
+            for (var i = 0; i < cbs.create.length; ++i) {
+              cbs.create[i](emptyNode, vnode.parent);
+            }
+          }
+        }
+
+        if (parent !== null) {
+          removeVnodes(parent, [oldVnode], 0, 0);
+        } else if (isDef(oldVnode.tag)) {
+          invokeDestroyHook(oldVnode);
+        }
+      }
+    }
+
+    invokeInsertHook(vnode, insertedVnodeQueue, isInitialPatch);
+    return vnode.elm
+  }
+}
+
+/*  */
+
+var directives = {
+  create: updateDirectives,
+  update: updateDirectives,
+  destroy: function unbindDirectives (vnode) {
+    updateDirectives(vnode, emptyNode);
+  }
+};
+
+function updateDirectives (
+  oldVnode,
+  vnode
+) {
+  if (!oldVnode.data.directives && !vnode.data.directives) {
+    return
+  }
+  var isCreate = oldVnode === emptyNode;
+  var oldDirs = normalizeDirectives$1(oldVnode.data.directives, oldVnode.context);
+  var newDirs = normalizeDirectives$1(vnode.data.directives, vnode.context);
+
+  var dirsWithInsert = [];
+  var dirsWithPostpatch = [];
+
+  var key, oldDir, dir;
+  for (key in newDirs) {
+    oldDir = oldDirs[key];
+    dir = newDirs[key];
+    if (!oldDir) {
+      // new directive, bind
+      callHook$1(dir, 'bind', vnode, oldVnode);
+      if (dir.def && dir.def.inserted) {
+        dirsWithInsert.push(dir);
+      }
+    } else {
+      // existing directive, update
+      dir.oldValue = oldDir.value;
+      callHook$1(dir, 'update', vnode, oldVnode);
+      if (dir.def && dir.def.componentUpdated) {
+        dirsWithPostpatch.push(dir);
+      }
+    }
+  }
+
+  if (dirsWithInsert.length) {
+    var callInsert = function () {
+      dirsWithInsert.forEach(function (dir) {
+        callHook$1(dir, 'inserted', vnode, oldVnode);
+      });
+    };
+    if (isCreate) {
+      mergeVNodeHook(vnode.data.hook || (vnode.data.hook = {}), 'insert', callInsert, 'dir-insert');
+    } else {
+      callInsert();
+    }
+  }
+
+  if (dirsWithPostpatch.length) {
+    mergeVNodeHook(vnode.data.hook || (vnode.data.hook = {}), 'postpatch', function () {
+      dirsWithPostpatch.forEach(function (dir) {
+        callHook$1(dir, 'componentUpdated', vnode, oldVnode);
+      });
+    }, 'dir-postpatch');
+  }
+
+  if (!isCreate) {
+    for (key in oldDirs) {
+      if (!newDirs[key]) {
+        // no longer present, unbind
+        callHook$1(oldDirs[key], 'unbind', oldVnode);
+      }
+    }
+  }
+}
+
+var emptyModifiers = Object.create(null);
+
+function normalizeDirectives$1 (
+  dirs,
+  vm
+) {
+  var res = Object.create(null);
+  if (!dirs) {
+    return res
+  }
+  var i, dir;
+  for (i = 0; i < dirs.length; i++) {
+    dir = dirs[i];
+    if (!dir.modifiers) {
+      dir.modifiers = emptyModifiers;
+    }
+    res[getRawDirName(dir)] = dir;
+    dir.def = resolveAsset(vm.$options, 'directives', dir.name, true);
+  }
+  return res
+}
+
+function getRawDirName (dir) {
+  return dir.rawName || ((dir.name) + "." + (Object.keys(dir.modifiers || {}).join('.')))
+}
+
+function callHook$1 (dir, hook, vnode, oldVnode) {
+  var fn = dir.def && dir.def[hook];
+  if (fn) {
+    fn(vnode.elm, dir, vnode, oldVnode);
+  }
+}
+
+var baseModules = [
+  ref,
+  directives
+];
+
+/*  */
+
+function updateAttrs (oldVnode, vnode) {
+  if (!oldVnode.data.attrs && !vnode.data.attrs) {
+    return
+  }
+  var key, cur, old;
+  var elm = vnode.elm;
+  var oldAttrs = oldVnode.data.attrs || {};
+  var attrs = vnode.data.attrs || {};
+  // clone observed objects, as the user probably wants to mutate it
+  if (attrs.__ob__) {
+    attrs = vnode.data.attrs = extend({}, attrs);
+  }
+
+  for (key in attrs) {
+    cur = attrs[key];
+    old = oldAttrs[key];
+    if (old !== cur) {
+      setAttr(elm, key, cur);
+    }
+  }
+  for (key in oldAttrs) {
+    if (attrs[key] == null) {
+      if (isXlink(key)) {
+        elm.removeAttributeNS(xlinkNS, getXlinkProp(key));
+      } else if (!isEnumeratedAttr(key)) {
+        elm.removeAttribute(key);
+      }
+    }
+  }
+}
+
+function setAttr (el, key, value) {
+  if (isBooleanAttr(key)) {
+    // set attribute for blank value
+    // e.g. <option disabled>Select one</option>
+    if (isFalsyAttrValue(value)) {
+      el.removeAttribute(key);
+    } else {
+      el.setAttribute(key, key);
+    }
+  } else if (isEnumeratedAttr(key)) {
+    el.setAttribute(key, isFalsyAttrValue(value) || value === 'false' ? 'false' : 'true');
+  } else if (isXlink(key)) {
+    if (isFalsyAttrValue(value)) {
+      el.removeAttributeNS(xlinkNS, getXlinkProp(key));
+    } else {
+      el.setAttributeNS(xlinkNS, key, value);
+    }
+  } else {
+    if (isFalsyAttrValue(value)) {
+      el.removeAttribute(key);
+    } else {
+      el.setAttribute(key, value);
+    }
+  }
+}
+
+var attrs = {
+  create: updateAttrs,
+  update: updateAttrs
+};
+
+/*  */
+
+function updateClass (oldVnode, vnode) {
+  var el = vnode.elm;
+  var data = vnode.data;
+  var oldData = oldVnode.data;
+  if (!data.staticClass && !data.class &&
+      (!oldData || (!oldData.staticClass && !oldData.class))) {
+    return
+  }
+
+  var cls = genClassForVnode(vnode);
+
+  // handle transition classes
+  var transitionClass = el._transitionClasses;
+  if (transitionClass) {
+    cls = concat(cls, stringifyClass(transitionClass));
+  }
+
+  // set the class
+  if (cls !== el._prevClass) {
+    el.setAttribute('class', cls);
+    el._prevClass = cls;
+  }
+}
+
+var klass = {
+  create: updateClass,
+  update: updateClass
+};
+
+// skip type checking this file because we need to attach private properties
+// to elements
+
+function updateDOMListeners (oldVnode, vnode) {
+  if (!oldVnode.data.on && !vnode.data.on) {
+    return
+  }
+  var on = vnode.data.on || {};
+  var oldOn = oldVnode.data.on || {};
+  var add = vnode.elm._v_add || (
+    vnode.elm._v_add = function (event, handler, once, capture) {
+      if (once) {
+        var oldHandler = handler;
+        handler = function (ev) {
+          remove(event, handler, capture);
+          arguments.length === 1
+            ? oldHandler(ev)
+            : oldHandler.apply(null, arguments);
+        };
+      }
+      vnode.elm.addEventListener(event, handler, capture);
+    }
+  );
+  var remove = vnode.elm._v_remove || (
+    vnode.elm._v_remove = function (event, handler, capture) {
+      vnode.elm.removeEventListener(event, handler, capture);
+    }
+  );
+  updateListeners(on, oldOn, add, remove, vnode.context);
+}
+
+var events = {
+  create: updateDOMListeners,
+  update: updateDOMListeners
+};
+
+/*  */
+
+function updateDOMProps (oldVnode, vnode) {
+  if (!oldVnode.data.domProps && !vnode.data.domProps) {
+    return
+  }
+  var key, cur;
+  var elm = vnode.elm;
+  var oldProps = oldVnode.data.domProps || {};
+  var props = vnode.data.domProps || {};
+  // clone observed objects, as the user probably wants to mutate it
+  if (props.__ob__) {
+    props = vnode.data.domProps = extend({}, props);
+  }
+
+  for (key in oldProps) {
+    if (props[key] == null) {
+      elm[key] = '';
+    }
+  }
+  for (key in props) {
+    cur = props[key];
+    // ignore children if the node has textContent or innerHTML,
+    // as these will throw away existing DOM nodes and cause removal errors
+    // on subsequent patches (#3360)
+    if (key === 'textContent' || key === 'innerHTML') {
+      if (vnode.children) { vnode.children.length = 0; }
+      if (cur === oldProps[key]) { continue }
+    }
+    if (key === 'value') {
+      // store value as _value as well since
+      // non-string values will be stringified
+      elm._value = cur;
+      // avoid resetting cursor position when value is the same
+      var strCur = cur == null ? '' : String(cur);
+      if (elm.value !== strCur && !elm.composing) {
+        elm.value = strCur;
+      }
+    } else {
+      elm[key] = cur;
+    }
+  }
+}
+
+var domProps = {
+  create: updateDOMProps,
+  update: updateDOMProps
+};
+
+/*  */
+
+var parseStyleText = cached(function (cssText) {
+  var res = {};
+  var listDelimiter = /;(?![^(]*\))/g;
+  var propertyDelimiter = /:(.+)/;
+  cssText.split(listDelimiter).forEach(function (item) {
+    if (item) {
+      var tmp = item.split(propertyDelimiter);
+      tmp.length > 1 && (res[tmp[0].trim()] = tmp[1].trim());
+    }
+  });
+  return res
+});
+
+// merge static and dynamic style data on the same vnode
+function normalizeStyleData (data) {
+  var style = normalizeStyleBinding(data.style);
+  // static style is pre-processed into an object during compilation
+  // and is always a fresh object, so it's safe to merge into it
+  return data.staticStyle
+    ? extend(data.staticStyle, style)
+    : style
+}
+
+// normalize possible array / string values into Object
+function normalizeStyleBinding (bindingStyle) {
+  if (Array.isArray(bindingStyle)) {
+    return toObject(bindingStyle)
+  }
+  if (typeof bindingStyle === 'string') {
+    return parseStyleText(bindingStyle)
+  }
+  return bindingStyle
+}
+
+/**
+ * parent component style should be after child's
+ * so that parent component's style could override it
+ */
+function getStyle (vnode, checkChild) {
+  var res = {};
+  var styleData;
+
+  if (checkChild) {
+    var childNode = vnode;
+    while (childNode.child) {
+      childNode = childNode.child._vnode;
+      if (childNode.data && (styleData = normalizeStyleData(childNode.data))) {
+        extend(res, styleData);
+      }
+    }
+  }
+
+  if ((styleData = normalizeStyleData(vnode.data))) {
+    extend(res, styleData);
+  }
+
+  var parentNode = vnode;
+  while ((parentNode = parentNode.parent)) {
+    if (parentNode.data && (styleData = normalizeStyleData(parentNode.data))) {
+      extend(res, styleData);
+    }
+  }
+  return res
+}
+
+/*  */
+
+var cssVarRE = /^--/;
+var importantRE = /\s*!important$/;
+var setProp = function (el, name, val) {
+  /* istanbul ignore if */
+  if (cssVarRE.test(name)) {
+    el.style.setProperty(name, val);
+  } else if (importantRE.test(val)) {
+    el.style.setProperty(name, val.replace(importantRE, ''), 'important');
+  } else {
+    el.style[normalize(name)] = val;
+  }
+};
+
+var prefixes = ['Webkit', 'Moz', 'ms'];
+
+var testEl;
+var normalize = cached(function (prop) {
+  testEl = testEl || document.createElement('div');
+  prop = camelize(prop);
+  if (prop !== 'filter' && (prop in testEl.style)) {
+    return prop
+  }
+  var upper = prop.charAt(0).toUpperCase() + prop.slice(1);
+  for (var i = 0; i < prefixes.length; i++) {
+    var prefixed = prefixes[i] + upper;
+    if (prefixed in testEl.style) {
+      return prefixed
+    }
+  }
+});
+
+function updateStyle (oldVnode, vnode) {
+  var data = vnode.data;
+  var oldData = oldVnode.data;
+
+  if (!data.staticStyle && !data.style &&
+      !oldData.staticStyle && !oldData.style) {
+    return
+  }
+
+  var cur, name;
+  var el = vnode.elm;
+  var oldStaticStyle = oldVnode.data.staticStyle;
+  var oldStyleBinding = oldVnode.data.style || {};
+
+  // if static style exists, stylebinding already merged into it when doing normalizeStyleData
+  var oldStyle = oldStaticStyle || oldStyleBinding;
+
+  var style = normalizeStyleBinding(vnode.data.style) || {};
+
+  vnode.data.style = style.__ob__ ? extend({}, style) : style;
+
+  var newStyle = getStyle(vnode, true);
+
+  for (name in oldStyle) {
+    if (newStyle[name] == null) {
+      setProp(el, name, '');
+    }
+  }
+  for (name in newStyle) {
+    cur = newStyle[name];
+    if (cur !== oldStyle[name]) {
+      // ie9 setting to null has no effect, must use empty string
+      setProp(el, name, cur == null ? '' : cur);
+    }
+  }
+}
+
+var style = {
+  create: updateStyle,
+  update: updateStyle
+};
+
+/*  */
+
+/**
+ * Add class with compatibility for SVG since classList is not supported on
+ * SVG elements in IE
+ */
+function addClass (el, cls) {
+  /* istanbul ignore if */
+  if (!cls || !cls.trim()) {
+    return
+  }
+
+  /* istanbul ignore else */
+  if (el.classList) {
+    if (cls.indexOf(' ') > -1) {
+      cls.split(/\s+/).forEach(function (c) { return el.classList.add(c); });
+    } else {
+      el.classList.add(cls);
+    }
+  } else {
+    var cur = ' ' + el.getAttribute('class') + ' ';
+    if (cur.indexOf(' ' + cls + ' ') < 0) {
+      el.setAttribute('class', (cur + cls).trim());
+    }
+  }
+}
+
+/**
+ * Remove class with compatibility for SVG since classList is not supported on
+ * SVG elements in IE
+ */
+function removeClass (el, cls) {
+  /* istanbul ignore if */
+  if (!cls || !cls.trim()) {
+    return
+  }
+
+  /* istanbul ignore else */
+  if (el.classList) {
+    if (cls.indexOf(' ') > -1) {
+      cls.split(/\s+/).forEach(function (c) { return el.classList.remove(c); });
+    } else {
+      el.classList.remove(cls);
+    }
+  } else {
+    var cur = ' ' + el.getAttribute('class') + ' ';
+    var tar = ' ' + cls + ' ';
+    while (cur.indexOf(tar) >= 0) {
+      cur = cur.replace(tar, ' ');
+    }
+    el.setAttribute('class', cur.trim());
+  }
+}
+
+/*  */
+
+var hasTransition = inBrowser && !isIE9;
+var TRANSITION = 'transition';
+var ANIMATION = 'animation';
+
+// Transition property/event sniffing
+var transitionProp = 'transition';
+var transitionEndEvent = 'transitionend';
+var animationProp = 'animation';
+var animationEndEvent = 'animationend';
+if (hasTransition) {
+  /* istanbul ignore if */
+  if (window.ontransitionend === undefined &&
+    window.onwebkittransitionend !== undefined) {
+    transitionProp = 'WebkitTransition';
+    transitionEndEvent = 'webkitTransitionEnd';
+  }
+  if (window.onanimationend === undefined &&
+    window.onwebkitanimationend !== undefined) {
+    animationProp = 'WebkitAnimation';
+    animationEndEvent = 'webkitAnimationEnd';
+  }
+}
+
+var raf = (inBrowser && window.requestAnimationFrame) || setTimeout;
+function nextFrame (fn) {
+  raf(function () {
+    raf(fn);
+  });
+}
+
+function addTransitionClass (el, cls) {
+  (el._transitionClasses || (el._transitionClasses = [])).push(cls);
+  addClass(el, cls);
+}
+
+function removeTransitionClass (el, cls) {
+  if (el._transitionClasses) {
+    remove$1(el._transitionClasses, cls);
+  }
+  removeClass(el, cls);
+}
+
+function whenTransitionEnds (
+  el,
+  expectedType,
+  cb
+) {
+  var ref = getTransitionInfo(el, expectedType);
+  var type = ref.type;
+  var timeout = ref.timeout;
+  var propCount = ref.propCount;
+  if (!type) { return cb() }
+  var event = type === TRANSITION ? transitionEndEvent : animationEndEvent;
+  var ended = 0;
+  var end = function () {
+    el.removeEventListener(event, onEnd);
+    cb();
+  };
+  var onEnd = function (e) {
+    if (e.target === el) {
+      if (++ended >= propCount) {
+        end();
+      }
+    }
+  };
+  setTimeout(function () {
+    if (ended < propCount) {
+      end();
+    }
+  }, timeout + 1);
+  el.addEventListener(event, onEnd);
+}
+
+var transformRE = /\b(transform|all)(,|$)/;
+
+function getTransitionInfo (el, expectedType) {
+  var styles = window.getComputedStyle(el);
+  var transitioneDelays = styles[transitionProp + 'Delay'].split(', ');
+  var transitionDurations = styles[transitionProp + 'Duration'].split(', ');
+  var transitionTimeout = getTimeout(transitioneDelays, transitionDurations);
+  var animationDelays = styles[animationProp + 'Delay'].split(', ');
+  var animationDurations = styles[animationProp + 'Duration'].split(', ');
+  var animationTimeout = getTimeout(animationDelays, animationDurations);
+
+  var type;
+  var timeout = 0;
+  var propCount = 0;
+  /* istanbul ignore if */
+  if (expectedType === TRANSITION) {
+    if (transitionTimeout > 0) {
+      type = TRANSITION;
+      timeout = transitionTimeout;
+      propCount = transitionDurations.length;
+    }
+  } else if (expectedType === ANIMATION) {
+    if (animationTimeout > 0) {
+      type = ANIMATION;
+      timeout = animationTimeout;
+      propCount = animationDurations.length;
+    }
+  } else {
+    timeout = Math.max(transitionTimeout, animationTimeout);
+    type = timeout > 0
+      ? transitionTimeout > animationTimeout
+        ? TRANSITION
+        : ANIMATION
+      : null;
+    propCount = type
+      ? type === TRANSITION
+        ? transitionDurations.length
+        : animationDurations.length
+      : 0;
+  }
+  var hasTransform =
+    type === TRANSITION &&
+    transformRE.test(styles[transitionProp + 'Property']);
+  return {
+    type: type,
+    timeout: timeout,
+    propCount: propCount,
+    hasTransform: hasTransform
+  }
+}
+
+function getTimeout (delays, durations) {
+  /* istanbul ignore next */
+  while (delays.length < durations.length) {
+    delays = delays.concat(delays);
+  }
+
+  return Math.max.apply(null, durations.map(function (d, i) {
+    return toMs(d) + toMs(delays[i])
+  }))
+}
+
+function toMs (s) {
+  return Number(s.slice(0, -1)) * 1000
+}
+
+/*  */
+
+function enter (vnode) {
+  var el = vnode.elm;
+
+  // call leave callback now
+  if (el._leaveCb) {
+    el._leaveCb.cancelled = true;
+    el._leaveCb();
+  }
+
+  var data = resolveTransition(vnode.data.transition);
+  if (!data) {
+    return
+  }
+
+  /* istanbul ignore if */
+  if (el._enterCb || el.nodeType !== 1) {
+    return
+  }
+
+  var css = data.css;
+  var type = data.type;
+  var enterClass = data.enterClass;
+  var enterActiveClass = data.enterActiveClass;
+  var appearClass = data.appearClass;
+  var appearActiveClass = data.appearActiveClass;
+  var beforeEnter = data.beforeEnter;
+  var enter = data.enter;
+  var afterEnter = data.afterEnter;
+  var enterCancelled = data.enterCancelled;
+  var beforeAppear = data.beforeAppear;
+  var appear = data.appear;
+  var afterAppear = data.afterAppear;
+  var appearCancelled = data.appearCancelled;
+
+  // activeInstance will always be the <transition> component managing this
+  // transition. One edge case to check is when the <transition> is placed
+  // as the root node of a child component. In that case we need to check
+  // <transition>'s parent for appear check.
+  var context = activeInstance;
+  var transitionNode = activeInstance.$vnode;
+  while (transitionNode && transitionNode.parent) {
+    transitionNode = transitionNode.parent;
+    context = transitionNode.context;
+  }
+
+  var isAppear = !context._isMounted || !vnode.isRootInsert;
+
+  if (isAppear && !appear && appear !== '') {
+    return
+  }
+
+  var startClass = isAppear ? appearClass : enterClass;
+  var activeClass = isAppear ? appearActiveClass : enterActiveClass;
+  var beforeEnterHook = isAppear ? (beforeAppear || beforeEnter) : beforeEnter;
+  var enterHook = isAppear ? (typeof appear === 'function' ? appear : enter) : enter;
+  var afterEnterHook = isAppear ? (afterAppear || afterEnter) : afterEnter;
+  var enterCancelledHook = isAppear ? (appearCancelled || enterCancelled) : enterCancelled;
+
+  var expectsCSS = css !== false && !isIE9;
+  var userWantsControl =
+    enterHook &&
+    // enterHook may be a bound method which exposes
+    // the length of original fn as _length
+    (enterHook._length || enterHook.length) > 1;
+
+  var cb = el._enterCb = once(function () {
+    if (expectsCSS) {
+      removeTransitionClass(el, activeClass);
+    }
+    if (cb.cancelled) {
+      if (expectsCSS) {
+        removeTransitionClass(el, startClass);
+      }
+      enterCancelledHook && enterCancelledHook(el);
+    } else {
+      afterEnterHook && afterEnterHook(el);
+    }
+    el._enterCb = null;
+  });
+
+  if (!vnode.data.show) {
+    // remove pending leave element on enter by injecting an insert hook
+    mergeVNodeHook(vnode.data.hook || (vnode.data.hook = {}), 'insert', function () {
+      var parent = el.parentNode;
+      var pendingNode = parent && parent._pending && parent._pending[vnode.key];
+      if (pendingNode &&
+          pendingNode.context === vnode.context &&
+          pendingNode.tag === vnode.tag &&
+          pendingNode.elm._leaveCb) {
+        pendingNode.elm._leaveCb();
+      }
+      enterHook && enterHook(el, cb);
+    }, 'transition-insert');
+  }
+
+  // start enter transition
+  beforeEnterHook && beforeEnterHook(el);
+  if (expectsCSS) {
+    addTransitionClass(el, startClass);
+    addTransitionClass(el, activeClass);
+    nextFrame(function () {
+      removeTransitionClass(el, startClass);
+      if (!cb.cancelled && !userWantsControl) {
+        whenTransitionEnds(el, type, cb);
+      }
+    });
+  }
+
+  if (vnode.data.show) {
+    enterHook && enterHook(el, cb);
+  }
+
+  if (!expectsCSS && !userWantsControl) {
+    cb();
+  }
+}
+
+function leave (vnode, rm) {
+  var el = vnode.elm;
+
+  // call enter callback now
+  if (el._enterCb) {
+    el._enterCb.cancelled = true;
+    el._enterCb();
+  }
+
+  var data = resolveTransition(vnode.data.transition);
+  if (!data) {
+    return rm()
+  }
+
+  /* istanbul ignore if */
+  if (el._leaveCb || el.nodeType !== 1) {
+    return
+  }
+
+  var css = data.css;
+  var type = data.type;
+  var leaveClass = data.leaveClass;
+  var leaveActiveClass = data.leaveActiveClass;
+  var beforeLeave = data.beforeLeave;
+  var leave = data.leave;
+  var afterLeave = data.afterLeave;
+  var leaveCancelled = data.leaveCancelled;
+  var delayLeave = data.delayLeave;
+
+  var expectsCSS = css !== false && !isIE9;
+  var userWantsControl =
+    leave &&
+    // leave hook may be a bound method which exposes
+    // the length of original fn as _length
+    (leave._length || leave.length) > 1;
+
+  var cb = el._leaveCb = once(function () {
+    if (el.parentNode && el.parentNode._pending) {
+      el.parentNode._pending[vnode.key] = null;
+    }
+    if (expectsCSS) {
+      removeTransitionClass(el, leaveActiveClass);
+    }
+    if (cb.cancelled) {
+      if (expectsCSS) {
+        removeTransitionClass(el, leaveClass);
+      }
+      leaveCancelled && leaveCancelled(el);
+    } else {
+      rm();
+      afterLeave && afterLeave(el);
+    }
+    el._leaveCb = null;
+  });
+
+  if (delayLeave) {
+    delayLeave(performLeave);
+  } else {
+    performLeave();
+  }
+
+  function performLeave () {
+    // the delayed leave may have already been cancelled
+    if (cb.cancelled) {
+      return
+    }
+    // record leaving element
+    if (!vnode.data.show) {
+      (el.parentNode._pending || (el.parentNode._pending = {}))[vnode.key] = vnode;
+    }
+    beforeLeave && beforeLeave(el);
+    if (expectsCSS) {
+      addTransitionClass(el, leaveClass);
+      addTransitionClass(el, leaveActiveClass);
+      nextFrame(function () {
+        removeTransitionClass(el, leaveClass);
+        if (!cb.cancelled && !userWantsControl) {
+          whenTransitionEnds(el, type, cb);
+        }
+      });
+    }
+    leave && leave(el, cb);
+    if (!expectsCSS && !userWantsControl) {
+      cb();
+    }
+  }
+}
+
+function resolveTransition (def$$1) {
+  if (!def$$1) {
+    return
+  }
+  /* istanbul ignore else */
+  if (typeof def$$1 === 'object') {
+    var res = {};
+    if (def$$1.css !== false) {
+      extend(res, autoCssTransition(def$$1.name || 'v'));
+    }
+    extend(res, def$$1);
+    return res
+  } else if (typeof def$$1 === 'string') {
+    return autoCssTransition(def$$1)
+  }
+}
+
+var autoCssTransition = cached(function (name) {
+  return {
+    enterClass: (name + "-enter"),
+    leaveClass: (name + "-leave"),
+    appearClass: (name + "-enter"),
+    enterActiveClass: (name + "-enter-active"),
+    leaveActiveClass: (name + "-leave-active"),
+    appearActiveClass: (name + "-enter-active")
+  }
+});
+
+function once (fn) {
+  var called = false;
+  return function () {
+    if (!called) {
+      called = true;
+      fn();
+    }
+  }
+}
+
+function _enter (_, vnode) {
+  if (!vnode.data.show) {
+    enter(vnode);
+  }
+}
+
+var transition = inBrowser ? {
+  create: _enter,
+  activate: _enter,
+  remove: function remove (vnode, rm) {
+    /* istanbul ignore else */
+    if (!vnode.data.show) {
+      leave(vnode, rm);
+    } else {
+      rm();
+    }
+  }
+} : {};
+
+var platformModules = [
+  attrs,
+  klass,
+  events,
+  domProps,
+  style,
+  transition
+];
+
+/*  */
+
+// the directive module should be applied last, after all
+// built-in modules have been applied.
+var modules = platformModules.concat(baseModules);
+
+var patch$1 = createPatchFunction({ nodeOps: nodeOps, modules: modules });
+
+/**
+ * Not type checking this file because flow doesn't like attaching
+ * properties to Elements.
+ */
+
+var modelableTagRE = /^input|select|textarea|vue-component-[0-9]+(-[0-9a-zA-Z_-]*)?$/;
+
+/* istanbul ignore if */
+if (isIE9) {
+  // http://www.matts411.com/post/internet-explorer-9-oninput/
+  document.addEventListener('selectionchange', function () {
+    var el = document.activeElement;
+    if (el && el.vmodel) {
+      trigger(el, 'input');
+    }
+  });
+}
+
+var model = {
+  inserted: function inserted (el, binding, vnode) {
+    if (false) {
+      if (!modelableTagRE.test(vnode.tag)) {
+        warn(
+          "v-model is not supported on element type: <" + (vnode.tag) + ">. " +
+          'If you are working with contenteditable, it\'s recommended to ' +
+          'wrap a library dedicated for that purpose inside a custom component.',
+          vnode.context
+        );
+      }
+    }
+    if (vnode.tag === 'select') {
+      var cb = function () {
+        setSelected(el, binding, vnode.context);
+      };
+      cb();
+      /* istanbul ignore if */
+      if (isIE || isEdge) {
+        setTimeout(cb, 0);
+      }
+    } else if (
+      (vnode.tag === 'textarea' || el.type === 'text') &&
+      !binding.modifiers.lazy
+    ) {
+      if (!isAndroid) {
+        el.addEventListener('compositionstart', onCompositionStart);
+        el.addEventListener('compositionend', onCompositionEnd);
+      }
+      /* istanbul ignore if */
+      if (isIE9) {
+        el.vmodel = true;
+      }
+    }
+  },
+  componentUpdated: function componentUpdated (el, binding, vnode) {
+    if (vnode.tag === 'select') {
+      setSelected(el, binding, vnode.context);
+      // in case the options rendered by v-for have changed,
+      // it's possible that the value is out-of-sync with the rendered options.
+      // detect such cases and filter out values that no longer has a matching
+      // option in the DOM.
+      var needReset = el.multiple
+        ? binding.value.some(function (v) { return hasNoMatchingOption(v, el.options); })
+        : binding.value !== binding.oldValue && hasNoMatchingOption(binding.value, el.options);
+      if (needReset) {
+        trigger(el, 'change');
+      }
+    }
+  }
+};
+
+function setSelected (el, binding, vm) {
+  var value = binding.value;
+  var isMultiple = el.multiple;
+  if (isMultiple && !Array.isArray(value)) {
+    "production" !== 'production' && warn(
+      "<select multiple v-model=\"" + (binding.expression) + "\"> " +
+      "expects an Array value for its binding, but got " + (Object.prototype.toString.call(value).slice(8, -1)),
+      vm
+    );
+    return
+  }
+  var selected, option;
+  for (var i = 0, l = el.options.length; i < l; i++) {
+    option = el.options[i];
+    if (isMultiple) {
+      selected = looseIndexOf(value, getValue(option)) > -1;
+      if (option.selected !== selected) {
+        option.selected = selected;
+      }
+    } else {
+      if (looseEqual(getValue(option), value)) {
+        if (el.selectedIndex !== i) {
+          el.selectedIndex = i;
+        }
+        return
+      }
+    }
+  }
+  if (!isMultiple) {
+    el.selectedIndex = -1;
+  }
+}
+
+function hasNoMatchingOption (value, options) {
+  for (var i = 0, l = options.length; i < l; i++) {
+    if (looseEqual(getValue(options[i]), value)) {
+      return false
+    }
+  }
+  return true
+}
+
+function getValue (option) {
+  return '_value' in option
+    ? option._value
+    : option.value
+}
+
+function onCompositionStart (e) {
+  e.target.composing = true;
+}
+
+function onCompositionEnd (e) {
+  e.target.composing = false;
+  trigger(e.target, 'input');
+}
+
+function trigger (el, type) {
+  var e = document.createEvent('HTMLEvents');
+  e.initEvent(type, true, true);
+  el.dispatchEvent(e);
+}
+
+/*  */
+
+// recursively search for possible transition defined inside the component root
+function locateNode (vnode) {
+  return vnode.child && (!vnode.data || !vnode.data.transition)
+    ? locateNode(vnode.child._vnode)
+    : vnode
+}
+
+var show = {
+  bind: function bind (el, ref, vnode) {
+    var value = ref.value;
+
+    vnode = locateNode(vnode);
+    var transition = vnode.data && vnode.data.transition;
+    if (value && transition && !isIE9) {
+      enter(vnode);
+    }
+    var originalDisplay = el.style.display === 'none' ? '' : el.style.display;
+    el.style.display = value ? originalDisplay : 'none';
+    el.__vOriginalDisplay = originalDisplay;
+  },
+  update: function update (el, ref, vnode) {
+    var value = ref.value;
+    var oldValue = ref.oldValue;
+
+    /* istanbul ignore if */
+    if (value === oldValue) { return }
+    vnode = locateNode(vnode);
+    var transition = vnode.data && vnode.data.transition;
+    if (transition && !isIE9) {
+      if (value) {
+        enter(vnode);
+        el.style.display = el.__vOriginalDisplay;
+      } else {
+        leave(vnode, function () {
+          el.style.display = 'none';
+        });
+      }
+    } else {
+      el.style.display = value ? el.__vOriginalDisplay : 'none';
+    }
+  }
+};
+
+var platformDirectives = {
+  model: model,
+  show: show
+};
+
+/*  */
+
+// Provides transition support for a single element/component.
+// supports transition mode (out-in / in-out)
+
+var transitionProps = {
+  name: String,
+  appear: Boolean,
+  css: Boolean,
+  mode: String,
+  type: String,
+  enterClass: String,
+  leaveClass: String,
+  enterActiveClass: String,
+  leaveActiveClass: String,
+  appearClass: String,
+  appearActiveClass: String
+};
+
+// in case the child is also an abstract component, e.g. <keep-alive>
+// we want to recursively retrieve the real component to be rendered
+function getRealChild (vnode) {
+  var compOptions = vnode && vnode.componentOptions;
+  if (compOptions && compOptions.Ctor.options.abstract) {
+    return getRealChild(getFirstComponentChild(compOptions.children))
+  } else {
+    return vnode
+  }
+}
+
+function extractTransitionData (comp) {
+  var data = {};
+  var options = comp.$options;
+  // props
+  for (var key in options.propsData) {
+    data[key] = comp[key];
+  }
+  // events.
+  // extract listeners and pass them directly to the transition methods
+  var listeners = options._parentListeners;
+  for (var key$1 in listeners) {
+    data[camelize(key$1)] = listeners[key$1].fn;
+  }
+  return data
+}
+
+function placeholder (h, rawChild) {
+  return /\d-keep-alive$/.test(rawChild.tag)
+    ? h('keep-alive')
+    : null
+}
+
+function hasParentTransition (vnode) {
+  while ((vnode = vnode.parent)) {
+    if (vnode.data.transition) {
+      return true
+    }
+  }
+}
+
+var Transition = {
+  name: 'transition',
+  props: transitionProps,
+  abstract: true,
+  render: function render (h) {
+    var this$1 = this;
+
+    var children = this.$slots.default;
+    if (!children) {
+      return
+    }
+
+    // filter out text nodes (possible whitespaces)
+    children = children.filter(function (c) { return c.tag; });
+    /* istanbul ignore if */
+    if (!children.length) {
+      return
+    }
+
+    // warn multiple elements
+    if (false) {
+      warn(
+        '<transition> can only be used on a single element. Use ' +
+        '<transition-group> for lists.',
+        this.$parent
+      );
+    }
+
+    var mode = this.mode;
+
+    // warn invalid mode
+    if (false) {
+      warn(
+        'invalid <transition> mode: ' + mode,
+        this.$parent
+      );
+    }
+
+    var rawChild = children[0];
+
+    // if this is a component root node and the component's
+    // parent container node also has transition, skip.
+    if (hasParentTransition(this.$vnode)) {
+      return rawChild
+    }
+
+    // apply transition data to child
+    // use getRealChild() to ignore abstract components e.g. keep-alive
+    var child = getRealChild(rawChild);
+    /* istanbul ignore if */
+    if (!child) {
+      return rawChild
+    }
+
+    if (this._leaving) {
+      return placeholder(h, rawChild)
+    }
+
+    var key = child.key = child.key == null || child.isStatic
+      ? ("__v" + (child.tag + this._uid) + "__")
+      : child.key;
+    var data = (child.data || (child.data = {})).transition = extractTransitionData(this);
+    var oldRawChild = this._vnode;
+    var oldChild = getRealChild(oldRawChild);
+
+    // mark v-show
+    // so that the transition module can hand over the control to the directive
+    if (child.data.directives && child.data.directives.some(function (d) { return d.name === 'show'; })) {
+      child.data.show = true;
+    }
+
+    if (oldChild && oldChild.data && oldChild.key !== key) {
+      // replace old child transition data with fresh one
+      // important for dynamic transitions!
+      var oldData = oldChild.data.transition = extend({}, data);
+
+      // handle transition mode
+      if (mode === 'out-in') {
+        // return placeholder node and queue update when leave finishes
+        this._leaving = true;
+        mergeVNodeHook(oldData, 'afterLeave', function () {
+          this$1._leaving = false;
+          this$1.$forceUpdate();
+        }, key);
+        return placeholder(h, rawChild)
+      } else if (mode === 'in-out') {
+        var delayedLeave;
+        var performLeave = function () { delayedLeave(); };
+        mergeVNodeHook(data, 'afterEnter', performLeave, key);
+        mergeVNodeHook(data, 'enterCancelled', performLeave, key);
+        mergeVNodeHook(oldData, 'delayLeave', function (leave) {
+          delayedLeave = leave;
+        }, key);
+      }
+    }
+
+    return rawChild
+  }
+};
+
+/*  */
+
+// Provides transition support for list items.
+// supports move transitions using the FLIP technique.
+
+// Because the vdom's children update algorithm is "unstable" - i.e.
+// it doesn't guarantee the relative positioning of removed elements,
+// we force transition-group to update its children into two passes:
+// in the first pass, we remove all nodes that need to be removed,
+// triggering their leaving transition; in the second pass, we insert/move
+// into the final disired state. This way in the second pass removed
+// nodes will remain where they should be.
+
+var props = extend({
+  tag: String,
+  moveClass: String
+}, transitionProps);
+
+delete props.mode;
+
+var TransitionGroup = {
+  props: props,
+
+  render: function render (h) {
+    var tag = this.tag || this.$vnode.data.tag || 'span';
+    var map = Object.create(null);
+    var prevChildren = this.prevChildren = this.children;
+    var rawChildren = this.$slots.default || [];
+    var children = this.children = [];
+    var transitionData = extractTransitionData(this);
+
+    for (var i = 0; i < rawChildren.length; i++) {
+      var c = rawChildren[i];
+      if (c.tag) {
+        if (c.key != null && String(c.key).indexOf('__vlist') !== 0) {
+          children.push(c);
+          map[c.key] = c
+          ;(c.data || (c.data = {})).transition = transitionData;
+        } else if (false) {
+          var opts = c.componentOptions;
+          var name = opts
+            ? (opts.Ctor.options.name || opts.tag)
+            : c.tag;
+          warn(("<transition-group> children must be keyed: <" + name + ">"));
+        }
+      }
+    }
+
+    if (prevChildren) {
+      var kept = [];
+      var removed = [];
+      for (var i$1 = 0; i$1 < prevChildren.length; i$1++) {
+        var c$1 = prevChildren[i$1];
+        c$1.data.transition = transitionData;
+        c$1.data.pos = c$1.elm.getBoundingClientRect();
+        if (map[c$1.key]) {
+          kept.push(c$1);
+        } else {
+          removed.push(c$1);
+        }
+      }
+      this.kept = h(tag, null, kept);
+      this.removed = removed;
+    }
+
+    return h(tag, null, children)
+  },
+
+  beforeUpdate: function beforeUpdate () {
+    // force removing pass
+    this.__patch__(
+      this._vnode,
+      this.kept,
+      false, // hydrating
+      true // removeOnly (!important, avoids unnecessary moves)
+    );
+    this._vnode = this.kept;
+  },
+
+  updated: function updated () {
+    var children = this.prevChildren;
+    var moveClass = this.moveClass || ((this.name || 'v') + '-move');
+    if (!children.length || !this.hasMove(children[0].elm, moveClass)) {
+      return
+    }
+
+    // we divide the work into three loops to avoid mixing DOM reads and writes
+    // in each iteration - which helps prevent layout thrashing.
+    children.forEach(callPendingCbs);
+    children.forEach(recordPosition);
+    children.forEach(applyTranslation);
+
+    // force reflow to put everything in position
+    var f = document.body.offsetHeight; // eslint-disable-line
+
+    children.forEach(function (c) {
+      if (c.data.moved) {
+        var el = c.elm;
+        var s = el.style;
+        addTransitionClass(el, moveClass);
+        s.transform = s.WebkitTransform = s.transitionDuration = '';
+        el.addEventListener(transitionEndEvent, el._moveCb = function cb (e) {
+          if (!e || /transform$/.test(e.propertyName)) {
+            el.removeEventListener(transitionEndEvent, cb);
+            el._moveCb = null;
+            removeTransitionClass(el, moveClass);
+          }
+        });
+      }
+    });
+  },
+
+  methods: {
+    hasMove: function hasMove (el, moveClass) {
+      /* istanbul ignore if */
+      if (!hasTransition) {
+        return false
+      }
+      if (this._hasMove != null) {
+        return this._hasMove
+      }
+      addTransitionClass(el, moveClass);
+      var info = getTransitionInfo(el);
+      removeTransitionClass(el, moveClass);
+      return (this._hasMove = info.hasTransform)
+    }
+  }
+};
+
+function callPendingCbs (c) {
+  /* istanbul ignore if */
+  if (c.elm._moveCb) {
+    c.elm._moveCb();
+  }
+  /* istanbul ignore if */
+  if (c.elm._enterCb) {
+    c.elm._enterCb();
+  }
+}
+
+function recordPosition (c) {
+  c.data.newPos = c.elm.getBoundingClientRect();
+}
+
+function applyTranslation (c) {
+  var oldPos = c.data.pos;
+  var newPos = c.data.newPos;
+  var dx = oldPos.left - newPos.left;
+  var dy = oldPos.top - newPos.top;
+  if (dx || dy) {
+    c.data.moved = true;
+    var s = c.elm.style;
+    s.transform = s.WebkitTransform = "translate(" + dx + "px," + dy + "px)";
+    s.transitionDuration = '0s';
+  }
+}
+
+var platformComponents = {
+  Transition: Transition,
+  TransitionGroup: TransitionGroup
+};
+
+/*  */
+
+// install platform specific utils
+Vue$2.config.isUnknownElement = isUnknownElement;
+Vue$2.config.isReservedTag = isReservedTag;
+Vue$2.config.getTagNamespace = getTagNamespace;
+Vue$2.config.mustUseProp = mustUseProp;
+
+// install platform runtime directives & components
+extend(Vue$2.options.directives, platformDirectives);
+extend(Vue$2.options.components, platformComponents);
+
+// install platform patch function
+Vue$2.prototype.__patch__ = inBrowser ? patch$1 : noop;
+
+// wrap mount
+Vue$2.prototype.$mount = function (
+  el,
+  hydrating
+) {
+  el = el && inBrowser ? query(el) : undefined;
+  return this._mount(el, hydrating)
+};
+
+// devtools global hook
+/* istanbul ignore next */
+setTimeout(function () {
+  if (config.devtools) {
+    if (devtools) {
+      devtools.emit('init', Vue$2);
+    } else if (
+      false
+    ) {
+      console.log(
+        'Download the Vue Devtools for a better development experience:\n' +
+        'https://github.com/vuejs/vue-devtools'
+      );
+    }
+  }
+}, 0);
+
+module.exports = Vue$2;
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(27)))
+
+/***/ },
+/* 4 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__repos_json__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__repos_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__repos_json__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+let repos = [];
+let languages = {
+  // language: [list of repos]
+  all: []
+};
+
+let apis = {
+  all: [],
+  "Viewer": [],
+  "Design Automation": [],
+  "Model Derivative": [],
+  "Data Management": []
+}; // enum list of apis with Autodesk
+
+for (let repo of __WEBPACK_IMPORTED_MODULE_0__repos_json___default.a) {
+  // put repos in a list
+  repos.push(repo);
+
+  // map language -> repo
+  let language = repo.language;
+  if (language !== null) {
+    if (!languages[language]) {
+      languages[language] = [];
+    }
+    languages[language].push(repo);
+  }
+
+  // map api -> repo
+  // reg match api with the name of repo
+  let viewerreg = /[vV]iewer/g,
+      dareg = /[dD]esign.[aA]utomation/g,
+      mdreg = /[mM]odel.[dD]erivative/g,
+      dmreg = /[dD]ata.[mM]anagement/g;
+  // can match multiple apis per repo
+  if (repo.name.match(viewerreg)) {
+    apis["Viewer"].push(repo);
+  }
+  if (repo.name.match(dareg)) {
+    apis["Design Automation"].push(repo);
+  }
+  if (repo.name.match(mdreg)) {
+    apis["Model Derivative"].push(repo);
+  }
+  if (repo.name.match(dmreg)) {
+    apis["Data Management"].push(repo);
+  }
+}
+
+languages.all.push(...repos);
+apis.all.push(...repos);
+
+/* harmony default export */ exports["default"] = {
+  // pass these to the page
+  data() {
+    return {
+      repos: repos,
+      languages: languages,
+      apis: apis
+    };
+  },
+
+  methods: {
+    sortByPopularity: () => {
+      repos.sort((a, b) => {
+        return b.stargazers_count - a.stargazers_count;
+      });
+    },
+    sortByAlphabetical: () => {
+      repos.sort((a, b) => {
+        return a.name.localeCompare(b.name);
+      });
+    },
+    sortByLastUpdated: () => {
+      repos.sort((a, b) => {
+        return b.updated_at.localeCompare(a.updated_at);
+      });
+    },
+    filterByLanguage: language => {
+      repos.splice(0, repos.length);
+      repos.push(...languages[language]);
+    },
+    filterByAPIUsed: apiName => {
+      repos.splice(0, repos.length);
+      repos.push(...apis[apiName]);
+    }
+  }
+};
+
+/***/ },
+/* 5 */
+/***/ function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, "\n* {\n  margin: 0;\n  padding: 0;\n}\nbody {\n  background: #e2e1e0;\n  text-align: center;\n  height: 100%;\n}\n.repo-card {\n  color: #404040;\n  background: #fff;\n  border-radius: 2px;\n  display: inline-block;\n  height: 12rem;\n  margin: 1rem;\n  padding: 1rem;\n  position: relative;\n  width: 300px;\n  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);\n  transition: all 0.3s cubic-bezier(.25,.8,.25,1);\n  vertical-align: top;\n}\n.repo-card:hover {\n  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);\n}\nh3 {\n  margin-bottom: 0.5rem;\n}\n", ""]);
+
+// exports
+
+
+/***/ },
+/* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, "/*!\n *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome\n *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)\n */@font-face{font-family:'FontAwesome';src:url(" + __webpack_require__(10) + ");src:url(" + __webpack_require__(9) + "?#iefix&v=4.7.0) format('embedded-opentype'),url(" + __webpack_require__(12) + ") format('woff2'),url(" + __webpack_require__(13) + ") format('woff'),url(" + __webpack_require__(11) + ") format('truetype'),url(" + __webpack_require__(8) + "#fontawesomeregular) format('svg');font-weight:normal;font-style:normal}.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-fw{width:1.28571429em;text-align:center}.fa-ul{padding-left:0;margin-left:2.14285714em;list-style-type:none}.fa-ul>li{position:relative}.fa-li{position:absolute;left:-2.14285714em;width:2.14285714em;top:.14285714em;text-align:center}.fa-li.fa-lg{left:-1.85714286em}.fa-border{padding:.2em .25em .15em;border:solid .08em #eee;border-radius:.1em}.fa-pull-left{float:left}.fa-pull-right{float:right}.fa.fa-pull-left{margin-right:.3em}.fa.fa-pull-right{margin-left:.3em}.pull-right{float:right}.pull-left{float:left}.fa.pull-left{margin-right:.3em}.fa.pull-right{margin-left:.3em}.fa-spin{-webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear}.fa-pulse{-webkit-animation:fa-spin 1s infinite steps(8);animation:fa-spin 1s infinite steps(8)}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}.fa-rotate-90{-ms-filter:\"progid:DXImageTransform.Microsoft.BasicImage(rotation=1)\";-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-ms-filter:\"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)\";-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-ms-filter:\"progid:DXImageTransform.Microsoft.BasicImage(rotation=3)\";-webkit-transform:rotate(270deg);-ms-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{-ms-filter:\"progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)\";-webkit-transform:scale(-1, 1);-ms-transform:scale(-1, 1);transform:scale(-1, 1)}.fa-flip-vertical{-ms-filter:\"progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)\";-webkit-transform:scale(1, -1);-ms-transform:scale(1, -1);transform:scale(1, -1)}:root .fa-rotate-90,:root .fa-rotate-180,:root .fa-rotate-270,:root .fa-flip-horizontal,:root .fa-flip-vertical{filter:none}.fa-stack{position:relative;display:inline-block;width:2em;height:2em;line-height:2em;vertical-align:middle}.fa-stack-1x,.fa-stack-2x{position:absolute;left:0;width:100%;text-align:center}.fa-stack-1x{line-height:inherit}.fa-stack-2x{font-size:2em}.fa-inverse{color:#fff}.fa-glass:before{content:\"\\F000\"}.fa-music:before{content:\"\\F001\"}.fa-search:before{content:\"\\F002\"}.fa-envelope-o:before{content:\"\\F003\"}.fa-heart:before{content:\"\\F004\"}.fa-star:before{content:\"\\F005\"}.fa-star-o:before{content:\"\\F006\"}.fa-user:before{content:\"\\F007\"}.fa-film:before{content:\"\\F008\"}.fa-th-large:before{content:\"\\F009\"}.fa-th:before{content:\"\\F00A\"}.fa-th-list:before{content:\"\\F00B\"}.fa-check:before{content:\"\\F00C\"}.fa-remove:before,.fa-close:before,.fa-times:before{content:\"\\F00D\"}.fa-search-plus:before{content:\"\\F00E\"}.fa-search-minus:before{content:\"\\F010\"}.fa-power-off:before{content:\"\\F011\"}.fa-signal:before{content:\"\\F012\"}.fa-gear:before,.fa-cog:before{content:\"\\F013\"}.fa-trash-o:before{content:\"\\F014\"}.fa-home:before{content:\"\\F015\"}.fa-file-o:before{content:\"\\F016\"}.fa-clock-o:before{content:\"\\F017\"}.fa-road:before{content:\"\\F018\"}.fa-download:before{content:\"\\F019\"}.fa-arrow-circle-o-down:before{content:\"\\F01A\"}.fa-arrow-circle-o-up:before{content:\"\\F01B\"}.fa-inbox:before{content:\"\\F01C\"}.fa-play-circle-o:before{content:\"\\F01D\"}.fa-rotate-right:before,.fa-repeat:before{content:\"\\F01E\"}.fa-refresh:before{content:\"\\F021\"}.fa-list-alt:before{content:\"\\F022\"}.fa-lock:before{content:\"\\F023\"}.fa-flag:before{content:\"\\F024\"}.fa-headphones:before{content:\"\\F025\"}.fa-volume-off:before{content:\"\\F026\"}.fa-volume-down:before{content:\"\\F027\"}.fa-volume-up:before{content:\"\\F028\"}.fa-qrcode:before{content:\"\\F029\"}.fa-barcode:before{content:\"\\F02A\"}.fa-tag:before{content:\"\\F02B\"}.fa-tags:before{content:\"\\F02C\"}.fa-book:before{content:\"\\F02D\"}.fa-bookmark:before{content:\"\\F02E\"}.fa-print:before{content:\"\\F02F\"}.fa-camera:before{content:\"\\F030\"}.fa-font:before{content:\"\\F031\"}.fa-bold:before{content:\"\\F032\"}.fa-italic:before{content:\"\\F033\"}.fa-text-height:before{content:\"\\F034\"}.fa-text-width:before{content:\"\\F035\"}.fa-align-left:before{content:\"\\F036\"}.fa-align-center:before{content:\"\\F037\"}.fa-align-right:before{content:\"\\F038\"}.fa-align-justify:before{content:\"\\F039\"}.fa-list:before{content:\"\\F03A\"}.fa-dedent:before,.fa-outdent:before{content:\"\\F03B\"}.fa-indent:before{content:\"\\F03C\"}.fa-video-camera:before{content:\"\\F03D\"}.fa-photo:before,.fa-image:before,.fa-picture-o:before{content:\"\\F03E\"}.fa-pencil:before{content:\"\\F040\"}.fa-map-marker:before{content:\"\\F041\"}.fa-adjust:before{content:\"\\F042\"}.fa-tint:before{content:\"\\F043\"}.fa-edit:before,.fa-pencil-square-o:before{content:\"\\F044\"}.fa-share-square-o:before{content:\"\\F045\"}.fa-check-square-o:before{content:\"\\F046\"}.fa-arrows:before{content:\"\\F047\"}.fa-step-backward:before{content:\"\\F048\"}.fa-fast-backward:before{content:\"\\F049\"}.fa-backward:before{content:\"\\F04A\"}.fa-play:before{content:\"\\F04B\"}.fa-pause:before{content:\"\\F04C\"}.fa-stop:before{content:\"\\F04D\"}.fa-forward:before{content:\"\\F04E\"}.fa-fast-forward:before{content:\"\\F050\"}.fa-step-forward:before{content:\"\\F051\"}.fa-eject:before{content:\"\\F052\"}.fa-chevron-left:before{content:\"\\F053\"}.fa-chevron-right:before{content:\"\\F054\"}.fa-plus-circle:before{content:\"\\F055\"}.fa-minus-circle:before{content:\"\\F056\"}.fa-times-circle:before{content:\"\\F057\"}.fa-check-circle:before{content:\"\\F058\"}.fa-question-circle:before{content:\"\\F059\"}.fa-info-circle:before{content:\"\\F05A\"}.fa-crosshairs:before{content:\"\\F05B\"}.fa-times-circle-o:before{content:\"\\F05C\"}.fa-check-circle-o:before{content:\"\\F05D\"}.fa-ban:before{content:\"\\F05E\"}.fa-arrow-left:before{content:\"\\F060\"}.fa-arrow-right:before{content:\"\\F061\"}.fa-arrow-up:before{content:\"\\F062\"}.fa-arrow-down:before{content:\"\\F063\"}.fa-mail-forward:before,.fa-share:before{content:\"\\F064\"}.fa-expand:before{content:\"\\F065\"}.fa-compress:before{content:\"\\F066\"}.fa-plus:before{content:\"\\F067\"}.fa-minus:before{content:\"\\F068\"}.fa-asterisk:before{content:\"\\F069\"}.fa-exclamation-circle:before{content:\"\\F06A\"}.fa-gift:before{content:\"\\F06B\"}.fa-leaf:before{content:\"\\F06C\"}.fa-fire:before{content:\"\\F06D\"}.fa-eye:before{content:\"\\F06E\"}.fa-eye-slash:before{content:\"\\F070\"}.fa-warning:before,.fa-exclamation-triangle:before{content:\"\\F071\"}.fa-plane:before{content:\"\\F072\"}.fa-calendar:before{content:\"\\F073\"}.fa-random:before{content:\"\\F074\"}.fa-comment:before{content:\"\\F075\"}.fa-magnet:before{content:\"\\F076\"}.fa-chevron-up:before{content:\"\\F077\"}.fa-chevron-down:before{content:\"\\F078\"}.fa-retweet:before{content:\"\\F079\"}.fa-shopping-cart:before{content:\"\\F07A\"}.fa-folder:before{content:\"\\F07B\"}.fa-folder-open:before{content:\"\\F07C\"}.fa-arrows-v:before{content:\"\\F07D\"}.fa-arrows-h:before{content:\"\\F07E\"}.fa-bar-chart-o:before,.fa-bar-chart:before{content:\"\\F080\"}.fa-twitter-square:before{content:\"\\F081\"}.fa-facebook-square:before{content:\"\\F082\"}.fa-camera-retro:before{content:\"\\F083\"}.fa-key:before{content:\"\\F084\"}.fa-gears:before,.fa-cogs:before{content:\"\\F085\"}.fa-comments:before{content:\"\\F086\"}.fa-thumbs-o-up:before{content:\"\\F087\"}.fa-thumbs-o-down:before{content:\"\\F088\"}.fa-star-half:before{content:\"\\F089\"}.fa-heart-o:before{content:\"\\F08A\"}.fa-sign-out:before{content:\"\\F08B\"}.fa-linkedin-square:before{content:\"\\F08C\"}.fa-thumb-tack:before{content:\"\\F08D\"}.fa-external-link:before{content:\"\\F08E\"}.fa-sign-in:before{content:\"\\F090\"}.fa-trophy:before{content:\"\\F091\"}.fa-github-square:before{content:\"\\F092\"}.fa-upload:before{content:\"\\F093\"}.fa-lemon-o:before{content:\"\\F094\"}.fa-phone:before{content:\"\\F095\"}.fa-square-o:before{content:\"\\F096\"}.fa-bookmark-o:before{content:\"\\F097\"}.fa-phone-square:before{content:\"\\F098\"}.fa-twitter:before{content:\"\\F099\"}.fa-facebook-f:before,.fa-facebook:before{content:\"\\F09A\"}.fa-github:before{content:\"\\F09B\"}.fa-unlock:before{content:\"\\F09C\"}.fa-credit-card:before{content:\"\\F09D\"}.fa-feed:before,.fa-rss:before{content:\"\\F09E\"}.fa-hdd-o:before{content:\"\\F0A0\"}.fa-bullhorn:before{content:\"\\F0A1\"}.fa-bell:before{content:\"\\F0F3\"}.fa-certificate:before{content:\"\\F0A3\"}.fa-hand-o-right:before{content:\"\\F0A4\"}.fa-hand-o-left:before{content:\"\\F0A5\"}.fa-hand-o-up:before{content:\"\\F0A6\"}.fa-hand-o-down:before{content:\"\\F0A7\"}.fa-arrow-circle-left:before{content:\"\\F0A8\"}.fa-arrow-circle-right:before{content:\"\\F0A9\"}.fa-arrow-circle-up:before{content:\"\\F0AA\"}.fa-arrow-circle-down:before{content:\"\\F0AB\"}.fa-globe:before{content:\"\\F0AC\"}.fa-wrench:before{content:\"\\F0AD\"}.fa-tasks:before{content:\"\\F0AE\"}.fa-filter:before{content:\"\\F0B0\"}.fa-briefcase:before{content:\"\\F0B1\"}.fa-arrows-alt:before{content:\"\\F0B2\"}.fa-group:before,.fa-users:before{content:\"\\F0C0\"}.fa-chain:before,.fa-link:before{content:\"\\F0C1\"}.fa-cloud:before{content:\"\\F0C2\"}.fa-flask:before{content:\"\\F0C3\"}.fa-cut:before,.fa-scissors:before{content:\"\\F0C4\"}.fa-copy:before,.fa-files-o:before{content:\"\\F0C5\"}.fa-paperclip:before{content:\"\\F0C6\"}.fa-save:before,.fa-floppy-o:before{content:\"\\F0C7\"}.fa-square:before{content:\"\\F0C8\"}.fa-navicon:before,.fa-reorder:before,.fa-bars:before{content:\"\\F0C9\"}.fa-list-ul:before{content:\"\\F0CA\"}.fa-list-ol:before{content:\"\\F0CB\"}.fa-strikethrough:before{content:\"\\F0CC\"}.fa-underline:before{content:\"\\F0CD\"}.fa-table:before{content:\"\\F0CE\"}.fa-magic:before{content:\"\\F0D0\"}.fa-truck:before{content:\"\\F0D1\"}.fa-pinterest:before{content:\"\\F0D2\"}.fa-pinterest-square:before{content:\"\\F0D3\"}.fa-google-plus-square:before{content:\"\\F0D4\"}.fa-google-plus:before{content:\"\\F0D5\"}.fa-money:before{content:\"\\F0D6\"}.fa-caret-down:before{content:\"\\F0D7\"}.fa-caret-up:before{content:\"\\F0D8\"}.fa-caret-left:before{content:\"\\F0D9\"}.fa-caret-right:before{content:\"\\F0DA\"}.fa-columns:before{content:\"\\F0DB\"}.fa-unsorted:before,.fa-sort:before{content:\"\\F0DC\"}.fa-sort-down:before,.fa-sort-desc:before{content:\"\\F0DD\"}.fa-sort-up:before,.fa-sort-asc:before{content:\"\\F0DE\"}.fa-envelope:before{content:\"\\F0E0\"}.fa-linkedin:before{content:\"\\F0E1\"}.fa-rotate-left:before,.fa-undo:before{content:\"\\F0E2\"}.fa-legal:before,.fa-gavel:before{content:\"\\F0E3\"}.fa-dashboard:before,.fa-tachometer:before{content:\"\\F0E4\"}.fa-comment-o:before{content:\"\\F0E5\"}.fa-comments-o:before{content:\"\\F0E6\"}.fa-flash:before,.fa-bolt:before{content:\"\\F0E7\"}.fa-sitemap:before{content:\"\\F0E8\"}.fa-umbrella:before{content:\"\\F0E9\"}.fa-paste:before,.fa-clipboard:before{content:\"\\F0EA\"}.fa-lightbulb-o:before{content:\"\\F0EB\"}.fa-exchange:before{content:\"\\F0EC\"}.fa-cloud-download:before{content:\"\\F0ED\"}.fa-cloud-upload:before{content:\"\\F0EE\"}.fa-user-md:before{content:\"\\F0F0\"}.fa-stethoscope:before{content:\"\\F0F1\"}.fa-suitcase:before{content:\"\\F0F2\"}.fa-bell-o:before{content:\"\\F0A2\"}.fa-coffee:before{content:\"\\F0F4\"}.fa-cutlery:before{content:\"\\F0F5\"}.fa-file-text-o:before{content:\"\\F0F6\"}.fa-building-o:before{content:\"\\F0F7\"}.fa-hospital-o:before{content:\"\\F0F8\"}.fa-ambulance:before{content:\"\\F0F9\"}.fa-medkit:before{content:\"\\F0FA\"}.fa-fighter-jet:before{content:\"\\F0FB\"}.fa-beer:before{content:\"\\F0FC\"}.fa-h-square:before{content:\"\\F0FD\"}.fa-plus-square:before{content:\"\\F0FE\"}.fa-angle-double-left:before{content:\"\\F100\"}.fa-angle-double-right:before{content:\"\\F101\"}.fa-angle-double-up:before{content:\"\\F102\"}.fa-angle-double-down:before{content:\"\\F103\"}.fa-angle-left:before{content:\"\\F104\"}.fa-angle-right:before{content:\"\\F105\"}.fa-angle-up:before{content:\"\\F106\"}.fa-angle-down:before{content:\"\\F107\"}.fa-desktop:before{content:\"\\F108\"}.fa-laptop:before{content:\"\\F109\"}.fa-tablet:before{content:\"\\F10A\"}.fa-mobile-phone:before,.fa-mobile:before{content:\"\\F10B\"}.fa-circle-o:before{content:\"\\F10C\"}.fa-quote-left:before{content:\"\\F10D\"}.fa-quote-right:before{content:\"\\F10E\"}.fa-spinner:before{content:\"\\F110\"}.fa-circle:before{content:\"\\F111\"}.fa-mail-reply:before,.fa-reply:before{content:\"\\F112\"}.fa-github-alt:before{content:\"\\F113\"}.fa-folder-o:before{content:\"\\F114\"}.fa-folder-open-o:before{content:\"\\F115\"}.fa-smile-o:before{content:\"\\F118\"}.fa-frown-o:before{content:\"\\F119\"}.fa-meh-o:before{content:\"\\F11A\"}.fa-gamepad:before{content:\"\\F11B\"}.fa-keyboard-o:before{content:\"\\F11C\"}.fa-flag-o:before{content:\"\\F11D\"}.fa-flag-checkered:before{content:\"\\F11E\"}.fa-terminal:before{content:\"\\F120\"}.fa-code:before{content:\"\\F121\"}.fa-mail-reply-all:before,.fa-reply-all:before{content:\"\\F122\"}.fa-star-half-empty:before,.fa-star-half-full:before,.fa-star-half-o:before{content:\"\\F123\"}.fa-location-arrow:before{content:\"\\F124\"}.fa-crop:before{content:\"\\F125\"}.fa-code-fork:before{content:\"\\F126\"}.fa-unlink:before,.fa-chain-broken:before{content:\"\\F127\"}.fa-question:before{content:\"\\F128\"}.fa-info:before{content:\"\\F129\"}.fa-exclamation:before{content:\"\\F12A\"}.fa-superscript:before{content:\"\\F12B\"}.fa-subscript:before{content:\"\\F12C\"}.fa-eraser:before{content:\"\\F12D\"}.fa-puzzle-piece:before{content:\"\\F12E\"}.fa-microphone:before{content:\"\\F130\"}.fa-microphone-slash:before{content:\"\\F131\"}.fa-shield:before{content:\"\\F132\"}.fa-calendar-o:before{content:\"\\F133\"}.fa-fire-extinguisher:before{content:\"\\F134\"}.fa-rocket:before{content:\"\\F135\"}.fa-maxcdn:before{content:\"\\F136\"}.fa-chevron-circle-left:before{content:\"\\F137\"}.fa-chevron-circle-right:before{content:\"\\F138\"}.fa-chevron-circle-up:before{content:\"\\F139\"}.fa-chevron-circle-down:before{content:\"\\F13A\"}.fa-html5:before{content:\"\\F13B\"}.fa-css3:before{content:\"\\F13C\"}.fa-anchor:before{content:\"\\F13D\"}.fa-unlock-alt:before{content:\"\\F13E\"}.fa-bullseye:before{content:\"\\F140\"}.fa-ellipsis-h:before{content:\"\\F141\"}.fa-ellipsis-v:before{content:\"\\F142\"}.fa-rss-square:before{content:\"\\F143\"}.fa-play-circle:before{content:\"\\F144\"}.fa-ticket:before{content:\"\\F145\"}.fa-minus-square:before{content:\"\\F146\"}.fa-minus-square-o:before{content:\"\\F147\"}.fa-level-up:before{content:\"\\F148\"}.fa-level-down:before{content:\"\\F149\"}.fa-check-square:before{content:\"\\F14A\"}.fa-pencil-square:before{content:\"\\F14B\"}.fa-external-link-square:before{content:\"\\F14C\"}.fa-share-square:before{content:\"\\F14D\"}.fa-compass:before{content:\"\\F14E\"}.fa-toggle-down:before,.fa-caret-square-o-down:before{content:\"\\F150\"}.fa-toggle-up:before,.fa-caret-square-o-up:before{content:\"\\F151\"}.fa-toggle-right:before,.fa-caret-square-o-right:before{content:\"\\F152\"}.fa-euro:before,.fa-eur:before{content:\"\\F153\"}.fa-gbp:before{content:\"\\F154\"}.fa-dollar:before,.fa-usd:before{content:\"\\F155\"}.fa-rupee:before,.fa-inr:before{content:\"\\F156\"}.fa-cny:before,.fa-rmb:before,.fa-yen:before,.fa-jpy:before{content:\"\\F157\"}.fa-ruble:before,.fa-rouble:before,.fa-rub:before{content:\"\\F158\"}.fa-won:before,.fa-krw:before{content:\"\\F159\"}.fa-bitcoin:before,.fa-btc:before{content:\"\\F15A\"}.fa-file:before{content:\"\\F15B\"}.fa-file-text:before{content:\"\\F15C\"}.fa-sort-alpha-asc:before{content:\"\\F15D\"}.fa-sort-alpha-desc:before{content:\"\\F15E\"}.fa-sort-amount-asc:before{content:\"\\F160\"}.fa-sort-amount-desc:before{content:\"\\F161\"}.fa-sort-numeric-asc:before{content:\"\\F162\"}.fa-sort-numeric-desc:before{content:\"\\F163\"}.fa-thumbs-up:before{content:\"\\F164\"}.fa-thumbs-down:before{content:\"\\F165\"}.fa-youtube-square:before{content:\"\\F166\"}.fa-youtube:before{content:\"\\F167\"}.fa-xing:before{content:\"\\F168\"}.fa-xing-square:before{content:\"\\F169\"}.fa-youtube-play:before{content:\"\\F16A\"}.fa-dropbox:before{content:\"\\F16B\"}.fa-stack-overflow:before{content:\"\\F16C\"}.fa-instagram:before{content:\"\\F16D\"}.fa-flickr:before{content:\"\\F16E\"}.fa-adn:before{content:\"\\F170\"}.fa-bitbucket:before{content:\"\\F171\"}.fa-bitbucket-square:before{content:\"\\F172\"}.fa-tumblr:before{content:\"\\F173\"}.fa-tumblr-square:before{content:\"\\F174\"}.fa-long-arrow-down:before{content:\"\\F175\"}.fa-long-arrow-up:before{content:\"\\F176\"}.fa-long-arrow-left:before{content:\"\\F177\"}.fa-long-arrow-right:before{content:\"\\F178\"}.fa-apple:before{content:\"\\F179\"}.fa-windows:before{content:\"\\F17A\"}.fa-android:before{content:\"\\F17B\"}.fa-linux:before{content:\"\\F17C\"}.fa-dribbble:before{content:\"\\F17D\"}.fa-skype:before{content:\"\\F17E\"}.fa-foursquare:before{content:\"\\F180\"}.fa-trello:before{content:\"\\F181\"}.fa-female:before{content:\"\\F182\"}.fa-male:before{content:\"\\F183\"}.fa-gittip:before,.fa-gratipay:before{content:\"\\F184\"}.fa-sun-o:before{content:\"\\F185\"}.fa-moon-o:before{content:\"\\F186\"}.fa-archive:before{content:\"\\F187\"}.fa-bug:before{content:\"\\F188\"}.fa-vk:before{content:\"\\F189\"}.fa-weibo:before{content:\"\\F18A\"}.fa-renren:before{content:\"\\F18B\"}.fa-pagelines:before{content:\"\\F18C\"}.fa-stack-exchange:before{content:\"\\F18D\"}.fa-arrow-circle-o-right:before{content:\"\\F18E\"}.fa-arrow-circle-o-left:before{content:\"\\F190\"}.fa-toggle-left:before,.fa-caret-square-o-left:before{content:\"\\F191\"}.fa-dot-circle-o:before{content:\"\\F192\"}.fa-wheelchair:before{content:\"\\F193\"}.fa-vimeo-square:before{content:\"\\F194\"}.fa-turkish-lira:before,.fa-try:before{content:\"\\F195\"}.fa-plus-square-o:before{content:\"\\F196\"}.fa-space-shuttle:before{content:\"\\F197\"}.fa-slack:before{content:\"\\F198\"}.fa-envelope-square:before{content:\"\\F199\"}.fa-wordpress:before{content:\"\\F19A\"}.fa-openid:before{content:\"\\F19B\"}.fa-institution:before,.fa-bank:before,.fa-university:before{content:\"\\F19C\"}.fa-mortar-board:before,.fa-graduation-cap:before{content:\"\\F19D\"}.fa-yahoo:before{content:\"\\F19E\"}.fa-google:before{content:\"\\F1A0\"}.fa-reddit:before{content:\"\\F1A1\"}.fa-reddit-square:before{content:\"\\F1A2\"}.fa-stumbleupon-circle:before{content:\"\\F1A3\"}.fa-stumbleupon:before{content:\"\\F1A4\"}.fa-delicious:before{content:\"\\F1A5\"}.fa-digg:before{content:\"\\F1A6\"}.fa-pied-piper-pp:before{content:\"\\F1A7\"}.fa-pied-piper-alt:before{content:\"\\F1A8\"}.fa-drupal:before{content:\"\\F1A9\"}.fa-joomla:before{content:\"\\F1AA\"}.fa-language:before{content:\"\\F1AB\"}.fa-fax:before{content:\"\\F1AC\"}.fa-building:before{content:\"\\F1AD\"}.fa-child:before{content:\"\\F1AE\"}.fa-paw:before{content:\"\\F1B0\"}.fa-spoon:before{content:\"\\F1B1\"}.fa-cube:before{content:\"\\F1B2\"}.fa-cubes:before{content:\"\\F1B3\"}.fa-behance:before{content:\"\\F1B4\"}.fa-behance-square:before{content:\"\\F1B5\"}.fa-steam:before{content:\"\\F1B6\"}.fa-steam-square:before{content:\"\\F1B7\"}.fa-recycle:before{content:\"\\F1B8\"}.fa-automobile:before,.fa-car:before{content:\"\\F1B9\"}.fa-cab:before,.fa-taxi:before{content:\"\\F1BA\"}.fa-tree:before{content:\"\\F1BB\"}.fa-spotify:before{content:\"\\F1BC\"}.fa-deviantart:before{content:\"\\F1BD\"}.fa-soundcloud:before{content:\"\\F1BE\"}.fa-database:before{content:\"\\F1C0\"}.fa-file-pdf-o:before{content:\"\\F1C1\"}.fa-file-word-o:before{content:\"\\F1C2\"}.fa-file-excel-o:before{content:\"\\F1C3\"}.fa-file-powerpoint-o:before{content:\"\\F1C4\"}.fa-file-photo-o:before,.fa-file-picture-o:before,.fa-file-image-o:before{content:\"\\F1C5\"}.fa-file-zip-o:before,.fa-file-archive-o:before{content:\"\\F1C6\"}.fa-file-sound-o:before,.fa-file-audio-o:before{content:\"\\F1C7\"}.fa-file-movie-o:before,.fa-file-video-o:before{content:\"\\F1C8\"}.fa-file-code-o:before{content:\"\\F1C9\"}.fa-vine:before{content:\"\\F1CA\"}.fa-codepen:before{content:\"\\F1CB\"}.fa-jsfiddle:before{content:\"\\F1CC\"}.fa-life-bouy:before,.fa-life-buoy:before,.fa-life-saver:before,.fa-support:before,.fa-life-ring:before{content:\"\\F1CD\"}.fa-circle-o-notch:before{content:\"\\F1CE\"}.fa-ra:before,.fa-resistance:before,.fa-rebel:before{content:\"\\F1D0\"}.fa-ge:before,.fa-empire:before{content:\"\\F1D1\"}.fa-git-square:before{content:\"\\F1D2\"}.fa-git:before{content:\"\\F1D3\"}.fa-y-combinator-square:before,.fa-yc-square:before,.fa-hacker-news:before{content:\"\\F1D4\"}.fa-tencent-weibo:before{content:\"\\F1D5\"}.fa-qq:before{content:\"\\F1D6\"}.fa-wechat:before,.fa-weixin:before{content:\"\\F1D7\"}.fa-send:before,.fa-paper-plane:before{content:\"\\F1D8\"}.fa-send-o:before,.fa-paper-plane-o:before{content:\"\\F1D9\"}.fa-history:before{content:\"\\F1DA\"}.fa-circle-thin:before{content:\"\\F1DB\"}.fa-header:before{content:\"\\F1DC\"}.fa-paragraph:before{content:\"\\F1DD\"}.fa-sliders:before{content:\"\\F1DE\"}.fa-share-alt:before{content:\"\\F1E0\"}.fa-share-alt-square:before{content:\"\\F1E1\"}.fa-bomb:before{content:\"\\F1E2\"}.fa-soccer-ball-o:before,.fa-futbol-o:before{content:\"\\F1E3\"}.fa-tty:before{content:\"\\F1E4\"}.fa-binoculars:before{content:\"\\F1E5\"}.fa-plug:before{content:\"\\F1E6\"}.fa-slideshare:before{content:\"\\F1E7\"}.fa-twitch:before{content:\"\\F1E8\"}.fa-yelp:before{content:\"\\F1E9\"}.fa-newspaper-o:before{content:\"\\F1EA\"}.fa-wifi:before{content:\"\\F1EB\"}.fa-calculator:before{content:\"\\F1EC\"}.fa-paypal:before{content:\"\\F1ED\"}.fa-google-wallet:before{content:\"\\F1EE\"}.fa-cc-visa:before{content:\"\\F1F0\"}.fa-cc-mastercard:before{content:\"\\F1F1\"}.fa-cc-discover:before{content:\"\\F1F2\"}.fa-cc-amex:before{content:\"\\F1F3\"}.fa-cc-paypal:before{content:\"\\F1F4\"}.fa-cc-stripe:before{content:\"\\F1F5\"}.fa-bell-slash:before{content:\"\\F1F6\"}.fa-bell-slash-o:before{content:\"\\F1F7\"}.fa-trash:before{content:\"\\F1F8\"}.fa-copyright:before{content:\"\\F1F9\"}.fa-at:before{content:\"\\F1FA\"}.fa-eyedropper:before{content:\"\\F1FB\"}.fa-paint-brush:before{content:\"\\F1FC\"}.fa-birthday-cake:before{content:\"\\F1FD\"}.fa-area-chart:before{content:\"\\F1FE\"}.fa-pie-chart:before{content:\"\\F200\"}.fa-line-chart:before{content:\"\\F201\"}.fa-lastfm:before{content:\"\\F202\"}.fa-lastfm-square:before{content:\"\\F203\"}.fa-toggle-off:before{content:\"\\F204\"}.fa-toggle-on:before{content:\"\\F205\"}.fa-bicycle:before{content:\"\\F206\"}.fa-bus:before{content:\"\\F207\"}.fa-ioxhost:before{content:\"\\F208\"}.fa-angellist:before{content:\"\\F209\"}.fa-cc:before{content:\"\\F20A\"}.fa-shekel:before,.fa-sheqel:before,.fa-ils:before{content:\"\\F20B\"}.fa-meanpath:before{content:\"\\F20C\"}.fa-buysellads:before{content:\"\\F20D\"}.fa-connectdevelop:before{content:\"\\F20E\"}.fa-dashcube:before{content:\"\\F210\"}.fa-forumbee:before{content:\"\\F211\"}.fa-leanpub:before{content:\"\\F212\"}.fa-sellsy:before{content:\"\\F213\"}.fa-shirtsinbulk:before{content:\"\\F214\"}.fa-simplybuilt:before{content:\"\\F215\"}.fa-skyatlas:before{content:\"\\F216\"}.fa-cart-plus:before{content:\"\\F217\"}.fa-cart-arrow-down:before{content:\"\\F218\"}.fa-diamond:before{content:\"\\F219\"}.fa-ship:before{content:\"\\F21A\"}.fa-user-secret:before{content:\"\\F21B\"}.fa-motorcycle:before{content:\"\\F21C\"}.fa-street-view:before{content:\"\\F21D\"}.fa-heartbeat:before{content:\"\\F21E\"}.fa-venus:before{content:\"\\F221\"}.fa-mars:before{content:\"\\F222\"}.fa-mercury:before{content:\"\\F223\"}.fa-intersex:before,.fa-transgender:before{content:\"\\F224\"}.fa-transgender-alt:before{content:\"\\F225\"}.fa-venus-double:before{content:\"\\F226\"}.fa-mars-double:before{content:\"\\F227\"}.fa-venus-mars:before{content:\"\\F228\"}.fa-mars-stroke:before{content:\"\\F229\"}.fa-mars-stroke-v:before{content:\"\\F22A\"}.fa-mars-stroke-h:before{content:\"\\F22B\"}.fa-neuter:before{content:\"\\F22C\"}.fa-genderless:before{content:\"\\F22D\"}.fa-facebook-official:before{content:\"\\F230\"}.fa-pinterest-p:before{content:\"\\F231\"}.fa-whatsapp:before{content:\"\\F232\"}.fa-server:before{content:\"\\F233\"}.fa-user-plus:before{content:\"\\F234\"}.fa-user-times:before{content:\"\\F235\"}.fa-hotel:before,.fa-bed:before{content:\"\\F236\"}.fa-viacoin:before{content:\"\\F237\"}.fa-train:before{content:\"\\F238\"}.fa-subway:before{content:\"\\F239\"}.fa-medium:before{content:\"\\F23A\"}.fa-yc:before,.fa-y-combinator:before{content:\"\\F23B\"}.fa-optin-monster:before{content:\"\\F23C\"}.fa-opencart:before{content:\"\\F23D\"}.fa-expeditedssl:before{content:\"\\F23E\"}.fa-battery-4:before,.fa-battery:before,.fa-battery-full:before{content:\"\\F240\"}.fa-battery-3:before,.fa-battery-three-quarters:before{content:\"\\F241\"}.fa-battery-2:before,.fa-battery-half:before{content:\"\\F242\"}.fa-battery-1:before,.fa-battery-quarter:before{content:\"\\F243\"}.fa-battery-0:before,.fa-battery-empty:before{content:\"\\F244\"}.fa-mouse-pointer:before{content:\"\\F245\"}.fa-i-cursor:before{content:\"\\F246\"}.fa-object-group:before{content:\"\\F247\"}.fa-object-ungroup:before{content:\"\\F248\"}.fa-sticky-note:before{content:\"\\F249\"}.fa-sticky-note-o:before{content:\"\\F24A\"}.fa-cc-jcb:before{content:\"\\F24B\"}.fa-cc-diners-club:before{content:\"\\F24C\"}.fa-clone:before{content:\"\\F24D\"}.fa-balance-scale:before{content:\"\\F24E\"}.fa-hourglass-o:before{content:\"\\F250\"}.fa-hourglass-1:before,.fa-hourglass-start:before{content:\"\\F251\"}.fa-hourglass-2:before,.fa-hourglass-half:before{content:\"\\F252\"}.fa-hourglass-3:before,.fa-hourglass-end:before{content:\"\\F253\"}.fa-hourglass:before{content:\"\\F254\"}.fa-hand-grab-o:before,.fa-hand-rock-o:before{content:\"\\F255\"}.fa-hand-stop-o:before,.fa-hand-paper-o:before{content:\"\\F256\"}.fa-hand-scissors-o:before{content:\"\\F257\"}.fa-hand-lizard-o:before{content:\"\\F258\"}.fa-hand-spock-o:before{content:\"\\F259\"}.fa-hand-pointer-o:before{content:\"\\F25A\"}.fa-hand-peace-o:before{content:\"\\F25B\"}.fa-trademark:before{content:\"\\F25C\"}.fa-registered:before{content:\"\\F25D\"}.fa-creative-commons:before{content:\"\\F25E\"}.fa-gg:before{content:\"\\F260\"}.fa-gg-circle:before{content:\"\\F261\"}.fa-tripadvisor:before{content:\"\\F262\"}.fa-odnoklassniki:before{content:\"\\F263\"}.fa-odnoklassniki-square:before{content:\"\\F264\"}.fa-get-pocket:before{content:\"\\F265\"}.fa-wikipedia-w:before{content:\"\\F266\"}.fa-safari:before{content:\"\\F267\"}.fa-chrome:before{content:\"\\F268\"}.fa-firefox:before{content:\"\\F269\"}.fa-opera:before{content:\"\\F26A\"}.fa-internet-explorer:before{content:\"\\F26B\"}.fa-tv:before,.fa-television:before{content:\"\\F26C\"}.fa-contao:before{content:\"\\F26D\"}.fa-500px:before{content:\"\\F26E\"}.fa-amazon:before{content:\"\\F270\"}.fa-calendar-plus-o:before{content:\"\\F271\"}.fa-calendar-minus-o:before{content:\"\\F272\"}.fa-calendar-times-o:before{content:\"\\F273\"}.fa-calendar-check-o:before{content:\"\\F274\"}.fa-industry:before{content:\"\\F275\"}.fa-map-pin:before{content:\"\\F276\"}.fa-map-signs:before{content:\"\\F277\"}.fa-map-o:before{content:\"\\F278\"}.fa-map:before{content:\"\\F279\"}.fa-commenting:before{content:\"\\F27A\"}.fa-commenting-o:before{content:\"\\F27B\"}.fa-houzz:before{content:\"\\F27C\"}.fa-vimeo:before{content:\"\\F27D\"}.fa-black-tie:before{content:\"\\F27E\"}.fa-fonticons:before{content:\"\\F280\"}.fa-reddit-alien:before{content:\"\\F281\"}.fa-edge:before{content:\"\\F282\"}.fa-credit-card-alt:before{content:\"\\F283\"}.fa-codiepie:before{content:\"\\F284\"}.fa-modx:before{content:\"\\F285\"}.fa-fort-awesome:before{content:\"\\F286\"}.fa-usb:before{content:\"\\F287\"}.fa-product-hunt:before{content:\"\\F288\"}.fa-mixcloud:before{content:\"\\F289\"}.fa-scribd:before{content:\"\\F28A\"}.fa-pause-circle:before{content:\"\\F28B\"}.fa-pause-circle-o:before{content:\"\\F28C\"}.fa-stop-circle:before{content:\"\\F28D\"}.fa-stop-circle-o:before{content:\"\\F28E\"}.fa-shopping-bag:before{content:\"\\F290\"}.fa-shopping-basket:before{content:\"\\F291\"}.fa-hashtag:before{content:\"\\F292\"}.fa-bluetooth:before{content:\"\\F293\"}.fa-bluetooth-b:before{content:\"\\F294\"}.fa-percent:before{content:\"\\F295\"}.fa-gitlab:before{content:\"\\F296\"}.fa-wpbeginner:before{content:\"\\F297\"}.fa-wpforms:before{content:\"\\F298\"}.fa-envira:before{content:\"\\F299\"}.fa-universal-access:before{content:\"\\F29A\"}.fa-wheelchair-alt:before{content:\"\\F29B\"}.fa-question-circle-o:before{content:\"\\F29C\"}.fa-blind:before{content:\"\\F29D\"}.fa-audio-description:before{content:\"\\F29E\"}.fa-volume-control-phone:before{content:\"\\F2A0\"}.fa-braille:before{content:\"\\F2A1\"}.fa-assistive-listening-systems:before{content:\"\\F2A2\"}.fa-asl-interpreting:before,.fa-american-sign-language-interpreting:before{content:\"\\F2A3\"}.fa-deafness:before,.fa-hard-of-hearing:before,.fa-deaf:before{content:\"\\F2A4\"}.fa-glide:before{content:\"\\F2A5\"}.fa-glide-g:before{content:\"\\F2A6\"}.fa-signing:before,.fa-sign-language:before{content:\"\\F2A7\"}.fa-low-vision:before{content:\"\\F2A8\"}.fa-viadeo:before{content:\"\\F2A9\"}.fa-viadeo-square:before{content:\"\\F2AA\"}.fa-snapchat:before{content:\"\\F2AB\"}.fa-snapchat-ghost:before{content:\"\\F2AC\"}.fa-snapchat-square:before{content:\"\\F2AD\"}.fa-pied-piper:before{content:\"\\F2AE\"}.fa-first-order:before{content:\"\\F2B0\"}.fa-yoast:before{content:\"\\F2B1\"}.fa-themeisle:before{content:\"\\F2B2\"}.fa-google-plus-circle:before,.fa-google-plus-official:before{content:\"\\F2B3\"}.fa-fa:before,.fa-font-awesome:before{content:\"\\F2B4\"}.fa-handshake-o:before{content:\"\\F2B5\"}.fa-envelope-open:before{content:\"\\F2B6\"}.fa-envelope-open-o:before{content:\"\\F2B7\"}.fa-linode:before{content:\"\\F2B8\"}.fa-address-book:before{content:\"\\F2B9\"}.fa-address-book-o:before{content:\"\\F2BA\"}.fa-vcard:before,.fa-address-card:before{content:\"\\F2BB\"}.fa-vcard-o:before,.fa-address-card-o:before{content:\"\\F2BC\"}.fa-user-circle:before{content:\"\\F2BD\"}.fa-user-circle-o:before{content:\"\\F2BE\"}.fa-user-o:before{content:\"\\F2C0\"}.fa-id-badge:before{content:\"\\F2C1\"}.fa-drivers-license:before,.fa-id-card:before{content:\"\\F2C2\"}.fa-drivers-license-o:before,.fa-id-card-o:before{content:\"\\F2C3\"}.fa-quora:before{content:\"\\F2C4\"}.fa-free-code-camp:before{content:\"\\F2C5\"}.fa-telegram:before{content:\"\\F2C6\"}.fa-thermometer-4:before,.fa-thermometer:before,.fa-thermometer-full:before{content:\"\\F2C7\"}.fa-thermometer-3:before,.fa-thermometer-three-quarters:before{content:\"\\F2C8\"}.fa-thermometer-2:before,.fa-thermometer-half:before{content:\"\\F2C9\"}.fa-thermometer-1:before,.fa-thermometer-quarter:before{content:\"\\F2CA\"}.fa-thermometer-0:before,.fa-thermometer-empty:before{content:\"\\F2CB\"}.fa-shower:before{content:\"\\F2CC\"}.fa-bathtub:before,.fa-s15:before,.fa-bath:before{content:\"\\F2CD\"}.fa-podcast:before{content:\"\\F2CE\"}.fa-window-maximize:before{content:\"\\F2D0\"}.fa-window-minimize:before{content:\"\\F2D1\"}.fa-window-restore:before{content:\"\\F2D2\"}.fa-times-rectangle:before,.fa-window-close:before{content:\"\\F2D3\"}.fa-times-rectangle-o:before,.fa-window-close-o:before{content:\"\\F2D4\"}.fa-bandcamp:before{content:\"\\F2D5\"}.fa-grav:before{content:\"\\F2D6\"}.fa-etsy:before{content:\"\\F2D7\"}.fa-imdb:before{content:\"\\F2D8\"}.fa-ravelry:before{content:\"\\F2D9\"}.fa-eercast:before{content:\"\\F2DA\"}.fa-microchip:before{content:\"\\F2DB\"}.fa-snowflake-o:before{content:\"\\F2DC\"}.fa-superpowers:before{content:\"\\F2DD\"}.fa-wpexplorer:before{content:\"\\F2DE\"}.fa-meetup:before{content:\"\\F2E0\"}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}", ""]);
+
+// exports
+
+
+/***/ },
+/* 7 */
+/***/ function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+exports.i(__webpack_require__(6), "");
+
+// module
+exports.push([module.i, "@font-face {\n  font-family: 'Artifakt Element';\n  src:  url(" + __webpack_require__(14) + ") format('eot'),\n        url(" + __webpack_require__(15) + ") format('ttf'),\n        url(" + __webpack_require__(16) + ") format('woff'),\n        url(" + __webpack_require__(17) + ") format('woff2');\n}\n@font-face {\n  font-family: 'Artifakt Legend';\n  src:  url(" + __webpack_require__(18) + ") format('eot'),\n        url(" + __webpack_require__(19) + ") format('ttf'),\n        url(" + __webpack_require__(20) + ") format('woff'),\n        url(" + __webpack_require__(21) + ") format('woff2');\n}\nbody {\n    font-family: \"Artifakt Element\", fallback, sans-serif;\n}\na {\n  text-decoration: none;\n  color: black;\n}\na:hover {\n    color: #EE8822;\n}\nul {\n    list-style-type: none;\n    margin: 0;\n    padding: 0;\n    overflow: hidden;\n    background-color: #fff;\n}\nli {\n    float: left;\n}\nli a {\n    display: block;\n    color: black;\n    text-align: center;\n    padding: 24px 16px;\n    text-decoration: none;\n}\n\nli a:hover {\n    background-color: #D17920;\n    color: white;\n}", ""]);
+
+// exports
+
+
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "b67134b4df53afdfcd5565f5bb031c9f.svg";
+
+/***/ },
+/* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "674f50d287a8c48dc19ba404d20fe713.eot";
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "674f50d287a8c48dc19ba404d20fe713.eot";
+
+/***/ },
+/* 11 */
+/***/ function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "b06871f281fee6b241d60582ae9369b9.ttf";
+
+/***/ },
+/* 12 */
+/***/ function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "af7ae505a9eed503f8b8e6982036873e.woff2";
+
+/***/ },
+/* 13 */
+/***/ function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "fee66e712a8a08eef5805a46892932ad.woff";
+
+/***/ },
+/* 14 */
+/***/ function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "b55ce0300eb05115229e39fd1efbd249.eot";
+
+/***/ },
+/* 15 */
+/***/ function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "987567cc24dd1d57a195aa5f883b9b6c.ttf";
+
+/***/ },
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "5df10b32745d362e4c96bf4495aa0506.woff";
+
+/***/ },
+/* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "b0c983bbda990a72e5d84ffc5ed4cd85.woff2";
+
+/***/ },
+/* 18 */
+/***/ function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "081c9df7e40389dd9d8ff2b4bd4f74a0.eot";
+
+/***/ },
+/* 19 */
+/***/ function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "d41a989609413d1591f33a88383e87ff.ttf";
+
+/***/ },
+/* 20 */
+/***/ function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "f50fe0e10a846115dea27179ae287eec.woff";
+
+/***/ },
+/* 21 */
+/***/ function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "4adbc570eca5a2c295c8318589f42bd1.woff2";
+
+/***/ },
+/* 22 */
+/***/ function(module, exports) {
+
+module.exports = [
+	{
+		"id": 21898898,
+		"name": "forge.commandline-curl",
+		"full_name": "Autodesk-Forge/forge.commandline-curl",
+		"owner": {
+			"login": "Autodesk-Forge",
+			"id": 16883010,
+			"avatar_url": "https://avatars.githubusercontent.com/u/16883010?v=3",
+			"gravatar_id": "",
+			"url": "https://api.github.com/users/Autodesk-Forge",
+			"html_url": "https://github.com/Autodesk-Forge",
+			"followers_url": "https://api.github.com/users/Autodesk-Forge/followers",
+			"following_url": "https://api.github.com/users/Autodesk-Forge/following{/other_user}",
+			"gists_url": "https://api.github.com/users/Autodesk-Forge/gists{/gist_id}",
+			"starred_url": "https://api.github.com/users/Autodesk-Forge/starred{/owner}{/repo}",
+			"subscriptions_url": "https://api.github.com/users/Autodesk-Forge/subscriptions",
+			"organizations_url": "https://api.github.com/users/Autodesk-Forge/orgs",
+			"repos_url": "https://api.github.com/users/Autodesk-Forge/repos",
+			"events_url": "https://api.github.com/users/Autodesk-Forge/events{/privacy}",
+			"received_events_url": "https://api.github.com/users/Autodesk-Forge/received_events",
+			"type": "Organization",
+			"site_admin": false
+		},
+		"private": false,
+		"html_url": "https://github.com/Autodesk-Forge/forge.commandline-curl",
+		"description": "curl commands demonstrating the Forge OAuth authorisation and Model Derivatives API ",
+		"fork": false,
+		"url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl",
+		"forks_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/forks",
+		"keys_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/keys{/key_id}",
+		"collaborators_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/collaborators{/collaborator}",
+		"teams_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/teams",
+		"hooks_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/hooks",
+		"issue_events_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/issues/events{/number}",
+		"events_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/events",
+		"assignees_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/assignees{/user}",
+		"branches_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/branches{/branch}",
+		"tags_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/tags",
+		"blobs_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/git/blobs{/sha}",
+		"git_tags_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/git/tags{/sha}",
+		"git_refs_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/git/refs{/sha}",
+		"trees_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/git/trees{/sha}",
+		"statuses_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/statuses/{sha}",
+		"languages_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/languages",
+		"stargazers_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/stargazers",
+		"contributors_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/contributors",
+		"subscribers_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/subscribers",
+		"subscription_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/subscription",
+		"commits_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/commits{/sha}",
+		"git_commits_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/git/commits{/sha}",
+		"comments_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/comments{/number}",
+		"issue_comment_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/issues/comments{/number}",
+		"contents_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/contents/{+path}",
+		"compare_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/compare/{base}...{head}",
+		"merges_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/merges",
+		"archive_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/{archive_format}{/ref}",
+		"downloads_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/downloads",
+		"issues_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/issues{/number}",
+		"pulls_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/pulls{/number}",
+		"milestones_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/milestones{/number}",
+		"notifications_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/notifications{?since,all,participating}",
+		"labels_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/labels{/name}",
+		"releases_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/releases{/id}",
+		"deployments_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-curl/deployments",
+		"created_at": "2014-07-16T11:58:57Z",
+		"updated_at": "2016-10-07T05:34:44Z",
+		"pushed_at": "2016-09-01T13:08:05Z",
+		"git_url": "git://github.com/Autodesk-Forge/forge.commandline-curl.git",
+		"ssh_url": "git@github.com:Autodesk-Forge/forge.commandline-curl.git",
+		"clone_url": "https://github.com/Autodesk-Forge/forge.commandline-curl.git",
+		"svn_url": "https://github.com/Autodesk-Forge/forge.commandline-curl",
+		"homepage": "http://developer-autodesk.github.io/",
+		"size": 111,
+		"stargazers_count": 6,
+		"watchers_count": 6,
+		"language": "Shell",
+		"has_issues": true,
+		"has_downloads": true,
+		"has_wiki": true,
+		"has_pages": false,
+		"forks_count": 2,
+		"mirror_url": null,
+		"open_issues_count": 0,
+		"forks": 2,
+		"open_issues": 0,
+		"watchers": 6,
+		"default_branch": "master",
+		"permissions": {
+			"admin": false,
+			"push": false,
+			"pull": true
+		}
+	},
+	{
+		"id": 21914619,
+		"name": "viewer-steampunked-morgan",
+		"full_name": "Autodesk-Forge/viewer-steampunked-morgan",
+		"owner": {
+			"login": "Autodesk-Forge",
+			"id": 16883010,
+			"avatar_url": "https://avatars.githubusercontent.com/u/16883010?v=3",
+			"gravatar_id": "",
+			"url": "https://api.github.com/users/Autodesk-Forge",
+			"html_url": "https://github.com/Autodesk-Forge",
+			"followers_url": "https://api.github.com/users/Autodesk-Forge/followers",
+			"following_url": "https://api.github.com/users/Autodesk-Forge/following{/other_user}",
+			"gists_url": "https://api.github.com/users/Autodesk-Forge/gists{/gist_id}",
+			"starred_url": "https://api.github.com/users/Autodesk-Forge/starred{/owner}{/repo}",
+			"subscriptions_url": "https://api.github.com/users/Autodesk-Forge/subscriptions",
+			"organizations_url": "https://api.github.com/users/Autodesk-Forge/orgs",
+			"repos_url": "https://api.github.com/users/Autodesk-Forge/repos",
+			"events_url": "https://api.github.com/users/Autodesk-Forge/events{/privacy}",
+			"received_events_url": "https://api.github.com/users/Autodesk-Forge/received_events",
+			"type": "Organization",
+			"site_admin": false
+		},
+		"private": false,
+		"html_url": "https://github.com/Autodesk-Forge/viewer-steampunked-morgan",
+		"description": "A Node.js server using the Forge Viewer to display the Morgan 3 Wheeler",
+		"fork": false,
+		"url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan",
+		"forks_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/forks",
+		"keys_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/keys{/key_id}",
+		"collaborators_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/collaborators{/collaborator}",
+		"teams_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/teams",
+		"hooks_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/hooks",
+		"issue_events_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/issues/events{/number}",
+		"events_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/events",
+		"assignees_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/assignees{/user}",
+		"branches_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/branches{/branch}",
+		"tags_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/tags",
+		"blobs_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/git/blobs{/sha}",
+		"git_tags_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/git/tags{/sha}",
+		"git_refs_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/git/refs{/sha}",
+		"trees_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/git/trees{/sha}",
+		"statuses_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/statuses/{sha}",
+		"languages_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/languages",
+		"stargazers_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/stargazers",
+		"contributors_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/contributors",
+		"subscribers_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/subscribers",
+		"subscription_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/subscription",
+		"commits_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/commits{/sha}",
+		"git_commits_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/git/commits{/sha}",
+		"comments_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/comments{/number}",
+		"issue_comment_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/issues/comments{/number}",
+		"contents_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/contents/{+path}",
+		"compare_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/compare/{base}...{head}",
+		"merges_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/merges",
+		"archive_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/{archive_format}{/ref}",
+		"downloads_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/downloads",
+		"issues_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/issues{/number}",
+		"pulls_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/pulls{/number}",
+		"milestones_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/milestones{/number}",
+		"notifications_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/notifications{?since,all,participating}",
+		"labels_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/labels{/name}",
+		"releases_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/releases{/id}",
+		"deployments_url": "https://api.github.com/repos/Autodesk-Forge/viewer-steampunked-morgan/deployments",
+		"created_at": "2014-07-16T19:44:54Z",
+		"updated_at": "2016-10-07T05:35:03Z",
+		"pushed_at": "2016-06-09T06:45:26Z",
+		"git_url": "git://github.com/Autodesk-Forge/viewer-steampunked-morgan.git",
+		"ssh_url": "git@github.com:Autodesk-Forge/viewer-steampunked-morgan.git",
+		"clone_url": "https://github.com/Autodesk-Forge/viewer-steampunked-morgan.git",
+		"svn_url": "https://github.com/Autodesk-Forge/viewer-steampunked-morgan",
+		"homepage": "http://autode.sk/m3w",
+		"size": 2528,
+		"stargazers_count": 4,
+		"watchers_count": 4,
+		"language": "JavaScript",
+		"has_issues": true,
+		"has_downloads": true,
+		"has_wiki": true,
+		"has_pages": false,
+		"forks_count": 2,
+		"mirror_url": null,
+		"open_issues_count": 1,
+		"forks": 2,
+		"open_issues": 1,
+		"watchers": 4,
+		"default_branch": "master",
+		"permissions": {
+			"admin": false,
+			"push": false,
+			"pull": true
+		}
+	},
+	{
+		"id": 29182409,
+		"name": "viewer-android-sample",
+		"full_name": "Autodesk-Forge/viewer-android-sample",
+		"owner": {
+			"login": "Autodesk-Forge",
+			"id": 16883010,
+			"avatar_url": "https://avatars.githubusercontent.com/u/16883010?v=3",
+			"gravatar_id": "",
+			"url": "https://api.github.com/users/Autodesk-Forge",
+			"html_url": "https://github.com/Autodesk-Forge",
+			"followers_url": "https://api.github.com/users/Autodesk-Forge/followers",
+			"following_url": "https://api.github.com/users/Autodesk-Forge/following{/other_user}",
+			"gists_url": "https://api.github.com/users/Autodesk-Forge/gists{/gist_id}",
+			"starred_url": "https://api.github.com/users/Autodesk-Forge/starred{/owner}{/repo}",
+			"subscriptions_url": "https://api.github.com/users/Autodesk-Forge/subscriptions",
+			"organizations_url": "https://api.github.com/users/Autodesk-Forge/orgs",
+			"repos_url": "https://api.github.com/users/Autodesk-Forge/repos",
+			"events_url": "https://api.github.com/users/Autodesk-Forge/events{/privacy}",
+			"received_events_url": "https://api.github.com/users/Autodesk-Forge/received_events",
+			"type": "Organization",
+			"site_admin": false
+		},
+		"private": false,
+		"html_url": "https://github.com/Autodesk-Forge/viewer-android-sample",
+		"description": "An Andoid sample demonstrating the Forge OAuth authorisation and Model Derivatives API",
+		"fork": false,
+		"url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample",
+		"forks_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/forks",
+		"keys_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/keys{/key_id}",
+		"collaborators_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/collaborators{/collaborator}",
+		"teams_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/teams",
+		"hooks_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/hooks",
+		"issue_events_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/issues/events{/number}",
+		"events_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/events",
+		"assignees_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/assignees{/user}",
+		"branches_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/branches{/branch}",
+		"tags_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/tags",
+		"blobs_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/git/blobs{/sha}",
+		"git_tags_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/git/tags{/sha}",
+		"git_refs_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/git/refs{/sha}",
+		"trees_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/git/trees{/sha}",
+		"statuses_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/statuses/{sha}",
+		"languages_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/languages",
+		"stargazers_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/stargazers",
+		"contributors_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/contributors",
+		"subscribers_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/subscribers",
+		"subscription_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/subscription",
+		"commits_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/commits{/sha}",
+		"git_commits_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/git/commits{/sha}",
+		"comments_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/comments{/number}",
+		"issue_comment_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/issues/comments{/number}",
+		"contents_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/contents/{+path}",
+		"compare_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/compare/{base}...{head}",
+		"merges_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/merges",
+		"archive_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/{archive_format}{/ref}",
+		"downloads_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/downloads",
+		"issues_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/issues{/number}",
+		"pulls_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/pulls{/number}",
+		"milestones_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/milestones{/number}",
+		"notifications_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/notifications{?since,all,participating}",
+		"labels_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/labels{/name}",
+		"releases_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/releases{/id}",
+		"deployments_url": "https://api.github.com/repos/Autodesk-Forge/viewer-android-sample/deployments",
+		"created_at": "2015-01-13T09:22:00Z",
+		"updated_at": "2016-11-11T08:49:45Z",
+		"pushed_at": "2016-06-07T13:01:58Z",
+		"git_url": "git://github.com/Autodesk-Forge/viewer-android-sample.git",
+		"ssh_url": "git@github.com:Autodesk-Forge/viewer-android-sample.git",
+		"clone_url": "https://github.com/Autodesk-Forge/viewer-android-sample.git",
+		"svn_url": "https://github.com/Autodesk-Forge/viewer-android-sample",
+		"homepage": "http://developer-autodesk.github.io/",
+		"size": 3285,
+		"stargazers_count": 6,
+		"watchers_count": 6,
+		"language": "Java",
+		"has_issues": true,
+		"has_downloads": true,
+		"has_wiki": true,
+		"has_pages": false,
+		"forks_count": 1,
+		"mirror_url": null,
+		"open_issues_count": 0,
+		"forks": 1,
+		"open_issues": 0,
+		"watchers": 6,
+		"default_branch": "master",
+		"permissions": {
+			"admin": false,
+			"push": false,
+			"pull": true
+		}
+	},
+	{
+		"id": 64939693,
+		"name": "forge.oauth2-js",
+		"full_name": "Autodesk-Forge/forge.oauth2-js",
+		"owner": {
+			"login": "Autodesk-Forge",
+			"id": 16883010,
+			"avatar_url": "https://avatars.githubusercontent.com/u/16883010?v=3",
+			"gravatar_id": "",
+			"url": "https://api.github.com/users/Autodesk-Forge",
+			"html_url": "https://github.com/Autodesk-Forge",
+			"followers_url": "https://api.github.com/users/Autodesk-Forge/followers",
+			"following_url": "https://api.github.com/users/Autodesk-Forge/following{/other_user}",
+			"gists_url": "https://api.github.com/users/Autodesk-Forge/gists{/gist_id}",
+			"starred_url": "https://api.github.com/users/Autodesk-Forge/starred{/owner}{/repo}",
+			"subscriptions_url": "https://api.github.com/users/Autodesk-Forge/subscriptions",
+			"organizations_url": "https://api.github.com/users/Autodesk-Forge/orgs",
+			"repos_url": "https://api.github.com/users/Autodesk-Forge/repos",
+			"events_url": "https://api.github.com/users/Autodesk-Forge/events{/privacy}",
+			"received_events_url": "https://api.github.com/users/Autodesk-Forge/received_events",
+			"type": "Organization",
+			"site_admin": false
+		},
+		"private": false,
+		"html_url": "https://github.com/Autodesk-Forge/forge.oauth2-js",
+		"description": "Asynchronous Node.js library for the Autodesk Forge oAuth2 implementation",
+		"fork": false,
+		"url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js",
+		"forks_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/forks",
+		"keys_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/keys{/key_id}",
+		"collaborators_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/collaborators{/collaborator}",
+		"teams_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/teams",
+		"hooks_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/hooks",
+		"issue_events_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/issues/events{/number}",
+		"events_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/events",
+		"assignees_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/assignees{/user}",
+		"branches_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/branches{/branch}",
+		"tags_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/tags",
+		"blobs_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/git/blobs{/sha}",
+		"git_tags_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/git/tags{/sha}",
+		"git_refs_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/git/refs{/sha}",
+		"trees_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/git/trees{/sha}",
+		"statuses_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/statuses/{sha}",
+		"languages_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/languages",
+		"stargazers_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/stargazers",
+		"contributors_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/contributors",
+		"subscribers_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/subscribers",
+		"subscription_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/subscription",
+		"commits_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/commits{/sha}",
+		"git_commits_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/git/commits{/sha}",
+		"comments_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/comments{/number}",
+		"issue_comment_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/issues/comments{/number}",
+		"contents_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/contents/{+path}",
+		"compare_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/compare/{base}...{head}",
+		"merges_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/merges",
+		"archive_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/{archive_format}{/ref}",
+		"downloads_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/downloads",
+		"issues_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/issues{/number}",
+		"pulls_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/pulls{/number}",
+		"milestones_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/milestones{/number}",
+		"notifications_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/notifications{?since,all,participating}",
+		"labels_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/labels{/name}",
+		"releases_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/releases{/id}",
+		"deployments_url": "https://api.github.com/repos/Autodesk-Forge/forge.oauth2-js/deployments",
+		"created_at": "2016-08-04T14:05:24Z",
+		"updated_at": "2016-08-04T14:07:26Z",
+		"pushed_at": "2016-09-01T10:23:50Z",
+		"git_url": "git://github.com/Autodesk-Forge/forge.oauth2-js.git",
+		"ssh_url": "git@github.com:Autodesk-Forge/forge.oauth2-js.git",
+		"clone_url": "https://github.com/Autodesk-Forge/forge.oauth2-js.git",
+		"svn_url": "https://github.com/Autodesk-Forge/forge.oauth2-js",
+		"homepage": null,
+		"size": 35,
+		"stargazers_count": 0,
+		"watchers_count": 0,
+		"language": "JavaScript",
+		"has_issues": true,
+		"has_downloads": true,
+		"has_wiki": true,
+		"has_pages": false,
+		"forks_count": 0,
+		"mirror_url": null,
+		"open_issues_count": 0,
+		"forks": 0,
+		"open_issues": 0,
+		"watchers": 0,
+		"default_branch": "master",
+		"permissions": {
+			"admin": false,
+			"push": false,
+			"pull": true
+		}
+	},
+	{
+		"id": 64940145,
+		"name": "forge.oss-js",
+		"full_name": "Autodesk-Forge/forge.oss-js",
+		"owner": {
+			"login": "Autodesk-Forge",
+			"id": 16883010,
+			"avatar_url": "https://avatars.githubusercontent.com/u/16883010?v=3",
+			"gravatar_id": "",
+			"url": "https://api.github.com/users/Autodesk-Forge",
+			"html_url": "https://github.com/Autodesk-Forge",
+			"followers_url": "https://api.github.com/users/Autodesk-Forge/followers",
+			"following_url": "https://api.github.com/users/Autodesk-Forge/following{/other_user}",
+			"gists_url": "https://api.github.com/users/Autodesk-Forge/gists{/gist_id}",
+			"starred_url": "https://api.github.com/users/Autodesk-Forge/starred{/owner}{/repo}",
+			"subscriptions_url": "https://api.github.com/users/Autodesk-Forge/subscriptions",
+			"organizations_url": "https://api.github.com/users/Autodesk-Forge/orgs",
+			"repos_url": "https://api.github.com/users/Autodesk-Forge/repos",
+			"events_url": "https://api.github.com/users/Autodesk-Forge/events{/privacy}",
+			"received_events_url": "https://api.github.com/users/Autodesk-Forge/received_events",
+			"type": "Organization",
+			"site_admin": false
+		},
+		"private": false,
+		"html_url": "https://github.com/Autodesk-Forge/forge.oss-js",
+		"description": "Asynchronous Javascript/Node.js library for the Autodesk Forge OSS API",
+		"fork": false,
+		"url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js",
+		"forks_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/forks",
+		"keys_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/keys{/key_id}",
+		"collaborators_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/collaborators{/collaborator}",
+		"teams_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/teams",
+		"hooks_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/hooks",
+		"issue_events_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/issues/events{/number}",
+		"events_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/events",
+		"assignees_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/assignees{/user}",
+		"branches_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/branches{/branch}",
+		"tags_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/tags",
+		"blobs_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/git/blobs{/sha}",
+		"git_tags_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/git/tags{/sha}",
+		"git_refs_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/git/refs{/sha}",
+		"trees_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/git/trees{/sha}",
+		"statuses_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/statuses/{sha}",
+		"languages_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/languages",
+		"stargazers_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/stargazers",
+		"contributors_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/contributors",
+		"subscribers_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/subscribers",
+		"subscription_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/subscription",
+		"commits_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/commits{/sha}",
+		"git_commits_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/git/commits{/sha}",
+		"comments_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/comments{/number}",
+		"issue_comment_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/issues/comments{/number}",
+		"contents_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/contents/{+path}",
+		"compare_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/compare/{base}...{head}",
+		"merges_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/merges",
+		"archive_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/{archive_format}{/ref}",
+		"downloads_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/downloads",
+		"issues_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/issues{/number}",
+		"pulls_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/pulls{/number}",
+		"milestones_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/milestones{/number}",
+		"notifications_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/notifications{?since,all,participating}",
+		"labels_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/labels{/name}",
+		"releases_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/releases{/id}",
+		"deployments_url": "https://api.github.com/repos/Autodesk-Forge/forge.oss-js/deployments",
+		"created_at": "2016-08-04T14:11:23Z",
+		"updated_at": "2016-09-23T20:51:26Z",
+		"pushed_at": "2016-09-01T10:24:28Z",
+		"git_url": "git://github.com/Autodesk-Forge/forge.oss-js.git",
+		"ssh_url": "git@github.com:Autodesk-Forge/forge.oss-js.git",
+		"clone_url": "https://github.com/Autodesk-Forge/forge.oss-js.git",
+		"svn_url": "https://github.com/Autodesk-Forge/forge.oss-js",
+		"homepage": null,
+		"size": 63,
+		"stargazers_count": 1,
+		"watchers_count": 1,
+		"language": "JavaScript",
+		"has_issues": true,
+		"has_downloads": true,
+		"has_wiki": true,
+		"has_pages": false,
+		"forks_count": 0,
+		"mirror_url": null,
+		"open_issues_count": 1,
+		"forks": 0,
+		"open_issues": 1,
+		"watchers": 1,
+		"default_branch": "master",
+		"permissions": {
+			"admin": false,
+			"push": false,
+			"pull": true
+		}
+	},
+	{
+		"id": 64940256,
+		"name": "forge.data.management-js",
+		"full_name": "Autodesk-Forge/forge.data.management-js",
+		"owner": {
+			"login": "Autodesk-Forge",
+			"id": 16883010,
+			"avatar_url": "https://avatars.githubusercontent.com/u/16883010?v=3",
+			"gravatar_id": "",
+			"url": "https://api.github.com/users/Autodesk-Forge",
+			"html_url": "https://github.com/Autodesk-Forge",
+			"followers_url": "https://api.github.com/users/Autodesk-Forge/followers",
+			"following_url": "https://api.github.com/users/Autodesk-Forge/following{/other_user}",
+			"gists_url": "https://api.github.com/users/Autodesk-Forge/gists{/gist_id}",
+			"starred_url": "https://api.github.com/users/Autodesk-Forge/starred{/owner}{/repo}",
+			"subscriptions_url": "https://api.github.com/users/Autodesk-Forge/subscriptions",
+			"organizations_url": "https://api.github.com/users/Autodesk-Forge/orgs",
+			"repos_url": "https://api.github.com/users/Autodesk-Forge/repos",
+			"events_url": "https://api.github.com/users/Autodesk-Forge/events{/privacy}",
+			"received_events_url": "https://api.github.com/users/Autodesk-Forge/received_events",
+			"type": "Organization",
+			"site_admin": false
+		},
+		"private": false,
+		"html_url": "https://github.com/Autodesk-Forge/forge.data.management-js",
+		"description": "Asynchronous Javascript/Node.js library for the Autodesk Forge Data Management API",
+		"fork": false,
+		"url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js",
+		"forks_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/forks",
+		"keys_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/keys{/key_id}",
+		"collaborators_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/collaborators{/collaborator}",
+		"teams_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/teams",
+		"hooks_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/hooks",
+		"issue_events_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/issues/events{/number}",
+		"events_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/events",
+		"assignees_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/assignees{/user}",
+		"branches_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/branches{/branch}",
+		"tags_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/tags",
+		"blobs_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/git/blobs{/sha}",
+		"git_tags_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/git/tags{/sha}",
+		"git_refs_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/git/refs{/sha}",
+		"trees_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/git/trees{/sha}",
+		"statuses_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/statuses/{sha}",
+		"languages_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/languages",
+		"stargazers_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/stargazers",
+		"contributors_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/contributors",
+		"subscribers_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/subscribers",
+		"subscription_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/subscription",
+		"commits_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/commits{/sha}",
+		"git_commits_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/git/commits{/sha}",
+		"comments_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/comments{/number}",
+		"issue_comment_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/issues/comments{/number}",
+		"contents_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/contents/{+path}",
+		"compare_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/compare/{base}...{head}",
+		"merges_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/merges",
+		"archive_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/{archive_format}{/ref}",
+		"downloads_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/downloads",
+		"issues_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/issues{/number}",
+		"pulls_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/pulls{/number}",
+		"milestones_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/milestones{/number}",
+		"notifications_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/notifications{?since,all,participating}",
+		"labels_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/labels{/name}",
+		"releases_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/releases{/id}",
+		"deployments_url": "https://api.github.com/repos/Autodesk-Forge/forge.data.management-js/deployments",
+		"created_at": "2016-08-04T14:13:09Z",
+		"updated_at": "2016-10-20T09:00:10Z",
+		"pushed_at": "2016-09-01T10:25:39Z",
+		"git_url": "git://github.com/Autodesk-Forge/forge.data.management-js.git",
+		"ssh_url": "git@github.com:Autodesk-Forge/forge.data.management-js.git",
+		"clone_url": "https://github.com/Autodesk-Forge/forge.data.management-js.git",
+		"svn_url": "https://github.com/Autodesk-Forge/forge.data.management-js",
+		"homepage": null,
+		"size": 119,
+		"stargazers_count": 1,
+		"watchers_count": 1,
+		"language": "JavaScript",
+		"has_issues": true,
+		"has_downloads": true,
+		"has_wiki": true,
+		"has_pages": false,
+		"forks_count": 0,
+		"mirror_url": null,
+		"open_issues_count": 1,
+		"forks": 0,
+		"open_issues": 1,
+		"watchers": 1,
+		"default_branch": "master",
+		"permissions": {
+			"admin": false,
+			"push": false,
+			"pull": true
+		}
+	},
+	{
+		"id": 64940535,
+		"name": "forge.model.derivative-js",
+		"full_name": "Autodesk-Forge/forge.model.derivative-js",
+		"owner": {
+			"login": "Autodesk-Forge",
+			"id": 16883010,
+			"avatar_url": "https://avatars.githubusercontent.com/u/16883010?v=3",
+			"gravatar_id": "",
+			"url": "https://api.github.com/users/Autodesk-Forge",
+			"html_url": "https://github.com/Autodesk-Forge",
+			"followers_url": "https://api.github.com/users/Autodesk-Forge/followers",
+			"following_url": "https://api.github.com/users/Autodesk-Forge/following{/other_user}",
+			"gists_url": "https://api.github.com/users/Autodesk-Forge/gists{/gist_id}",
+			"starred_url": "https://api.github.com/users/Autodesk-Forge/starred{/owner}{/repo}",
+			"subscriptions_url": "https://api.github.com/users/Autodesk-Forge/subscriptions",
+			"organizations_url": "https://api.github.com/users/Autodesk-Forge/orgs",
+			"repos_url": "https://api.github.com/users/Autodesk-Forge/repos",
+			"events_url": "https://api.github.com/users/Autodesk-Forge/events{/privacy}",
+			"received_events_url": "https://api.github.com/users/Autodesk-Forge/received_events",
+			"type": "Organization",
+			"site_admin": false
+		},
+		"private": false,
+		"html_url": "https://github.com/Autodesk-Forge/forge.model.derivative-js",
+		"description": "Asynchronous Javascript/Node.js library for the Autodesk Forge Model Derivative API",
+		"fork": false,
+		"url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js",
+		"forks_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/forks",
+		"keys_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/keys{/key_id}",
+		"collaborators_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/collaborators{/collaborator}",
+		"teams_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/teams",
+		"hooks_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/hooks",
+		"issue_events_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/issues/events{/number}",
+		"events_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/events",
+		"assignees_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/assignees{/user}",
+		"branches_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/branches{/branch}",
+		"tags_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/tags",
+		"blobs_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/git/blobs{/sha}",
+		"git_tags_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/git/tags{/sha}",
+		"git_refs_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/git/refs{/sha}",
+		"trees_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/git/trees{/sha}",
+		"statuses_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/statuses/{sha}",
+		"languages_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/languages",
+		"stargazers_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/stargazers",
+		"contributors_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/contributors",
+		"subscribers_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/subscribers",
+		"subscription_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/subscription",
+		"commits_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/commits{/sha}",
+		"git_commits_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/git/commits{/sha}",
+		"comments_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/comments{/number}",
+		"issue_comment_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/issues/comments{/number}",
+		"contents_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/contents/{+path}",
+		"compare_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/compare/{base}...{head}",
+		"merges_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/merges",
+		"archive_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/{archive_format}{/ref}",
+		"downloads_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/downloads",
+		"issues_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/issues{/number}",
+		"pulls_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/pulls{/number}",
+		"milestones_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/milestones{/number}",
+		"notifications_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/notifications{?since,all,participating}",
+		"labels_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/labels{/name}",
+		"releases_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/releases{/id}",
+		"deployments_url": "https://api.github.com/repos/Autodesk-Forge/forge.model.derivative-js/deployments",
+		"created_at": "2016-08-04T14:17:01Z",
+		"updated_at": "2016-11-21T15:02:53Z",
+		"pushed_at": "2016-10-31T09:11:51Z",
+		"git_url": "git://github.com/Autodesk-Forge/forge.model.derivative-js.git",
+		"ssh_url": "git@github.com:Autodesk-Forge/forge.model.derivative-js.git",
+		"clone_url": "https://github.com/Autodesk-Forge/forge.model.derivative-js.git",
+		"svn_url": "https://github.com/Autodesk-Forge/forge.model.derivative-js",
+		"homepage": null,
+		"size": 82,
+		"stargazers_count": 2,
+		"watchers_count": 2,
+		"language": "JavaScript",
+		"has_issues": true,
+		"has_downloads": true,
+		"has_wiki": true,
+		"has_pages": false,
+		"forks_count": 2,
+		"mirror_url": null,
+		"open_issues_count": 1,
+		"forks": 2,
+		"open_issues": 1,
+		"watchers": 2,
+		"default_branch": "master",
+		"permissions": {
+			"admin": false,
+			"push": false,
+			"pull": true
+		}
+	},
+	{
+		"id": 64959137,
+		"name": "forge.commandline-nodejs",
+		"full_name": "Autodesk-Forge/forge.commandline-nodejs",
+		"owner": {
+			"login": "Autodesk-Forge",
+			"id": 16883010,
+			"avatar_url": "https://avatars.githubusercontent.com/u/16883010?v=3",
+			"gravatar_id": "",
+			"url": "https://api.github.com/users/Autodesk-Forge",
+			"html_url": "https://github.com/Autodesk-Forge",
+			"followers_url": "https://api.github.com/users/Autodesk-Forge/followers",
+			"following_url": "https://api.github.com/users/Autodesk-Forge/following{/other_user}",
+			"gists_url": "https://api.github.com/users/Autodesk-Forge/gists{/gist_id}",
+			"starred_url": "https://api.github.com/users/Autodesk-Forge/starred{/owner}{/repo}",
+			"subscriptions_url": "https://api.github.com/users/Autodesk-Forge/subscriptions",
+			"organizations_url": "https://api.github.com/users/Autodesk-Forge/orgs",
+			"repos_url": "https://api.github.com/users/Autodesk-Forge/repos",
+			"events_url": "https://api.github.com/users/Autodesk-Forge/events{/privacy}",
+			"received_events_url": "https://api.github.com/users/Autodesk-Forge/received_events",
+			"type": "Organization",
+			"site_admin": false
+		},
+		"private": false,
+		"html_url": "https://github.com/Autodesk-Forge/forge.commandline-nodejs",
+		"description": "Node.js command line tool demonstrating the Forge API",
+		"fork": false,
+		"url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs",
+		"forks_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/forks",
+		"keys_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/keys{/key_id}",
+		"collaborators_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/collaborators{/collaborator}",
+		"teams_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/teams",
+		"hooks_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/hooks",
+		"issue_events_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/issues/events{/number}",
+		"events_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/events",
+		"assignees_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/assignees{/user}",
+		"branches_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/branches{/branch}",
+		"tags_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/tags",
+		"blobs_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/git/blobs{/sha}",
+		"git_tags_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/git/tags{/sha}",
+		"git_refs_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/git/refs{/sha}",
+		"trees_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/git/trees{/sha}",
+		"statuses_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/statuses/{sha}",
+		"languages_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/languages",
+		"stargazers_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/stargazers",
+		"contributors_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/contributors",
+		"subscribers_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/subscribers",
+		"subscription_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/subscription",
+		"commits_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/commits{/sha}",
+		"git_commits_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/git/commits{/sha}",
+		"comments_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/comments{/number}",
+		"issue_comment_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/issues/comments{/number}",
+		"contents_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/contents/{+path}",
+		"compare_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/compare/{base}...{head}",
+		"merges_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/merges",
+		"archive_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/{archive_format}{/ref}",
+		"downloads_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/downloads",
+		"issues_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/issues{/number}",
+		"pulls_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/pulls{/number}",
+		"milestones_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/milestones{/number}",
+		"notifications_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/notifications{?since,all,participating}",
+		"labels_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/labels{/name}",
+		"releases_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/releases{/id}",
+		"deployments_url": "https://api.github.com/repos/Autodesk-Forge/forge.commandline-nodejs/deployments",
+		"created_at": "2016-08-04T18:46:17Z",
+		"updated_at": "2016-10-25T15:14:13Z",
+		"pushed_at": "2016-10-26T10:03:38Z",
+		"git_url": "git://github.com/Autodesk-Forge/forge.commandline-nodejs.git",
+		"ssh_url": "git@github.com:Autodesk-Forge/forge.commandline-nodejs.git",
+		"clone_url": "https://github.com/Autodesk-Forge/forge.commandline-nodejs.git",
+		"svn_url": "https://github.com/Autodesk-Forge/forge.commandline-nodejs",
+		"homepage": null,
+		"size": 141,
+		"stargazers_count": 2,
+		"watchers_count": 2,
+		"language": "JavaScript",
+		"has_issues": true,
+		"has_downloads": true,
+		"has_wiki": true,
+		"has_pages": false,
+		"forks_count": 2,
+		"mirror_url": null,
+		"open_issues_count": 0,
+		"forks": 2,
+		"open_issues": 0,
+		"watchers": 2,
+		"default_branch": "master",
+		"permissions": {
+			"admin": false,
+			"push": false,
+			"pull": true
+		}
+	},
+	{
+		"id": 67513960,
+		"name": "forge-api-nodejs-client",
+		"full_name": "Autodesk-Forge/forge-api-nodejs-client",
+		"owner": {
+			"login": "Autodesk-Forge",
+			"id": 16883010,
+			"avatar_url": "https://avatars.githubusercontent.com/u/16883010?v=3",
+			"gravatar_id": "",
+			"url": "https://api.github.com/users/Autodesk-Forge",
+			"html_url": "https://github.com/Autodesk-Forge",
+			"followers_url": "https://api.github.com/users/Autodesk-Forge/followers",
+			"following_url": "https://api.github.com/users/Autodesk-Forge/following{/other_user}",
+			"gists_url": "https://api.github.com/users/Autodesk-Forge/gists{/gist_id}",
+			"starred_url": "https://api.github.com/users/Autodesk-Forge/starred{/owner}{/repo}",
+			"subscriptions_url": "https://api.github.com/users/Autodesk-Forge/subscriptions",
+			"organizations_url": "https://api.github.com/users/Autodesk-Forge/orgs",
+			"repos_url": "https://api.github.com/users/Autodesk-Forge/repos",
+			"events_url": "https://api.github.com/users/Autodesk-Forge/events{/privacy}",
+			"received_events_url": "https://api.github.com/users/Autodesk-Forge/received_events",
+			"type": "Organization",
+			"site_admin": false
+		},
+		"private": false,
+		"html_url": "https://github.com/Autodesk-Forge/forge-api-nodejs-client",
+		"description": "Easily integrate Forge REST APIs into your application",
+		"fork": false,
+		"url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client",
+		"forks_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/forks",
+		"keys_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/keys{/key_id}",
+		"collaborators_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/collaborators{/collaborator}",
+		"teams_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/teams",
+		"hooks_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/hooks",
+		"issue_events_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/issues/events{/number}",
+		"events_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/events",
+		"assignees_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/assignees{/user}",
+		"branches_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/branches{/branch}",
+		"tags_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/tags",
+		"blobs_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/git/blobs{/sha}",
+		"git_tags_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/git/tags{/sha}",
+		"git_refs_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/git/refs{/sha}",
+		"trees_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/git/trees{/sha}",
+		"statuses_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/statuses/{sha}",
+		"languages_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/languages",
+		"stargazers_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/stargazers",
+		"contributors_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/contributors",
+		"subscribers_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/subscribers",
+		"subscription_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/subscription",
+		"commits_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/commits{/sha}",
+		"git_commits_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/git/commits{/sha}",
+		"comments_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/comments{/number}",
+		"issue_comment_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/issues/comments{/number}",
+		"contents_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/contents/{+path}",
+		"compare_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/compare/{base}...{head}",
+		"merges_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/merges",
+		"archive_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/{archive_format}{/ref}",
+		"downloads_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/downloads",
+		"issues_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/issues{/number}",
+		"pulls_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/pulls{/number}",
+		"milestones_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/milestones{/number}",
+		"notifications_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/notifications{?since,all,participating}",
+		"labels_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/labels{/name}",
+		"releases_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/releases{/id}",
+		"deployments_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-nodejs-client/deployments",
+		"created_at": "2016-09-06T14:09:11Z",
+		"updated_at": "2016-12-09T02:05:33Z",
+		"pushed_at": "2016-12-11T08:12:58Z",
+		"git_url": "git://github.com/Autodesk-Forge/forge-api-nodejs-client.git",
+		"ssh_url": "git@github.com:Autodesk-Forge/forge-api-nodejs-client.git",
+		"clone_url": "https://github.com/Autodesk-Forge/forge-api-nodejs-client.git",
+		"svn_url": "https://github.com/Autodesk-Forge/forge-api-nodejs-client",
+		"homepage": "",
+		"size": 449,
+		"stargazers_count": 9,
+		"watchers_count": 9,
+		"language": "JavaScript",
+		"has_issues": true,
+		"has_downloads": true,
+		"has_wiki": true,
+		"has_pages": false,
+		"forks_count": 3,
+		"mirror_url": null,
+		"open_issues_count": 0,
+		"forks": 3,
+		"open_issues": 0,
+		"watchers": 9,
+		"default_branch": "master",
+		"permissions": {
+			"admin": false,
+			"push": false,
+			"pull": true
+		}
+	},
+	{
+		"id": 67623548,
+		"name": "forge-boilers.nodejs",
+		"full_name": "Autodesk-Forge/forge-boilers.nodejs",
+		"owner": {
+			"login": "Autodesk-Forge",
+			"id": 16883010,
+			"avatar_url": "https://avatars.githubusercontent.com/u/16883010?v=3",
+			"gravatar_id": "",
+			"url": "https://api.github.com/users/Autodesk-Forge",
+			"html_url": "https://github.com/Autodesk-Forge",
+			"followers_url": "https://api.github.com/users/Autodesk-Forge/followers",
+			"following_url": "https://api.github.com/users/Autodesk-Forge/following{/other_user}",
+			"gists_url": "https://api.github.com/users/Autodesk-Forge/gists{/gist_id}",
+			"starred_url": "https://api.github.com/users/Autodesk-Forge/starred{/owner}{/repo}",
+			"subscriptions_url": "https://api.github.com/users/Autodesk-Forge/subscriptions",
+			"organizations_url": "https://api.github.com/users/Autodesk-Forge/orgs",
+			"repos_url": "https://api.github.com/users/Autodesk-Forge/repos",
+			"events_url": "https://api.github.com/users/Autodesk-Forge/events{/privacy}",
+			"received_events_url": "https://api.github.com/users/Autodesk-Forge/received_events",
+			"type": "Organization",
+			"site_admin": false
+		},
+		"private": false,
+		"html_url": "https://github.com/Autodesk-Forge/forge-boilers.nodejs",
+		"description": "A collection of node.js-based boiler projects for the Autodesk Forge Web Services APIs - ",
+		"fork": false,
+		"url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs",
+		"forks_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/forks",
+		"keys_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/keys{/key_id}",
+		"collaborators_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/collaborators{/collaborator}",
+		"teams_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/teams",
+		"hooks_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/hooks",
+		"issue_events_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/issues/events{/number}",
+		"events_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/events",
+		"assignees_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/assignees{/user}",
+		"branches_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/branches{/branch}",
+		"tags_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/tags",
+		"blobs_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/git/blobs{/sha}",
+		"git_tags_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/git/tags{/sha}",
+		"git_refs_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/git/refs{/sha}",
+		"trees_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/git/trees{/sha}",
+		"statuses_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/statuses/{sha}",
+		"languages_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/languages",
+		"stargazers_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/stargazers",
+		"contributors_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/contributors",
+		"subscribers_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/subscribers",
+		"subscription_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/subscription",
+		"commits_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/commits{/sha}",
+		"git_commits_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/git/commits{/sha}",
+		"comments_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/comments{/number}",
+		"issue_comment_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/issues/comments{/number}",
+		"contents_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/contents/{+path}",
+		"compare_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/compare/{base}...{head}",
+		"merges_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/merges",
+		"archive_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/{archive_format}{/ref}",
+		"downloads_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/downloads",
+		"issues_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/issues{/number}",
+		"pulls_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/pulls{/number}",
+		"milestones_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/milestones{/number}",
+		"notifications_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/notifications{?since,all,participating}",
+		"labels_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/labels{/name}",
+		"releases_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/releases{/id}",
+		"deployments_url": "https://api.github.com/repos/Autodesk-Forge/forge-boilers.nodejs/deployments",
+		"created_at": "2016-09-07T16:14:51Z",
+		"updated_at": "2016-12-08T11:17:24Z",
+		"pushed_at": "2016-12-09T09:53:38Z",
+		"git_url": "git://github.com/Autodesk-Forge/forge-boilers.nodejs.git",
+		"ssh_url": "git@github.com:Autodesk-Forge/forge-boilers.nodejs.git",
+		"clone_url": "https://github.com/Autodesk-Forge/forge-boilers.nodejs.git",
+		"svn_url": "https://github.com/Autodesk-Forge/forge-boilers.nodejs",
+		"homepage": "http://forge.autodesk.com",
+		"size": 28625,
+		"stargazers_count": 17,
+		"watchers_count": 17,
+		"language": "JavaScript",
+		"has_issues": true,
+		"has_downloads": true,
+		"has_wiki": true,
+		"has_pages": true,
+		"forks_count": 14,
+		"mirror_url": null,
+		"open_issues_count": 0,
+		"forks": 14,
+		"open_issues": 0,
+		"watchers": 17,
+		"default_branch": "master",
+		"permissions": {
+			"admin": false,
+			"push": false,
+			"pull": true
+		}
+	},
+	{
+		"id": 69402229,
+		"name": "forge-rcdb.nodejs",
+		"full_name": "Autodesk-Forge/forge-rcdb.nodejs",
+		"owner": {
+			"login": "Autodesk-Forge",
+			"id": 16883010,
+			"avatar_url": "https://avatars.githubusercontent.com/u/16883010?v=3",
+			"gravatar_id": "",
+			"url": "https://api.github.com/users/Autodesk-Forge",
+			"html_url": "https://github.com/Autodesk-Forge",
+			"followers_url": "https://api.github.com/users/Autodesk-Forge/followers",
+			"following_url": "https://api.github.com/users/Autodesk-Forge/following{/other_user}",
+			"gists_url": "https://api.github.com/users/Autodesk-Forge/gists{/gist_id}",
+			"starred_url": "https://api.github.com/users/Autodesk-Forge/starred{/owner}{/repo}",
+			"subscriptions_url": "https://api.github.com/users/Autodesk-Forge/subscriptions",
+			"organizations_url": "https://api.github.com/users/Autodesk-Forge/orgs",
+			"repos_url": "https://api.github.com/users/Autodesk-Forge/repos",
+			"events_url": "https://api.github.com/users/Autodesk-Forge/events{/privacy}",
+			"received_events_url": "https://api.github.com/users/Autodesk-Forge/received_events",
+			"type": "Organization",
+			"site_admin": false
+		},
+		"private": false,
+		"html_url": "https://github.com/Autodesk-Forge/forge-rcdb.nodejs",
+		"description": "Forge Responsive Connected Database: A responsive React-based web application that showcases the use of Autodesk Forge Viewer and Forge web services ...",
+		"fork": false,
+		"url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs",
+		"forks_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/forks",
+		"keys_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/keys{/key_id}",
+		"collaborators_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/collaborators{/collaborator}",
+		"teams_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/teams",
+		"hooks_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/hooks",
+		"issue_events_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/issues/events{/number}",
+		"events_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/events",
+		"assignees_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/assignees{/user}",
+		"branches_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/branches{/branch}",
+		"tags_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/tags",
+		"blobs_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/git/blobs{/sha}",
+		"git_tags_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/git/tags{/sha}",
+		"git_refs_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/git/refs{/sha}",
+		"trees_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/git/trees{/sha}",
+		"statuses_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/statuses/{sha}",
+		"languages_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/languages",
+		"stargazers_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/stargazers",
+		"contributors_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/contributors",
+		"subscribers_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/subscribers",
+		"subscription_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/subscription",
+		"commits_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/commits{/sha}",
+		"git_commits_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/git/commits{/sha}",
+		"comments_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/comments{/number}",
+		"issue_comment_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/issues/comments{/number}",
+		"contents_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/contents/{+path}",
+		"compare_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/compare/{base}...{head}",
+		"merges_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/merges",
+		"archive_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/{archive_format}{/ref}",
+		"downloads_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/downloads",
+		"issues_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/issues{/number}",
+		"pulls_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/pulls{/number}",
+		"milestones_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/milestones{/number}",
+		"notifications_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/notifications{?since,all,participating}",
+		"labels_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/labels{/name}",
+		"releases_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/releases{/id}",
+		"deployments_url": "https://api.github.com/repos/Autodesk-Forge/forge-rcdb.nodejs/deployments",
+		"created_at": "2016-09-27T21:58:45Z",
+		"updated_at": "2016-12-06T14:36:09Z",
+		"pushed_at": "2016-12-08T13:19:01Z",
+		"git_url": "git://github.com/Autodesk-Forge/forge-rcdb.nodejs.git",
+		"ssh_url": "git@github.com:Autodesk-Forge/forge-rcdb.nodejs.git",
+		"clone_url": "https://github.com/Autodesk-Forge/forge-rcdb.nodejs.git",
+		"svn_url": "https://github.com/Autodesk-Forge/forge-rcdb.nodejs",
+		"homepage": null,
+		"size": 16007,
+		"stargazers_count": 7,
+		"watchers_count": 7,
+		"language": "JavaScript",
+		"has_issues": true,
+		"has_downloads": true,
+		"has_wiki": true,
+		"has_pages": false,
+		"forks_count": 3,
+		"mirror_url": null,
+		"open_issues_count": 0,
+		"forks": 3,
+		"open_issues": 0,
+		"watchers": 7,
+		"default_branch": "master",
+		"permissions": {
+			"admin": false,
+			"push": false,
+			"pull": true
+		}
+	},
+	{
+		"id": 69567132,
+		"name": "forge-api-java-client",
+		"full_name": "Autodesk-Forge/forge-api-java-client",
+		"owner": {
+			"login": "Autodesk-Forge",
+			"id": 16883010,
+			"avatar_url": "https://avatars.githubusercontent.com/u/16883010?v=3",
+			"gravatar_id": "",
+			"url": "https://api.github.com/users/Autodesk-Forge",
+			"html_url": "https://github.com/Autodesk-Forge",
+			"followers_url": "https://api.github.com/users/Autodesk-Forge/followers",
+			"following_url": "https://api.github.com/users/Autodesk-Forge/following{/other_user}",
+			"gists_url": "https://api.github.com/users/Autodesk-Forge/gists{/gist_id}",
+			"starred_url": "https://api.github.com/users/Autodesk-Forge/starred{/owner}{/repo}",
+			"subscriptions_url": "https://api.github.com/users/Autodesk-Forge/subscriptions",
+			"organizations_url": "https://api.github.com/users/Autodesk-Forge/orgs",
+			"repos_url": "https://api.github.com/users/Autodesk-Forge/repos",
+			"events_url": "https://api.github.com/users/Autodesk-Forge/events{/privacy}",
+			"received_events_url": "https://api.github.com/users/Autodesk-Forge/received_events",
+			"type": "Organization",
+			"site_admin": false
+		},
+		"private": false,
+		"html_url": "https://github.com/Autodesk-Forge/forge-api-java-client",
+		"description": "Easily integrate Forge REST APIs into your application",
+		"fork": false,
+		"url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client",
+		"forks_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/forks",
+		"keys_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/keys{/key_id}",
+		"collaborators_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/collaborators{/collaborator}",
+		"teams_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/teams",
+		"hooks_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/hooks",
+		"issue_events_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/issues/events{/number}",
+		"events_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/events",
+		"assignees_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/assignees{/user}",
+		"branches_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/branches{/branch}",
+		"tags_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/tags",
+		"blobs_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/git/blobs{/sha}",
+		"git_tags_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/git/tags{/sha}",
+		"git_refs_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/git/refs{/sha}",
+		"trees_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/git/trees{/sha}",
+		"statuses_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/statuses/{sha}",
+		"languages_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/languages",
+		"stargazers_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/stargazers",
+		"contributors_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/contributors",
+		"subscribers_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/subscribers",
+		"subscription_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/subscription",
+		"commits_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/commits{/sha}",
+		"git_commits_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/git/commits{/sha}",
+		"comments_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/comments{/number}",
+		"issue_comment_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/issues/comments{/number}",
+		"contents_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/contents/{+path}",
+		"compare_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/compare/{base}...{head}",
+		"merges_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/merges",
+		"archive_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/{archive_format}{/ref}",
+		"downloads_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/downloads",
+		"issues_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/issues{/number}",
+		"pulls_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/pulls{/number}",
+		"milestones_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/milestones{/number}",
+		"notifications_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/notifications{?since,all,participating}",
+		"labels_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/labels{/name}",
+		"releases_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/releases{/id}",
+		"deployments_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client/deployments",
+		"created_at": "2016-09-29T12:52:47Z",
+		"updated_at": "2016-12-06T09:25:47Z",
+		"pushed_at": "2016-12-06T09:44:53Z",
+		"git_url": "git://github.com/Autodesk-Forge/forge-api-java-client.git",
+		"ssh_url": "git@github.com:Autodesk-Forge/forge-api-java-client.git",
+		"clone_url": "https://github.com/Autodesk-Forge/forge-api-java-client.git",
+		"svn_url": "https://github.com/Autodesk-Forge/forge-api-java-client",
+		"homepage": null,
+		"size": 294,
+		"stargazers_count": 4,
+		"watchers_count": 4,
+		"language": "Java",
+		"has_issues": true,
+		"has_downloads": true,
+		"has_wiki": true,
+		"has_pages": false,
+		"forks_count": 1,
+		"mirror_url": null,
+		"open_issues_count": 1,
+		"forks": 1,
+		"open_issues": 1,
+		"watchers": 4,
+		"default_branch": "master",
+		"permissions": {
+			"admin": false,
+			"push": false,
+			"pull": true
+		}
+	},
+	{
+		"id": 69567571,
+		"name": "forge-api-java-client-jars",
+		"full_name": "Autodesk-Forge/forge-api-java-client-jars",
+		"owner": {
+			"login": "Autodesk-Forge",
+			"id": 16883010,
+			"avatar_url": "https://avatars.githubusercontent.com/u/16883010?v=3",
+			"gravatar_id": "",
+			"url": "https://api.github.com/users/Autodesk-Forge",
+			"html_url": "https://github.com/Autodesk-Forge",
+			"followers_url": "https://api.github.com/users/Autodesk-Forge/followers",
+			"following_url": "https://api.github.com/users/Autodesk-Forge/following{/other_user}",
+			"gists_url": "https://api.github.com/users/Autodesk-Forge/gists{/gist_id}",
+			"starred_url": "https://api.github.com/users/Autodesk-Forge/starred{/owner}{/repo}",
+			"subscriptions_url": "https://api.github.com/users/Autodesk-Forge/subscriptions",
+			"organizations_url": "https://api.github.com/users/Autodesk-Forge/orgs",
+			"repos_url": "https://api.github.com/users/Autodesk-Forge/repos",
+			"events_url": "https://api.github.com/users/Autodesk-Forge/events{/privacy}",
+			"received_events_url": "https://api.github.com/users/Autodesk-Forge/received_events",
+			"type": "Organization",
+			"site_admin": false
+		},
+		"private": false,
+		"html_url": "https://github.com/Autodesk-Forge/forge-api-java-client-jars",
+		"description": "Easily integrate Forge REST APIs into your application",
+		"fork": false,
+		"url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars",
+		"forks_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/forks",
+		"keys_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/keys{/key_id}",
+		"collaborators_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/collaborators{/collaborator}",
+		"teams_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/teams",
+		"hooks_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/hooks",
+		"issue_events_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/issues/events{/number}",
+		"events_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/events",
+		"assignees_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/assignees{/user}",
+		"branches_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/branches{/branch}",
+		"tags_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/tags",
+		"blobs_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/git/blobs{/sha}",
+		"git_tags_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/git/tags{/sha}",
+		"git_refs_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/git/refs{/sha}",
+		"trees_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/git/trees{/sha}",
+		"statuses_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/statuses/{sha}",
+		"languages_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/languages",
+		"stargazers_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/stargazers",
+		"contributors_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/contributors",
+		"subscribers_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/subscribers",
+		"subscription_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/subscription",
+		"commits_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/commits{/sha}",
+		"git_commits_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/git/commits{/sha}",
+		"comments_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/comments{/number}",
+		"issue_comment_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/issues/comments{/number}",
+		"contents_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/contents/{+path}",
+		"compare_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/compare/{base}...{head}",
+		"merges_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/merges",
+		"archive_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/{archive_format}{/ref}",
+		"downloads_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/downloads",
+		"issues_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/issues{/number}",
+		"pulls_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/pulls{/number}",
+		"milestones_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/milestones{/number}",
+		"notifications_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/notifications{?since,all,participating}",
+		"labels_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/labels{/name}",
+		"releases_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/releases{/id}",
+		"deployments_url": "https://api.github.com/repos/Autodesk-Forge/forge-api-java-client-jars/deployments",
+		"created_at": "2016-09-29T12:58:26Z",
+		"updated_at": "2016-09-29T12:58:26Z",
+		"pushed_at": "2016-12-06T09:48:20Z",
+		"git_url": "git://github.com/Autodesk-Forge/forge-api-java-client-jars.git",
+		"ssh_url": "git@github.com:Autodesk-Forge/forge-api-java-client-jars.git",
+		"clone_url": "https://github.com/Autodesk-Forge/forge-api-java-client-jars.git",
+		"svn_url": "https://github.com/Autodesk-Forge/forge-api-java-client-jars",
+		"homepage": null,
+		"size": 12309,
+		"stargazers_count": 0,
+		"watchers_count": 0,
+		"language": null,
+		"has_issues": true,
+		"has_downloads": true,
+		"has_wiki": true,
+		"has_pages": false,
+		"forks_count": 1,
+		"mirror_url": null,
+		"open_issues_count": 0,
+		"forks": 1,
+		"open_issues": 0,
+		"watchers": 0,
+		"default_branch": "master",
+		"permissions": {
+			"admin": false,
+			"push": false,
+			"pull": true
+		}
+	},
+	{
+		"id": 73214266,
+		"name": "model.derivative-swift-sample",
+		"full_name": "Autodesk-Forge/model.derivative-swift-sample",
+		"owner": {
+			"login": "Autodesk-Forge",
+			"id": 16883010,
+			"avatar_url": "https://avatars.githubusercontent.com/u/16883010?v=3",
+			"gravatar_id": "",
+			"url": "https://api.github.com/users/Autodesk-Forge",
+			"html_url": "https://github.com/Autodesk-Forge",
+			"followers_url": "https://api.github.com/users/Autodesk-Forge/followers",
+			"following_url": "https://api.github.com/users/Autodesk-Forge/following{/other_user}",
+			"gists_url": "https://api.github.com/users/Autodesk-Forge/gists{/gist_id}",
+			"starred_url": "https://api.github.com/users/Autodesk-Forge/starred{/owner}{/repo}",
+			"subscriptions_url": "https://api.github.com/users/Autodesk-Forge/subscriptions",
+			"organizations_url": "https://api.github.com/users/Autodesk-Forge/orgs",
+			"repos_url": "https://api.github.com/users/Autodesk-Forge/repos",
+			"events_url": "https://api.github.com/users/Autodesk-Forge/events{/privacy}",
+			"received_events_url": "https://api.github.com/users/Autodesk-Forge/received_events",
+			"type": "Organization",
+			"site_admin": false
+		},
+		"private": false,
+		"html_url": "https://github.com/Autodesk-Forge/model.derivative-swift-sample",
+		"description": "Shows how to use the Forge API's including the Model Derivative API from a Swift application",
+		"fork": false,
+		"url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample",
+		"forks_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/forks",
+		"keys_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/keys{/key_id}",
+		"collaborators_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/collaborators{/collaborator}",
+		"teams_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/teams",
+		"hooks_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/hooks",
+		"issue_events_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/issues/events{/number}",
+		"events_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/events",
+		"assignees_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/assignees{/user}",
+		"branches_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/branches{/branch}",
+		"tags_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/tags",
+		"blobs_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/git/blobs{/sha}",
+		"git_tags_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/git/tags{/sha}",
+		"git_refs_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/git/refs{/sha}",
+		"trees_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/git/trees{/sha}",
+		"statuses_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/statuses/{sha}",
+		"languages_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/languages",
+		"stargazers_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/stargazers",
+		"contributors_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/contributors",
+		"subscribers_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/subscribers",
+		"subscription_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/subscription",
+		"commits_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/commits{/sha}",
+		"git_commits_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/git/commits{/sha}",
+		"comments_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/comments{/number}",
+		"issue_comment_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/issues/comments{/number}",
+		"contents_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/contents/{+path}",
+		"compare_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/compare/{base}...{head}",
+		"merges_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/merges",
+		"archive_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/{archive_format}{/ref}",
+		"downloads_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/downloads",
+		"issues_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/issues{/number}",
+		"pulls_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/pulls{/number}",
+		"milestones_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/milestones{/number}",
+		"notifications_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/notifications{?since,all,participating}",
+		"labels_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/labels{/name}",
+		"releases_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/releases{/id}",
+		"deployments_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-swift-sample/deployments",
+		"created_at": "2016-11-08T18:20:11Z",
+		"updated_at": "2016-11-14T18:30:56Z",
+		"pushed_at": "2016-11-08T23:46:57Z",
+		"git_url": "git://github.com/Autodesk-Forge/model.derivative-swift-sample.git",
+		"ssh_url": "git@github.com:Autodesk-Forge/model.derivative-swift-sample.git",
+		"clone_url": "https://github.com/Autodesk-Forge/model.derivative-swift-sample.git",
+		"svn_url": "https://github.com/Autodesk-Forge/model.derivative-swift-sample",
+		"homepage": null,
+		"size": 177,
+		"stargazers_count": 1,
+		"watchers_count": 1,
+		"language": "Swift",
+		"has_issues": true,
+		"has_downloads": true,
+		"has_wiki": true,
+		"has_pages": false,
+		"forks_count": 0,
+		"mirror_url": null,
+		"open_issues_count": 0,
+		"forks": 0,
+		"open_issues": 0,
+		"watchers": 1,
+		"default_branch": "master",
+		"permissions": {
+			"admin": false,
+			"push": false,
+			"pull": true
+		}
+	},
+	{
+		"id": 73215307,
+		"name": "model.derivative-nodejs-sample",
+		"full_name": "Autodesk-Forge/model.derivative-nodejs-sample",
+		"owner": {
+			"login": "Autodesk-Forge",
+			"id": 16883010,
+			"avatar_url": "https://avatars.githubusercontent.com/u/16883010?v=3",
+			"gravatar_id": "",
+			"url": "https://api.github.com/users/Autodesk-Forge",
+			"html_url": "https://github.com/Autodesk-Forge",
+			"followers_url": "https://api.github.com/users/Autodesk-Forge/followers",
+			"following_url": "https://api.github.com/users/Autodesk-Forge/following{/other_user}",
+			"gists_url": "https://api.github.com/users/Autodesk-Forge/gists{/gist_id}",
+			"starred_url": "https://api.github.com/users/Autodesk-Forge/starred{/owner}{/repo}",
+			"subscriptions_url": "https://api.github.com/users/Autodesk-Forge/subscriptions",
+			"organizations_url": "https://api.github.com/users/Autodesk-Forge/orgs",
+			"repos_url": "https://api.github.com/users/Autodesk-Forge/repos",
+			"events_url": "https://api.github.com/users/Autodesk-Forge/events{/privacy}",
+			"received_events_url": "https://api.github.com/users/Autodesk-Forge/received_events",
+			"type": "Organization",
+			"site_admin": false
+		},
+		"private": false,
+		"html_url": "https://github.com/Autodesk-Forge/model.derivative-nodejs-sample",
+		"description": "Shows how to use the Forge API's including the Model Derivative API from Node.js",
+		"fork": false,
+		"url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample",
+		"forks_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/forks",
+		"keys_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/keys{/key_id}",
+		"collaborators_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/collaborators{/collaborator}",
+		"teams_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/teams",
+		"hooks_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/hooks",
+		"issue_events_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/issues/events{/number}",
+		"events_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/events",
+		"assignees_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/assignees{/user}",
+		"branches_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/branches{/branch}",
+		"tags_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/tags",
+		"blobs_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/git/blobs{/sha}",
+		"git_tags_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/git/tags{/sha}",
+		"git_refs_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/git/refs{/sha}",
+		"trees_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/git/trees{/sha}",
+		"statuses_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/statuses/{sha}",
+		"languages_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/languages",
+		"stargazers_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/stargazers",
+		"contributors_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/contributors",
+		"subscribers_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/subscribers",
+		"subscription_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/subscription",
+		"commits_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/commits{/sha}",
+		"git_commits_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/git/commits{/sha}",
+		"comments_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/comments{/number}",
+		"issue_comment_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/issues/comments{/number}",
+		"contents_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/contents/{+path}",
+		"compare_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/compare/{base}...{head}",
+		"merges_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/merges",
+		"archive_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/{archive_format}{/ref}",
+		"downloads_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/downloads",
+		"issues_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/issues{/number}",
+		"pulls_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/pulls{/number}",
+		"milestones_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/milestones{/number}",
+		"notifications_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/notifications{?since,all,participating}",
+		"labels_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/labels{/name}",
+		"releases_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/releases{/id}",
+		"deployments_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-sample/deployments",
+		"created_at": "2016-11-08T18:32:21Z",
+		"updated_at": "2016-12-06T16:56:56Z",
+		"pushed_at": "2016-11-12T22:49:53Z",
+		"git_url": "git://github.com/Autodesk-Forge/model.derivative-nodejs-sample.git",
+		"ssh_url": "git@github.com:Autodesk-Forge/model.derivative-nodejs-sample.git",
+		"clone_url": "https://github.com/Autodesk-Forge/model.derivative-nodejs-sample.git",
+		"svn_url": "https://github.com/Autodesk-Forge/model.derivative-nodejs-sample",
+		"homepage": "https://derivatives.autodesk.io/",
+		"size": 2014,
+		"stargazers_count": 1,
+		"watchers_count": 1,
+		"language": "JavaScript",
+		"has_issues": true,
+		"has_downloads": true,
+		"has_wiki": true,
+		"has_pages": false,
+		"forks_count": 0,
+		"mirror_url": null,
+		"open_issues_count": 0,
+		"forks": 0,
+		"open_issues": 0,
+		"watchers": 1,
+		"default_branch": "master",
+		"permissions": {
+			"admin": false,
+			"push": false,
+			"pull": true
+		}
+	},
+	{
+		"id": 73496523,
+		"name": "data.management-nodejs-integration.box",
+		"full_name": "Autodesk-Forge/data.management-nodejs-integration.box",
+		"owner": {
+			"login": "Autodesk-Forge",
+			"id": 16883010,
+			"avatar_url": "https://avatars.githubusercontent.com/u/16883010?v=3",
+			"gravatar_id": "",
+			"url": "https://api.github.com/users/Autodesk-Forge",
+			"html_url": "https://github.com/Autodesk-Forge",
+			"followers_url": "https://api.github.com/users/Autodesk-Forge/followers",
+			"following_url": "https://api.github.com/users/Autodesk-Forge/following{/other_user}",
+			"gists_url": "https://api.github.com/users/Autodesk-Forge/gists{/gist_id}",
+			"starred_url": "https://api.github.com/users/Autodesk-Forge/starred{/owner}{/repo}",
+			"subscriptions_url": "https://api.github.com/users/Autodesk-Forge/subscriptions",
+			"organizations_url": "https://api.github.com/users/Autodesk-Forge/orgs",
+			"repos_url": "https://api.github.com/users/Autodesk-Forge/repos",
+			"events_url": "https://api.github.com/users/Autodesk-Forge/events{/privacy}",
+			"received_events_url": "https://api.github.com/users/Autodesk-Forge/received_events",
+			"type": "Organization",
+			"site_admin": false
+		},
+		"private": false,
+		"html_url": "https://github.com/Autodesk-Forge/data.management-nodejs-integration.box",
+		"description": "Basic integration between Data Management API & Box ",
+		"fork": false,
+		"url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box",
+		"forks_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/forks",
+		"keys_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/keys{/key_id}",
+		"collaborators_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/collaborators{/collaborator}",
+		"teams_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/teams",
+		"hooks_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/hooks",
+		"issue_events_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/issues/events{/number}",
+		"events_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/events",
+		"assignees_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/assignees{/user}",
+		"branches_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/branches{/branch}",
+		"tags_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/tags",
+		"blobs_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/git/blobs{/sha}",
+		"git_tags_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/git/tags{/sha}",
+		"git_refs_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/git/refs{/sha}",
+		"trees_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/git/trees{/sha}",
+		"statuses_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/statuses/{sha}",
+		"languages_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/languages",
+		"stargazers_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/stargazers",
+		"contributors_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/contributors",
+		"subscribers_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/subscribers",
+		"subscription_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/subscription",
+		"commits_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/commits{/sha}",
+		"git_commits_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/git/commits{/sha}",
+		"comments_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/comments{/number}",
+		"issue_comment_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/issues/comments{/number}",
+		"contents_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/contents/{+path}",
+		"compare_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/compare/{base}...{head}",
+		"merges_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/merges",
+		"archive_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/{archive_format}{/ref}",
+		"downloads_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/downloads",
+		"issues_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/issues{/number}",
+		"pulls_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/pulls{/number}",
+		"milestones_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/milestones{/number}",
+		"notifications_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/notifications{?since,all,participating}",
+		"labels_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/labels{/name}",
+		"releases_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/releases{/id}",
+		"deployments_url": "https://api.github.com/repos/Autodesk-Forge/data.management-nodejs-integration.box/deployments",
+		"created_at": "2016-11-11T17:13:14Z",
+		"updated_at": "2016-12-06T16:57:47Z",
+		"pushed_at": "2016-11-11T17:25:47Z",
+		"git_url": "git://github.com/Autodesk-Forge/data.management-nodejs-integration.box.git",
+		"ssh_url": "git@github.com:Autodesk-Forge/data.management-nodejs-integration.box.git",
+		"clone_url": "https://github.com/Autodesk-Forge/data.management-nodejs-integration.box.git",
+		"svn_url": "https://github.com/Autodesk-Forge/data.management-nodejs-integration.box",
+		"homepage": "https://forgedmboxintegration.herokuapp.com",
+		"size": 242,
+		"stargazers_count": 0,
+		"watchers_count": 0,
+		"language": "JavaScript",
+		"has_issues": true,
+		"has_downloads": true,
+		"has_wiki": true,
+		"has_pages": false,
+		"forks_count": 0,
+		"mirror_url": null,
+		"open_issues_count": 0,
+		"forks": 0,
+		"open_issues": 0,
+		"watchers": 0,
+		"default_branch": "master",
+		"permissions": {
+			"admin": false,
+			"push": false,
+			"pull": true
+		}
+	},
+	{
+		"id": 73496831,
+		"name": "model.derivative-nodejs-google.drive.viewer",
+		"full_name": "Autodesk-Forge/model.derivative-nodejs-google.drive.viewer",
+		"owner": {
+			"login": "Autodesk-Forge",
+			"id": 16883010,
+			"avatar_url": "https://avatars.githubusercontent.com/u/16883010?v=3",
+			"gravatar_id": "",
+			"url": "https://api.github.com/users/Autodesk-Forge",
+			"html_url": "https://github.com/Autodesk-Forge",
+			"followers_url": "https://api.github.com/users/Autodesk-Forge/followers",
+			"following_url": "https://api.github.com/users/Autodesk-Forge/following{/other_user}",
+			"gists_url": "https://api.github.com/users/Autodesk-Forge/gists{/gist_id}",
+			"starred_url": "https://api.github.com/users/Autodesk-Forge/starred{/owner}{/repo}",
+			"subscriptions_url": "https://api.github.com/users/Autodesk-Forge/subscriptions",
+			"organizations_url": "https://api.github.com/users/Autodesk-Forge/orgs",
+			"repos_url": "https://api.github.com/users/Autodesk-Forge/repos",
+			"events_url": "https://api.github.com/users/Autodesk-Forge/events{/privacy}",
+			"received_events_url": "https://api.github.com/users/Autodesk-Forge/received_events",
+			"type": "Organization",
+			"site_admin": false
+		},
+		"private": false,
+		"html_url": "https://github.com/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer",
+		"description": "Transparent use of Model Derivative to view Google Drive compatible files",
+		"fork": false,
+		"url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer",
+		"forks_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/forks",
+		"keys_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/keys{/key_id}",
+		"collaborators_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/collaborators{/collaborator}",
+		"teams_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/teams",
+		"hooks_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/hooks",
+		"issue_events_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/issues/events{/number}",
+		"events_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/events",
+		"assignees_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/assignees{/user}",
+		"branches_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/branches{/branch}",
+		"tags_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/tags",
+		"blobs_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/git/blobs{/sha}",
+		"git_tags_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/git/tags{/sha}",
+		"git_refs_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/git/refs{/sha}",
+		"trees_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/git/trees{/sha}",
+		"statuses_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/statuses/{sha}",
+		"languages_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/languages",
+		"stargazers_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/stargazers",
+		"contributors_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/contributors",
+		"subscribers_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/subscribers",
+		"subscription_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/subscription",
+		"commits_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/commits{/sha}",
+		"git_commits_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/git/commits{/sha}",
+		"comments_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/comments{/number}",
+		"issue_comment_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/issues/comments{/number}",
+		"contents_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/contents/{+path}",
+		"compare_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/compare/{base}...{head}",
+		"merges_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/merges",
+		"archive_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/{archive_format}{/ref}",
+		"downloads_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/downloads",
+		"issues_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/issues{/number}",
+		"pulls_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/pulls{/number}",
+		"milestones_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/milestones{/number}",
+		"notifications_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/notifications{?since,all,participating}",
+		"labels_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/labels{/name}",
+		"releases_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/releases{/id}",
+		"deployments_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer/deployments",
+		"created_at": "2016-11-11T17:17:44Z",
+		"updated_at": "2016-12-06T16:57:28Z",
+		"pushed_at": "2016-11-11T17:25:59Z",
+		"git_url": "git://github.com/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer.git",
+		"ssh_url": "git@github.com:Autodesk-Forge/model.derivative-nodejs-google.drive.viewer.git",
+		"clone_url": "https://github.com/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer.git",
+		"svn_url": "https://github.com/Autodesk-Forge/model.derivative-nodejs-google.drive.viewer",
+		"homepage": "http://forgegoogledriveviewer.herokuapp.com/",
+		"size": 240,
+		"stargazers_count": 0,
+		"watchers_count": 0,
+		"language": "JavaScript",
+		"has_issues": true,
+		"has_downloads": true,
+		"has_wiki": true,
+		"has_pages": false,
+		"forks_count": 1,
+		"mirror_url": null,
+		"open_issues_count": 0,
+		"forks": 1,
+		"open_issues": 0,
+		"watchers": 0,
+		"default_branch": "master",
+		"permissions": {
+			"admin": false,
+			"push": false,
+			"pull": true
+		}
+	},
+	{
+		"id": 73497109,
+		"name": "model.derivative-nodejs-box.viewer",
+		"full_name": "Autodesk-Forge/model.derivative-nodejs-box.viewer",
+		"owner": {
+			"login": "Autodesk-Forge",
+			"id": 16883010,
+			"avatar_url": "https://avatars.githubusercontent.com/u/16883010?v=3",
+			"gravatar_id": "",
+			"url": "https://api.github.com/users/Autodesk-Forge",
+			"html_url": "https://github.com/Autodesk-Forge",
+			"followers_url": "https://api.github.com/users/Autodesk-Forge/followers",
+			"following_url": "https://api.github.com/users/Autodesk-Forge/following{/other_user}",
+			"gists_url": "https://api.github.com/users/Autodesk-Forge/gists{/gist_id}",
+			"starred_url": "https://api.github.com/users/Autodesk-Forge/starred{/owner}{/repo}",
+			"subscriptions_url": "https://api.github.com/users/Autodesk-Forge/subscriptions",
+			"organizations_url": "https://api.github.com/users/Autodesk-Forge/orgs",
+			"repos_url": "https://api.github.com/users/Autodesk-Forge/repos",
+			"events_url": "https://api.github.com/users/Autodesk-Forge/events{/privacy}",
+			"received_events_url": "https://api.github.com/users/Autodesk-Forge/received_events",
+			"type": "Organization",
+			"site_admin": false
+		},
+		"private": false,
+		"html_url": "https://github.com/Autodesk-Forge/model.derivative-nodejs-box.viewer",
+		"description": "Transparent use of Model Derivative to view Box compatible files",
+		"fork": false,
+		"url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer",
+		"forks_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/forks",
+		"keys_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/keys{/key_id}",
+		"collaborators_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/collaborators{/collaborator}",
+		"teams_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/teams",
+		"hooks_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/hooks",
+		"issue_events_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/issues/events{/number}",
+		"events_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/events",
+		"assignees_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/assignees{/user}",
+		"branches_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/branches{/branch}",
+		"tags_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/tags",
+		"blobs_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/git/blobs{/sha}",
+		"git_tags_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/git/tags{/sha}",
+		"git_refs_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/git/refs{/sha}",
+		"trees_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/git/trees{/sha}",
+		"statuses_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/statuses/{sha}",
+		"languages_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/languages",
+		"stargazers_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/stargazers",
+		"contributors_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/contributors",
+		"subscribers_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/subscribers",
+		"subscription_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/subscription",
+		"commits_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/commits{/sha}",
+		"git_commits_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/git/commits{/sha}",
+		"comments_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/comments{/number}",
+		"issue_comment_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/issues/comments{/number}",
+		"contents_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/contents/{+path}",
+		"compare_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/compare/{base}...{head}",
+		"merges_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/merges",
+		"archive_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/{archive_format}{/ref}",
+		"downloads_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/downloads",
+		"issues_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/issues{/number}",
+		"pulls_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/pulls{/number}",
+		"milestones_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/milestones{/number}",
+		"notifications_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/notifications{?since,all,participating}",
+		"labels_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/labels{/name}",
+		"releases_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/releases{/id}",
+		"deployments_url": "https://api.github.com/repos/Autodesk-Forge/model.derivative-nodejs-box.viewer/deployments",
+		"created_at": "2016-11-11T17:21:28Z",
+		"updated_at": "2016-12-06T16:58:07Z",
+		"pushed_at": "2016-11-11T17:25:55Z",
+		"git_url": "git://github.com/Autodesk-Forge/model.derivative-nodejs-box.viewer.git",
+		"ssh_url": "git@github.com:Autodesk-Forge/model.derivative-nodejs-box.viewer.git",
+		"clone_url": "https://github.com/Autodesk-Forge/model.derivative-nodejs-box.viewer.git",
+		"svn_url": "https://github.com/Autodesk-Forge/model.derivative-nodejs-box.viewer",
+		"homepage": "http://forgeboxviewer.herokuapp.com/",
+		"size": 228,
+		"stargazers_count": 0,
+		"watchers_count": 0,
+		"language": "JavaScript",
+		"has_issues": true,
+		"has_downloads": true,
+		"has_wiki": true,
+		"has_pages": false,
+		"forks_count": 0,
+		"mirror_url": null,
+		"open_issues_count": 0,
+		"forks": 0,
+		"open_issues": 0,
+		"watchers": 0,
+		"default_branch": "master",
+		"permissions": {
+			"admin": false,
+			"push": false,
+			"pull": true
+		}
+	},
+	{
+		"id": 73499502,
+		"name": "viewer-meteor-sample",
+		"full_name": "Autodesk-Forge/viewer-meteor-sample",
+		"owner": {
+			"login": "Autodesk-Forge",
+			"id": 16883010,
+			"avatar_url": "https://avatars.githubusercontent.com/u/16883010?v=3",
+			"gravatar_id": "",
+			"url": "https://api.github.com/users/Autodesk-Forge",
+			"html_url": "https://github.com/Autodesk-Forge",
+			"followers_url": "https://api.github.com/users/Autodesk-Forge/followers",
+			"following_url": "https://api.github.com/users/Autodesk-Forge/following{/other_user}",
+			"gists_url": "https://api.github.com/users/Autodesk-Forge/gists{/gist_id}",
+			"starred_url": "https://api.github.com/users/Autodesk-Forge/starred{/owner}{/repo}",
+			"subscriptions_url": "https://api.github.com/users/Autodesk-Forge/subscriptions",
+			"organizations_url": "https://api.github.com/users/Autodesk-Forge/orgs",
+			"repos_url": "https://api.github.com/users/Autodesk-Forge/repos",
+			"events_url": "https://api.github.com/users/Autodesk-Forge/events{/privacy}",
+			"received_events_url": "https://api.github.com/users/Autodesk-Forge/received_events",
+			"type": "Organization",
+			"site_admin": false
+		},
+		"private": false,
+		"html_url": "https://github.com/Autodesk-Forge/viewer-meteor-sample",
+		"description": "Demonstrate Meteor with Viewer",
+		"fork": false,
+		"url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample",
+		"forks_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/forks",
+		"keys_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/keys{/key_id}",
+		"collaborators_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/collaborators{/collaborator}",
+		"teams_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/teams",
+		"hooks_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/hooks",
+		"issue_events_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/issues/events{/number}",
+		"events_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/events",
+		"assignees_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/assignees{/user}",
+		"branches_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/branches{/branch}",
+		"tags_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/tags",
+		"blobs_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/git/blobs{/sha}",
+		"git_tags_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/git/tags{/sha}",
+		"git_refs_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/git/refs{/sha}",
+		"trees_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/git/trees{/sha}",
+		"statuses_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/statuses/{sha}",
+		"languages_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/languages",
+		"stargazers_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/stargazers",
+		"contributors_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/contributors",
+		"subscribers_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/subscribers",
+		"subscription_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/subscription",
+		"commits_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/commits{/sha}",
+		"git_commits_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/git/commits{/sha}",
+		"comments_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/comments{/number}",
+		"issue_comment_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/issues/comments{/number}",
+		"contents_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/contents/{+path}",
+		"compare_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/compare/{base}...{head}",
+		"merges_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/merges",
+		"archive_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/{archive_format}{/ref}",
+		"downloads_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/downloads",
+		"issues_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/issues{/number}",
+		"pulls_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/pulls{/number}",
+		"milestones_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/milestones{/number}",
+		"notifications_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/notifications{?since,all,participating}",
+		"labels_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/labels{/name}",
+		"releases_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/releases{/id}",
+		"deployments_url": "https://api.github.com/repos/Autodesk-Forge/viewer-meteor-sample/deployments",
+		"created_at": "2016-11-11T17:56:50Z",
+		"updated_at": "2016-11-11T17:59:18Z",
+		"pushed_at": "2016-11-11T17:59:17Z",
+		"git_url": "git://github.com/Autodesk-Forge/viewer-meteor-sample.git",
+		"ssh_url": "git@github.com:Autodesk-Forge/viewer-meteor-sample.git",
+		"clone_url": "https://github.com/Autodesk-Forge/viewer-meteor-sample.git",
+		"svn_url": "https://github.com/Autodesk-Forge/viewer-meteor-sample",
+		"homepage": null,
+		"size": 9,
+		"stargazers_count": 0,
+		"watchers_count": 0,
+		"language": "JavaScript",
+		"has_issues": true,
+		"has_downloads": true,
+		"has_wiki": true,
+		"has_pages": false,
+		"forks_count": 0,
+		"mirror_url": null,
+		"open_issues_count": 0,
+		"forks": 0,
+		"open_issues": 0,
+		"watchers": 0,
+		"default_branch": "master",
+		"permissions": {
+			"admin": false,
+			"push": false,
+			"pull": true
+		}
+	},
+	{
+		"id": 73500303,
+		"name": "design.automation-java-simple.sample",
+		"full_name": "Autodesk-Forge/design.automation-java-simple.sample",
+		"owner": {
+			"login": "Autodesk-Forge",
+			"id": 16883010,
+			"avatar_url": "https://avatars.githubusercontent.com/u/16883010?v=3",
+			"gravatar_id": "",
+			"url": "https://api.github.com/users/Autodesk-Forge",
+			"html_url": "https://github.com/Autodesk-Forge",
+			"followers_url": "https://api.github.com/users/Autodesk-Forge/followers",
+			"following_url": "https://api.github.com/users/Autodesk-Forge/following{/other_user}",
+			"gists_url": "https://api.github.com/users/Autodesk-Forge/gists{/gist_id}",
+			"starred_url": "https://api.github.com/users/Autodesk-Forge/starred{/owner}{/repo}",
+			"subscriptions_url": "https://api.github.com/users/Autodesk-Forge/subscriptions",
+			"organizations_url": "https://api.github.com/users/Autodesk-Forge/orgs",
+			"repos_url": "https://api.github.com/users/Autodesk-Forge/repos",
+			"events_url": "https://api.github.com/users/Autodesk-Forge/events{/privacy}",
+			"received_events_url": "https://api.github.com/users/Autodesk-Forge/received_events",
+			"type": "Organization",
+			"site_admin": false
+		},
+		"private": false,
+		"html_url": "https://github.com/Autodesk-Forge/design.automation-java-simple.sample",
+		"description": "The simplest Design Automation API Java sample ",
+		"fork": false,
+		"url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample",
+		"forks_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/forks",
+		"keys_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/keys{/key_id}",
+		"collaborators_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/collaborators{/collaborator}",
+		"teams_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/teams",
+		"hooks_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/hooks",
+		"issue_events_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/issues/events{/number}",
+		"events_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/events",
+		"assignees_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/assignees{/user}",
+		"branches_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/branches{/branch}",
+		"tags_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/tags",
+		"blobs_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/git/blobs{/sha}",
+		"git_tags_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/git/tags{/sha}",
+		"git_refs_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/git/refs{/sha}",
+		"trees_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/git/trees{/sha}",
+		"statuses_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/statuses/{sha}",
+		"languages_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/languages",
+		"stargazers_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/stargazers",
+		"contributors_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/contributors",
+		"subscribers_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/subscribers",
+		"subscription_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/subscription",
+		"commits_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/commits{/sha}",
+		"git_commits_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/git/commits{/sha}",
+		"comments_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/comments{/number}",
+		"issue_comment_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/issues/comments{/number}",
+		"contents_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/contents/{+path}",
+		"compare_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/compare/{base}...{head}",
+		"merges_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/merges",
+		"archive_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/{archive_format}{/ref}",
+		"downloads_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/downloads",
+		"issues_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/issues{/number}",
+		"pulls_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/pulls{/number}",
+		"milestones_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/milestones{/number}",
+		"notifications_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/notifications{?since,all,participating}",
+		"labels_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/labels{/name}",
+		"releases_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/releases{/id}",
+		"deployments_url": "https://api.github.com/repos/Autodesk-Forge/design.automation-java-simple.sample/deployments",
+		"created_at": "2016-11-11T18:08:51Z",
+		"updated_at": "2016-11-11T18:10:47Z",
+		"pushed_at": "2016-11-11T18:10:46Z",
+		"git_url": "git://github.com/Autodesk-Forge/design.automation-java-simple.sample.git",
+		"ssh_url": "git@github.com:Autodesk-Forge/design.automation-java-simple.sample.git",
+		"clone_url": "https://github.com/Autodesk-Forge/design.automation-java-simple.sample.git",
+		"svn_url": "https://github.com/Autodesk-Forge/design.automation-java-simple.sample",
+		"homepage": null,
+		"size": 5,
+		"stargazers_count": 0,
+		"watchers_count": 0,
+		"language": "Java",
+		"has_issues": true,
+		"has_downloads": true,
+		"has_wiki": true,
+		"has_pages": false,
+		"forks_count": 0,
+		"mirror_url": null,
+		"open_issues_count": 0,
+		"forks": 0,
+		"open_issues": 0,
+		"watchers": 0,
+		"default_branch": "master",
+		"permissions": {
+			"admin": false,
+			"push": false,
+			"pull": true
+		}
+	},
+	{
+		"id": 75750936,
+		"name": "viewer-navigation.sample",
+		"full_name": "Autodesk-Forge/viewer-navigation.sample",
+		"owner": {
+			"login": "Autodesk-Forge",
+			"id": 16883010,
+			"avatar_url": "https://avatars.githubusercontent.com/u/16883010?v=3",
+			"gravatar_id": "",
+			"url": "https://api.github.com/users/Autodesk-Forge",
+			"html_url": "https://github.com/Autodesk-Forge",
+			"followers_url": "https://api.github.com/users/Autodesk-Forge/followers",
+			"following_url": "https://api.github.com/users/Autodesk-Forge/following{/other_user}",
+			"gists_url": "https://api.github.com/users/Autodesk-Forge/gists{/gist_id}",
+			"starred_url": "https://api.github.com/users/Autodesk-Forge/starred{/owner}{/repo}",
+			"subscriptions_url": "https://api.github.com/users/Autodesk-Forge/subscriptions",
+			"organizations_url": "https://api.github.com/users/Autodesk-Forge/orgs",
+			"repos_url": "https://api.github.com/users/Autodesk-Forge/repos",
+			"events_url": "https://api.github.com/users/Autodesk-Forge/events{/privacy}",
+			"received_events_url": "https://api.github.com/users/Autodesk-Forge/received_events",
+			"type": "Organization",
+			"site_admin": false
+		},
+		"private": false,
+		"html_url": "https://github.com/Autodesk-Forge/viewer-navigation.sample",
+		"description": "Viewer 2D/3D Viewer Location Navigation",
+		"fork": false,
+		"url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample",
+		"forks_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/forks",
+		"keys_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/keys{/key_id}",
+		"collaborators_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/collaborators{/collaborator}",
+		"teams_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/teams",
+		"hooks_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/hooks",
+		"issue_events_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/issues/events{/number}",
+		"events_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/events",
+		"assignees_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/assignees{/user}",
+		"branches_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/branches{/branch}",
+		"tags_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/tags",
+		"blobs_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/git/blobs{/sha}",
+		"git_tags_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/git/tags{/sha}",
+		"git_refs_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/git/refs{/sha}",
+		"trees_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/git/trees{/sha}",
+		"statuses_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/statuses/{sha}",
+		"languages_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/languages",
+		"stargazers_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/stargazers",
+		"contributors_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/contributors",
+		"subscribers_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/subscribers",
+		"subscription_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/subscription",
+		"commits_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/commits{/sha}",
+		"git_commits_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/git/commits{/sha}",
+		"comments_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/comments{/number}",
+		"issue_comment_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/issues/comments{/number}",
+		"contents_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/contents/{+path}",
+		"compare_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/compare/{base}...{head}",
+		"merges_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/merges",
+		"archive_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/{archive_format}{/ref}",
+		"downloads_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/downloads",
+		"issues_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/issues{/number}",
+		"pulls_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/pulls{/number}",
+		"milestones_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/milestones{/number}",
+		"notifications_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/notifications{?since,all,participating}",
+		"labels_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/labels{/name}",
+		"releases_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/releases{/id}",
+		"deployments_url": "https://api.github.com/repos/Autodesk-Forge/viewer-navigation.sample/deployments",
+		"created_at": "2016-12-06T16:40:59Z",
+		"updated_at": "2016-12-10T17:56:52Z",
+		"pushed_at": "2016-12-06T16:46:10Z",
+		"git_url": "git://github.com/Autodesk-Forge/viewer-navigation.sample.git",
+		"ssh_url": "git@github.com:Autodesk-Forge/viewer-navigation.sample.git",
+		"clone_url": "https://github.com/Autodesk-Forge/viewer-navigation.sample.git",
+		"svn_url": "https://github.com/Autodesk-Forge/viewer-navigation.sample",
+		"homepage": "http://viewernavigation.herokuapp.com",
+		"size": 30892,
+		"stargazers_count": 1,
+		"watchers_count": 1,
+		"language": "JavaScript",
+		"has_issues": true,
+		"has_downloads": true,
+		"has_wiki": true,
+		"has_pages": false,
+		"forks_count": 1,
+		"mirror_url": null,
+		"open_issues_count": 0,
+		"forks": 1,
+		"open_issues": 0,
+		"watchers": 1,
+		"default_branch": "master",
+		"permissions": {
+			"admin": false,
+			"push": false,
+			"pull": true
+		}
+	}
+];
+
+/***/ },
+/* 23 */
+/***/ function(module, exports) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+var stylesInDom = {},
+	memoize = function(fn) {
+		var memo;
+		return function () {
+			if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+			return memo;
+		};
+	},
+	isOldIE = memoize(function() {
+		return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
+	}),
+	getHeadElement = memoize(function () {
+		return document.head || document.getElementsByTagName("head")[0];
+	}),
+	singletonElement = null,
+	singletonCounter = 0,
+	styleElementsInsertedAtTop = [];
+
+module.exports = function(list, options) {
+	if(typeof DEBUG !== "undefined" && DEBUG) {
+		if(typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+	}
+
+	options = options || {};
+	// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+	// tags it will allow on a page
+	if (typeof options.singleton === "undefined") options.singleton = isOldIE();
+
+	// By default, add <style> tags to the bottom of <head>.
+	if (typeof options.insertAt === "undefined") options.insertAt = "bottom";
+
+	var styles = listToStyles(list);
+	addStylesToDom(styles, options);
+
+	return function update(newList) {
+		var mayRemove = [];
+		for(var i = 0; i < styles.length; i++) {
+			var item = styles[i];
+			var domStyle = stylesInDom[item.id];
+			domStyle.refs--;
+			mayRemove.push(domStyle);
+		}
+		if(newList) {
+			var newStyles = listToStyles(newList);
+			addStylesToDom(newStyles, options);
+		}
+		for(var i = 0; i < mayRemove.length; i++) {
+			var domStyle = mayRemove[i];
+			if(domStyle.refs === 0) {
+				for(var j = 0; j < domStyle.parts.length; j++)
+					domStyle.parts[j]();
+				delete stylesInDom[domStyle.id];
+			}
+		}
+	};
+}
+
+function addStylesToDom(styles, options) {
+	for(var i = 0; i < styles.length; i++) {
+		var item = styles[i];
+		var domStyle = stylesInDom[item.id];
+		if(domStyle) {
+			domStyle.refs++;
+			for(var j = 0; j < domStyle.parts.length; j++) {
+				domStyle.parts[j](item.parts[j]);
+			}
+			for(; j < item.parts.length; j++) {
+				domStyle.parts.push(addStyle(item.parts[j], options));
+			}
+		} else {
+			var parts = [];
+			for(var j = 0; j < item.parts.length; j++) {
+				parts.push(addStyle(item.parts[j], options));
+			}
+			stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
+		}
+	}
+}
+
+function listToStyles(list) {
+	var styles = [];
+	var newStyles = {};
+	for(var i = 0; i < list.length; i++) {
+		var item = list[i];
+		var id = item[0];
+		var css = item[1];
+		var media = item[2];
+		var sourceMap = item[3];
+		var part = {css: css, media: media, sourceMap: sourceMap};
+		if(!newStyles[id])
+			styles.push(newStyles[id] = {id: id, parts: [part]});
+		else
+			newStyles[id].parts.push(part);
+	}
+	return styles;
+}
+
+function insertStyleElement(options, styleElement) {
+	var head = getHeadElement();
+	var lastStyleElementInsertedAtTop = styleElementsInsertedAtTop[styleElementsInsertedAtTop.length - 1];
+	if (options.insertAt === "top") {
+		if(!lastStyleElementInsertedAtTop) {
+			head.insertBefore(styleElement, head.firstChild);
+		} else if(lastStyleElementInsertedAtTop.nextSibling) {
+			head.insertBefore(styleElement, lastStyleElementInsertedAtTop.nextSibling);
+		} else {
+			head.appendChild(styleElement);
+		}
+		styleElementsInsertedAtTop.push(styleElement);
+	} else if (options.insertAt === "bottom") {
+		head.appendChild(styleElement);
+	} else {
+		throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
+	}
+}
+
+function removeStyleElement(styleElement) {
+	styleElement.parentNode.removeChild(styleElement);
+	var idx = styleElementsInsertedAtTop.indexOf(styleElement);
+	if(idx >= 0) {
+		styleElementsInsertedAtTop.splice(idx, 1);
+	}
+}
+
+function createStyleElement(options) {
+	var styleElement = document.createElement("style");
+	styleElement.type = "text/css";
+	insertStyleElement(options, styleElement);
+	return styleElement;
+}
+
+function createLinkElement(options) {
+	var linkElement = document.createElement("link");
+	linkElement.rel = "stylesheet";
+	insertStyleElement(options, linkElement);
+	return linkElement;
+}
+
+function addStyle(obj, options) {
+	var styleElement, update, remove;
+
+	if (options.singleton) {
+		var styleIndex = singletonCounter++;
+		styleElement = singletonElement || (singletonElement = createStyleElement(options));
+		update = applyToSingletonTag.bind(null, styleElement, styleIndex, false);
+		remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);
+	} else if(obj.sourceMap &&
+		typeof URL === "function" &&
+		typeof URL.createObjectURL === "function" &&
+		typeof URL.revokeObjectURL === "function" &&
+		typeof Blob === "function" &&
+		typeof btoa === "function") {
+		styleElement = createLinkElement(options);
+		update = updateLink.bind(null, styleElement);
+		remove = function() {
+			removeStyleElement(styleElement);
+			if(styleElement.href)
+				URL.revokeObjectURL(styleElement.href);
+		};
+	} else {
+		styleElement = createStyleElement(options);
+		update = applyToTag.bind(null, styleElement);
+		remove = function() {
+			removeStyleElement(styleElement);
+		};
+	}
+
+	update(obj);
+
+	return function updateStyle(newObj) {
+		if(newObj) {
+			if(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)
+				return;
+			update(obj = newObj);
+		} else {
+			remove();
+		}
+	};
+}
+
+var replaceText = (function () {
+	var textStore = [];
+
+	return function (index, replacement) {
+		textStore[index] = replacement;
+		return textStore.filter(Boolean).join('\n');
+	};
+})();
+
+function applyToSingletonTag(styleElement, index, remove, obj) {
+	var css = remove ? "" : obj.css;
+
+	if (styleElement.styleSheet) {
+		styleElement.styleSheet.cssText = replaceText(index, css);
+	} else {
+		var cssNode = document.createTextNode(css);
+		var childNodes = styleElement.childNodes;
+		if (childNodes[index]) styleElement.removeChild(childNodes[index]);
+		if (childNodes.length) {
+			styleElement.insertBefore(cssNode, childNodes[index]);
+		} else {
+			styleElement.appendChild(cssNode);
+		}
+	}
+}
+
+function applyToTag(styleElement, obj) {
+	var css = obj.css;
+	var media = obj.media;
+
+	if(media) {
+		styleElement.setAttribute("media", media)
+	}
+
+	if(styleElement.styleSheet) {
+		styleElement.styleSheet.cssText = css;
+	} else {
+		while(styleElement.firstChild) {
+			styleElement.removeChild(styleElement.firstChild);
+		}
+		styleElement.appendChild(document.createTextNode(css));
+	}
+}
+
+function updateLink(linkElement, obj) {
+	var css = obj.css;
+	var sourceMap = obj.sourceMap;
+
+	if(sourceMap) {
+		// http://stackoverflow.com/a/26603875
+		css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
+	}
+
+	var blob = new Blob([css], { type: "text/css" });
+
+	var oldSrc = linkElement.href;
+
+	linkElement.href = URL.createObjectURL(blob);
+
+	if(oldSrc)
+		URL.revokeObjectURL(oldSrc);
+}
+
+
+/***/ },
+/* 24 */
+/***/ function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
+  return _h('div', {
+    attrs: {
+      "id": "cards"
+    }
+  }, [_h('div', {
+    staticClass: "repo-card"
+  }, [_h('p', ["There are " + _vm._s(_vm.repos.length) + " repos."]), " ", _vm._m(0), " ", _h('p', [_h('a', {
+    attrs: {
+      "href": "#"
+    },
+    on: {
+      "click": _vm.sortByPopularity
+    }
+  }, ["Most Popular"])]), " ", _h('p', [_h('a', {
+    attrs: {
+      "href": "#"
+    },
+    on: {
+      "click": _vm.sortByAlphabetical
+    }
+  }, ["Alphabetical"])]), " ", _h('p', [_h('a', {
+    attrs: {
+      "href": "#"
+    },
+    on: {
+      "click": _vm.sortByLastUpdated
+    }
+  }, ["Last Updated"])])]), " ", _h('div', {
+    staticClass: "repo-card"
+  }, [_h('p', ["Filter by Language: "]), " ", _h('p', [_vm._l((_vm.languages), function(repo, language) {
+    return _h('a', {
+      attrs: {
+        "href": "#"
+      },
+      on: {
+        "click": function($event) {
+          _vm.filterByLanguage(language)
+        }
+      }
+    }, [_vm._s(language) + " "])
+  })]), " ", _h('br'), " ", _h('p', ["Filter by API Used: "]), " ", _h('p', [_vm._l((_vm.apis), function(repo, api) {
+    return _h('a', {
+      attrs: {
+        "href": "#"
+      },
+      on: {
+        "click": function($event) {
+          _vm.filterByAPIUsed(api)
+        }
+      }
+    }, [_vm._s(api) + " "])
+  })])]), " ", _vm._l((_vm.repos), function(repo) {
+    return _h('a', {
+      attrs: {
+        "href": repo.html_url
+      }
+    }, [_h('div', {
+      staticClass: "repo-card"
+    }, [_h('h3', [_vm._s(repo.name)]), " ", _h('p', [_vm._s(repo.description)]), " ", _h('p', [_h('span', [_h('a', {
+      attrs: {
+        "href": repo.html_url
+      }
+    }, [_h('i', {
+      staticClass: "fa fa-github",
+      attrs: {
+        "aria-hidden": "true"
+      }
+    }), " Source Code"])]), " ", _h('span', [_h('i', {
+      staticClass: "fa fa-star",
+      attrs: {
+        "aria-hidden": "true"
+      }
+    }), " " + _vm._s(repo.stargazers_count)]), " ", _h('span', [_h('a', {
+      directives: [{
+        name: "show",
+        rawName: "v-show",
+        value: (repo.homepage),
+        expression: "repo.homepage"
+      }],
+      attrs: {
+        "href": repo.homepage
+      }
+    }, [_h('i', {
+      staticClass: "fa fa-desktop",
+      attrs: {
+        "aria-hidden": "true"
+      }
+    }), " Demo"])])])])])
+  })])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;
+  return _h('p', [_h('br'), "Sort: "])
+}]}
+
+/***/ },
+/* 25 */
+/***/ function(module, exports) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+var stylesInDom = {},
+	memoize = function(fn) {
+		var memo;
+		return function () {
+			if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+			return memo;
+		};
+	},
+	isOldIE = memoize(function() {
+		return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
+	}),
+	getHeadElement = memoize(function () {
+		return document.head || document.getElementsByTagName("head")[0];
+	}),
+	singletonElement = null,
+	singletonCounter = 0,
+	styleElementsInsertedAtTop = [];
+
+module.exports = function(list, options) {
+	if(typeof DEBUG !== "undefined" && DEBUG) {
+		if(typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+	}
+
+	options = options || {};
+	// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+	// tags it will allow on a page
+	if (typeof options.singleton === "undefined") options.singleton = isOldIE();
+
+	// By default, add <style> tags to the bottom of <head>.
+	if (typeof options.insertAt === "undefined") options.insertAt = "bottom";
+
+	var styles = listToStyles(list);
+	addStylesToDom(styles, options);
+
+	return function update(newList) {
+		var mayRemove = [];
+		for(var i = 0; i < styles.length; i++) {
+			var item = styles[i];
+			var domStyle = stylesInDom[item.id];
+			domStyle.refs--;
+			mayRemove.push(domStyle);
+		}
+		if(newList) {
+			var newStyles = listToStyles(newList);
+			addStylesToDom(newStyles, options);
+		}
+		for(var i = 0; i < mayRemove.length; i++) {
+			var domStyle = mayRemove[i];
+			if(domStyle.refs === 0) {
+				for(var j = 0; j < domStyle.parts.length; j++)
+					domStyle.parts[j]();
+				delete stylesInDom[domStyle.id];
+			}
+		}
+	};
+}
+
+function addStylesToDom(styles, options) {
+	for(var i = 0; i < styles.length; i++) {
+		var item = styles[i];
+		var domStyle = stylesInDom[item.id];
+		if(domStyle) {
+			domStyle.refs++;
+			for(var j = 0; j < domStyle.parts.length; j++) {
+				domStyle.parts[j](item.parts[j]);
+			}
+			for(; j < item.parts.length; j++) {
+				domStyle.parts.push(addStyle(item.parts[j], options));
+			}
+		} else {
+			var parts = [];
+			for(var j = 0; j < item.parts.length; j++) {
+				parts.push(addStyle(item.parts[j], options));
+			}
+			stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
+		}
+	}
+}
+
+function listToStyles(list) {
+	var styles = [];
+	var newStyles = {};
+	for(var i = 0; i < list.length; i++) {
+		var item = list[i];
+		var id = item[0];
+		var css = item[1];
+		var media = item[2];
+		var sourceMap = item[3];
+		var part = {css: css, media: media, sourceMap: sourceMap};
+		if(!newStyles[id])
+			styles.push(newStyles[id] = {id: id, parts: [part]});
+		else
+			newStyles[id].parts.push(part);
+	}
+	return styles;
+}
+
+function insertStyleElement(options, styleElement) {
+	var head = getHeadElement();
+	var lastStyleElementInsertedAtTop = styleElementsInsertedAtTop[styleElementsInsertedAtTop.length - 1];
+	if (options.insertAt === "top") {
+		if(!lastStyleElementInsertedAtTop) {
+			head.insertBefore(styleElement, head.firstChild);
+		} else if(lastStyleElementInsertedAtTop.nextSibling) {
+			head.insertBefore(styleElement, lastStyleElementInsertedAtTop.nextSibling);
+		} else {
+			head.appendChild(styleElement);
+		}
+		styleElementsInsertedAtTop.push(styleElement);
+	} else if (options.insertAt === "bottom") {
+		head.appendChild(styleElement);
+	} else {
+		throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
+	}
+}
+
+function removeStyleElement(styleElement) {
+	styleElement.parentNode.removeChild(styleElement);
+	var idx = styleElementsInsertedAtTop.indexOf(styleElement);
+	if(idx >= 0) {
+		styleElementsInsertedAtTop.splice(idx, 1);
+	}
+}
+
+function createStyleElement(options) {
+	var styleElement = document.createElement("style");
+	styleElement.type = "text/css";
+	insertStyleElement(options, styleElement);
+	return styleElement;
+}
+
+function addStyle(obj, options) {
+	var styleElement, update, remove;
+
+	if (options.singleton) {
+		var styleIndex = singletonCounter++;
+		styleElement = singletonElement || (singletonElement = createStyleElement(options));
+		update = applyToSingletonTag.bind(null, styleElement, styleIndex, false);
+		remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);
+	} else {
+		styleElement = createStyleElement(options);
+		update = applyToTag.bind(null, styleElement);
+		remove = function() {
+			removeStyleElement(styleElement);
+		};
+	}
+
+	update(obj);
+
+	return function updateStyle(newObj) {
+		if(newObj) {
+			if(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)
+				return;
+			update(obj = newObj);
+		} else {
+			remove();
+		}
+	};
+}
+
+var replaceText = (function () {
+	var textStore = [];
+
+	return function (index, replacement) {
+		textStore[index] = replacement;
+		return textStore.filter(Boolean).join('\n');
+	};
+})();
+
+function applyToSingletonTag(styleElement, index, remove, obj) {
+	var css = remove ? "" : obj.css;
+
+	if (styleElement.styleSheet) {
+		styleElement.styleSheet.cssText = replaceText(index, css);
+	} else {
+		var cssNode = document.createTextNode(css);
+		var childNodes = styleElement.childNodes;
+		if (childNodes[index]) styleElement.removeChild(childNodes[index]);
+		if (childNodes.length) {
+			styleElement.insertBefore(cssNode, childNodes[index]);
+		} else {
+			styleElement.appendChild(cssNode);
+		}
+	}
+}
+
+function applyToTag(styleElement, obj) {
+	var css = obj.css;
+	var media = obj.media;
+	var sourceMap = obj.sourceMap;
+
+	if (media) {
+		styleElement.setAttribute("media", media);
+	}
+
+	if (sourceMap) {
+		// https://developer.chrome.com/devtools/docs/javascript-debugging
+		// this makes source maps inside style tags work properly in Chrome
+		css += '\n/*# sourceURL=' + sourceMap.sources[0] + ' */';
+		// http://stackoverflow.com/a/26603875
+		css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
+	}
+
+	if (styleElement.styleSheet) {
+		styleElement.styleSheet.cssText = css;
+	} else {
+		while(styleElement.firstChild) {
+			styleElement.removeChild(styleElement.firstChild);
+		}
+		styleElement.appendChild(document.createTextNode(css));
+	}
+}
+
+
+/***/ },
+/* 26 */
+/***/ function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(5);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(25)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-6cf85cf4!./../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Cards.vue", function() {
+			var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-6cf85cf4!./../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Cards.vue");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ },
+/* 27 */
+/***/ function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() { return this; })();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1,eval)("this");
+} catch(e) {
+	// This works if the window reference is available
+	if(typeof window === "object")
+		g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ },
+/* 28 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Cards_vue__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Cards_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Cards_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_main_css__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_main_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__styles_main_css__);
+
+
+
+
+new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
+  el: '#cards',
+  render: h => h(__WEBPACK_IMPORTED_MODULE_1__Cards_vue___default.a)
+});
+
+/***/ }
+/******/ ]);
+//# sourceMappingURL=build.js.map

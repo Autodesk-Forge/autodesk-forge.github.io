@@ -1,14 +1,16 @@
 {
-  "name": "developer-autodesk.github.io",
+  "name": "autodesk-forge.github.io",
   "description": "A place for autodesk forge sample codes.",
   "author": "Shiya Luo",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --port 3000",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
     "jquery": "^3.1.1",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
     "vue": "^2.0.5"
   },
   "devDependencies": {

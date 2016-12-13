@@ -70,7 +70,6 @@
     "ssh_url": "git@github.com:Autodesk-Forge/forge.commandline-curl.git",
     "clone_url": "https://github.com/Autodesk-Forge/forge.commandline-curl.git",
     "svn_url": "https://github.com/Autodesk-Forge/forge.commandline-curl",
-    "homepage": "http://developer-autodesk.github.io/",
     "size": 111,
     "stargazers_count": 6,
     "watchers_count": 6,
@@ -256,7 +255,6 @@
     "ssh_url": "git@github.com:Autodesk-Forge/viewer-android-sample.git",
     "clone_url": "https://github.com/Autodesk-Forge/viewer-android-sample.git",
     "svn_url": "https://github.com/Autodesk-Forge/viewer-android-sample",
-    "homepage": "http://developer-autodesk.github.io/",
     "size": 3285,
     "stargazers_count": 6,
     "watchers_count": 6,
@@ -907,7 +905,6 @@
     "ssh_url": "git@github.com:Autodesk-Forge/forge-boilers.nodejs.git",
     "clone_url": "https://github.com/Autodesk-Forge/forge-boilers.nodejs.git",
     "svn_url": "https://github.com/Autodesk-Forge/forge-boilers.nodejs",
-    "homepage": "http://forge.autodesk.com",
     "size": 28625,
     "stargazers_count": 17,
     "watchers_count": 17,
@@ -932,6 +929,7 @@
   {
     "id": 69402229,
     "name": "forge-rcdb.nodejs",
+    "blogpost": "http://adndevblog.typepad.com/cloud_and_mobile/2016/10/working-seamlessly-onlineoffline-when-developing-apps-with-the-forge-viewer-.html",
     "full_name": "Autodesk-Forge/forge-rcdb.nodejs",
     "owner": {
       "login": "Autodesk-Forge",
@@ -1000,7 +998,7 @@
     "ssh_url": "git@github.com:Autodesk-Forge/forge-rcdb.nodejs.git",
     "clone_url": "https://github.com/Autodesk-Forge/forge-rcdb.nodejs.git",
     "svn_url": "https://github.com/Autodesk-Forge/forge-rcdb.nodejs",
-    "homepage": null,
+    "homepage": "https://forge-rcdb.autodesk.io/",
     "size": 16007,
     "stargazers_count": 7,
     "watchers_count": 7,
@@ -1396,6 +1394,7 @@
   },
   {
     "id": 73496523,
+    "blogpost":"http://adndevblog.typepad.com/cloud_and_mobile/2016/09/box-forge.html",
     "name": "data.management-nodejs-integration.box",
     "full_name": "Autodesk-Forge/data.management-nodejs-integration.box",
     "owner": {
@@ -1490,6 +1489,7 @@
   {
     "id": 73496831,
     "name": "model.derivative-nodejs-google.drive.viewer",
+    "blogpost":"http://adndevblog.typepad.com/cloud_and_mobile/2016/10/google-drive-model-derivative-viewer.html",
     "full_name": "Autodesk-Forge/model.derivative-nodejs-google.drive.viewer",
     "owner": {
       "login": "Autodesk-Forge",

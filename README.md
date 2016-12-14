@@ -10,7 +10,7 @@ npm install
 ## Develop
 
 ``` bash
-# serve with hot reload at localhost:8080
+# serve with hot reload at localhost:3000
 npm run dev
 ```
 Built with webpack + vue.js. All source files in `src` folder, compiled into `dist` folder.

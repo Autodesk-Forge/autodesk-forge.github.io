@@ -25,25 +25,41 @@ a {
 a:hover {
     color: #EE8822;
 }
-ul {
+ul#banner { // banner styles
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #fff;
+    #logo {
+        padding: 0px;
+    }
+    li {
+        float: left;
+        padding-top: 8px;
+        &.right {
+            float: right;
+        }
+        &#search {
+          padding-top: 15px;
+        }
+    }
 }
-li {
-    float: left;
-}
+
 li a {
     display: block;
     color: #404040;
     text-align: center;
     padding: 10px 10px;
-    vertical-align: middle;
     text-decoration: none;
 }
 
 li a:hover {
     color: #EE8822;
+}
+
+#footer {
+  border-top: 1px solid #ebeff0; 
+  padding: 20px 0 20px 0; 
+  font-size: 12px;
 }

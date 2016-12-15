@@ -1,6 +1,5 @@
 <template>
     <div id="cards" class="forge-body">
-
         <div class="forge-top-banner">
             <h1>Forge is Autodesk's API Platform</h1>
             <p>The Forge platform unlocks the functionality in Autodesk products that have been serving industries such
@@ -8,7 +7,7 @@
         </div>
         <div class="forge-top-filter">
             <span style="display:inline-block;">
-                Showing {{repos.length}} repos
+                Showing {{repos.length}} repo(s)
                 <div class="dropdown" style="display:inline-block;">
                     <button class="btn btn-info dropdown-toggle btn-xs filterbutton" type="button" data-toggle="dropdown">
                         Sort <span class="caret"></span></button>
@@ -35,17 +34,19 @@
             </span>
         </div>
         <a v-for="repo in repos" v-bind:href="repo.html_url">
-            <div class="repo-card">
+            <div class="repo-card forge-title">
                 <!--<div style="position: absolute; top: 0; right: 0;">
                         <a v-show="repo.homepage" v-bind:href="repo.homepage"><img src="img/demo.png" /></a></div>-->
-                <h3>{{ repo.name }}</h3>
-                <p>{{ repo.description }}</p>
-                <div style="position: absolute; bottom:10px; width:100%">
+                <div class="card-info">
+                  <h3>{{ repo.name }}</h3>
+                  <p>{{ repo.description }}</p>
+                </div>
+                <div class="card-footer">
                     <!-- This is redundant <span><a v-bind:href="repo.html_url"><i class="fa fa-github" aria-hidden="true"></i> Source Code</a></span>-->
 
                     <!-- need to implement this blogpost feature... not sure how-->
                     <a v-show="repo.homepage" v-bind:href="repo.homepage" target="_blank"><span
-                            class="repo-card-footer-blogpost"><i class="fa fa-desktop" aria-hidden="true"></i> Live demo</span></a>
+                            class="repo-card-footer-blogpost"><i class="fa fa-desktop" aria-hidden="true"></i> Live Demo</span></a>
                     <!--<a v-show="repo.blogpost" v-bind:href="repo.blogpost" target="_blank"><span class="repo-card-footer-blogpost"><i class="fa fa-file-text-o" aria-hidden="true"></i> Blog post</span></a>-->
                     <span class="repo-card-footer-item"><i class="fa fa-star" aria-hidden="true"></i> {{ repo.stargazers_count }}</span>
                     <span class="repo-card-footer-item"><i class="fa fa-code-fork" aria-hidden="true"></i> {{ repo.forks_count }}</span>
@@ -146,8 +147,6 @@ export default {
     }
   }
 }
-
-
 </script>
 
 <style>
@@ -162,45 +161,41 @@ body {
   text-align: center;
   height: 100%;
 }
+
+.filterbutton, .filterbutton:hover, .filterbutton:active, .filterbutton:visited {
+  height:25px;
+  background-color: #3566cc !important;
+  border: #3566cc !important;
+}
+
 .repo-card {
   color: #404040;
   background: #fff;
   border: 1px solid #d3d3d3;
-  border-radius: 2px;
+  border-radius: 1px;
   display: inline-block;
   height: 20rem;
   margin: 1rem;
-  padding: 1rem;
   position: relative;
   width: 300px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   vertical-align: top;
 }
-
-.repo-card-footer-item{
-  padding-right:30px;
-  color: #ccc;
-  font-size: 13px;
+.repo-card .card-info {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
-
-.repo-card-footer-language{
-    color: #000;
-    font-size: 13px;
-    padding-right:30px;
-}
-
-.repo-card-footer-blogpost{
-    color: #3b65a7;
-    font-size: 13px;
-    padding-right:30px;
+.repo-card .card-footer {
+  position: 
+  absolute; 
+  bottom: 10px; 
+  width: 100%;
+  padding: none;
 }
 
 .repo-card:hover {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
-h3 {
-  margin-bottom: 0.5rem;
 }
 
 

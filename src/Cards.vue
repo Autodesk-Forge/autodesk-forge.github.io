@@ -5,21 +5,34 @@
             <h1>Forge is Autodesk's API Platform</h1>
             <p>The Forge platform unlocks the functionality in Autodesk products that have been serving industries such
                 as architecture, engineering, construction, manufacturing, media, and others.</p>
-            </div>
-            <div class="forge-top-filter">
-
-            <p>Showing {{repos.length}} repos</p>
-                <p>Sort by
-            <a href="#" @click="sortByAlphabetical">Alphabetical</a>,
-            <a href="#" @click="sortByPopularity">Most Popular</a> or
-            <a href="#" @click="sortByLastUpdated">Last updated</a></p>
-
-            <p>Filter by Language:
-            <a v-for="(repo, language) in languages" href="#" @click="filterByLanguage(language)">{{ language }} </a>
-            </p>
-
-            <p>Filter by API Used:
-            <a v-for="(repo, api) in apis" href="#" @click="filterByAPIUsed(api)">{{ api }} </a></p>
+        </div>
+        <div class="forge-top-filter">
+            <span style="display:inline-block;">
+                Showing {{repos.length}} repos
+                <div class="dropdown" style="display:inline-block;">
+                    <button class="btn btn-info dropdown-toggle btn-xs filterbutton" type="button" data-toggle="dropdown">
+                        Sort <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" @click="sortByAlphabetical">Alphabetical</a></li>
+                        <li><a href="#" @click="sortByPopularity">Most Popular</a></li>
+                        <li><a href="#" @click="sortByLastUpdated">Last updated</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown" style="display:inline-block;">
+                    <button class="btn btn-info dropdown-toggle btn-xs filterbutton" type="button" data-toggle="dropdown">
+                        Language <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li v-for="(repo, language) in languages"><a href="#" @click="filterByLanguage(language)">{{ language }}</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown" style="display:inline-block;">
+                    <button class="btn btn-info dropdown-toggle btn-xs filterbutton" type="button" data-toggle="dropdown">
+                        API <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li v-for="(repo, api) in apis"><a href="#" @click="filterByAPIUsed(api)">{{ api }}</a></li>
+                    </ul>
+                </div>
+            </span>
         </div>
         <a v-for="repo in repos" v-bind:href="repo.html_url">
             <div class="repo-card">
@@ -31,7 +44,8 @@
                     <!-- This is redundant <span><a v-bind:href="repo.html_url"><i class="fa fa-github" aria-hidden="true"></i> Source Code</a></span>-->
 
                     <!-- need to implement this blogpost feature... not sure how-->
-                    <a v-show="repo.homepage" v-bind:href="repo.homepage" target="_blank"><span class="repo-card-footer-blogpost"><i class="fa fa-desktop" aria-hidden="true"></i> Live demo</span></a>
+                    <a v-show="repo.homepage" v-bind:href="repo.homepage" target="_blank"><span
+                            class="repo-card-footer-blogpost"><i class="fa fa-desktop" aria-hidden="true"></i> Live demo</span></a>
                     <!--<a v-show="repo.blogpost" v-bind:href="repo.blogpost" target="_blank"><span class="repo-card-footer-blogpost"><i class="fa fa-file-text-o" aria-hidden="true"></i> Blog post</span></a>-->
                     <span class="repo-card-footer-item"><i class="fa fa-star" aria-hidden="true"></i> {{ repo.stargazers_count }}</span>
                     <span class="repo-card-footer-item"><i class="fa fa-code-fork" aria-hidden="true"></i> {{ repo.forks_count }}</span>
@@ -133,12 +147,16 @@ export default {
   }
 }
 
+
 </script>
 
 <style>
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
 }
 body {
   text-align: center;
@@ -150,7 +168,7 @@ body {
   border: 1px solid #d3d3d3;
   border-radius: 2px;
   display: inline-block;
-  height: 10rem;
+  height: 20rem;
   margin: 1rem;
   padding: 1rem;
   position: relative;
@@ -184,5 +202,6 @@ body {
 h3 {
   margin-bottom: 0.5rem;
 }
+
 
 </style>

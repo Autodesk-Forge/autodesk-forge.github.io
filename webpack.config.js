@@ -3,7 +3,7 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-  entry: './src/main.js',
+  entry: ['babel-polyfill', './src/main.js'],
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
@@ -41,13 +41,13 @@ module.exports = {
           name: '[name].[ext]?[hash]'
         }
       },
-      { 
-        test: /\.json$/, 
-        loader: 'json' 
+      {
+        test: /\.json$/,
+        loader: 'json'
       },
-      { 
-        test: /bootstrap-sass\/assets\/javascripts\//, 
-        loader: 'imports-loader?jQuery=jquery' 
+      {
+        test: /bootstrap-sass\/assets\/javascripts\//,
+        loader: 'imports-loader?jQuery=jquery'
       }
     ]
   },

@@ -1,67 +1,74 @@
 @import 'normalize.css';
 @import 'forge.less';
 @import (css) './font-awesome-4.7.0/css/font-awesome.min.css';
+
 @font-face {
   font-family: 'Artifakt Element';
-  src:  url('./fonts/element/EOT/Artifakt_Element_Regular.eot') format('eot'),
-        url('./fonts/element/TTF/Artifakt_Element_Regular.ttf') format('ttf'),
-        url('./fonts/element/WOFF/Artifakt_Element_Regular.woff') format('woff'),
-        url('./fonts/element/WOFF2/Artifakt_Element_Regular.woff2') format('woff2');
+  src: url('./fonts/element/EOT/Artifakt_Element_Regular.eot') format('eot'),
+  url('./fonts/element/TTF/Artifakt_Element_Regular.ttf') format('ttf'),
+  url('./fonts/element/WOFF/Artifakt_Element_Regular.woff') format('woff'),
+  url('./fonts/element/WOFF2/Artifakt_Element_Regular.woff2') format('woff2');
 }
+
 @font-face {
   font-family: 'Artifakt Legend';
-  src:  url('./fonts/legend/EOT/Artifakt_Legend_Regular.eot') format('eot'),
-        url('./fonts/legend/TTF/Artifakt_Legend_Regular.ttf') format('ttf'),
-        url('./fonts/legend/WOFF/Artifakt_Legend_Regular.woff') format('woff'),
-        url('./fonts/legend/WOFF2/Artifakt_Legend_Regular.woff2') format('woff2');
+  src: url('./fonts/legend/EOT/Artifakt_Legend_Regular.eot') format('eot'),
+  url('./fonts/legend/TTF/Artifakt_Legend_Regular.ttf') format('ttf'),
+  url('./fonts/legend/WOFF/Artifakt_Legend_Regular.woff') format('woff'),
+  url('./fonts/legend/WOFF2/Artifakt_Legend_Regular.woff2') format('woff2');
 }
+
 body {
-    font-family: "Artifakt Element", fallback, sans-serif;
+  font-family: "Artifakt Element", fallback, sans-serif;
 }
+
 a {
   text-decoration: none !important;
   color: #404040 !important;
 }
+
 a:hover {
-    color: #EE8822 !important;
+  color: #EE8822 !important;
 }
-ul#banner { // banner styles
-    list-style-type: none;
-    margin: 0;
-    padding-top: 5px;
-    height: 64px;
-    overflow: hidden;
-    background-color: #fff;
-    #logo {
-        padding: 0px;
+
+.forge-navbar {
+  list-style: none;
+  margin: 0;
+  padding-top: 5px;
+  height: 64px;
+  overflow: hidden;
+  background-color: #fff;
+  #logo {
+    padding-top: 13px;
+  }
+  li {
+    list-style: none;
+    float: left;
+    padding-top: 20px;
+    padding-right: 20px;
+    &.right {
+      float: right;
     }
-    li {
-        float: left;
-        padding-top: 8px;
-        &.right {
-            float: right;
-        }
-        &#search {
-          padding-top: 15px;
-        }
+    &#search {
+      padding-top: 15px;
     }
+  }
 }
 
 li a {
-    display: block;
-    color: #404040;
-    text-align: center;
-    padding: 10px 10px;
-    text-decoration: none;
+  display: block;
+  color: #404040;
+  text-decoration: none;
 }
 
 li a:hover {
-    color: #EE8822;
+  color: #EE8822;
 }
 
 #footer {
   border-top: 1px solid #ebeff0;
-  padding: 20px 0 20px 0; 
+  padding: 20px 0 20px 0;
+  margin-left: 10px;
   font-size: 12px;
   max-width: 1160px;
   text-align: left;
@@ -73,12 +80,46 @@ li a:hover {
   }
 }
 
-.maxwidth{
-  max-width:1160px;
-  margin:0 auto;
+.maxwidth {
+  max-width: 1160px;
+  margin: 0 auto;
 }
 
 span.sep {
   color: #d8d8d8;
   padding: 0 3px;
+}
+
+div.header {
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 1px solid #ebeff0;
+  margin-right: 20px;
+}
+
+div.col-lg-6 {
+  margin: 0;
+}
+
+div.page-footer {
+  margin-left: 30px;
+  margin-top: 20px;
+  div {
+    padding: 0;
+  }
+  text-align: left;
+  font-size: 12px;
+  ul {
+    padding-left: 3px;
+  }
+  li {
+    padding-top: 10px;
+    display: list-item;
+    list-style: none;
+  }
+}
+
+a.trackit:hover {
+  text-decoration: underline !important;
+  color: #666 !important;
 }

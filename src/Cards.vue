@@ -163,15 +163,9 @@ export default {
 
 <style>
 * {
-  margin: 0;
-  padding: 0;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-}
-body {
-  text-align: center;
-  height: 100%;
 }
 
 .filterbutton, .filterbutton:hover, .filterbutton:active, .filterbutton:visited {

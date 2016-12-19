@@ -10,7 +10,7 @@
         </div>
         <div class="forge-top-filter">
             <div class="maxwidth" style="padding-left:20px; padding-right:20px">
-            <strong>{{repos.length}}</strong> Samples in Github
+            <div style="padding-top:8px; display:inline-block;"><strong>{{repos.length}}</strong> Samples in Github</div>
             <span style="display:inline-block; float: right; ">
                 Filter by
                 <div class="dropdown" style="display:inline-block;">
@@ -181,7 +181,7 @@ export default {
 .repo-card {
   color: #666666;
   background: #fff;
-  border: 1px solid #d3d3d3;
+  border: 1px solid #EBEFF0;
   border-radius: 1px;
   display: inline-block;
   height: 20rem;
@@ -210,6 +210,7 @@ export default {
 
 .repo-card-info-item{
   padding-right: 10px;
+  color: #8b8b8b;
 }
 
 .repo-card-footer{
@@ -217,8 +218,8 @@ export default {
 }
 
 .repo-card:hover {
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  border: 1px solid #3566cc;
+  box-shadow: 0px 0px 10px 0px #cacaca;
+  border: 1px solid #3566CC;
 }
 
 </style>

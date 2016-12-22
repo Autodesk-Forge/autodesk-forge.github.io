@@ -3,9 +3,9 @@
         <div class="forge-top-banner">
             <div  class="maxwidth">
             <h1>Forge Samples and SDKs</h1>
-            <p>Check out these samples, tutorials and SDKs created to help speed up your Forge application development.
-                Visit our <a href="https://developer.autodesk.com/">blog</a> for lots more smaller code snippets,
-                tips and tricks.</p>
+            <p>Check out these samples, tutorials, and SDKs created to help speed up your Forge application development.
+                Visit our <a href="http://adndevblog.typepad.com/cloud_and_mobile/" target="_blank">blog</a> for more code snippets,
+                tips, and tricks.</p>
                 </div>
         </div>
         <div class="forge-top-filter">

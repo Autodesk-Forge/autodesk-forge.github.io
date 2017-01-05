@@ -11,9 +11,9 @@
         <div class="forge-top-filter">
             <div class="maxwidth" style="padding-left:20px; padding-right:20px">
             <div style="padding-top:8px; display:inline-block;"><strong>{{repos.length}}</strong> Samples in Github</div>
-            <span style="display:inline-block; float: right; ">
+            <span style="float: right; ">
                 Filter by
-                <div class="dropdown" style="display:inline-block;">
+                <div class="dropdown">
                     <button class="btn btn-info dropdown-toggle btn-xs filterbutton" type="button" data-toggle="dropdown">
                         API <span class="caret"></span></button>
                     <ul class="dropdown-menu">
@@ -21,7 +21,7 @@
                     </ul>
                 </div>
                 or
-                <div class="dropdown" style="display:inline-block;">
+                <div class="dropdown">
                     <button class="btn btn-info dropdown-toggle btn-xs filterbutton" type="button" data-toggle="dropdown">
                         Language <span class="caret"></span></button>
                     <ul class="dropdown-menu">
@@ -29,7 +29,7 @@
                     </ul>
                 </div>
                 or sort by
-                <div class="dropdown" style="display:inline-block;">
+                <div class="dropdown">
                     <button class="btn btn-info dropdown-toggle btn-xs filterbutton" type="button" data-toggle="dropdown">
                         Sort <span class="caret"></span></button>
                     <ul class="dropdown-menu">
@@ -206,6 +206,10 @@ export default {
   padding: none;
   position: absolute;
   bottom: 10px;
+}
+
+.dropdown {
+  display: inline-block;
 }
 
 .repo-card-info-item{

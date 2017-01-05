@@ -31,11 +31,9 @@
                 or sort by
                 <div class="dropdown">
                     <button class="btn btn-info dropdown-toggle btn-xs filterbutton" type="button" data-toggle="dropdown">
-                        Sort <span class="caret"></span></button>
+                        {{ sort[0] }} <span class="caret"></span></button>
                     <ul class="dropdown-menu">
-                        <li><a href="#" @click="sortByAlphabetical">Alphabetical</a></li>
-                        <li><a href="#" @click="sortByPopularity">Most Popular</a></li>
-                        <li><a href="#" @click="sortByLastUpdated">Last updated</a></li>
+                        <li v-for="value in sort"><a href="#" @click="sortBy(value)">{{ value }}</a></li>
                     </ul>
                 </div>
             </span>
@@ -86,6 +84,10 @@ let apis = {
   "Data Management" : []
 } // enum list of apis with Autodesk
 
+let sort = [
+  'Most Popular', 'Last Updated', 'Alphabetical' // default is 'Most Popular'
+];
+
 for (let repo of reposJSON) {
   // put repos in a list
   repos.push(repo);
@@ -129,25 +131,40 @@ export default {
     return {
       repos : repos,
       languages : languages, // used in filter by language
-      apis : apis // used in filter by api used
+      apis : apis, // used in filter by api used
+      sort : sort
     }
   },
 
   methods: {
-    sortByPopularity: () => {
-      repos.sort((a, b) => {
-        return b.stargazers_count - a.stargazers_count;
-      });
-    },
-    sortByAlphabetical: () => {
-      repos.sort((a, b) => {
-        return a.name.localeCompare(b.name);
-      });
-    },
-    sortByLastUpdated: () => {
-      repos.sort((a,b) => {
-        return b.updated_at.localeCompare(a.updated_at);
-      });
+    sortBy: (value) => {
+      let pos = sort.indexOf(value);
+      let temp = sort[0];
+      sort[0] = value;
+      sort[pos] = temp;
+      switch (value) {
+        case 'Most Popular': {
+            repos.sort((a, b) => {
+              return b.stargazers_count - a.stargazers_count;
+            });
+          break;
+        }
+        case 'Last Updated': {
+          repos.sort((a,b) => {
+            return b.updated_at.localeCompare(a.updated_at);
+          });
+          break;
+        }
+        case 'Alphabetical': {
+          repos.sort((a, b) => {
+            return a.name.localeCompare(b.name);
+          });
+          break;
+        }
+        default: {
+          break;
+        }
+      }
     },
     filterByLanguage: (language) => {
       repos.splice(0, repos.length);

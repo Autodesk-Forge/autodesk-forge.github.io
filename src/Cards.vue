@@ -1,70 +1,68 @@
 <template>
-    <div id="cards" class="forge-body">
-        <div class="forge-top-banner">
-            <div  class="maxwidth">
-            <h1>Forge Samples and SDKs</h1>
-            <p>Check out these samples, tutorials, and SDKs created to help speed up your Forge application development.
-                Visit our <a href="http://adndevblog.typepad.com/cloud_and_mobile/" target="_blank">blog</a> for more code snippets,
-                tips, and tricks.</p>
-                </div>
-        </div>
-        <div class="forge-top-filter">
-            <div class="maxwidth" style="padding-left:20px; padding-right:20px">
-            <div style="padding-top:8px; display:inline-block;"><strong>{{repos.length}}</strong> Samples in Github</div>
-            <span style="float: right; ">
+  <div id="cards" class="forge-body">
+    <div class="forge-top-banner">
+      <div class="maxwidth">
+        <h1>Forge Samples and SDKs</h1>
+        <p>Check out these samples, tutorials, and SDKs created to help speed up your Forge application development. Visit our <a href="http://adndevblog.typepad.com/cloud_and_mobile/" target="_blank">blog</a> for more code snippets, tips, and tricks.</p>
+      </div>
+    </div>
+    <div class="forge-top-filter">
+      <div class="maxwidth" style="padding-left:20px; padding-right:20px">
+        <div style="padding-top:8px; display:inline-block;"><strong>{{repos.length}}</strong> Samples in Github</div>
+        <span style="float: right; ">
                 Filter by
                 <div class="dropdown">
                     <button class="btn btn-info dropdown-toggle btn-xs filterbutton" type="button" data-toggle="dropdown">
-                        API <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <li v-for="(repo, api) in apis"><a href="#" @click="filterByAPIUsed(api)">{{ api }}</a></li>
-                    </ul>
-                </div>
-                or
-                <div class="dropdown">
-                    <button class="btn btn-info dropdown-toggle btn-xs filterbutton" type="button" data-toggle="dropdown">
-                        Language <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <li v-for="(repo, language) in languages"><a href="#" @click="filterByLanguage(language)">{{ language }}</a></li>
-                    </ul>
-                </div>
-                or sort by
-                <div class="dropdown">
-                    <button class="btn btn-info dropdown-toggle btn-xs filterbutton" type="button" data-toggle="dropdown">
-                        {{ sort[0] }} <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <li v-for="value in sort"><a href="#" @click="sortBy(value)">{{ value }}</a></li>
-                    </ul>
-                </div>
-            </span>
-                </div>
-        </div>
-        <div  class="maxwidth">
-        <a v-for="repo in repos" v-bind:href="repo.html_url">
-            <div class="repo-card forge-title">
-                <!--<div style="position: absolute; top: 0; right: 0;">
-                        <a v-show="repo.homepage" v-bind:href="repo.homepage"><img src="img/demo.png" /></a></div>-->
-                <div>
-                  <h3 class="card-title">{{ repo.name }}</h3>
-                    <p>
-                        <span class="repo-card-info-item"><i class="fa fa-star" aria-hidden="true"></i> {{ repo.stargazers_count }}</span>
-                        <span class="repo-card-info-item"><i class="fa fa-code-fork" aria-hidden="true"></i> {{ repo.forks_count }}</span>
-                        <span class="repo-card-info-item"><i class="fa fa-code" aria-hidden="true"></i> {{ repo.language }}</span>
-                    </p>
-                    <p class="card-info">{{ repo.description }}</p>
-                </div>
-                <div class="card-footer">
-                    <!-- This is redundant <span><a v-bind:href="repo.html_url"><i class="fa fa-github" aria-hidden="true"></i> Source Code</a></span>-->
-
-                    <!-- need to implement this blogpost feature... not sure how-->
-                    <a v-show="repo.homepage" v-bind:href="repo.homepage" target="_blank" class="repo-card-footer">
-                        <i class="fa fa-desktop" aria-hidden="true"></i> Live Demo</a>
-                    <!--<a v-show="repo.blogpost" v-bind:href="repo.blogpost" target="_blank"><span class="repo-card-footer-blogpost"><i class="fa fa-file-text-o" aria-hidden="true"></i> Blog post</span></a>-->
-                </div>
-            </div>
-        </a>
-            </div>
+                        API <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li v-for="(repo, api) in apis"><a href="#" @click="filterByAPIUsed(api)">{{ api }}</a>
+          </li>
+        </ul>
+      </div>
+      or
+      <div class="dropdown">
+        <button class="btn btn-info dropdown-toggle btn-xs filterbutton" type="button" data-toggle="dropdown">
+          Language <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li v-for="(repo, language) in languages"><a href="#" @click="filterByLanguage(language)">{{ language }}</a>
+          </li>
+        </ul>
+      </div>
+      Sort by
+      <div class="dropdown">
+        <button class="btn btn-info dropdown-toggle btn-xs filterbutton" type="button" data-toggle="dropdown">
+          {{ sort[0] }} <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li v-for="value in sort"><a href="#" @click="sortBy(value)">{{ value }}</a>
+          </li>
+        </ul>
+      </div>
+      </span>
     </div>
+  </div>
+  <div class="maxwidth">
+    <a v-for="repo in repos" v-bind:href="repo.html_url">
+      <div class="repo-card forge-title">
+        <div>
+          <h3 class="card-title">{{ repo.name }}</h3>
+          <p>
+            <span class="repo-card-info-item"><i class="fa fa-star" aria-hidden="true"></i> {{ repo.stargazers_count }}</span>
+            <span class="repo-card-info-item"><i class="fa fa-code-fork" aria-hidden="true"></i> {{ repo.forks_count }}</span>
+            <span class="repo-card-info-item"><i class="fa fa-code" aria-hidden="true"></i> {{ repo.language }}</span>
+          </p>
+          <p class="card-info">{{ repo.description }}</p>
+        </div>
+        <div class="card-footer">
+          <a v-show="repo.homepage" v-bind:href="repo.homepage" target="_blank" class="repo-card-footer">
+            <i class="fa fa-desktop" aria-hidden="true"></i> Live Demo
+          </a>
+        </div>
+      </div>
+    </a>
+  </div>
 </template>
 
 <script>

@@ -1,11 +1,5 @@
 <template>
   <div id="cards" class="forge-body">
-    <div class="forge-top-banner">
-      <div class="maxwidth">
-        <h1>Forge Samples and SDKs</h1>
-        <p>Check out these samples, tutorials, and SDKs created to help speed up your Forge application development. Visit our <a href="http://adndevblog.typepad.com/cloud_and_mobile/" target="_blank">blog</a> for more code snippets, tips, and tricks.</p>
-      </div>
-    </div>
     <div class="forge-top-filter">
       <div class="maxwidth" style="padding-left:20px; padding-right:20px">
         <div style="padding-top:8px; display:inline-block;"><strong>{{repos.length}}</strong> Samples in Github</div>
@@ -64,7 +58,6 @@
     </a>
   </div>
 </template>
-
 <script>
 import reposJSON from './repos.json';
 
@@ -136,10 +129,14 @@ export default {
 
   methods: {
     sortBy: (value) => {
+
+      // sort[0] is the current way of sort
+      // whenever that value changes, update sort[0]
       let pos = sort.indexOf(value);
       let temp = sort[0];
       sort[0] = value;
       sort[pos] = temp;
+
       switch (value) {
         case 'Most Popular': {
             repos.sort((a, b) => {

@@ -64,11 +64,11 @@ import reposJSON from './repos.json';
 let repos = [];
 let languages = {
   // language: [list of repos]
-  all : []
+  "All Languages" : []
 };
 
 let apis = {
-  all : [],
+  "All APIs" : [],
   "Viewer" : [],
   "Design Automation" : [],
   "Model Derivative" : [],
@@ -113,8 +113,8 @@ for (let repo of reposJSON) {
   }
 }
 
-languages.all.push(...repos);
-apis.all.push(...repos);
+languages["All Languages"].push(...repos);
+apis["All APIs"].push(...repos);
 
 export default {
   // pass these to the page

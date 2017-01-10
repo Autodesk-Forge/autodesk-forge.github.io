@@ -58,11 +58,9 @@
   </div>
 </template>
 <script>
-import reposJSON from './repos.json';
+import { repos, allRepos } from './repos.js';
 import JsSearch from 'js-search';
 
-let repos = [];
-let allRepos = [];
 let languages = [
   "All Languages"
 ];
@@ -79,18 +77,13 @@ let sort = [
   'Most Popular', 'Last Updated', 'Alphabetical'
 ];
 
-for (let repo of reposJSON) {
-  // put repos in a list
-  repos.push(repo);
-
+for (let repo of repos) {
   // get list of languages
   let language = repo.language;
   if (!!language && languages.indexOf(language) === -1) {
     languages.push(language);
   }
 }
-
-allRepos.push(...repos);
 
 export default {
   // pass these to the page

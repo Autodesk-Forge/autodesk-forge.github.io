@@ -7,30 +7,29 @@
                 Filter by
                 <div class="dropdown">
                     <button class="btn btn-info dropdown-toggle btn-xs filterbutton" type="button" data-toggle="dropdown">
-                        API <span class="caret"></span>
+                        {{ filterAPI }} <span class="caret"></span>
         </button>
         <ul class="dropdown-menu">
-          <li v-for="(repo, api) in apis"><a href="#" @click="filterByAPIUsed(api)">{{ api }}</a>
+          <li v-for="api in apis"><a href="#" v-on:click="filterAPI = api" @click="filter(filterAPI, filterLanguage)">{{ api }}</a>
           </li>
         </ul>
       </div>
-      or
       <div class="dropdown">
         <button class="btn btn-info dropdown-toggle btn-xs filterbutton" type="button" data-toggle="dropdown">
-          Language <span class="caret"></span>
+          {{ filterLanguage }} <span class="caret"></span>
         </button>
         <ul class="dropdown-menu">
-          <li v-for="(repo, language) in languages"><a href="#" @click="filterByLanguage(language)">{{ language }}</a>
+          <li v-for="language in languages"><a href="#" v-on:click="filterLanguage = language" @click="filter(filterAPI, filterLanguage)">{{ language }}</a>
           </li>
         </ul>
       </div>
       Sort by
       <div class="dropdown">
         <button class="btn btn-info dropdown-toggle btn-xs filterbutton" type="button" data-toggle="dropdown">
-          {{ sort[0] }} <span class="caret"></span>
+          {{ sortValue }} <span class="caret"></span>
         </button>
         <ul class="dropdown-menu">
-          <li v-for="value in sort"><a href="#" @click="sortBy(value)">{{ value }}</a>
+          <li v-for="value in sort"><a href="#" v-on:click="sortValue = value" @click="sortBy(value)">{{ value }}</a>
           </li>
         </ul>
       </div>
@@ -60,61 +59,38 @@
 </template>
 <script>
 import reposJSON from './repos.json';
+import JsSearch from 'js-search';
 
 let repos = [];
-let languages = {
-  // language: [list of repos]
-  "All Languages" : []
-};
+let allRepos = [];
+let languages = [
+  "All Languages"
+];
 
-let apis = {
-  "All APIs" : [],
-  "Viewer" : [],
-  "Design Automation" : [],
-  "Model Derivative" : [],
-  "Data Management" : []
-} // enum list of apis with Autodesk
+let apis = [
+  "All APIs",
+  "Viewer",
+  "Design Automation",
+  "Model Derivative",
+  "Data Management"
+]
 
 let sort = [
-  'Most Popular', 'Last Updated', 'Alphabetical' // default is 'Most Popular'
+  'Most Popular', 'Last Updated', 'Alphabetical'
 ];
 
 for (let repo of reposJSON) {
   // put repos in a list
   repos.push(repo);
 
-  // map language -> repo
+  // get list of languages
   let language = repo.language;
-  if (language !== null) {
-    if (!languages[language]) {
-      languages[language] = [];
-    }
-    languages[language].push(repo);
-  }
-
-  // map api -> repo
-  // reg match api with the name of repo
-  let viewerreg = /[vV]iewer/g,
-      dareg = /[dD]esign.[aA]utomation/g,
-      mdreg = /[mM]odel.[dD]erivative/g,
-      dmreg = /[dD]ata.[mM]anagement/g;
-  // can match multiple apis per repo
-  if (repo.name.match(viewerreg)) {
-    apis["Viewer"].push(repo);
-  }
-  if (repo.name.match(dareg)) {
-    apis["Design Automation"].push(repo);
-  }
-  if (repo.name.match(mdreg)) {
-    apis["Model Derivative"].push(repo);
-  }
-  if (repo.name.match(dmreg)) {
-    apis["Data Management"].push(repo);
+  if (!!language && languages.indexOf(language) === -1) {
+    languages.push(language);
   }
 }
 
-languages["All Languages"].push(...repos);
-apis["All APIs"].push(...repos);
+allRepos.push(...repos);
 
 export default {
   // pass these to the page
@@ -122,21 +98,16 @@ export default {
     return {
       repos : repos,
       languages : languages, // used in filter by language
+      filterLanguage: "All Languages",
       apis : apis, // used in filter by api used
-      sort : sort
+      filterAPI: "All APIs",
+      sort : sort,
+      sortValue: "Last Updated"
     }
   },
 
   methods: {
     sortBy: (value) => {
-
-      // sort[0] is the current way of sort
-      // whenever that value changes, update sort[0]
-      let pos = sort.indexOf(value);
-      let temp = sort[0];
-      sort[0] = value;
-      sort[pos] = temp;
-
       switch (value) {
         case 'Most Popular': {
             repos.sort((a, b) => {
@@ -161,13 +132,27 @@ export default {
         }
       }
     },
-    filterByLanguage: (language) => {
+    filter: (api, language) => {
       repos.splice(0, repos.length);
-      repos.push(...languages[language]);
-    },
-    filterByAPIUsed: (apiName) => {
+      repos.push(...allRepos);
+      let results = [...repos];
+
+      // api search is fuzzier
+      if (api !== apis[0]) {
+        let repoSearch = new JsSearch.Search('id');
+        repoSearch.addIndex('name');
+        repoSearch.addDocuments(results);
+        results = repoSearch.search(api);
+      }
+      if (language !== languages[0]) {
+        let search = new JsSearch.Search('id');
+        search.indexStrategy = new JsSearch.ExactWordIndexStrategy();
+        search.addIndex('language');
+        search.addDocuments(results);
+        results = search.search(language);
+      }
       repos.splice(0, repos.length);
-      repos.push(...apis[apiName]);
+      repos.push(...results);
     }
   }
 }

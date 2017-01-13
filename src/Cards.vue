@@ -151,7 +151,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 * {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;

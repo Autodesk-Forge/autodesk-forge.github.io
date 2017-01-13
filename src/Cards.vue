@@ -1,5 +1,5 @@
 <template>
-  <div id="cards" class="forge-body">
+  <div class="forge-body">
     <div class="forge-top-filter">
       <div class="maxwidth" style="padding-left:20px; padding-right:20px">
         <div style="padding-top:8px; display:inline-block;"><strong>{{repos.length}}</strong> Samples in Github</div>
@@ -151,7 +151,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 * {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;

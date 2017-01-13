@@ -131,14 +131,10 @@ li.search {
 }
 .forge-navbar {
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   padding-top: 5px;
   min-height: 54px;
   background-color: white;
-}
-.maxwidth {
-  max-width: 1160px;
-  margin: 0 auto;
 }
 .api-dropdown {
   min-width: 400px;

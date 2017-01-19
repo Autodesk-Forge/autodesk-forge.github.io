@@ -3,8 +3,8 @@
   <ul>
     <li id="logo"><a href="http://developer.autodesk.com"><img src="/img/Autodesk-Forge-2lines.svg" height="29"/></a>
     </li>
-    <li class="no-click dropdown">
-      <a href="" class="dropdown-title">APIs <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+    <li class="dropdown">
+      <a href="" class="dropdown-title no-click">APIs <i class="fa fa-angle-down" aria-hidden="true"></i></a>
       <div class="dropdown-content api-dropdown">
         <div class="api-dropdown-col">
           <h4 class="api-dropdown-header">General Availability</h4>
@@ -17,8 +17,8 @@
       </div>
     </li>
     <li><a href="https://developer.autodesk.com/en/pricing">Pricing</a></li>
-    <li class="no-click dropdown">
-      <a href="" class="dropdown-title">Resources <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+    <li class="dropdown">
+      <a href="" class="dropdown-title no-click">Resources <i class="fa fa-angle-down" aria-hidden="true"></i></a>
       <div class="dropdown-content">
         <a v-for="(link, resource) in resources" :href="link">{{ resource }}</a>
       </div>

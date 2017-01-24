@@ -2,7 +2,7 @@
   <div class="forge-body">
     <div class="forge-top-filter">
       <div class="maxwidth" style="padding-left:20px; padding-right:20px">
-        <div style="padding-top:8px; display:inline-block;"><strong>{{repos.length}}</strong> Samples in Github</div>
+        <div style="padding-top:8px; display:inline-block;"><strong>{{repos.length}}</strong> of {{allReposCount}} Samples in Github</div>
         <span style="float: right; ">
                 Filter by
                 <div class="dropdown">
@@ -95,7 +95,8 @@ export default {
       apis : apis, // used in filter by api used
       filterAPI: "All APIs",
       sort : sort,
-      sortValue: "Last Updated"
+      sortValue: "Last Updated",
+      allReposCount: allRepos.length
     }
   },
 

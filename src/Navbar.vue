@@ -62,10 +62,6 @@ const generalAvailableAPIs = [
 ]
 const betaAPIs = [
   {
-    name: "3D Print API (Deprecated)",
-    link: "https://developer.autodesk.com/en/docs/print/v1/overview/"
-  },
-  {
     name: "BIM 360 API",
     link: "https://developer.autodesk.com/en/docs/bim360/v1/overview/"
   },

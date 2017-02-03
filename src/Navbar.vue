@@ -56,7 +56,7 @@ const generalAvailableAPIs = [
     link: "https://developer.autodesk.com/en/docs/model-derivative/v2/overview/"
   },
   {
-    name: "Authentication (OAuth)",
+    name: "Viewer",
     link: "https://developer.autodesk.com/en/docs/viewer/v2/overview/"
   }
 ]

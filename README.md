@@ -1,6 +1,6 @@
 # Autodesk Developer GitHub Repos
 
-This is a collection of all samples found on Autodesk Developer website. It takes the response body (in `src/repos.json`) of GET https://api.github.com/orgs/Autodesk-Forge/repos and present them in the page. 
+This is a collection of all samples found on Autodesk Developer website. It requires to manually take the response body of GET https://api.github.com/orgs/Autodesk-Forge/repos?type=public&page=1 (follow responder Links header for subsequent pages) and update at in `src/repos.json`.  
 
 ## Setup
 ``` bash

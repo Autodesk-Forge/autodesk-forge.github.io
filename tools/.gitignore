@@ -1,0 +1,13 @@
+*
+
+!.gitignore
+!package.json
+
+!pull-data.js
+
+!github.json
+!externals.github.json
+!slideshare.json
+!youtube.json
+
+~

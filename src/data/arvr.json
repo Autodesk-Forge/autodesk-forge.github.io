@@ -1,0 +1,38 @@
+[
+  {
+	"href": "http://vr.autodesk.io/",
+	"img": "house.png"
+  },
+  {
+	"href": "https://safe-reef-1847.herokuapp.com/stereo-voice2.html",
+	"img": "morgan.png"
+  },
+  {
+	"href": "https://safe-reef-1847.herokuapp.com/stereo-voice2.html",
+	"img": "flyer-one.png"
+  },
+  {
+	"href": "https://safe-reef-1847.herokuapp.com/stereo-voice2.html",
+	"img": "boat.png"
+  },
+  {
+	"href": "https://safe-reef-1847.herokuapp.com/stereo-voice2.html",
+	"img": "differential.png"
+  },
+  {
+	"href": "http://aupano.autodesk.com/panogl.html?url=panos/int",
+	"img": "angelapoovey.png"
+  },
+  {
+	"href": "http://aupano.autodesk.com/panogl.html?url=panos/water1",
+	"img": "emmauelurbina.png"
+  },
+  {
+	"href": "http://aupano.autodesk.com/turn.html?url=rccar2",
+	"img": "car-interactive.png"
+  },
+  {
+	"href": "http://aupano.autodesk.com/turn.html?url=watch2",
+	"img": "watch-turnable.png"
+  }
+]

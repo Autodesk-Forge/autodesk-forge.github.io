@@ -1,0 +1,234 @@
+/* Reset */
+
+forge-menu {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+forge-menu {
+    display: block;
+}
+
+/* Menu */
+
+#forge-menu {
+    -moz-transition: -moz-transform 0.35s ease, opacity 0.35s ease, visibility 0.35s;
+    -webkit-transition: -webkit-transform 0.35s ease, opacity 0.35s ease, visibility 0.35s;
+    -ms-transition: -ms-transform 0.35s ease, opacity 0.35s ease, visibility 0.35s;
+    transition: transform 0.35s ease, opacity 0.35s ease, visibility 0.35s;
+    /*-moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;*/
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -moz-pointer-events: none;
+    -webkit-pointer-events: none;
+    -ms-pointer-events: none;
+    pointer-events: none;
+    background-color: white;
+    color: black;
+    box-shadow: none;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    visibility: hidden;
+    width: 100%;
+    z-index: 10002;
+    padding-top: 3.5em;
+}
+
+#forge-menu .forge-menu-inner {
+    -moz-transition: -moz-transform 0.35s ease-out, opacity 0.35s ease, visibility 0.35s;
+    -webkit-transition: -webkit-transform 0.35s ease-out, opacity 0.35s ease, visibility 0.35s;
+    -ms-transition: -ms-transform 0.35s ease-out, opacity 0.35s ease, visibility 0.35s;
+    transition: transform 0.35s ease-out, opacity 0.35s ease, visibility 0.35s;
+    -moz-transform: rotateX(20deg);
+    -webkit-transform: rotateX(20deg);
+    -ms-transform: rotateX(20deg);
+    transform: rotateX(20deg);
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+    max-height: 100vh;
+    opacity: 0;
+    overflow: auto;
+    text-align: left;
+    visibility: hidden;
+    width: 100%;
+}
+
+#forge-menu .forge-menu-inner > :first-child {
+}
+
+#forge-menu .forge-menu-inner > :last-child {
+}
+
+#forge-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#forge-menu ul li.dropdown {
+    background-color: #e82;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    height: 64px;
+    margin: 0;
+    padding: 1.25em 20px;
+    line-height: 10px;
+    font-weight: bold;
+    border-bottom: solid 1px white;
+}
+
+#forge-menu ul li.dropdown i.fa {
+    float: right;
+}
+
+#forge-menu ul li.api-dropdown-header {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1em;
+    color: #444;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    display: block;
+    -webkit-margin-before: 1.33em;
+    -webkit-margin-after: 1.33em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    padding-left: 20px;
+}
+
+#forge-menu ul li.api-links {
+    color: #333;
+    display: block;
+    margin: 0;
+    padding: 10px 10px 20px 20px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.1;
+}
+
+#forge-menu ul li.dropdown a,
+#forge-menu ul li.api-dropdown-header a,
+#forge-menu ul li.api-links a {
+    text-decoration: none;
+    border-bottom: none;
+}
+
+#forge-menu ul li.api-links a:hover {
+    color: #e82;
+}
+
+#forge-menu ul li.dropdown a:hover {
+    color: black;
+}
+
+#forge-menu ul hr {
+    margin: 0;
+    padding: 0;
+    border-color: lightgray;
+}
+
+#forge-menu .close {
+    -moz-transition: color 0.2s ease-in-out;
+    -webkit-transition: color 0.2s ease-in-out;
+    -ms-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+    -webkit-tap-highlight-color: transparent;
+    border: 0;
+    cursor: pointer;
+    display: block;
+    height: 4em;
+    line-height: 4em;
+    overflow: hidden;
+    padding-right: 1.25em;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    text-indent: 8em;
+    top: 0;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 8em;
+}
+
+#forge-menu .close:before, #forge-menu .close:after {
+    -moz-transition: opacity 0.2s ease-in-out;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    -ms-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+    background-position: center;
+    background-repeat: no-repeat;
+    content: '';
+    display: block;
+    height: 4em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 4em;
+}
+
+#forge-menu .close:before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23ffffff%3B stroke-width: 2%3B %7D%3C/style%3E%3Cline x1='0' y1='0' x2='20' y2='20' /%3E%3Cline x1='20' y1='0' x2='0' y2='20' /%3E%3C/svg%3E");
+    -webkit-filter: grayscale(1) contrast(0);
+    filter: grayscale(1) contrast(0);
+}
+
+#forge-menu .close:after {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %239bf1ff%3B stroke-width: 2%3B %7D%3C/style%3E%3Cline x1='0' y1='0' x2='20' y2='20' /%3E%3Cline x1='20' y1='0' x2='0' y2='20' /%3E%3C/svg%3E");
+    -webkit-filter: grayscale(1) contrast(0);
+    filter: grayscale(1) contrast(0);
+    opacity: 0;
+}
+
+#forge-menu .close:hover:after, #forge-menu .close:active:after {
+    -webkit-filter: grayscale(1) contrast(0);
+    filter: grayscale(1) contrast(0);
+    opacity: 1;
+}
+
+body.is-ie #forge-menu {
+    background: rgba(42, 47, 74, 0.975);
+}
+
+body.is-forge-menu-visible #wrapper {
+    -moz-filter: blur(0.5em);
+    -webkit-filter: blur(0.5em);
+    -ms-filter: blur(0.5em);
+    filter: blur(0.5em);
+}
+
+body.is-forge-menu-visible #forge-menu {
+    -moz-pointer-events: auto;
+    -webkit-pointer-events: auto;
+    -ms-pointer-events: auto;
+    pointer-events: auto;
+    opacity: 1;
+    visibility: visible;
+}
+
+body.is-forge-menu-visible #forge-menu .forge-menu-inner {
+    -moz-transform: none;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+}

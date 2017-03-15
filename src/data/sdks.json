@@ -1,0 +1,83 @@
+{
+  "dot-net": {
+	"type": "web",
+	"title": ".NET",
+	"icon": "devicon-dot-net-plain",
+	"github": "https://github.com/Autodesk-Forge/forge-api-dotnet-client",
+	"description": "Easily integrate Forge REST APIs into your application",
+	"hidden": false
+  },
+  "nodejs": {
+	"type": "web",
+	"title": "Node.js",
+	"icon": "devicon-nodejs-plain",
+	"github": "https://github.com/Autodesk-Forge/forge-api-nodejs-client",
+	"description": "Easily integrate Forge REST APIs into your application"
+  },
+  "php": {
+	"type": "web",
+	"title": "PHP",
+	"icon": "devicon-php-plain",
+	"github": "https://github.com/Autodesk-Forge/forge-api-php-client",
+	"description": "Easily integrate Forge REST APIs into your application",
+	"hidden": true
+  },
+  "java": {
+	"type": "web",
+	"title": "Java",
+	"icon": "devicon-java-plain",
+	"github": "https://github.com/Autodesk-Forge/forge-api-java-client",
+	"description": "Easily integrate Forge REST APIs into your application"
+  },
+  "python": {
+	"type": "web",
+	"title": "Python",
+	"icon": "devicon-python-plain",
+	"github": "https://github.com/Autodesk-Forge/forge-api-python-client",
+	"description": "Easily integrate Forge REST APIs into your application",
+	"hidden": true
+  },
+  "ruby": {
+	"type": "web",
+	"title": "Ruby",
+	"icon": "devicon-ruby-plain",
+	"github": "https://github.com/Autodesk-Forge/forge-api-ruby-client",
+	"description": "Easily integrate Forge REST APIs into your application",
+	"hidden": true
+  },
+
+  "apple": {
+	"type": "mobile",
+	"title": "iOS",
+	"icon": "devicon-apple-plain",
+	"github": "https://github.com/Autodesk-Forge/forge-api-ios-client",
+	"description": "Easily integrate Forge REST APIs into your application",
+	"hidden": true
+  },
+  "android": {
+	"type": "mobile",
+	"title": "Android",
+	"icon": "devicon-android-plain",
+	"github": "https://github.com/Autodesk-Forge/forge-api-android-client",
+	"description": "Easily integrate Forge REST APIs into your application",
+	"hidden": true
+  },
+  "windows": {
+	"type": "mobile",
+	"title": "Windows",
+	"icon": "devicon-windows8-plain",
+	"github": "https://github.com/Autodesk-Forge/forge-api-windows-client",
+	"description": "Easily integrate Forge REST APIs into your application",
+	"hidden": true
+  },
+
+  "dot-net2": {
+	"type": "desktop",
+	"title": ".NET",
+	"icon": "devicon-dot-net-plain",
+	"github": "https://github.com/Autodesk-Forge/forge-api-dotnet-client",
+	"description": "Easily integrate Forge REST APIs into your application",
+	"hidden": false
+  }
+
+}

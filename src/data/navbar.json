@@ -1,0 +1,20 @@
+{
+	"resources": {
+		"Get Help": "https://developer.autodesk.com/en/support/get-help",
+		"API Status": "https://developer.autodesk.com/en/support/api-status",
+		"Blog": "https://forge.autodesk.com/blog",
+	  	"Quickstarts": "https://developer.autodesk.com/en/docs/quickstarts/v1",
+	  	"Forge Samples": "https://autodesk-forge.github.io/"
+	},
+	"APIs": [
+		{ "name": "Authentication (OAuth)", "link": "https://developer.autodesk.com/en/docs/oauth/v2/overview/" },
+		{ "name": "Data Management API", "link": "https://developer.autodesk.com/en/docs/data/v2/overview/" },
+		{ "name": "Design Automation API", "link": "https://developer.autodesk.com/en/docs/design-automation/v2/overview/" },
+		{ "name": "Model Derivative API", "link": "https://developer.autodesk.com/en/docs/model-derivative/v2/overview/" },
+		{ "name": "Viewer", "link": "https://developer.autodesk.com/en/docs/viewer/v2/overview/" }
+	],
+	"betaAPIs": [
+		{ "name": "BIM 360 API", "link": "https://developer.autodesk.com/en/docs/bim360/v1/overview/" },
+		{ "name": "Reality Capture API", "link": "https://developer.autodesk.com/en/docs/reality-capture/v1/overview/" }
+	]
+}

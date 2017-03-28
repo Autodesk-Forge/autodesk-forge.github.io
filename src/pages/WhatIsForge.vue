@@ -94,7 +94,7 @@
                     </div>
                 </section>
                 <section id="design-automation">
-                    <a href="http://createmycloset.azurewebsites.net" class="image">
+                    <a href="http://createmybureau.azurewebsites.net/" class="image">
                         <img src="./WhatIsForge/designautomation.png" alt="" data-position="25% 25%" />
                     </a>
                     <div class="content">
@@ -105,8 +105,8 @@
                             <p>Leverage the scale of Autodesk's cloud to run automation scripts on your design files.</p>
                             <p>The API a (server-side) REST API</p>
                             <ul class="actions">
-                                <li><a href="http://createmycloset.azurewebsites.net" target="demo" class="button next scrolly">Try it live</a></li>
-                                <li><a href="https://github.com/Developer-Autodesk/design.automation-asp.net-cabinet-sample" target="github" class="button next scrolly">Open on GitHub</a></li>
+                                <li><a href="http://createmybureau.azurewebsites.net/" target="demo" class="button next scrolly">Try it live</a></li>
+                                <li><a href="https://github.com/Autodesk-Forge/design.automation-asp.net-cabinet-sample" target="github" class="button next scrolly">Open on GitHub</a></li>
                             </ul>
                         </div>
                     </div>

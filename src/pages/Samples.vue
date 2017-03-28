@@ -20,7 +20,7 @@
         </div>
     </div>
     <div class="maxwidth">
-		<a v-for="repo in repos" v-bind:href="repo.html_url">
+		<a v-for="repo in repos" v-bind:href="repo.html_url" v-if="repo.hidden != true">
 			<div class="repo-card forge-title">
 				<div>
 					<h3 class="card-title" v-bind:title="repo.name">{{ repo.name }}</h3>
@@ -101,8 +101,11 @@
 
 			prepareData: function (repos) {
 				let languages =[ 'All Languages' ] ;
-				let repos_ =repos ;
+				let repos_ =[] ;
 				for ( let repo of repos ) {
+					if ( repo.hidden === true )
+						continue ;
+					repos_.push (repo) ;
 					// get list of languages
 					let language =repo.language ;
 					if ( !!language && languages.indexOf (language) === -1 )

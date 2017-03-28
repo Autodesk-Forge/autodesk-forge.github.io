@@ -2415,7 +2415,8 @@
 	  "admin": false,
 	  "push": false,
 	  "pull": true
-	}
+	},
+	"hidden": true
   },
   {
 	"id": 76556591,

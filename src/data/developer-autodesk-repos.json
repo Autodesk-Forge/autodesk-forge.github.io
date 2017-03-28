@@ -1578,8 +1578,9 @@
             "admin": false,
             "push": false,
             "pull": true
-        }
-    },
+        },
+		"hidden": true
+	},
     {
         "id": 29517720,
         "name": "workflow-node.js-view.and.data.api",

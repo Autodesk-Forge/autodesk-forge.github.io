@@ -7,8 +7,8 @@
                 </li>
             </ul>
             <ul class="actions vertical">
-                <li><a href="http://developer.autodesk.com/" class="button special fit">Forge Developer Site</a></li>
-                <li><a href="https://gems.autodesk.com/devcon" class="button fit">Forge Conference</a></li>
+                <li><a href="https://developer.autodesk.com/" class="button special fit">Forge Developer Site</a></li>
+                <li><a href="https://forge.autodesk.com/DevCon" class="button fit">Forge Conference</a></li>
             </ul>
         </nav>
 </template>

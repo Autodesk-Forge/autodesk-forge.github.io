@@ -48,4 +48,4 @@
 
 <script>
 import styles from './contact.css' ; // eslint-disable-line no-unused-vars
-</scripts>
+</script>

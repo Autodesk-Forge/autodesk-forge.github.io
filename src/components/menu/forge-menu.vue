@@ -16,7 +16,7 @@
                 </li>
 
 
-                <li class="dropdown"><a href="https://developer.autodesk.com/en/pricing">Pricing</a></li>
+                <li class="dropdown"><a href="https://developer.autodesk.com/pricing">Pricing</a></li>
 
 
                 <li class="dropdown">Resources <i class="fa fa-angle-down" aria-hidden="true"></i></li>

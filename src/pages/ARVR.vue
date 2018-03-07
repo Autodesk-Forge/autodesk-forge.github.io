@@ -32,7 +32,7 @@
 
 	               <ul class="actions">
 	                    <li><a href="https://github.com/KeanW/Dancing-Robot" target="demo" class="button next scrolly">Dancing Robot</a></li>
-	                    <li><a href="https://github.com/cyrillef/Holo-Forge" target="demo" class="button next scrolly">Forge to Hololens</a></li>
+	                    <li><a href="http://forgetoolkit.com/#/" target="demo" class="button next scrolly">Forge to Unity</a></li>
 	                </ul>
 	            </div>
 	        </section>
@@ -78,74 +78,76 @@
 </template>
 
 <script>
-	import MainLayout from '../layouts/main.vue' ;
+import MainLayout from "../layouts/main.vue";
 
-	// https://www.npmjs.com/package/owl.carousel
-	// http://stackoverflow.com/questions/40483358/import-owl-carousel-from-webpack
-	import 'owl.carousel' ;
-	import styles from 'owl.carousel/dist/assets/owl.carousel.css'; // eslint-disable-line no-unused-vars
-	import 'owl.carousel/dist/assets/owl.theme.default.css';
+// https://www.npmjs.com/package/owl.carousel
+// http://stackoverflow.com/questions/40483358/import-owl-carousel-from-webpack
+import "owl.carousel";
+import styles from "owl.carousel/dist/assets/owl.carousel.css"; // eslint-disable-line no-unused-vars
+import "owl.carousel/dist/assets/owl.theme.default.css";
 
-	export default {
-		data: function () {
-			var arvr =require ('../data/arvr.json') ;
-            for ( var i =0 ; i < arvr.length ; i++ ) {
-                if ( arvr [i].img )
-                    arvr [i].img =require ('./ARVR/' + arvr [i].img) ;
-            }
-			var navigationMenu =require ('../data/navigation') ;
-            for ( var j =0 ; j < navigationMenu.length ; j++ ) {
-                if ( navigationMenu [j].image )
-                    navigationMenu [j].image =require ('' + navigationMenu [j].image) ;
-            }
-			return ({
-				title: 'AR/VR experiments',
-				description: 'Experimental virtual reality (VR) and augmented reality (AR) projects and references.',
-				menu: navigationMenu,
-				arvr: arvr
-			}) ;
-		},
-		components: {
-			MainLayout
-		},
-		mounted () {
-			var owl =$('.owl-carousel') ;
-			owl.owlCarousel ({
-				//items: this.$data.arvr.length,
-				items: 4,
-                loop: true,
-                margin: 10,
+export default {
+  data: function() {
+    var arvr = require("../data/arvr.json");
+    for (var i = 0; i < arvr.length; i++) {
+      if (arvr[i].img) arvr[i].img = require("./ARVR/" + arvr[i].img);
+    }
+    var navigationMenu = require("../data/navigation");
+    for (var j = 0; j < navigationMenu.length; j++) {
+      if (navigationMenu[j].image)
+        navigationMenu[j].image = require("" + navigationMenu[j].image);
+    }
+    return {
+      title: "AR/VR experiments",
+      description:
+        "Experimental virtual reality (VR) and augmented reality (AR) projects and references.",
+      menu: navigationMenu,
+      arvr: arvr
+    };
+  },
+  components: {
+    MainLayout
+  },
+  mounted() {
+    var owl = $(".owl-carousel");
+    owl.owlCarousel({
+      //items: this.$data.arvr.length,
+      items: 4,
+      loop: true,
+      margin: 10,
 
-                autoplay: true,
-                autoplayTimeout: 1000,
-                autoplayHoverPause: true,
+      autoplay: true,
+      autoplayTimeout: 1000,
+      autoplayHoverPause: true,
 
-                responsive: {
-                    // breakpoint from 0 up
-                    0 : {
-                        items: 1,
-                    },
-                    // breakpoint from 480 up
-                    480 : {
-                        items: 2,
-                    },
-                    // breakpoint from 768 up
-                    768 : {
-                        items: 4,
-                    }
-                }
-            }) ;
-            owl.on ('mouseleave', function (evt) {
-                evt.stopPropagation () ;
-                owl.trigger ('stop.owl.autoplay') ;
-                setTimeout (function () { owl.trigger ('play.owl.autoplay', [ 1000 ]) ; }, 500) ;
-            }) ;
-		}
-	}
+      responsive: {
+        // breakpoint from 0 up
+        0: {
+          items: 1
+        },
+        // breakpoint from 480 up
+        480: {
+          items: 2
+        },
+        // breakpoint from 768 up
+        768: {
+          items: 4
+        }
+      }
+    });
+    owl.on("mouseleave", function(evt) {
+      evt.stopPropagation();
+      owl.trigger("stop.owl.autoplay");
+      setTimeout(function() {
+        owl.trigger("play.owl.autoplay", [1000]);
+      }, 500);
+    });
+  }
+};
 </script>
 
 <style>
 #banner.ARVR {
-    background-image: url(./ARVR/arvr.png);
+  background-image: url(./ARVR/arvr.png);
 }
 </style>

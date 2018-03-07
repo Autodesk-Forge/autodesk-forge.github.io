@@ -24,6 +24,7 @@ export default {
 	'?TryItLive': 'TryItLive',
 	'?SDK': 'SDK',
 	'?Samples': 'Samples',
+	'?Showcases': 'Showcases',
 	'?ARVR': 'ARVR',
 
 	'?VideosAndPresentations': 'VideosAndPresentations'

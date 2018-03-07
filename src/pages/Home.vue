@@ -81,6 +81,10 @@ export default {
 	background-image: url(./Home/sample.png);
 }
 
+.showcases-article {
+	background-image: url(./Home/showcases.png);
+}
+
 .arvr-article {
 	background-image: url(./Home/arvr2.png);
 }

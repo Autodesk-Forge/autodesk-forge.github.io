@@ -14,7 +14,7 @@
 					</div>
 				</div>
 			</li>
-			<li><a href="https://developer.autodesk.com/en/pricing">Pricing</a></li>
+			<li><a href="https://developer.autodesk.com/pricing">Pricing</a></li>
 			<li class="dropdown">
 				<a href="" class="dropdown-title no-click">Resources <i class="fa fa-angle-down" aria-hidden="true"></i></a>
 				<div class="dropdown-content">
@@ -31,7 +31,7 @@
 	/*const resources ={
 		"Get Help": "https://developer.autodesk.com/en/support/get-help",
 		"API Status": "https://developer.autodesk.com/en/support/api-status",
-		"Blog": "http://adndevblog.typepad.com/cloud_and_mobile/"
+		"Blog": "https://forge.autodesk.com/blog"
 	} ;
 	const APIs =[
 		{ name: "Authentication (OAuth)", link: "https://developer.autodesk.com/en/docs/oauth/v2/overview/" },

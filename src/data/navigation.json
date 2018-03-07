@@ -1,59 +1,74 @@
-[
-  { "href": "/",
-	"title": "Home",
-	"description": "FORGE: The future of making things.",
-	"style": "home",
-	"hidden": true
-  },
-  { "href": "?WhatIsForge",
-	"title": "What is Forge?",
-	"description": "FORGE is a set of web service APIs* that power the future of making things. Learn more...",
-	"style": "whatisforge",
-	"image": "./Home/questions.jpg"
-  },
-  { "href": "?GettingStarted",
-	"title": "Getting Started",
-	"description": "This page is intended to help you getting started with the Forge API.",
-	"style": "gettingstarted",
-	"image": "./Home/plant.jpg"
-  },
-  { "href": "?LearningPaths",
-	"title": "Learning Paths",
-	"description": "Learning paths are designed to guide you towards your personalized learning experience. Each path is designed as a specific track that will bring your knowledge to the next level, step by step.",
-	"style": "learningpaths",
-	"hidden": false,
-	"image": "./Home/labyrinth.jpg"
-  },
-  { "href": "?PlayWithItLive",
-	"title": "Play with it live",
-	"description": "Most 2D and 3D formats supported including DWG, DWF, RVT, Solidworks and STP. ... The Forge Viewer makes it easy to take your design, share via link, or embed in your own application.",
-	"style": "playwithitlive",
-	"image": "./Home/tryitnow.png",
-	"hidden": true
-  },
-  { "href": "?SDK",
-	"title": "Libraries/SDKs",
-	"description": "Easily use FORGE APIs in the programming language of your choice. Download and install helpers for Node.js, PHP, iOS, Android, C#, and more.",
-	"style": "sdks",
-	"image": "./Home/sdk.jpg"
-  },
-  { "href": "?Samples",
-	"title": "Samples & Live Demos",
-	"description": "Check out these samples, tutorials, and SDKs created to help speed up your Forge application development. Visit our blog for more code snippets, tips, and tricks.",
-	"style": "samples",
-	"image": "./Home/sample.png"
-  },
-  { "href": "?ARVR",
-	"title": "AR/VR experiments",
-	"description": "Experimental virtual reality (VR) and augmented reality (AR) projects and references.",
-	"style": "arvr",
-	"image": "./Home/arvr2.png"
-  },
-  { "href": "?VideosAndPresentations",
-	"title": "Presentation library & Videos",
-	"description": "Welcome to our library of videos and presentations helping you to understand how our switching solutions can help you.",
-	"style": "presentations",
-	"image": "./Home/presentations.jpg",
-	"hidden": false
-  }
+[{
+		"href": "/",
+		"title": "Home",
+		"description": "FORGE: The future of making things.",
+		"style": "home",
+		"hidden": true
+	},
+	{
+		"href": "?WhatIsForge",
+		"title": "What is Forge?",
+		"description": "FORGE is a set of web service APIs* that power the future of making things. Learn more...",
+		"style": "whatisforge",
+		"image": "./Home/questions.jpg"
+	},
+	{
+		"href": "?GettingStarted",
+		"title": "Getting Started",
+		"description": "This page is intended to help you getting started with the Forge API.",
+		"style": "gettingstarted",
+		"image": "./Home/plant.jpg"
+	},
+	{
+		"href": "?LearningPaths",
+		"title": "Learning Paths",
+		"description": "Learning paths are designed to guide you towards your personalized learning experience. Each path is designed as a specific track that will bring your knowledge to the next level, step by step.",
+		"style": "learningpaths",
+		"hidden": false,
+		"image": "./Home/labyrinth.jpg"
+	},
+	{
+		"href": "?PlayWithItLive",
+		"title": "Play with it live",
+		"description": "Most 2D and 3D formats supported including DWG, DWF, RVT, Solidworks and STP. ... The Forge Viewer makes it easy to take your design, share via link, or embed in your own application.",
+		"style": "playwithitlive",
+		"image": "./Home/tryitnow.png",
+		"hidden": true
+	},
+	{
+		"href": "?SDK",
+		"title": "Libraries/SDKs",
+		"description": "Easily use FORGE APIs in the programming language of your choice. Download and install helpers for Node.js, PHP, iOS, Android, C#, and more.",
+		"style": "sdks",
+		"image": "./Home/sdk.jpg"
+	},
+	{
+		"href": "https://forge.autodesk.com/learn-examples",
+		"title": "Samples & Live Demos",
+		"description": "Check out these samples, tutorials, and SDKs created to help speed up your Forge application development. Visit our blog for more code snippets, tips, and tricks.",
+		"style": "samples",
+		"image": "./Home/sample.png"
+	},
+	{
+		"href": "?Showcases",
+		"title": "Showcases",
+		"description": "Check out these demos and see Forge in action.",
+		"style": "showcases",
+		"image": "./Home/showcases.png"
+	},
+	{
+		"href": "?ARVR",
+		"title": "AR/VR experiments",
+		"description": "Experimental virtual reality (VR) and augmented reality (AR) projects and references.",
+		"style": "arvr",
+		"image": "./Home/arvr2.png"
+	},
+	{
+		"href": "?VideosAndPresentations",
+		"title": "Presentation library & Videos",
+		"description": "Welcome to our library of videos and presentations helping you to understand how our switching solutions can help you.",
+		"style": "presentations",
+		"image": "./Home/presentations.jpg",
+		"hidden": false
+	}
 ]

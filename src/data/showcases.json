@@ -1,0 +1,212 @@
+{
+  "forge-rocks": {
+	"title": "Autodesk Forge Viewer",
+	"icon": "forge-rocks.png",
+	"url": "https://viewer-rocks.autodesk.io/",
+	"github": "https://github.om/viewer-rocks/",
+	"description": "",
+	"owner": "Autodesk",
+	"hidden": false
+  },
+
+  "forge-rcdb": {
+	"title": "Forge | RCDB",
+	"url": "https://forge-rcdb.autodesk.io/",
+	"github": "",
+	"description": "",
+	"owner": "Autodesk",
+	"hidden": false
+  },
+
+  "forge-dm": {
+	"title": "Forge | Data Management",
+	"url": "https://dm.autodesk.io/",
+	"github": "",
+	"description": "",
+	"owner": "Autodesk",
+	"hidden": false
+  },
+
+  "forge-oss": {
+	"title": "Forge | OSS",
+	"url": "https://oss.autodesk.io/",
+	"github": "",
+	"description": "Just to show off you can control the location of the data you may store in DM – in the EU versus in the US",
+	"owner": "Autodesk",
+	"hidden": false
+  },
+
+  "cat-D4K2": {
+	"title": "Cat | D4K2 Track-Type Tractor | Caterpillar",
+	"url": "http://duchangyu.github.io/meetup-3d-on-web/3d-for-d4kz/index.html",
+	"github": "",
+	"description": "This demo page would need to be tweaked to remove Cat specific content (their logo and model numbers).",
+	"owner": "Autodesk",
+	"hidden": true
+  },
+
+  "cat": {
+	"title": "Forge | RCDB | Cat",
+	"url": "https://forge-rcdb.autodesk.io/configurator?id=5898edb0f3d07692f6cef148",
+	"github": "",
+	"description": "This demo needs to be updated with new geometry that is not from Cat (Philippe working on it)",
+	"owner": "Autodesk",
+	"hidden": true
+  },
+
+  "forge-box": {
+	"title": "Autodesk Forge Integration with Box",
+	"url": "https://forgeboxcn.herokuapp.com/",
+	"github": "",
+	"description": "",
+	"owner": "Autodesk",
+	"hidden": false
+  },
+
+  "forge-googledrive": {
+	"title": "Autodesk Forge Integration with Google Drive",
+	"url": "https://forgegoogledriveviewer.herokuapp.com/",
+	"github": "",
+	"description": "",
+	"owner": "Autodesk",
+	"hidden": false
+  },
+
+  "react-gallery": {
+	"title": "React Gallery",
+	"url": "https://react-gallery.autodesk.io/embed?id=560c6c57611ca14810e1b2bf&extIds=Viewing.Extension.StateManager;Viewing.Extension.Markup3D&options=%27%7b%22showPanel%22:%22true%22,%22stateId%22:%22a9f227f6154286f00c7%22%7d%27",
+	"github": "",
+	"description": "Simplest example I use to show off tagging and saving views (yes its also in some other samples… but this is a simple way)",
+	"owner": "Autodesk",
+	"hidden": false
+  },
+
+  "calaveras75-dam-500k": {
+	"title": "Gallery - Calaveras75 Dam-500k",
+	"url": "http://viewer.autodesk.io/node/gallery/#/viewer?id=57c51f61c299e65c080b29c5",
+	"github": "",
+	"description": "Just to show off what Reality Capture can do",
+	"owner": "Autodesk",
+	"hidden": false
+  },
+
+  "lmv-navtest": {
+	"title": "LMV Nav Test",
+	"url": "http://calm-inlet-4387.herokuapp.com/?_sm_au_=iVVQWPfnqHks4FkN",
+	"github": "",
+	"description": "",
+	"owner": "Autodesk",
+	"hidden": false
+  },
+
+  "voservices": {
+	"title": "VOServices",
+	"url": " https://vocd.autodesk.com/indexa.html",
+	"github": "",
+	"description": "Just to show off the Viewer used in a Process Plant environment",
+	"owner": "Autodesk",
+	"hidden": false
+  },
+
+  "my-bureau": {
+	"title": "Create My Bureau",
+	"url": "http://createmycloset.azurewebsites.net/",
+	"github": "",
+	"description": "",
+	"owner": "Autodesk",
+	"hidden": false
+  },
+
+  "forge-galleary": {
+	"title": "React Gallery",
+	"url": "https://react-gallery.autodesk.io/viewer?id=581874c144698ea4d986fc7e&extIds=Viewing.Extension.InViewerSearchWrapper",
+	"github": "",
+	"description": "Just to show off simple querying",
+	"owner": "Autodesk",
+	"hidden": false
+  },
+
+  "dasher-360": {
+	"title": "Dasher 360",
+	"url": "https://dasher360.com/",
+	"github": "",
+	"description": "",
+	"owner": "Autodesk",
+	"hidden": false
+  },
+
+  "vrok-it": {
+	"title": "Vrok-it",
+	"url": "http://www.vrok.it/?session=GD9ujO",
+	"github": "",
+	"description": "",
+	"owner": "Autodesk",
+	"hidden": false
+  },
+
+  "spbstu": {
+	"title": "Инженерно-строительный институт Санкт-Петербургский политехнический университет Петра Великого",
+	"url": "http://ice.spbstu.ru/rabotu_studentov/",
+	"github": "",
+	"description": "",
+	"owner": "Работы студентов",
+	"hidden": false
+  },
+
+  "BIM@TUDa": {
+	"title": "",
+	"url": "http://www.bim.tu-darmstadt.de/",
+	"github": "",
+	"description": "",
+	"owner": "BIM@TUDa",
+	"hidden": false
+  },
+
+  "ssi-corporate": {
+	"title": "",
+	"url": "http://blogs.ssi-corporate.com/waveform/2014/technology/autodesk-university-another-great-event/",
+	"github": "",
+	"description": "Autodesk University: Another Great Event",
+	"owner": "ssi-corporate",
+	"hidden": false
+  },
+
+  "simulationHub": {
+	"title": "",
+	"url": "https://www.simulationhub.com/knowledge-base/simulation-gallery",
+	"github": "",
+	"description": "CFD Simulation Project Gallery on simulationHub",
+	"owner": "simulationHub",
+	"hidden": false
+  },
+
+  "BLDNG360": {
+	"title": "",
+	"url": "https://bldng360.com/",
+	"github": "",
+	"description": "",
+	"owner": "BLDNG360",
+	"hidden": false
+  },
+
+
+  "Dotty-Digital": {
+	"title": "",
+	"url": "http://dotdotty.com/",
+	"github": "",
+	"description": "",
+	"owner": "Dotty Digital",
+	"hidden": false
+  },
+
+
+  "Threadmodeler": {
+	"title": "Threadmodeler",
+	"url": "http://threadmodeler.com/home",
+	"github": "",
+	"description": "",
+	"owner": "Cool Orange",
+	"hidden": false
+  }
+
+}

@@ -37,7 +37,7 @@
             <!-- Two -->
             <section id="two" class="spotlights">
                 <section id="viewer-api">
-                    <a href="https://examples.developer.autodesk.com/lmv-visual-reports/" class="image">
+                    <a href="https://forge-rcdb.autodesk.io/configurator?id=57f3739777c879f48ad54a44" class="image">
                         <img src="./WhatIsForge/viewer.jpg" alt="" data-position="center center" />
                     </a>
                     <div class="content">
@@ -49,8 +49,8 @@
                                 in over 50 formats right in your browser, without having to install extra software.</p>
                             <p>The API a (client-side) WEBGL/JavaScript API based on Three.js</p>
                             <ul class="actions">
-                                <li><a href="https://examples.developer.autodesk.com/lmv-visual-reports/" target="demo" class="button next scrolly">Try it live</a></li>
-                                <li><a href="https://github.com/Developer-Autodesk/lmv-visual-reports" target="github" class="button next scrolly">Open on GitHub</a></li>
+                                <li><a href="https://forge-rcdb.autodesk.io/configurator?id=57f3739777c879f48ad54a44" target="demo" class="button next scrolly">Try it live</a></li>
+                                <li><a href="https://github.com/Autodesk-Forge/forge-rcdb.nodejs" target="github" class="button next scrolly">Open on GitHub</a></li>
                             </ul>
                         </div>
                     </div>
